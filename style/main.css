@@ -1,0 +1,35 @@
+/* how to we eventually wanna organize or even break this apart? */
+/* also keep in mind how we wanna sort media queries, ie. all desktop then all mobile, or for each class as needed? */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fbfbfb;
+}
+.grid-container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 20px;
+}
+.header {
+    grid-column: 2 / 11;
+    float: left;
+    background-color: lightcoral;
+}
+nav {
+    grid-column: 1/2;
+    float: left;
+    height: 400px;
+    background-color: lightblue;
+}
+.main-content {
+    grid-column: 2/11;
+    float: left;
+    background-color: lightgray;
+}
+footer {
+    grid-column: 2/11;
+    float: left;
+    background-color: lightgreen;
+}
