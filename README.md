@@ -1,3 +1,3 @@
 # VacationBase
 Project for Web Design Workshop
-Written with love by Nick Jordan, Lianeli Sanchez, Adnane Rihani, Mykeria Cooks, & Sean Bost in Spring 2023
+Made with love by Nick Jordan, Mykeria Cooks, Sean Bost, Adnane Rihani, & Lianeli Sanchez in Spring 2023
