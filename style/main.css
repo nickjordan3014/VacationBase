@@ -1,10 +1,15 @@
 /* how to we eventually wanna organize or even break this apart? */
 /* also keep in mind how we wanna sort media queries, ie. all desktop then all mobile, or for each class as needed? */
 
+/*<-------------------- Main Body -------------------->*/
+
 body {
     margin: 0;
     padding: 0;
     background-color: #fbfbfb;
+}
+p, label {
+    font-size: 16px;
 }
 .grid-container {
     margin: auto;
@@ -12,6 +17,53 @@ body {
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
 }
+.main-content {
+    grid-column: 3/11;
+    height: 800px;
+}
+.header {
+    grid-column: 11/13;
+    height: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+/*<-------------------- Home Logo and Search -------------------->*/
+
+.logo-area {
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+} 
+.logo {
+    width: 20rem;
+    vertical-align: -20px;
+}
+.nobtndecor {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+.searchbox {
+    width: 10rem;
+    height: 1.5rem;
+}
+.searchico {
+    width: 2rem;
+    vertical-align: -10px;
+}
+.hsline {
+    width: 100%;
+    margin-inline: auto;
+}
+
+/*<-------------------- Navigation -------------------->*/
+
 nav {  /* note: width is to simulate grid column, as "position: fixed;" seems to overrule it */
     grid-column: 1/2;
     position: fixed;
@@ -20,8 +72,8 @@ nav {  /* note: width is to simulate grid column, as "position: fixed;" seems to
     min-width: 100px;
     border-right: solid;
     border-width: 2px;
-    border-color: blue;
-    background-color: lightblue;
+    border-color: lightgray;
+    background-color: white;
 }
 .nav-home {
     margin-bottom: 40px;
@@ -33,23 +85,33 @@ nav {  /* note: width is to simulate grid column, as "position: fixed;" seems to
     padding-left: 10px;
     padding-right: 10px;
 }
-.nav-item p { /* will eventually need to be H3 or whatever it is but is p until then for proof of concept */
+.nav-item .nav-p { /* will eventually need to be H3 or whatever it is but is p until then for proof of concept */
     margin-top: -16px;
     padding-top: 16px;
 }
-.header {
-    grid-column: 11/13;
-    height: 100px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: lightcoral;
-    text-align: right;
+.nav-p { /*Styles Navigation words*/
+    text-align: center;
+    color: black;
 }
-.main-content {
-    grid-column: 3/11;
-    height: 800px;
-    background-color: lightgray;
+.nav-a { /*Styles Navigation words*/
+    text-decoration: none;
 }
+/*Styles navigation icons :)) */
+.nav-home { 
+    display: block;
+    margin: auto;
+    padding-top: 1rem; padding-bottom: 2rem;
+    width: 5rem;
+}
+.nav-img {
+    display: block;
+    margin: auto;
+    padding-top: 0.25rem; padding-bottom: 0.25rem;
+    width: 3.5rem;
+}
+
+/*<-------------------- Ad Space -------------------->*/
+
 .ad-leaderboard {
     margin: auto;
     height: 90px;
@@ -68,6 +130,44 @@ nav {  /* note: width is to simulate grid column, as "position: fixed;" seems to
     width: 300px;
     background-color: gray;
 }
+
+/*<-------------------- Carousel -------------------->*/
+
+.inline {
+    display: inline-block;
+}
+.rightalign {
+    float: right;
+    font-style: italic;
+}
+.black{
+    color: black;
+}
+.carousel {
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 80%;
+}
+.carouselArrow {
+    width: 50px;
+    margin-left: 20px;
+    vertical-align:90px;
+}
+.card {
+    display: inline-block;
+    margin-right: 15px;
+    width: 200px;
+    height: 200px;
+    background-color: lightgray;
+} 
+.image {
+    width: 200px;
+    height: 150px;
+    background-color: gray;
+}
+
+/*<-------------------- Footer -------------------->*/
+
 footer {
     width: calc(84% - 40px);
     height: 100px;
