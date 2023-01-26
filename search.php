@@ -1,7 +1,7 @@
 <?php
-    include("search/searchHead.html");
-    include("navigation/nav.html");
-    include("search/searchBody.html");
-    include("header/header.html");
-    include("footer/footer.html");
+    include("pages/search/searchHead.html");
+    include("template/nav.html");
+    include("pages/search/searchBody.html");
+    include("template/header.html");
+    include("template/footer.html");
 ?>

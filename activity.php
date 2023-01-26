@@ -1,7 +1,7 @@
 <?php
-    include("pages/index/indexHead.html");
+    include("pages/activity/activityHead.html");
     include("template/nav.html");
-    include("pages/index/indexBody.html");
+    include("pages/activity/activityBody.html");
     include("template/header.html");
     include("template/footer.html");
 ?>
