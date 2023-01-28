@@ -1,7 +1,16 @@
 const data = {
     "ids" : [
         {
-            "scrollid" : "scroll0" 
+            "scrollid": "scroll0" 
+        },
+        {
+            "scrollid": "scroll1"
+        },
+        {
+            "scrollid": "scroll2"
+        },
+        {
+            "scrollid": "scroll3"
         }
     ]
 }
@@ -20,6 +29,15 @@ function scroll(id) { // function to move carousel over
 function init() { //intializes the function
     document.getElementById("auto0").onclick = function() { //First Carousel moves if clicked
         scroll(data.ids[0].scrollid);
+    }
+    document.getElementById("auto1").onclick = function() { //First Carousel moves if clicked
+        scroll(data.ids[1].scrollid);
+    }
+    document.getElementById("auto2").onclick = function() { //First Carousel moves if clicked
+        scroll(data.ids[2].scrollid);
+    }
+    document.getElementById("auto3").onclick = function() { //First Carousel moves if clicked
+        scroll(data.ids[3].scrollid);
     }
 }
 
