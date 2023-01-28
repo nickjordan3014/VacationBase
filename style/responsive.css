@@ -1,0 +1,143 @@
+:root {
+    --gray: #d9d9d9; /*Borders and Lines*/
+    --darkgray: #555; /*Gray Text*/
+    --pink: #F291D0; /*Nav Icons, Captions, etc.*/
+    --orange: #FFc875; /*Actions, Buttons, Links*/
+    --green: #e2f0d9; /*Fields, Footer*/
+    --white: white; /*Background*/
+    --black: black; /*Text*/
+}
+
+/*Small Screens*/
+@media only screen and (max-width: 768px) { 
+    /*<-------------------- Navigation -------------------->*/
+
+    .nav-home, .nav-item {
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        float: left;
+    }
+    .nav-p { /* Styles Navigation words */
+        text-align: center;
+        color: black;
+        display: none;
+    }
+    .nav-a {
+        text-decoration: none;
+    }
+    nav { 
+        background-color: white;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        border: 2px var(--gray) solid;
+    }
+    .nav-img {
+        height: 50px;
+    }
+
+    /*<-------------------- Ad Space -------------------->*/
+
+    .adleaderboard {
+        margin: auto;
+        height: 90px;
+        width: 970px;
+        background-color: var(--gray);
+    }
+    .ad-banner {
+        margin: auto;
+        height: 180px;
+        width: 930px;
+        background-color: var(--gray);
+    }
+    .ad-halfpage {
+        margin: auto;
+        height: 600px;
+        width: 300px;
+        background-color: var(--gray);
+    }
+}
+
+/*Big Screens*/
+@media only screen and (min-width: 768px) {
+    .grid-container {
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+    }
+    .main-content {
+        grid-column: 2/12;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 20px;
+    }
+    .inner-content {
+        grid-column: 2/10;
+    }
+    /*<-------------------- Navigation -------------------->*/
+
+    .nav-home {
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+    }
+    .nav-item {
+        display: block;
+        margin: auto;
+        padding-bottom: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .nav-p { /* Styles Navigation words */
+        margin-top: -20px;
+        padding-top: 16px;
+        text-align: center;
+        color: black;
+    }
+    .nav-a {
+        text-decoration: none;
+    }
+    nav {  /* note: width is to simulate grid column, as "position: fixed;" seems to overrule it */
+        grid-column: 1/2;
+        position: fixed;
+        height: 100%;
+        width: 8%;
+        min-width: 100px;
+        border-right: solid;
+        border-width: 2px;
+        border-color: lightgray;
+        background-color: white;
+    }
+    .nav-img {
+        width: 100%;
+    }
+
+    /*<-------------------- Ad Space -------------------->*/
+
+    .adleaderboard {
+        margin: auto;
+        height: 90px;
+        width: 970px;
+        background-color: var(--gray);
+    }
+    .ad-banner {
+        margin: auto;
+        height: 180px;
+        width: 930px;
+        background-color: var(--gray);
+    }
+    .ad-halfpage {
+        margin: auto;
+        height: 600px;
+        width: 300px;
+        background-color: var(--gray);
+    }
+}
