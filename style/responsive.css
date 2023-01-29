@@ -1,7 +1,7 @@
 :root {
     --gray: #d9d9d9; /*Borders and Lines*/
     --darkgray: #555; /*Gray Text*/
-    --pink: #F291D0; /*Nav Icons, Captions, etc.*/
+    --pink: rgb(242, 145, 208); /*Nav Icons, Captions, etc.*/
     --orange: #FFc875; /*Actions, Buttons, Links*/
     --green: #e2f0d9; /*Fields, Footer*/
     --white: white; /*Background*/
@@ -13,12 +13,9 @@
     /*<-------------------- Navigation -------------------->*/
 
     .nav-home, .nav-item {
-        display: block;
         color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
         text-decoration: none;
-        float: left;
+
     }
     .nav-p { /* Styles Navigation words */
         text-align: center;
@@ -35,24 +32,30 @@
         bottom: 0;
         width: 100%;
         border: 2px var(--gray) solid;
+        display: flex;
+        justify-content: space-between;
     }
     .nav-img {
         height: 50px;
+    }
+    .header {
+        display: none;
+    }
+    h2 {
+        margin-bottom: 0;
+    }
+    .rightalign {
+        display: block !important;
+        padding-top: 0; margin-top: 0;
     }
 
     /*<-------------------- Ad Space -------------------->*/
 
     .adleaderboard {
-        margin: auto;
-        height: 90px;
-        width: 970px;
-        background-color: var(--gray);
+        display: none;
     }
     .ad-banner {
-        margin: auto;
-        height: 180px;
-        width: 930px;
-        background-color: var(--gray);
+        display: none;
     }
     .ad-halfpage {
         margin: auto;
@@ -60,6 +63,19 @@
         width: 300px;
         background-color: var(--gray);
     }
+        /*Carousel Items*/
+
+        .carousel {
+            overflow-x: scroll;
+            white-space: nowrap;
+            width: 100%;
+        }
+        .carouselArrow {
+            display: none;
+        }
+        .carouselArrow {
+            display: none;
+        }
 }
 
 /*Big Screens*/
@@ -79,6 +95,10 @@
     }
     .inner-content {
         grid-column: 2/10;
+    }
+    .rightalign {
+        float: right;
+        font-style: italic;
     }
     /*<-------------------- Navigation -------------------->*/
 
@@ -139,5 +159,22 @@
         height: 600px;
         width: 300px;
         background-color: var(--gray);
+    }
+
+    /*Carousel Items*/
+
+    .carousel {
+        overflow-x: scroll;
+        white-space: nowrap;
+        width: 100%;
+    }
+    .carouselArrow {
+        width: 30px;
+        margin-top: 10px;
+        vertical-align: -15px;
+        padding: 2px;
+        background-color: rgba(242, 145, 208, 0.1) ;
+        border: 2px solid var(--darkgray);
+        border-radius: 2px;
     }
 }

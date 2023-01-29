@@ -49,17 +49,6 @@ body {
     padding: 0;
 }
 
-.header {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100px;
-    width: 400px;
-    padding-right: 20px;
-    padding-top: 5px;
-    text-align: right;
-}
-
 /*<-------------------- Home Logo and Search -------------------->*/
 
 .logo-area {
@@ -104,22 +93,8 @@ body {
 .inline {
     display: inline-block;
 }
-.rightalign {
-    float: right;
-    font-style: italic;
-}
 .black{
     color: black;
-}
-.carousel {
-    overflow-x: scroll;
-    white-space: nowrap;
-    width: 90%;
-}
-.carouselArrow {
-    width: 50px;
-    margin-left: 20px;
-    vertical-align:90px;
 }
 .card {
     display: inline-block;
