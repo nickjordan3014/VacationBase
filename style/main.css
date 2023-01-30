@@ -100,7 +100,7 @@ body {
     display: inline-block;
 }
 .black{
-    color: black;
+    color: black; /* .black?? are we serious lmao */
 }
 .card { 
     display: inline-block;
