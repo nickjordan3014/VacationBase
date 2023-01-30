@@ -102,7 +102,7 @@ body {
 .black{
     color: black;
 }
-.card {
+.card { 
     display: inline-block;
     margin: 0px;
     width: 24%;
