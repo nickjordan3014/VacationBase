@@ -1,5 +1,95 @@
 <section class="main-content">
-    <article class="ad-leaderboard">
-        <p>[ad here]</p> <!-- where does it go?! figure out later -->
-    </article>
+    <section class="inner-content">
+        <article class="adleaderboard">
+            <p>[ad here]</p> <!-- where does it go?! figure out later -->
+        </article>
+    </section>
+    <!-- SEARCH PAGE HEADER -->
+    <section class="header">
+        <p>New Here? <a href="">Sign Up!</a></p>
+        <p>Or, <a href="">Log-In</a></p>
+    </section>
+    <img src="img/icons-VB/VacationBase_Logo.png" alt="Vacation Base Logo" class="mobileLogo">
+    <section class="search-content">
+        <section class="logo-area">
+            <form action="search.php" class="logo-area">     
+                    <label for="search" class="searchlabel">Show me... </label>
+                    <input type="text" name="search" class="searchpagebox">
+                    <button class="nobtndecor">
+                        <img src="img/icons-VB/Search_Icon.png" alt="Search Icon" class="searchico">
+                    </button>
+            </form>
+        </section>
+        <hr class="hsline">
+    </section>
+    <section class="filter-content">
+        <form action="filter.php" class="filter-form">
+            <section>
+                <h4>Days Open</h4>
+                <label for="daysOpen" class="filter-label">
+                    <input type="checkbox">
+                    Sunday
+                </label>
+                <label for="daysOpen" class="filter-label">
+                    <input type="checkbox">
+                    Monday
+                </label>
+                <label for="daysOpen" class="filter-label">
+                    <input type="checkbox">
+                    Tuesday
+                </label>
+                <label for="daysOpen" class="filter-label">
+                    <input type="checkbox">
+                    Wednesday
+                </label>
+                <label for="daysOpen" class="filter-label">
+                    <input type="checkbox">
+                    Thursday
+                </label>
+                <label for="daysOpen" class="filter-label">
+                    <input type="checkbox">
+                    Friday
+                </label>
+                <label for="daysOpen" class="filter-label">
+                    <input type="checkbox">
+                    Saturday
+                </label>
+            </section>
+            <section>
+                <h4>Hours</h4>
+                At least from 
+                <select name="" id="">
+                    <option value="open">10</option>
+                </select> 
+                to 
+                <select name="" id="">
+                    <option value="close">10</option>
+                </select>
+            </section>
+            <section>
+                <h4>Budget</h4>
+                <label for="budget">No more per person minimum than </label>
+                <input type="text" placeholder="$" class="filter-text">
+            </section>
+            <section>
+                <h4>Age Requirement</h4>
+                <label for="all"><input type="radio">All</label>
+                <label for="13"><input type="radio">13+</label>
+                <label for="18"><input type="radio">18+</label>
+                <label for="21"><input type="radio">21+</label>
+            </section>
+            <section>
+                <h4>Great For</h4>
+                <label for="storm" class="filter-label"><input type="checkbox">Stormy Weather</label>
+                <label for="fam" class="filter-label"><input type="checkbox">Families</label>
+                <label for="solo" class="filter-label"><input type="checkbox">Going Solor</label>
+                <label for="value" class="filter-label"><input type="checkbox">Awesome Value</label>
+                <label for="local" class="filter-label"><input type="checkbox">Living like a Local</label>
+                <label for="transit" class="filter-label"><input type="checkbox">Public Transit</label>
+            </section>
+        </form>
+        <article class="sa">
+            <p>[ad here]</p>
+        </article>
+    </section>
 </section>

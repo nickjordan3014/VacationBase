@@ -29,6 +29,8 @@ h3 {
 
 h4 {
     font-size: 22;
+    margin: 5px;
+    padding: 0;
 }
 
 p, .captions, label, button {
@@ -74,6 +76,10 @@ body {
     width: 10rem;
     height: 1.5rem;
 }
+.searchlabel {
+    display: block;
+    text-align: left;
+}
 .searchico {
     width: 2rem;
     vertical-align: -10px;
@@ -98,9 +104,10 @@ body {
 }
 .card {
     display: inline-block;
-    margin-inline: 7px;
-    width: 200px;
-    height: 200px;
+    /* margin-inline: 7px; */
+    width: 24%;
+    height: 100%;
+    background-color: #fff;
     border: 1px solid var(--gray);
 } 
 .image {
@@ -122,4 +129,23 @@ footer {
 
 .footer-txt {
     text-align: center;
+}
+
+/*<-------------------- Forms -------------------->*/
+
+.filter-form {
+    background-color: var(--green);
+    border: 1px var(--gray) solid;
+    border-radius: 2px;
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.filter-label {
+    display: block;
+}
+
+.filter-text {
+    width: 2rem;
+    height: 1.5rem
 }
