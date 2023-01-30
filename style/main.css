@@ -105,8 +105,8 @@ body {
 .card {
     display: inline-block;
     margin-inline: 7px;
-    width: 200px;
-    height: 200px;
+    width: 25%;
+    height: 100%;
     border: 1px solid var(--gray);
 } 
 .image {
