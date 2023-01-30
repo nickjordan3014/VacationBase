@@ -104,15 +104,15 @@ body {
 }
 .card {
     display: inline-block;
-    margin-inline: 7px;
+    margin: 0px;
     width: 24%;
     height: 100%;
     background-color: #fff;
     border: 1px solid var(--gray);
 } 
 .image {
-    width: 200px;
-    height: 150px;
+    /* width: 200px;
+    height: 150px; */
     background-color: gray;
 }
 
