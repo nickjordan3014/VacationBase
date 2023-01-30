@@ -111,8 +111,8 @@ body {
     border: 1px solid var(--gray);
 } 
 .image {
-    /* width: 200px;
-    height: 150px; */
+    width: 200px;
+    height: 150px;
     background-color: gray;
 }
 
