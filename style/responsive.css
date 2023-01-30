@@ -10,6 +10,44 @@
 
 /*Small Screens*/
 @media only screen and (max-width: 768px) { 
+    /*Grids*/
+    .grid-container {
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 10px;
+    }
+    .main-content {
+        grid-column: 1/12;
+        margin: auto;
+        display: grid;
+        gap: 10px;
+    }
+    .inner-content {
+        grid-column: 1/12;
+        margin: 10px;
+    }
+    .search-content { /*FOR SEARCH PAGE*/
+        grid-column: 1/12;
+        margin: 10px;
+    }
+    .searchpagebox { /*FOR SEARCH PAGE*/
+        width: 70vw;
+        height: 1.5rem;
+    } 
+    .filter-content {   /*FOR SEARCH PAGE*/
+        display: none;
+    }
+    .header {
+        position: absolute;
+        right: 5px;
+    }
+    .mobileLogo {
+        position: relative;
+        width: 15rem;
+        display: block;
+        margin-left: 0;
+    }
     /*<-------------------- Navigation -------------------->*/
 
     .nav-home, .nav-item {
@@ -38,9 +76,6 @@
     .nav-img {
         height: 50px;
     }
-    .header {
-        display: none;
-    }
     h2 {
         margin-bottom: 0;
     }
@@ -63,19 +98,19 @@
         width: 300px;
         background-color: var(--gray);
     }
-        /*Carousel Items*/
+    /*Carousel Items*/
 
-        .carousel {
-            overflow-x: scroll;
-            white-space: nowrap;
-            width: 100%;
-        }
-        .carouselArrow {
-            display: none;
-        }
-        .carouselArrow {
-            display: none;
-        }
+    .carousel {
+        overflow-x: scroll;
+        white-space: nowrap;
+        width: 100%;
+    }
+    .carouselArrow {
+        display: none;
+    }
+    .carouselArrow {
+        display: none;
+    }
 }
 
 /*Big Screens*/
@@ -96,9 +131,26 @@
     .inner-content {
         grid-column: 2/10;
     }
+    .search-content { /*FOR SEARCH PAGE*/
+        grid-column: 2/8;
+    }
+    .searchpagebox { /*FOR SEARCH PAGE*/
+        width: 40vw;
+        height: 1.5rem;
+    } 
+    .filter-content {   /*FOR SEARCH PAGE*/
+        grid-column: 9/12;
+    }
     .rightalign {
         float: right;
         font-style: italic;
+    }
+    .header {
+        position: absolute;
+        right: 15px;
+    }
+    .mobileLogo {
+        display: none;
     }
     /*<-------------------- Navigation -------------------->*/
 
@@ -154,7 +206,7 @@
         width: 930px;
         background-color: var(--gray);
     }
-    .ad-halfpage {
+    .sa {
         margin: auto;
         height: 600px;
         width: 300px;
