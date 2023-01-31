@@ -9,7 +9,7 @@
 }
 
 /*Small Screens*/
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 1000px) { 
     /*Grids*/
     .grid-container {
         margin: auto;
@@ -111,10 +111,17 @@
     .carouselArrow {
         display: none;
     }
+
+    .logo-area {
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    text-align: center;
+    } 
 }
 
 /*Big Screens*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1000px) {
     .grid-container {
         margin: auto;
         display: grid;
@@ -216,7 +223,7 @@
     /*Carousel Items*/
 
     .carousel {
-        overflow-x: scroll;
+        overflow-x: hidden;
         white-space: nowrap;
         width: 100%;
     }
@@ -229,4 +236,11 @@
         border: 2px solid var(--darkgray);
         border-radius: 2px;
     }
+
+    .logo-area {
+    display: inline-block;
+    margin: auto;
+    margin-top: 15px;
+    text-align: center;
+    } 
 }
