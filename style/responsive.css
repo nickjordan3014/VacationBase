@@ -111,6 +111,13 @@
     .carouselArrow {
         display: none;
     }
+
+    .logo-area {
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    text-align: center;
+    } 
 }
 
 /*Big Screens*/
@@ -229,4 +236,11 @@
         border: 2px solid var(--darkgray);
         border-radius: 2px;
     }
+
+    .logo-area {
+    display: inline-block;
+    margin: auto;
+    margin-top: 15px;
+    text-align: center;
+    } 
 }

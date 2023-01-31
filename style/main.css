@@ -53,12 +53,7 @@ body {
 
 /*<-------------------- Home Logo and Search -------------------->*/
 
-.logo-area {
-    display: inline-block;
-    margin: auto;
-    margin-top: 15px;
-    text-align: center;
-} 
+
 .logo {
     width: 20rem;
     vertical-align: -20px;
