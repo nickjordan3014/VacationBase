@@ -17,7 +17,7 @@ const data = {
 
 function scrollRight(id) { // function to move carousel over to the right
         let carousel = document.getElementById(id);
-        let carouselWidth = carousel.offsetWidth - (carousel.offsetWidth * .2);
+        let carouselWidth = carousel.offsetWidth - (carousel.offsetWidth * .001);
         let carouselPosition = carousel.scrollLeft;
 
         carousel.scrollTo({ //moves the carousel left based on current position and screen size
@@ -28,7 +28,7 @@ function scrollRight(id) { // function to move carousel over to the right
 
 function scrollLeft(id) { // function to move carousel over to the right
     let carousel = document.getElementById(id);
-    let carouselWidth = carousel.offsetWidth - (carousel.offsetWidth * .2);
+    let carouselWidth = carousel.offsetWidth - (carousel.offsetWidth * .001);
     let carouselPosition = carousel.scrollLeft;
 
     carousel.scrollTo({ //moves the carousel left based on current position and screen size

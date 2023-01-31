@@ -9,7 +9,7 @@
 }
 
 /*Small Screens*/
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 1000px) { 
     /*Grids*/
     .grid-container {
         margin: auto;
@@ -114,7 +114,7 @@
 }
 
 /*Big Screens*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1000px) {
     .grid-container {
         margin: auto;
         display: grid;
@@ -216,7 +216,7 @@
     /*Carousel Items*/
 
     .carousel {
-        overflow-x: scroll;
+        overflow-x: hidden;
         white-space: nowrap;
         width: 100%;
     }
