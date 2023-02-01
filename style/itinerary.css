@@ -1,0 +1,16 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+.column {
+    width: 50%;
+    padding: 10px;
+    height: auto;
+    float: left;
+}
+
+.row::after {
+    content: none;
+    display: table;
+    clear: both;
+}

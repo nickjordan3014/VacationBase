@@ -153,8 +153,8 @@ footer {
 
 /* Activity Page Content Styling */
 .margActivity {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 13%;
+    margin-right: 13%;
 }
 
 .price-click{
@@ -218,4 +218,11 @@ footer {
 .recCapt {
     font-size: 22px;
     font-weight: 500;
+}
+
+
+
+/* ITINERARY STYLING */
+.trip {
+    font-size: 28px;
 }
