@@ -1,0 +1,21 @@
+.profile-pic-area {
+    width: 100vw;
+}
+
+.profile-pic {
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+    width: 200px;
+}
+
+.username {
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.profile-nav {
+    font-size: 20px;
+    width: 15vw;
+}
