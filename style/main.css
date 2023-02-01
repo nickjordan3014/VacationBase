@@ -110,7 +110,12 @@ body {
     height: 100%;
     background-color: gray;
 }
-
+.actPage {
+    text-decoration: none;
+}
+.actPage:visited {
+    color: black;
+}
 
 /*<-------------------- Footer -------------------->*/
 
@@ -143,4 +148,74 @@ footer {
 .filter-text {
     width: 2rem;
     height: 1.5rem
+}
+
+
+/* Activity Page Content Styling */
+.margActivity {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.price-click{
+    display: flex;
+    width: 50%;
+}
+
+.priceOf {
+    flex: 1;
+    margin: 1%;
+}
+.priceOf p{
+    /* using 1.25vw for font-size worked but it gets too small and precise when the screen is minimized */
+    font-size: 20px;
+    
+}
+.actButton {
+    margin-top: 3%;
+    /* margin-left: -20%; */
+    margin-right: -60%;
+}
+.addACTButton {
+    cursor: pointer;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.activityButton {
+    background-color: white; 
+    color: #FFc875; 
+    border: 2px solid #FFc875;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 10px 15px;
+}
+.actInfo {
+    font-size: 24px;
+}
+.actInfoTwo {
+    font-size: 18px;
+}
+.actInfoThree {
+    font-size: 14px;
+}
+.respImgAct {
+    width: 600px;
+    height: 600px;
+}
+/* .actWebLink {
+    
+} */
+.actWebLink:visited {
+    color: black;
+}
+.actWebLink:link {
+    color: black;
+}
+
+.recCapt {
+    font-size: 22px;
+    font-weight: 500;
 }

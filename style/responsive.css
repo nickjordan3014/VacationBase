@@ -207,6 +207,12 @@
         width: 970px;
         background-color: var(--gray);
     }
+    .adleaderboardTwo {
+        margin: auto;
+        height: 160px;
+        width: 850px;
+        background-color: var(--gray);
+    }
     .ad-banner {
         margin: auto;
         height: 180px;
