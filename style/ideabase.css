@@ -1,0 +1,37 @@
+.ideabase-heading {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.ideabase-info {
+    padding-top: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+@media only screen and (max-width: 1000px) { 
+    .ideabase-card { 
+        display: inline-block;
+        margin: 0px 5px 0px 5px;
+        width: 250px;
+        height: 250px;
+        background-color: #fff;
+        border: 1px solid var(--gray);
+    } 
+    .ideabase-image {
+        width: 200px;
+        height: 250px;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .ideabase-card { 
+        display: inline-block;
+        margin: 0px 5px 0px 5px;
+        width: calc(25% - 15px);
+        height: 100%;
+    } 
+    .ideabase-image {
+        width: 100%;
+        height: 100%;
+        background-color: gray;
+    }
+}

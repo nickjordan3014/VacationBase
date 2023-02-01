@@ -97,19 +97,6 @@ body {
 .black{
     color: black; /* .black?? are we serious lmao */
 }
-.card { 
-    display: inline-block;
-    margin: 0px 5px 0px 5px;
-    width: calc(25% - 15px);
-    height: 100%;
-    background-color: #fff;
-    border: 1px solid var(--gray);
-} 
-.image {
-    width: 100%;
-    height: 100%;
-    background-color: gray;
-}
 .actPage {
     text-decoration: none;
 }
