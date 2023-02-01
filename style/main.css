@@ -140,8 +140,8 @@ footer {
 
 /* Activity Page Content Styling */
 .margActivity {
-    margin-left: 13%;
-    margin-right: 13%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .price-click{
@@ -189,8 +189,9 @@ footer {
     font-size: 14px;
 }
 .respImgAct {
-    width: 600px;
-    height: 600px;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 /* .actWebLink {
     
