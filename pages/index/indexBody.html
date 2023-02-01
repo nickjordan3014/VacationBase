@@ -27,15 +27,15 @@
 
     <section class="card-row">
         <h2 class="inline">Orlando's Signature: Themeparks</h2>
-        <button class="nobtndecor inline" id="autoLeft0">
-            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow"> <!--Using add icon as a placeholder for css purposes-->
-        </button>
-        <button class="nobtndecor inline" id="autoRight0">
-            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow"> <!--Using add icon as a placeholder for css purposes-->
-        </button>
+        
         <p class="inline rightalign"><a href="" class="black">See All Themepark Activities</a></p>
         <!--Cards-->
-        <section class="carousel inline" id="scroll0">
+        <div class="carouselInline">
+            <button class="nobtndecor" id="autoLeft0">
+                <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow carouselRight"> <!--Using add icon as a placeholder for css purposes-->
+            </button>
+
+        <section class="carousel" id="scroll0">
             <div class="card" id="tpC0"> <!--Naming Convention for cards tpC0 = theme park card 0-->
                 <a class= "actPage" href="activity.php">
                     <div class="clickCard">
@@ -108,6 +108,11 @@
                 </a>
             </div>
         </section>
+
+        <button class="nobtndecor arrowBG" id="autoRight0">
+            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow carouselLeft"> <!--Using add icon as a placeholder for css purposes-->
+        </button>
+        </div>
     </section>
 
 
@@ -116,48 +121,50 @@
     <!--Blogs-->
     <section class="card-row">
         <h2 class="inline">Blogs about Orlando</h2>
-        <button class="nobtndecor inline" id="autoLeft1">
-            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow"> <!--Using add icon as a placeholder for css purposes-->
-        </button>
-        <button class="nobtndecor inline" id="autoRight1">
-            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow"> <!--Using add icon as a placeholder for css purposes-->
-        </button>
         <p class="inline rightalign"><a href="" class="black">See All Orlando Blogs</a></p>
+        <div class="carouselInline">
+            <button class="nobtndecor" id="autoLeft1">
+                <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow carouselRight"> <!--Using add icon as a placeholder for css purposes-->
+            </button>
+            <section class="carousel" id="scroll1">
+                <div class="card" id="bC0"> <!--Naming Convention for cards bC0 = blog card 0-->
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 1</p> <!--Will worry about text styling later-->
+                </div>
+                <div class="card" id="bC1">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 2</p>
+                </div>
+                <div class="card" id="bC2">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 3</p>
+                </div>
+                <div class="card" id="bC3">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 4</p>
+                </div>
+                <div class="card" id="bC4">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 5</p>
+                </div>
+                <div class="card" id="bC5">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 6</p>
+                </div>
+                <div class="card" id="bC6">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 7</p>
+                </div>
+                <div class="card" id="bC7">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 8</p>
+                </div>
+            </section>
+            <button class="nobtndecor" id="autoRight1">
+                <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow carouselLeft"> <!--Using add icon as a placeholder for css purposes-->
+            </button>
+        </div>
         <!--Cards-->
-        <section class="carousel inline" id="scroll1">
-            <div class="card" id="bC0"> <!--Naming Convention for cards bC0 = blog card 0-->
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 1</p> <!--Will worry about text styling later-->
-            </div>
-            <div class="card" id="bC1">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 2</p>
-            </div>
-            <div class="card" id="bC2">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 3</p>
-            </div>
-            <div class="card" id="bC3">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 4</p>
-            </div>
-            <div class="card" id="bC4">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 5</p>
-            </div>
-            <div class="card" id="bC5">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 6</p>
-            </div>
-            <div class="card" id="bC6">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 7</p>
-            </div>
-            <div class="card" id="bC7">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 8</p>
-            </div>
-        </section>
     </section>
     <!--Ad Space-->
     <article class="adleaderboard">
@@ -166,94 +173,99 @@
     <!--Articles-->
     <section class="card-row">
         <h2 class="inline">Local Orlando Vibes</h2>
-        <button class="nobtndecor inline" id="autoLeft2">
-            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow"> <!--Using add icon as a placeholder for css purposes-->
-        </button>
-        <button class="nobtndecor inline" id="autoRight2">
-            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow"> <!--Using add icon as a placeholder for css purposes-->
-        </button>
         <p class="inline rightalign"><a href="" class="black">See All Orlando Articles</a></p>
         <!--Cards-->
-        <section class="carousel inline" id="scroll2">
-            <div class="card" id="aC0"> <!--Naming Convention for cards aC0 = articles card 0-->
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 1</p> <!--Will worry about text styling later-->
-            </div>
-            <div class="card" id="aC1">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 2</p>
-            </div>
-            <div class="card" id="aC2">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 3</p>
-            </div>
-            <div class="card" id="aC3">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 4</p>
-            </div>
-            <div class="card" id="aC4">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 5</p>
-            </div>
-            <div class="card" id="aC5">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 6</p>
-            </div>
-            <div class="card" id="aC6">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 7</p>
-            </div>
-            <div class="card" id="aC7">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 8</p>
-            </div>
-        </section>
+        <div class="carouselInline">
+            <button class="nobtndecor" id="autoLeft2">
+                <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow carouselLeft"> <!--Using add icon as a placeholder for css purposes-->
+            </button>
+            <section class="carousel" id="scroll2">
+                <div class="card" id="aC0"> <!--Naming Convention for cards aC0 = articles card 0-->
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 1</p> <!--Will worry about text styling later-->
+                </div>
+                <div class="card" id="aC1">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 2</p>
+                </div>
+                <div class="card" id="aC2">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 3</p>
+                </div>
+                <div class="card" id="aC3">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 4</p>
+                </div>
+                <div class="card" id="aC4">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 5</p>
+                </div>
+                <div class="card" id="aC5">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 6</p>
+                </div>
+                <div class="card" id="aC6">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 7</p>
+                </div>
+                <div class="card" id="aC7">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 8</p>
+                </div>
+            </section>
+            <button class="nobtndecor inline" id="autoRight2">
+                <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow carouselRight"> <!--Using add icon as a placeholder for css purposes-->
+            </button>
+        </div> 
     </section>
     <!--Preplanned-->
     <section class="card-row">
         <h2 class="inline">Preplanned Orlando Itineraries</h2>
-        <button class="nobtndecor inline" id="autoLeft3">
-            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow"> <!--Using add icon as a placeholder for css purposes-->
-        </button>
-        <button class="nobtndecor inline" id="autoRight3">
-            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow"> <!--Using add icon as a placeholder for css purposes-->
-        </button>
         <p class="inline rightalign"><a href="" class="black">See All preplanned Orlando Itineraries</a></p>
-        <!--Cards-->
-        <section class="carousel inline" id="scroll3">
-            <div class="card" id="piC0"> <!--Naming Convention for cards piC0 = preplanned itineraries card 0-->
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 1</p> <!--Will worry about text styling later-->
-            </div>
-            <div class="card" id="piC1">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 2</p>
-            </div>
-            <div class="card" id="piC2">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 3</p>
-            </div>
-            <div class="card" id="piC3">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 4</p>
-            </div>
-            <div class="card" id="piC4">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 5</p>
-            </div>
-            <div class="card" id="piC5">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 6</p>
-            </div>
-            <div class="card" id="piC6">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 7</p>
-            </div>
-            <div class="card" id="piC7">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Magic Kingdom 8</p>
-            </div>
-        </section>
+        <div class="carouselInline">
+            <button class="nobtndecor" id="autoLeft3">
+                <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow carouselLeft"> <!--Using add icon as a placeholder for css purposes-->
+            </button>        
+            <!--Cards-->
+            <section class="carousel" id="scroll3">
+                <div class="card" id="piC0"> <!--Naming Convention for cards piC0 = preplanned itineraries card 0-->
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 1</p> <!--Will worry about text styling later-->
+                </div>
+                <div class="card" id="piC1">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 2</p>
+                </div>
+                <div class="card" id="piC2">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 3</p>
+                </div>
+                <div class="card" id="piC3">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 4</p>
+                </div>
+                <div class="card" id="piC4">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 5</p>
+                </div>
+                <div class="card" id="piC5">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 6</p>
+                </div>
+                <div class="card" id="piC6">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 7</p>
+                </div>
+                <div class="card" id="piC7">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Magic Kingdom 8</p>
+                </div>
+            </section>
+            <button class="nobtndecor" id="autoRight3">
+                <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow carouselRight"> <!--Using add icon as a placeholder for css purposes-->
+            </button>
+        </div>
+        
     </section>
     <!--Ad Space-->
     <article class="adleaderboard">
