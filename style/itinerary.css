@@ -1,4 +1,7 @@
+/* split screen */
 * {
+    /* margin: 0; */
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -28,4 +31,99 @@
     content: none;
     display: table;
     clear: both;
+}
+
+/*  */
+#div2 {
+    width: 100%;
+    height: 140px;
+    padding: 10px;
+    border: 3px dashed #aaaaaa;
+    color: var(--darkgray);
+    background-color: var(--gray);
+}
+
+/* button  */
+.actButton {
+    margin-top: 3%;
+    margin-right: -100%;
+}
+.addACTButton {
+    cursor: pointer;
+    border: none;
+    color: var(--white);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    align-items: center;
+}
+.activityButton {
+    background-color: var(--white); 
+    color: var(--orange); 
+    border: 3px solid var(--orange);
+    border-radius: 25px;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+div.button1 {
+    align-items: center;
+    text-align: center;
+}
+.removeButton {
+    float: right;
+    padding: 2px;
+    padding-right: 2px;
+    border-radius: 15px;
+    border-color: var(--orange);
+    font-size: 12px;
+    color: var(--orange);
+    background-color: var(--white);
+}
+.resetDat {
+    float: right;
+    font-size: 12px;
+}
+.dragging {
+    background-color: var(--green);
+}
+.footer {
+    padding-right: 5px;
+}
+
+/* card */
+.card {
+    background-color: var(--green);
+}
+.body {
+    font-size: 16px;
+}
+
+.groups {
+    margin: 0 auto;
+    width: 125vw;
+    height: auto;
+    padding: 5px;
+}
+.groups li {
+    position:relative;
+    list-style: none;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.groups .card {
+    overflow: hidden;
+    display: block;
+}
+.groups .it-img {
+    float: left;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.groups .it-img .img{
+    width: 140px;
+    height: 130px;
+    display: block;
+    background-size: cover !important;
+    background-position: center;
 }
