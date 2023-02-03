@@ -1,0 +1,93 @@
+/*Small Screen Size*/
+@media only screen and (max-width: 1000px) {
+    .login-content {
+        grid-column: 1/12;
+        margin-top: 5vh;
+    }
+    .login-form {
+        margin-inline: 5vw;
+    }
+}
+
+/*Large Screen Size*/
+@media only screen and (min-width: 1000px) { 
+    .login-content { /*Also used for sign up and forgot password page*/
+        grid-column: 3/9;
+        margin-top: 10vh;
+    }
+}
+
+.form-items {
+    display: flex;
+    justify-content: center;
+}
+
+/*Text Styling*/
+.head-text {
+    padding-top: 20px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    text-align: center;
+}
+.head-desc {
+    margin-top: 0px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.form-labels {
+    margin: 0;
+}
+
+.box-size-long {
+    width: 300px;
+    height: 20px;
+}
+
+.box-size-short {
+    width: 140px;
+    height: 20px;
+}
+
+.box-pad {
+    margin-right: 9px
+}
+
+.buttons {
+    display: block;
+    margin-inline: auto;
+    margin-top: 10px;
+    background-color: white; 
+    color: var(--orange); 
+    border: 3px solid var(--orange);
+    border-radius: 25px;
+    font-size: 15px;
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.buttons:hover {
+    background-color: var(--orange);
+    color: white;
+}
+
+.forgotpw {
+    color: black;
+}
+
+.no-account {
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    margin: 0;
+}
+
+.or {
+    text-align: center;
+}
+
+.caption {
+    text-align: center;
+    font-size: 14px;
+}
