@@ -8,7 +8,7 @@
     --black: black; /*Text*/
 }
 
-/*Small Screens*/
+/*Small Screens!*/
 @media only screen and (max-width: 1000px) { 
     /*Grids*/
     .grid-container {
@@ -284,6 +284,7 @@
         height: 99%;
         background-color: #fff;
         border: 1px solid var(--gray);
+        border-radius: 3px;
     } 
     .image {
         width: 100%;
