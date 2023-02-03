@@ -3,5 +3,5 @@
     include("template/nav.html");
     include("template/header.html");
     include("pages/profile/profileBody.html");
-    include("template/footer.html");
+    //include("template/footer.html");
 ?>

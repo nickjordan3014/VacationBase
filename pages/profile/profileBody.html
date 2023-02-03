@@ -5,10 +5,10 @@
             <p class="username">USERNAME</p>
         </section>
         <section class="profile-navbar">
-            <button class="nobtndecor profile-nav">Itineraries</button>
-            <button class="nobtndecor profile-nav">Account</button>
-            <button class="nobtndecor profile-nav">About Us</button>
-            <button class="nobtndecor profile-nav">Rate & Review</button>
+            <button class="nobtndecor profile-nav" id="itineraries-link">Itineraries</button>
+            <button class="nobtndecor profile-nav" id="account-link">Account</button>
+            <button class="nobtndecor profile-nav" id="about-link">About Us</button>
+            <button class="nobtndecor profile-nav" id="rate-link">Rate & Review</button>
         </section>
         <hr class="hsline">
     </section>
@@ -45,8 +45,9 @@
             </div>
         </div>
     </section>
+
     <!--Account-->
-    <section id="account-sec" class="inner-content center-section">
+    <section id="account-sec" class="inner-content center-section invisible">
         <form action="accountsettings.php" class="profile-form">
             <!--First Name-->
             <dt>
@@ -83,8 +84,51 @@
             <button type="submit" class="account-submit">Save Changes</button>
         </form>
     </section>
+
     <!--About Us-->
-    <section id="about-us-sec"></section>
+    <section id="about-us-sec" class="inner-content about-us-text invisible">
+        <h1>Our Story</h1>
+        <h3>Who We Are</h3>
+        <p>Vacation Base is a one-stop shop for all of your itinerary planning needs!</p>
+
+        <h3>What We Provide</h3>
+        <p><span class="page-titles">Home Page: </span>Page Description</p>
+        <p><span class="page-titles">Search Page: </span>Page Description</p>
+        <p><span class="page-titles">Itinerary Page: </span>Page Description</p>
+        <p><span class="page-titles">IdeaBase Page: </span>Page Description</p>
+        
+    </section>
     <!--Rate & Review-->
-    <section id="rate-review-sec"></section>
+    <section id="rate-review-sec" class="inner-content center-section invisible">
+        <form action="review.php" class="profile-form">
+            <h3 class="center-text">Leave a review</h3>
+            <p>How are you liking your experience?</p>
+            <dt>
+                <label for="review">Name</label>
+            </dt>
+            <dd class="tb-container">
+                <input type="text" class="box">
+            </dd>
+            <dt>
+                <label for="review">Email</label>
+            </dt>
+            <dd class="tb-container">
+                <input type="text" class="box">
+            </dd>
+            <dt>
+                <label for="review">Review</label>
+            </dt>
+            <dd class="tb-container">
+                <input type="text" class="box tall">
+            </dd>
+            <div class="stars-in-box">
+                <img src="img/icons-VB/goldstar.png" alt="review star 1" id="star-1" class="star-size">
+                <img src="img/icons-VB/goldstar.png" alt="review star 1" id="star-2" class="star-size">
+                <img src="img/icons-VB/goldstar.png" alt="review star 1" id="star-3" class="star-size">
+                <img src="img/icons-VB/blackstar.png" alt="review star 1" id="star-4" class="star-size">
+                <img src="img/icons-VB/blackstar.png" alt="review star 1" id="star-5" class="star-size">
+            </div>
+            <button type="submit" class="account-submit">Save Changes</button>
+        </form>
+    </section>
 </section>
