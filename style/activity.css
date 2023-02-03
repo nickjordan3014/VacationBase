@@ -1,0 +1,71 @@
+/* Activity Page Content Styling */
+.margActivity {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.price-click{
+    display: flex;
+    width: 50%;
+}
+
+.priceOf {
+    flex: 1;
+    margin: 1%;
+}
+.priceOf p{
+    /* using 1.25vw for font-size worked but it gets too small and precise when the screen is minimized */
+    font-size: 20px;
+    
+}
+.actButton {
+    margin-top: 3%;
+    margin-right: -100%;
+}
+.addACTButton {
+    cursor: pointer;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.activityButton {
+    background-color: white; 
+    color: #FFc875; 
+    border: 3px solid #FFc875;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 10px 15px;
+}
+.actInfo {
+    font-size: 24px;
+}
+.actInfoTwo {
+    font-size: 18px;
+}
+.actInfoThree {
+    font-size: 14px;
+}
+.respImgAct {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.actWebLink:visited {
+    color: black;
+}
+.actWebLink:link {
+    color: black;
+}
+
+.recCapt {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.mapSize {
+    height: 100%;
+    width: 100%;
+    padding-top: 20px;
+}
