@@ -3,17 +3,42 @@
         <div class="rows">
             <div class="col">
                 <h1 class="head">Unadded Saved Activities</h1>
+                <p class="para">Drag An Event Onto Your Itinerary Plan And Select Your Dates</p>
                 <section>
-                    <div class="choice">
-                        <div class="it-container">
+                        <!-- <div class="dragBox"> -->
+                            <div id="div0" class="it-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <ul class="groups">
+                                    <li>
+                                        <!-- <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> -->
+                                            <!-- <img src="img/images/magickingdom.jpeg" alt="Magic Kingdom Castle"> -->
+                                            <div id="drag1" class="card" draggable="true" ondragstart="drag(event)">
+                                                <div class="it-img">
+                                                    <span class="img" style="background:url('img/images/magickingdom.jpeg') ;"></span>
+                                                    <!-- <img class="img" src="magickingdom.jpeg" alt=""> -->
+                                                </div>
+                                                <div class="it-data">
+                                                    <div class="body">
+                                                        <h2 class="title">
+                                                            Magic Kingdom
+                                                        </h2>
+                                                        <p>Magic Kingdom park is a theme park at...</p>
+                                                    </div>
+                                                    <div class="footer">
+                                                        <button type="button" class="removeButton">Remove</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <!-- </div> -->
+                                    </li>
+                                </ul>
+                            </div>
+                        <!-- </div> -->
+                        <!-- <div id="div1" class="it-container" ondrop="drop(event)" ondragover="allowDrop(event)">
                             <ul class="groups">
                                 <li>
-                                    <!-- <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> -->
-                                        <!-- <img src="img/images/magickingdom.jpeg" alt="Magic Kingdom Castle"> -->
-                                        <card class="card" draggable="true">
+                                        <div class="card" id="drag2" draggable="true" ondragstart="drag(event)">
                                             <div class="it-img">
                                                 <span class="img" style="background:url('img/images/magickingdom.jpeg') ;"></span>
-                                                <!-- <img class="img" src="magickingdom.jpeg" alt=""> -->
                                             </div>
                                             <div class="it-data">
                                                 <div class="body">
@@ -26,39 +51,10 @@
                                                     <button type="button" class="removeButton">Remove</button>
                                                 </div>
                                             </div>
-                                        </card>
-                                    <!-- </div> -->
+                                        </div>
                                 </li>
                             </ul>
-                        </div>
-
-                        <div class="it-container">
-                            <ul class="groups">
-                                <li>
-                                    <!-- <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> -->
-                                        <!-- <img src="img/images/magickingdom.jpeg" alt="Magic Kingdom Castle"> -->
-                                        <card class="card" draggable="true">
-                                            <div class="it-img">
-                                                <span class="img" style="background:url('img/images/magickingdom.jpeg') ;"></span>
-                                                <!-- <img class="img" src="magickingdom.jpeg" alt=""> -->
-                                            </div>
-                                            <div class="it-data">
-                                                <div class="body">
-                                                    <h2 class="title">
-                                                        Magic Kingdom
-                                                    </h2>
-                                                    <p>Magic Kingdom park is a theme park at...</p>
-                                                </div>
-                                                <div class="footer">
-                                                    <button type="button" class="removeButton">Remove</button>
-                                                </div>
-                                            </div>
-                                        </card>
-                                    <!-- </div> -->
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                        </div> -->
                 </section>
                 
             </div>
@@ -113,7 +109,7 @@
                         </ul>
                     </div>
                     <!-- UNCOMMENT THIS TO PUT BACK IN PLACE -->
-                    <div class="choice" id="div2"></div>
+                    <div class="choice" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><p class="dropText">Drop Here</p></div>
                     <!-- <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div> -->
                 </section>
                 <section>

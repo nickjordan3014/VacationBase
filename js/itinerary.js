@@ -39,59 +39,90 @@
 // }
   
 // function drag(ev) {
-//     ev.dataTransfer.setData("text", ev.target.id);
+//     ev.dataTransfer.setData("text/plain", ev.target.id);
 // }
   
 // function drop(ev) {
 //     ev.preventDefault();
-//     var data = ev.dataTransfer.getData("text");
+//     var data = ev.dataTransfer.getData("text/plain");
+//     console.log('hello');
 //     console.log(data);
 //     ev.target.appendChild(document.getElementById(data));
-//     // var s = document.createElement('div');
+//     // var s = document.createElement('div1');
 //     // s.innerHTML = document.getElementById(data).innerHTML;
 //     // document.getElementById('div1').appendChild(s);
 // }
 
-var card = document.getElementsByTagName('card');
-var choice = document.getElementsByClassName('choice');
-console.log(card);
-var dragItem = null;
+// var card = document.getElementsByTagName('card');
+// var choice = document.getElementsByClassName('choice');
+// console.log(card);
+// var dragItem = null;
 
-for (var i of card){
-    i.addEventListener('dragstart',dragStart);
-    i.addEventListener('dragend', dragEnd);
-}
+// for (var i of card){
+//     console.log(i);
+//     i.addEventListener('dragstart',dragStart);
+//     i.addEventListener('dragend', dragEnd);
+// }
 
-function dragStart(){
-    dragItem = this;
-    setTimeout(()=>this.style.display = "none", 0);
-}
+// function dragStart(){
+//     console.log('start');
+//     dragItem = this;
+//     setTimeout(()=>this.style.display = "none", 0);
+// }
 
-function dragEnd(){
-    setTimeout(()=>this.style.display = "block", 0);
-    dragItem = null;
-}
+// function dragEnd(){
+//     setTimeout(()=>this.style.display = "block", 0);
+//     dragItem = null;
+// }
 
-for (var j of choice){
-    j.addEventListener('dragover', dragOver);
-    j.addEventListener('dragenter', dragEnter);
-    j.addEventListener('dragleave', dragLeave);
-    j.addEventListener('drop', Drop);
-}
+// for (var j of choice){
+//     j.addEventListener('dragover', dragOver);
+//     j.addEventListener('dragenter', dragEnter);
+//     j.addEventListener('dragleave', dragLeave);
+//     j.addEventListener('drop', Drop);
+// }
 
-function Drop(){
-    this.append(dragItem);
-}
+// function Drop(){
+//     console.log(dragItem);
+//     this.append(dragItem);
+// }
 
-function dragOver(e){
-    e.preventDefault();
-}
+// function dragOver(e){
+//     e.preventDefault();
+// }
 
-function dragEnter(e){
-    e.preventDefault();
-}
+// function dragEnter(e){
+//     e.preventDefault();
+// }
 
-function dragLeave(){
+// function dragLeave(){
     
-}
+// }
 
+// const cards = document.querySelectorAll('.card')
+// const col = document.querySelectorAll('.col')
+
+// cards.forEach(card => {
+//     card.addEventListener('dragstart', dragStart)
+//     card.addEventListener('dragend', dragEnd)
+// });
+
+// function dragStart() {
+//     console.log('drag started');
+// }
+// function dragEnd() {
+//     console.log('drag ended');
+// }
+function allowDrop(ev) {
+    ev.preventDefault();
+  }
+  
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+  
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
