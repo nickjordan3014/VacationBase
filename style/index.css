@@ -1,0 +1,77 @@
+/*<-------------------- Home Logo and Search -------------------->*/
+
+
+.logo {
+    width: 20rem;
+    vertical-align: -20px;
+}
+.nobtndecor {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+.searchbox {
+    width: 10rem;
+    height: 1.5rem;
+}
+.searchlabel {
+    display: block;
+    text-align: left;
+}
+.searchico {
+    width: 2rem;
+    vertical-align: -10px;
+}
+.hsline {
+    width: 100%;
+    margin-inline: auto;
+}
+
+
+
+/*<-------------------- Carousel* -------------------->*/
+
+.card-row { /* houses everything in row: the carousel, its cards, descriptive text etc */
+    margin-top: 20px;
+}
+.inline {
+    display: inline-block;
+}
+.black{
+    color: black; /* .black?? are we serious lmao */
+}
+.actPage {
+    text-decoration: none;
+}
+.actPage:visited {
+    color: black;
+}
+
+/*<-------------------- Forms -------------------->*/
+
+.filter-form {
+    background-color: var(--green);
+    border: 1px var(--gray) solid;
+    border-radius: 2px;
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.filter-label {
+    display: block;
+}
+
+.filter-text {
+    width: 2rem;
+    height: 1.5rem
+}
+
+
+/* ITINERARY STYLING */
+.trip {
+    font-size: 28px;
+}

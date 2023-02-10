@@ -1,40 +1,57 @@
-/*<-------------------- Main Body -------------------->*/
+/*<-------------------- COLOR VARIABLES -------------------->*/
+
 :root {
-    --gray: #d9d9d9; /*Borders and Lines*/
-    --darkgray: #555; /*Gray Text*/
-    --pink: #F291D0; /*Nav Icons, Captions, etc.*/
-    --orange: #FFBD59; /*Actions, Buttons, Links*/
-    --green: #e2f0d9; /*Fields, Footer*/
-    --white: white; /*Background*/
-    --black: black; /*Text*/
+    --gray: #d9d9d9;    /*Borders and Lines*/
+    --darkgray: #555;   /*Gray Text*/
+    --pink: #F291D0;    /*Nav Icons, Captions, etc.*/
+    --orange: #FFBD59;  /*Actions, Buttons, Links*/
+    --green: #e2f0d9;   /*Fields, Footer*/
+    --white: white;     /*Background*/
+    --black: black;     /*Text*/
 }
 
-/*Fonts*/
+/*<-------------------- NON-UNIVERSAL CSS -------------------->*/
 
-h1, h2, h3, h4 {
+@import "activity.css";     /* houses css specific to activity and blog pages */
+@import "ideabase.css";     /* houses css specific to ideabase page */
+@import "index.css";        /* houses css specific to homepage */
+@import "itinerary.css";    /* houses css specific to itinerary page */
+@import "login.css";        /* houses css specific to login, signup, and forgotpw pages */
+@import "profile.css";      /* houses css specific to profile page */
+@import "search.css";       /* houses css specific to search page */
+@import "template.css";     /* houses css for nav, login status, and footer */
+
+@import "responsive.css";   /* !!!! sunsetting; rehome all css to appropriate files !!!! */
+
+/*<-------------------- FONTS -------------------->*/
+
+h1 {    /* is for ____ */
     font-family: source-serif-pro, serif;
     font-weight: 400;
-}
-
-h1 {
     font-size: 32px;
 }
 
-h2 {
+h2 {    /* is for ____ */
+    font-family: source-serif-pro, serif;
+    font-weight: 400;
     font-size: 26px;
 }
 
-h3 {
+h3 {    /* is for ____ */
+    font-family: source-serif-pro, serif;
+    font-weight: 400;
     font-size: 26px;
 }
 
-h4 {
+h4 {    /* is for ____ */
+    font-family: source-serif-pro, serif;
+    font-weight: 400;
     font-size: 22;
     margin: 5px;
     padding: 0;
 }
 
-p, .captions, label, button , ul, li{
+p, .captions, label, button , ul, li{   /* is for all paragraph-style text */
     font-family: open-sans, arial, sans-serif;
     font-weight: 400;
 }
@@ -47,111 +64,9 @@ p, label, button {
     font-size: 14px;
 }
 
+/*<-------------------- PAGE AND CSS GRID -------------------->*/
+
 body {
     margin: 0;
     padding: 0;
-}
-
-/*<-------------------- Home Logo and Search -------------------->*/
-
-
-.logo {
-    width: 20rem;
-    vertical-align: -20px;
-}
-.nobtndecor {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-}
-.searchbox {
-    width: 10rem;
-    height: 1.5rem;
-}
-.searchlabel {
-    display: block;
-    text-align: left;
-}
-.searchico {
-    width: 2rem;
-    vertical-align: -10px;
-}
-.hsline {
-    width: 100%;
-    margin-inline: auto;
-}
-
-
-
-/*<-------------------- Carousel* -------------------->*/
-
-.card-row { /* houses everything in row: the carousel, its cards, descriptive text etc */
-    margin-top: 20px;
-}
-.inline {
-    display: inline-block;
-}
-.black{
-    color: black; /* .black?? are we serious lmao */
-}
-.actPage {
-    text-decoration: none;
-}
-.actPage:visited {
-    color: black;
-}
-
-/*<-------------------- Footer -------------------->*/
-
-footer {
-    width: calc(84% - 40px);
-    height: 30px;
-    margin-top: 20px;
-    padding-left: calc(8% + 20px);
-    padding-right: calc(8% + 20px);
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: var(--green);
-}
-
-.footer-item {
-    margin: 0px 20px 0px 20px;
-    float: left;
-}
-.footer-item-right {
-    margin: 0px 20px 0px 20px;
-    float: right;
-}
-.footer-icon {
-    margin: -10px 20px 0px 0px;
-    float: left;
-}
-
-/*<-------------------- Forms -------------------->*/
-
-.filter-form {
-    background-color: var(--green);
-    border: 1px var(--gray) solid;
-    border-radius: 2px;
-    margin-top: 40px;
-    padding: 10px;
-}
-
-.filter-label {
-    display: block;
-}
-
-.filter-text {
-    width: 2rem;
-    height: 1.5rem
-}
-
-
-/* ITINERARY STYLING */
-.trip {
-    font-size: 28px;
 }
