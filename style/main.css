@@ -1,3 +1,5 @@
+/* Houses CSS called by multiple/all pages: colors & fonts, page & CSS grid, cards & carousels  */
+
 /*<-------------------- COLOR VARIABLES -------------------->*/
 
 :root {
@@ -9,19 +11,6 @@
     --white: white;     /*Background*/
     --black: black;     /*Text*/
 }
-
-/*<-------------------- NON-UNIVERSAL CSS -------------------->*/
-
-@import "activity.css";     /* houses css specific to activity and blog pages */
-@import "ideabase.css";     /* houses css specific to ideabase page */
-@import "index.css";        /* houses css specific to homepage */
-@import "itinerary.css";    /* houses css specific to itinerary page */
-@import "login.css";        /* houses css specific to login, signup, and forgotpw pages */
-@import "profile.css";      /* houses css specific to profile page */
-@import "search.css";       /* houses css specific to search page */
-@import "template.css";     /* houses css for nav, login status, and footer */
-
-@import "responsive.css";   /* !!!! sunsetting; rehome all css to appropriate files !!!! */
 
 /*<-------------------- FONTS -------------------->*/
 
@@ -35,6 +24,7 @@ h2 {    /* is for ____ */
     font-family: source-serif-pro, serif;
     font-weight: 400;
     font-size: 26px;
+    margin-bottom: 0;
 }
 
 h3 {    /* is for ____ */
@@ -62,6 +52,7 @@ p, label, button {
 
 .captions {
     font-size: 14px;
+    color: var(--darkgray);
 }
 
 /*<-------------------- PAGE AND CSS GRID -------------------->*/
@@ -69,4 +60,219 @@ p, label, button {
 body {
     margin: 0;
     padding: 0;
+    background-color: var(--green);
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .grid-container {
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+        padding-bottom: 20px;
+        background-color: #fcfcfc;
+    }
+    .main-content {
+        grid-column: 2/12;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 20px;
+    }
+    .inner-content {
+        grid-column: 2/10;
+    }
+    .search-content { /*FOR SEARCH PAGE*/
+        grid-column: 2/8;
+    }
+    .searchpagebox { /*FOR SEARCH PAGE*/
+        width: 40vw;
+        height: 1.5rem;
+    } 
+    .filter-content {   /*FOR SEARCH PAGE*/
+        grid-column: 9/12;
+    }
+    .rightalign {
+        float: right;
+        font-style: italic;
+    }
+    .mobileLogo {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .grid-container {
+        margin: auto;
+        display: grid;
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+    .main-content {
+        grid-column: 1/12;
+        margin: auto;
+        display: grid;
+        gap: 10px;
+    }
+    .inner-content {
+        grid-column: 1/12;
+        margin: 10px;
+    }
+    .search-content { /*FOR SEARCH PAGE*/
+        grid-column: 1/12;
+        margin: 10px;
+    }
+    .searchpagebox { /*FOR SEARCH PAGE*/
+        width: 70vw;
+        height: 1.5rem;
+    } 
+    .filter-content {   /*FOR SEARCH PAGE*/
+        display: none;
+    }
+    .mobileLogo {
+        position: relative;
+        width: 15rem;
+        display: block;
+        margin-left: 0;
+    }
+}
+
+/*<-------------------- CARDS AND CAROUSELS -------------------->*/
+
+@media only screen and (min-width: 1000px) {
+
+    .carousel {
+        overflow-x: hidden;
+        white-space: nowrap;
+        width: 100%;
+    }
+    .carouselInline {
+        display: inline-flex;
+        width: 65vw;
+        align-items: center;
+        justify-content: center;
+    }
+    .carouselArrow {
+        display: absolute;
+        padding: 10px;
+        width: 30px;
+        cursor: pointer; 
+    }
+    .carouselRight {
+        float: right;
+    }
+    .carouselLeft {
+       float: left;
+    }
+
+    .logo-area {
+        display: inline-block;
+        margin: auto;
+        margin-top: 15px;
+        text-align: center;
+    } 
+    .card { 
+        display: inline-block;
+        margin: 0px 5px 0px 5px;
+        width: calc(25% - 15px);
+        height: 99%;
+        background-color: #fff;
+        border: 1px solid var(--gray);
+        border-radius: 3px;
+    } 
+    .clickcard p{
+        margin-top: -20px;
+    }
+    .image {
+        width: 100%;
+        height: 100%;
+        background-color: gray;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .carousel {
+        overflow-x: scroll;
+        white-space: nowrap;
+        width: 92vw;
+    }
+    .carouselArrow {
+        display: none;
+    }
+    .carouselArrow {
+        display: none;
+    }
+
+    .logo-area {
+        display: block;
+        margin-top: 15px;
+        text-align: left;
+    } 
+    .logo {
+        margin-left: -1rem;
+    }
+
+
+    .card { 
+        display: inline-block;
+        margin: 0px 5px 0px 5px;
+        width: 200px;
+        height: 150px;
+        background-color: #fff;
+        border: 1px solid var(--gray);
+    } 
+    .image {
+        width: 200px;
+        height: 150px;
+        background-color: gray;
+    }
+}
+
+/*<-------------------- ADS -------------------->*/
+
+@media only screen and (min-width: 1000px) {
+
+    .adleaderboard {
+        margin: auto;
+        height: 90px;
+        width: 970px;
+        background-color: var(--gray);
+    }
+    .adleaderboardTwo {
+        margin: auto;
+        height: 160px;
+        width: 850px;
+        background-color: var(--gray);
+    }
+    .ad-banner {
+        margin: auto;
+        height: 180px;
+        width: 930px;
+        background-color: var(--gray);
+    }
+    .sa {
+        margin: auto;
+        height: 600px;
+        width: 300px;
+        background-color: var(--gray);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .adleaderboard {
+        display: none;
+    }
+    .ad-banner {
+        display: none;
+    }
+    .ad-halfpage {
+        margin: auto;
+        height: 600px;
+        width: 300px;
+        background-color: var(--gray);
+    }
 }

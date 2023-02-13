@@ -1,25 +1,133 @@
-/*<-------------------- Footer -------------------->*/
+/* Houses CSS for nav, loginstatus, and footer templates */
 
-footer {
-    width: calc(84% - 40px);
-    height: 30px;
-    margin-top: 20px;
-    padding-left: calc(8% + 20px);
-    padding-right: calc(8% + 20px);
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: var(--green);
+/*<-------------------- NAV -------------------->*/
+
+@media only screen and (min-width: 1000px) {
+
+    nav {  /* note: width is to simulate grid column, as "position: fixed;" seems to overrule it */
+        grid-column: 1/2;
+        position: fixed;
+        height: 100%;
+        width: 8%;
+        min-width: 100px;
+        border-right: solid;
+        border-width: 2px;
+        border-color: var(--gray);
+        background-color: white;
+    }
+    .nav-home {
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+    }
+    .nav-item {
+        display: block;
+        margin: auto;
+        padding-bottom: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .nav-p { /* Styles nav text */
+        margin-top: -20px;
+        padding-top: 16px;
+        text-align: center;
+        color: black;
+    }
+    .nav-a {
+        text-decoration: none;
+    }
+    .nav-img {
+        width: 100%;
+    }
 }
 
-.footer-item {
-    margin: 0px 20px 0px 20px;
-    float: left;
+@media only screen and (max-width: 1000px) { 
+
+    nav { 
+        background-color: white;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        border: 2px var(--gray) solid;
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-p { /* Styles nav text */
+        display: none;
+    }
+    .nav-img {
+        height: 50px;
+    }
 }
-.footer-item-right {
-    margin: 0px 20px 0px 20px;
-    float: right;
+
+/*<-------------------- LOGIN STATUS -------------------->*/
+
+@media only screen and (min-width: 1000px) {
+
+    .login-status {
+        position: absolute;
+        right: 15px;
+    }
 }
-.footer-icon {
-    margin: -10px 20px 0px 0px;
-    float: left;
+
+@media only screen and (max-width: 1000px) {
+
+    .login-status {
+        position: absolute;
+        right: 5px;
+        display: none;
+    }
+}
+
+/*<-------------------- FOOTER -------------------->*/
+
+@media only screen and (min-width: 1000px) {
+
+    footer {
+        width: 100%;
+        padding-left: calc(8%);
+        padding-right: calc(8%);
+        padding-top: 40px;
+        padding-bottom: 80px;
+        background-color: var(--green);
+    }
+    .footer-item {
+        margin: 0px 0px 0px 20px;
+        float: left;
+    }
+    .footer-item-right {
+        margin: 0px 20px 0px 0px;
+        float: right;
+    }
+    .footer-icon {
+        margin: -10px 20px 0px 0px;
+        float: left;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    footer {
+        width: 100%;
+        padding-left: calc(8%);
+        padding-right: calc(8%);
+        padding-top: 40px;
+        padding-bottom: 220px;
+        background-color: var(--green);
+    }
+    .footer-item {
+        margin: 0px 20px 10px 0px;
+        float: left;
+    }
+    .footer-item-right {
+        margin: 30px 20px 0px 0px;
+        float: right;
+    }
+    .footer-icon {
+        margin: 20px 20px 0px 0px;
+        float: left;
+    }
 }

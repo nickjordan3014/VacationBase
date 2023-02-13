@@ -1,3 +1,5 @@
+/* Houses CSS specific to log-in, sign-up, and forgotpw pages */
+
 /*Small Screen Size*/
 @media only screen and (max-width: 1000px) {
     .login-content {

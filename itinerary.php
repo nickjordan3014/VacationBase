@@ -4,4 +4,5 @@
     include("template/nav.html");
     include("template/loginStatus.html");
     include("pages/itinerary/itineraryBody.html");
+    include("template/footer.html");
 ?>

@@ -1,3 +1,5 @@
+/* Houses CSS specific to search page */
+
 @media only screen and (min-width: 1000px) {
     .search-card {
         height: 200px;
