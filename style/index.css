@@ -33,26 +33,6 @@
     margin-inline: auto;
 }
 
-
-
-/*<-------------------- Carousel* -------------------->*/
-
-.card-row { /* houses everything in row: the carousel, its cards, descriptive text etc */
-    margin-top: 20px;
-}
-.inline {
-    display: inline-block;
-}
-.black{
-    color: black; /* .black?? are we serious lmao */
-}
-.actPage {
-    text-decoration: none;
-}
-.actPage:visited {
-    color: black;
-}
-
 /*<-------------------- Forms -------------------->*/
 
 .filter-form {

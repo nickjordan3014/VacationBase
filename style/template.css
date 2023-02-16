@@ -92,7 +92,7 @@
         padding-right: calc(8%);
         padding-top: 40px;
         padding-bottom: 80px;
-        background-color: var(--green);
+        background-color: var(--offwhite);
     }
     .footer-item {
         margin: 0px 0px 0px 20px;
@@ -116,7 +116,7 @@
         padding-right: calc(8%);
         padding-top: 40px;
         padding-bottom: 220px;
-        background-color: var(--green);
+        background-color: var(--offwhite);
     }
     .footer-item {
         margin: 0px 20px 10px 0px;

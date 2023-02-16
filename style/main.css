@@ -3,13 +3,14 @@
 /*<-------------------- COLOR VARIABLES -------------------->*/
 
 :root {
-    --gray: #d9d9d9;    /*Borders and Lines*/
-    --darkgray: #555;   /*Gray Text*/
-    --pink: #F291D0;    /*Nav Icons, Captions, etc.*/
-    --orange: #FFBD59;  /*Actions, Buttons, Links*/
-    --green: #e2f0d9;   /*Fields, Footer*/
-    --white: white;     /*Background*/
-    --black: black;     /*Text*/
+    --pink: #F291D0;        /* Nav Icons, Captions, etc. */
+    --orange: #FFBD59;      /* Actions, Buttons, Links */
+    --green: #e2f0d9;       /* Backgrounds */
+    --white: white;         /* Backgrounds */
+    --offwhite: #fcfcfc;    /* Backgrounds */
+    --gray: #d9d9d9;        /* Borders and Lines */
+    --darkgray: #555;       /* Text */    
+    --black: black;         /* Text */
 }
 
 /*<-------------------- FONTS -------------------->*/
@@ -19,20 +20,17 @@ h1 {    /* is for ____ */
     font-weight: 400;
     font-size: 32px;
 }
-
 h2 {    /* is for ____ */
     font-family: source-serif-pro, serif;
     font-weight: 400;
     font-size: 26px;
     margin-bottom: 0;
 }
-
 h3 {    /* is for ____ */
     font-family: source-serif-pro, serif;
     font-weight: 400;
     font-size: 26px;
 }
-
 h4 {    /* is for ____ */
     font-family: source-serif-pro, serif;
     font-weight: 400;
@@ -45,14 +43,17 @@ p, .captions, label, button , ul, li{   /* is for all paragraph-style text */
     font-family: open-sans, arial, sans-serif;
     font-weight: 400;
 }
-
 p, label, button {
     font-size: 16px;
 }
-
 .captions {
     font-size: 14px;
     color: var(--darkgray);
+}
+
+a {
+    font-weight: 400;
+    /* color: var(--orange); */
 }
 
 /*<-------------------- PAGE AND CSS GRID -------------------->*/
@@ -71,7 +72,7 @@ body {
         grid-template-columns: repeat(12, 1fr);
         gap: 20px;
         padding-bottom: 20px;
-        background-color: #fcfcfc;
+        background-color: var(--offwhite);
     }
     .main-content {
         grid-column: 2/12;
@@ -140,6 +141,22 @@ body {
 }
 
 /*<-------------------- CARDS AND CAROUSELS -------------------->*/
+
+.card-row { /* houses everything in row: the carousel, its cards, descriptive text etc */
+    margin-top: 20px;
+}
+.inline {
+    display: inline-block;
+}
+.black{
+    color: black; /* .black?? are we serious lmao */
+}
+.actPage {
+    text-decoration: none;
+}
+.actPage:visited {
+    color: black;
+}
 
 @media only screen and (min-width: 1000px) {
 
