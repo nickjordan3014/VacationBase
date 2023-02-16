@@ -17,7 +17,7 @@
         width: 250px;
         height: 250px;
         background-color: #fff;
-        border: 1px solid var(--gray);
+        border: 1px solid $gray;
     } 
     .ideabase-image {
         width: 250px;
@@ -34,6 +34,6 @@
     .ideabase-image {
         width: 100%;
         height: 100%;
-        background-color: gray;
+        background-color: $gray;
     }
 }

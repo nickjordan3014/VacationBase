@@ -12,7 +12,7 @@
         min-width: 100px;
         border-right: solid;
         border-width: 2px;
-        border-color: var(--gray);
+        border-color: $gray;
         background-color: white;
     }
     .nav-home {
@@ -51,7 +51,7 @@
         position: fixed;
         bottom: 0;
         width: 100%;
-        border: 2px var(--gray) solid;
+        border: 2px $gray solid;
         display: flex;
         justify-content: space-between;
     }
@@ -92,7 +92,7 @@
         padding-right: calc(8%);
         padding-top: 40px;
         padding-bottom: 80px;
-        background-color: var(--offwhite);
+        background-color: $offwhite;
     }
     .footer-item {
         margin: 0px 0px 0px 20px;
@@ -116,7 +116,7 @@
         padding-right: calc(8%);
         padding-top: 40px;
         padding-bottom: 220px;
-        background-color: var(--offwhite);
+        background-color: $offwhite;
     }
     .footer-item {
         margin: 0px 20px 10px 0px;

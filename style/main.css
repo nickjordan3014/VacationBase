@@ -1,295 +1,1072 @@
-/* Houses CSS called by multiple/all pages: colors & fonts, page & CSS grid, cards & carousels  */
-
-/*<-------------------- COLOR VARIABLES -------------------->*/
-
-:root {
-    --pink: #F291D0;        /* Nav Icons, Captions, etc. */
-    --orange: #FFBD59;      /* Actions, Buttons, Links */
-    --green: #e2f0d9;       /* Backgrounds */
-    --white: white;         /* Backgrounds */
-    --offwhite: #fcfcfc;    /* Backgrounds */
-    --gray: #d9d9d9;        /* Borders and Lines */
-    --darkgray: #555;       /* Text */    
-    --black: black;         /* Text */
-}
-
+/*<-------------------- COLOR VARIABLES -------------------->*/ /* Houses CSS called by multiple/all pages: colors & fonts, page & CSS grid, cards & carousels  */
 /*<-------------------- FONTS -------------------->*/
-
-h1 {    /* is for ____ */
-    font-family: source-serif-pro, serif;
-    font-weight: 400;
-    font-size: 32px;
-}
-h2 {    /* is for ____ */
-    font-family: source-serif-pro, serif;
-    font-weight: 400;
-    font-size: 26px;
-    margin-bottom: 0;
-}
-h3 {    /* is for ____ */
-    font-family: source-serif-pro, serif;
-    font-weight: 400;
-    font-size: 26px;
-}
-h4 {    /* is for ____ */
-    font-family: source-serif-pro, serif;
-    font-weight: 400;
-    font-size: 22;
-    margin: 5px;
-    padding: 0;
+h1 { /* is for ____ */
+  font-family: source-serif-pro, serif;
+  font-weight: 400;
+  font-size: 32px;
 }
 
-p, .captions, label, button , ul, li{   /* is for all paragraph-style text */
-    font-family: open-sans, arial, sans-serif;
-    font-weight: 400;
+h2 { /* is for ____ */
+  font-family: source-serif-pro, serif;
+  font-weight: 400;
+  font-size: 26px;
+  margin-bottom: 0;
 }
+
+h3 { /* is for ____ */
+  font-family: source-serif-pro, serif;
+  font-weight: 400;
+  font-size: 26px;
+}
+
+h4 { /* is for ____ */
+  font-family: source-serif-pro, serif;
+  font-weight: 400;
+  font-size: 22;
+  margin: 5px;
+  padding: 0;
+}
+
+p, .captions, label, button, ul, li { /* is for all paragraph-style text */
+  font-family: open-sans, arial, sans-serif;
+  font-weight: 400;
+}
+
 p, label, button {
-    font-size: 16px;
+  font-size: 16px;
 }
+
 .captions {
-    font-size: 14px;
-    color: var(--darkgray);
+  font-size: 14px;
+  color: #555;
 }
 
 a {
-    font-weight: 400;
-    /* color: var(--orange); */
+  font-weight: 400;
+  /* color: $orange; */
 }
 
 /*<-------------------- PAGE AND CSS GRID -------------------->*/
-
 body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--green);
+  margin: 0;
+  padding: 0;
+  /*background-color: $green;*/
 }
 
 @media only screen and (min-width: 1000px) {
-
-    .grid-container {
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 20px;
-        padding-bottom: 20px;
-        background-color: var(--offwhite);
-    }
-    .main-content {
-        grid-column: 2/12;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        gap: 20px;
-    }
-    .inner-content {
-        grid-column: 2/10;
-    }
-    .search-content { /*FOR SEARCH PAGE*/
-        grid-column: 2/8;
-    }
-    .searchpagebox { /*FOR SEARCH PAGE*/
-        width: 40vw;
-        height: 1.5rem;
-    } 
-    .filter-content {   /*FOR SEARCH PAGE*/
-        grid-column: 9/12;
-    }
-    .rightalign {
-        float: right;
-        font-style: italic;
-    }
-    .mobileLogo {
-        display: none;
-    }
+  .grid-container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    padding-bottom: 20px;
+    background-color: #fcfcfc;
+  }
+  .main-content {
+    grid-column: 2/12;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 20px;
+  }
+  .inner-content {
+    grid-column: 2/10;
+  }
+  .search-content { /*FOR SEARCH PAGE*/
+    grid-column: 2/8;
+  }
+  .searchpagebox { /*FOR SEARCH PAGE*/
+    width: 40vw;
+    height: 1.5rem;
+  }
+  .filter-content { /*FOR SEARCH PAGE*/
+    grid-column: 9/12;
+  }
+  .rightalign {
+    float: right;
+    font-style: italic;
+  }
+  .mobileLogo {
+    display: none;
+  }
 }
-
 @media only screen and (max-width: 1000px) {
-
-    .grid-container {
-        margin: auto;
-        display: grid;
-        gap: 10px;
-        padding-bottom: 20px;
-    }
-    .main-content {
-        grid-column: 1/12;
-        margin: auto;
-        display: grid;
-        gap: 10px;
-    }
-    .inner-content {
-        grid-column: 1/12;
-        margin: 10px;
-    }
-    .search-content { /*FOR SEARCH PAGE*/
-        grid-column: 1/12;
-        margin: 10px;
-    }
-    .searchpagebox { /*FOR SEARCH PAGE*/
-        width: 70vw;
-        height: 1.5rem;
-    } 
-    .filter-content {   /*FOR SEARCH PAGE*/
-        display: none;
-    }
-    .mobileLogo {
-        position: relative;
-        width: 15rem;
-        display: block;
-        margin-left: 0;
-    }
+  .grid-container {
+    margin: auto;
+    display: grid;
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+  .main-content {
+    grid-column: 1/12;
+    margin: auto;
+    display: grid;
+    gap: 10px;
+  }
+  .inner-content {
+    grid-column: 1/12;
+    margin: 10px;
+  }
+  .search-content { /*FOR SEARCH PAGE*/
+    grid-column: 1/12;
+    margin: 10px;
+  }
+  .searchpagebox { /*FOR SEARCH PAGE*/
+    width: 70vw;
+    height: 1.5rem;
+  }
+  .filter-content { /*FOR SEARCH PAGE*/
+    display: none;
+  }
+  .mobileLogo {
+    position: relative;
+    width: 15rem;
+    display: block;
+    margin-left: 0;
+  }
 }
-
 /*<-------------------- CARDS AND CAROUSELS -------------------->*/
-
 .card-row { /* houses everything in row: the carousel, its cards, descriptive text etc */
-    margin-top: 20px;
+  margin-top: 20px;
 }
+
 .inline {
-    display: inline-block;
+  display: inline-block;
 }
-.black{
-    color: black; /* .black?? are we serious lmao */
+
+.black {
+  color: black; /* .black?? are we serious lmao */
 }
+
 .actPage {
-    text-decoration: none;
+  text-decoration: none;
 }
+
 .actPage:visited {
-    color: black;
+  color: black;
 }
 
 @media only screen and (min-width: 1000px) {
-
-    .carousel {
-        overflow-x: hidden;
-        white-space: nowrap;
-        width: 100%;
-    }
-    .carouselInline {
-        display: inline-flex;
-        width: 65vw;
-        align-items: center;
-        justify-content: center;
-    }
-    .carouselArrow {
-        display: absolute;
-        padding: 10px;
-        width: 30px;
-        cursor: pointer; 
-    }
-    .carouselRight {
-        float: right;
-    }
-    .carouselLeft {
-       float: left;
-    }
-
-    .logo-area {
-        display: inline-block;
-        margin: auto;
-        margin-top: 15px;
-        text-align: center;
-    } 
-    .card { 
-        display: inline-block;
-        margin: 0px 5px 0px 5px;
-        width: calc(25% - 15px);
-        height: 99%;
-        background-color: #fff;
-        border: 1px solid var(--gray);
-        border-radius: 3px;
-    } 
-    .clickcard p{
-        margin-top: -20px;
-    }
-    .image {
-        width: 100%;
-        height: 100%;
-        background-color: gray;
-    }
+  .carousel {
+    overflow-x: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  .carouselInline {
+    display: inline-flex;
+    width: 65vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .carouselArrow {
+    display: absolute;
+    padding: 10px;
+    width: 30px;
+    cursor: pointer;
+  }
+  .carouselRight {
+    float: right;
+  }
+  .carouselLeft {
+    float: left;
+  }
+  .logo-area {
+    display: inline-block;
+    margin: auto;
+    margin-top: 15px;
+    text-align: center;
+  }
+  .card {
+    display: inline-block;
+    margin: 0px 5px 0px 5px;
+    width: calc(25% - 15px);
+    height: 99%;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+  }
+  .clickcard p {
+    margin-top: -20px;
+  }
+  .image {
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+  }
 }
-
 @media only screen and (max-width: 1000px) {
-
-    .carousel {
-        overflow-x: scroll;
-        white-space: nowrap;
-        width: 92vw;
-    }
-    .carouselArrow {
-        display: none;
-    }
-    .carouselArrow {
-        display: none;
-    }
-
-    .logo-area {
-        display: block;
-        margin-top: 15px;
-        text-align: left;
-    } 
-    .logo {
-        margin-left: -1rem;
-    }
-
-
-    .card { 
-        display: inline-block;
-        margin: 0px 5px 0px 5px;
-        width: 200px;
-        height: 150px;
-        background-color: #fff;
-        border: 1px solid var(--gray);
-    } 
-    .image {
-        width: 200px;
-        height: 150px;
-        background-color: gray;
-    }
+  .carousel {
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 92vw;
+  }
+  .carouselArrow {
+    display: none;
+  }
+  .carouselArrow {
+    display: none;
+  }
+  .logo-area {
+    display: block;
+    margin-top: 15px;
+    text-align: left;
+  }
+  .logo {
+    margin-left: -1rem;
+  }
+  .card {
+    display: inline-block;
+    margin: 0px 5px 0px 5px;
+    width: 200px;
+    height: 150px;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+  }
+  .image {
+    width: 200px;
+    height: 150px;
+    background-color: gray;
+  }
 }
-
 /*<-------------------- ADS -------------------->*/
-
 @media only screen and (min-width: 1000px) {
+  .adleaderboard {
+    margin: auto;
+    height: 90px;
+    width: 970px;
+    background-color: #d9d9d9;
+  }
+  .adleaderboardTwo {
+    margin: auto;
+    height: 160px;
+    width: 850px;
+    background-color: #d9d9d9;
+  }
+  .ad-banner {
+    margin: auto;
+    height: 180px;
+    width: 930px;
+    background-color: #d9d9d9;
+  }
+  .sa {
+    margin: auto;
+    height: 600px;
+    width: 300px;
+    background-color: #d9d9d9;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .adleaderboard {
+    display: none;
+  }
+  .ad-banner {
+    display: none;
+  }
+  .ad-halfpage {
+    margin: auto;
+    height: 600px;
+    width: 300px;
+    background-color: #d9d9d9;
+  }
+}
+/* Houses CSS specific to homepage */
+/*<-------------------- Home Logo and Search -------------------->*/
+.logo {
+  width: 20rem;
+  vertical-align: -20px;
+}
 
-    .adleaderboard {
-        margin: auto;
-        height: 90px;
-        width: 970px;
-        background-color: var(--gray);
-    }
-    .adleaderboardTwo {
-        margin: auto;
-        height: 160px;
-        width: 850px;
-        background-color: var(--gray);
-    }
-    .ad-banner {
-        margin: auto;
-        height: 180px;
-        width: 930px;
-        background-color: var(--gray);
-    }
-    .sa {
-        margin: auto;
-        height: 600px;
-        width: 300px;
-        background-color: var(--gray);
-    }
+.nobtndecor {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.searchbox {
+  width: 10rem;
+  height: 1.5rem;
+}
+
+.searchlabel {
+  display: block;
+  text-align: left;
+}
+
+.searchico {
+  width: 2rem;
+  vertical-align: -10px;
+}
+
+.hsline {
+  width: 100%;
+  margin-inline: auto;
+}
+
+/*<-------------------- Forms -------------------->*/
+.filter-form {
+  background-color: #e2f0d9;
+  border: 1px #d9d9d9 solid;
+  border-radius: 2px;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.filter-label {
+  display: block;
+}
+
+.filter-text {
+  width: 2rem;
+  height: 1.5rem;
+}
+
+/* ITINERARY STYLING */
+.trip {
+  font-size: 28px;
+}
+
+/* Houses CSS for nav, loginstatus, and footer templates */
+/*<-------------------- NAV -------------------->*/
+@media only screen and (min-width: 1000px) {
+  nav { /* note: width is to simulate grid column, as "position: fixed;" seems to overrule it */
+    grid-column: 1/2;
+    position: fixed;
+    height: 100%;
+    width: 8%;
+    min-width: 100px;
+    border-right: solid;
+    border-width: 2px;
+    border-color: #d9d9d9;
+    background-color: white;
+  }
+  .nav-home {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+  .nav-item {
+    display: block;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .nav-p { /* Styles nav text */
+    margin-top: -20px;
+    padding-top: 16px;
+    text-align: center;
+    color: black;
+  }
+  .nav-a {
+    text-decoration: none;
+  }
+  .nav-img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  nav {
+    background-color: white;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border: 2px #d9d9d9 solid;
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-p { /* Styles nav text */
+    display: none;
+  }
+  .nav-img {
+    height: 50px;
+  }
+}
+/*<-------------------- LOGIN STATUS -------------------->*/
+@media only screen and (min-width: 1000px) {
+  .login-status {
+    position: absolute;
+    right: 15px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .login-status {
+    position: absolute;
+    right: 5px;
+    display: none;
+  }
+}
+/*<-------------------- FOOTER -------------------->*/
+@media only screen and (min-width: 1000px) {
+  footer {
+    width: 100%;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    background-color: #fcfcfc;
+  }
+  .footer-item {
+    margin: 0px 0px 0px 20px;
+    float: left;
+  }
+  .footer-item-right {
+    margin: 0px 20px 0px 0px;
+    float: right;
+  }
+  .footer-icon {
+    margin: -10px 20px 0px 0px;
+    float: left;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  footer {
+    width: 100%;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 40px;
+    padding-bottom: 220px;
+    background-color: #fcfcfc;
+  }
+  .footer-item {
+    margin: 0px 20px 10px 0px;
+    float: left;
+  }
+  .footer-item-right {
+    margin: 30px 20px 0px 0px;
+    float: right;
+  }
+  .footer-icon {
+    margin: 20px 20px 0px 0px;
+    float: left;
+  }
+}
+/* Houses CSS specific to activity and blog pages */
+/* Activity Page Content Styling */
+.margActivity {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.price-click {
+  display: flex;
+  width: 50%;
+}
+
+.priceOf {
+  flex: 1;
+  margin: 1%;
+}
+
+.priceOf p {
+  /* using 1.25vw for font-size worked but it gets too small and precise when the screen is minimized */
+  font-size: 20px;
+}
+
+.actButton {
+  margin-top: 3%;
+  margin-right: -100%;
+}
+
+.addACTButton {
+  cursor: pointer;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.activityButton {
+  background-color: white;
+  color: #FFc875;
+  border: 3px solid #FFc875;
+  border-radius: 25px;
+  font-size: 15px;
+  padding: 10px 15px;
+}
+
+.actInfo {
+  font-size: 24px;
+}
+
+.actInfoTwo {
+  font-size: 18px;
+}
+
+.actInfoThree {
+  font-size: 14px;
+}
+
+.respImgAct {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.actWebLink:visited {
+  color: black;
+}
+
+.actWebLink:link {
+  color: black;
+}
+
+.recCapt {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.mapSize {
+  height: 100%;
+  width: 100%;
+  padding-top: 20px;
+}
+
+/* Houses CSS specific to ideabase page */
+.ideabase-heading {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.ideabase-info {
+  padding-top: 5px;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 1000px) {
-
-    .adleaderboard {
-        display: none;
-    }
-    .ad-banner {
-        display: none;
-    }
-    .ad-halfpage {
-        margin: auto;
-        height: 600px;
-        width: 300px;
-        background-color: var(--gray);
-    }
+  .ideabase-card {
+    display: inline-block;
+    margin: 0px 5px 0px 5px;
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+  }
+  .ideabase-image {
+    width: 250px;
+    height: 250px;
+  }
 }
+@media only screen and (min-width: 1000px) {
+  .ideabase-card {
+    display: inline-block;
+    margin: 0px 5px 0px 5px;
+    width: calc(25% - 15px);
+    height: 100%;
+  }
+  .ideabase-image {
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9d9;
+  }
+}
+/* Houses CSS specific to itinerary page */
+/* split screen */
+* {
+  /* margin: 0; */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.head {
+  text-align: center;
+}
+
+.para {
+  text-align: center;
+}
+
+.col {
+  float: left;
+  width: 50%;
+  padding: 12px;
+}
+
+.rows::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  width: 50%;
+  padding: 10px;
+  height: auto;
+  float: left;
+}
+
+.row::after {
+  content: none;
+  display: table;
+  clear: both;
+}
+
+.dragBox {
+  width: 100%;
+  height: 140px;
+  padding: 10px;
+  border: 3px solid #aaaaaa;
+  color: #555;
+}
+
+/*  */
+#div2 {
+  width: 100%;
+  height: 140px;
+  padding: 10px;
+  border: 3px dashed #aaaaaa;
+  color: #555;
+  background-color: #d9d9d9;
+}
+
+/* .dHere {
+    text-align: center;
+} */
+p.dropText {
+  font-size: 25px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+/* button  */
+.actButton {
+  margin-top: 3%;
+  margin-right: -100%;
+}
+
+.addACTButton {
+  cursor: pointer;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  align-items: center;
+}
+
+.activityButton {
+  background-color: white;
+  color: #FFBD59;
+  border: 3px solid #FFBD59;
+  border-radius: 25px;
+  font-size: 18px;
+  padding: 10px 15px;
+}
+
+div.button1 {
+  align-items: center;
+  text-align: center;
+}
+
+.removeButton {
+  float: right;
+  padding: 2px;
+  padding-right: 2px;
+  border-radius: 15px;
+  border-color: #FFBD59;
+  font-size: 12px;
+  color: #FFBD59;
+  background-color: white;
+}
+
+.resetDat {
+  float: right;
+  font-size: 12px;
+}
+
+.dragging {
+  background-color: #e2f0d9;
+}
+
+.footer {
+  padding-right: 5px;
+}
+
+/* card */
+.itcard {
+  background-color: #e2f0d9;
+}
+
+.itbody {
+  font-size: 16px;
+}
+
+.groups {
+  margin: 0 auto;
+  width: 30vw;
+  height: auto;
+  padding: 5px;
+}
+
+.groups li {
+  position: relative;
+  list-style: none;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.groups .itcard {
+  overflow: hidden;
+  display: block;
+}
+
+.groups .it-img {
+  float: left;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.groups .it-img .img {
+  width: 140px;
+  height: 130px;
+  display: block;
+  background-size: cover !important;
+  background-position: center;
+}
+
+/* Houses CSS specific to log-in, sign-up, and forgotpw pages */
+/*Small Screen Size*/
+@media only screen and (max-width: 1000px) {
+  .login-content {
+    grid-column: 1/12;
+    margin-top: 5vh;
+  }
+  .login-form {
+    margin-inline: 5vw;
+  }
+}
+/*Large Screen Size*/
+@media only screen and (min-width: 1000px) {
+  .login-content { /*Also used for sign up and forgot password page*/
+    grid-column: 3/9;
+    margin-top: 10vh;
+  }
+}
+.form-items {
+  display: flex;
+  justify-content: center;
+}
+
+/*Text Styling*/
+.head-text {
+  padding-top: 20px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.head-desc {
+  margin-top: 0px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.form-labels {
+  margin: 0;
+}
+
+.box-size-long {
+  width: 300px;
+  height: 20px;
+}
+
+.box-size-short {
+  width: 140px;
+  height: 20px;
+}
+
+.box-pad {
+  margin-right: 9px;
+}
+
+.buttons {
+  display: block;
+  margin-inline: auto;
+  margin-top: 10px;
+  background-color: white;
+  color: #FFBD59;
+  border: 3px solid #FFBD59;
+  border-radius: 25px;
+  font-size: 15px;
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.buttons:hover {
+  background-color: #FFBD59;
+  color: white;
+}
+
+.forgotpw {
+  color: black;
+}
+
+.no-account {
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  margin: 0;
+}
+
+.or {
+  text-align: center;
+}
+
+.caption {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Houses CSS specific to profile page */
+/*Top of Profile Page*/
+.profile-pic {
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+  width: 200px;
+}
+
+.username {
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.profile-nav:hover {
+  text-decoration: underline;
+}
+
+/*Bottom of Profile Page*/
+.invisible {
+  display: none !important;
+}
+
+.itinerary-header {
+  text-align: center;
+}
+
+.center-section {
+  display: block;
+  margin: auto;
+}
+
+/*small screen*/
+@media only screen and (max-width: 1000px) {
+  .profile-split-left {
+    grid-column: 1/12;
+  }
+  .profile-split-right {
+    grid-column: 1/12;
+  }
+  .profile-nav {
+    font-size: 18px;
+    width: 20vw;
+  }
+}
+/*big screen*/
+@media only screen and (min-width: 1000px) {
+  .profile-split-left {
+    grid-column: 2/5;
+  }
+  .profile-split-right {
+    grid-column: 6/10;
+  }
+  .profile-nav {
+    font-size: 20px;
+    width: 15vw;
+  }
+}
+/*Itineraries Cards*/
+.itinerary-card {
+  display: grid;
+  grid-template-columns: 120px 140px 140px;
+  margin: auto;
+  width: 400px;
+  height: 95px;
+  background-color: var(--green);
+}
+
+.itinerary-card-img {
+  grid-column: 1/span 1;
+  padding-top: 10px;
+  margin-left: 10px;
+  width: 100px;
+  height: 75px;
+}
+
+.card-col {
+  grid-column: auto/span 1;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
+.card-date {
+  font-style: italic;
+  margin-top: 0;
+}
+
+.card-remove {
+  font-style: italic;
+  padding-right: 5px;
+  padding-top: 20px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.icons {
+  width: 25px;
+}
+
+.card-icons {
+  padding-top: 5px;
+  padding-left: 80px;
+}
+
+.share-icon {
+  width: 25px;
+  padding-top: 5px;
+  padding-left: 110px;
+}
+
+.card-button {
+  color: white;
+  background-color: var(--orange);
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  margin-top: 25px;
+  margin-left: 35px;
+}
+
+/*Account Settings Styling*/
+.profile-form {
+  background-color: var(--green);
+  padding: 25px;
+}
+
+.icon-container {
+  margin: 0;
+}
+
+.user-icons {
+  width: 50px;
+  cursor: pointer;
+}
+
+.tb-container {
+  margin: 0;
+}
+
+.box {
+  width: 250px;
+}
+
+.account-submit {
+  display: block;
+  margin: auto;
+  background-color: var(--green);
+  color: var(--orange);
+  border: 3px solid var(--orange);
+  border-radius: 25px;
+  font-size: 15px;
+  padding: 10px 15px;
+}
+
+.account-submit:hover {
+  color: white;
+  background-color: var(--orange);
+}
+
+/*About Us section*/
+.page-titles {
+  font-weight: bold;
+}
+
+.about-us-text {
+  margin-inline: 5%;
+}
+
+/*Reviews*/
+.center-text {
+  text-align: center;
+}
+
+.tall {
+  height: 100px;
+}
+
+.stars-in-box {
+  display: inline-block;
+  margin: auto;
+}
+
+.star-size {
+  width: 40px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+/* Houses CSS specific to search page */
+@media only screen and (min-width: 1000px) {
+  .search-card {
+    height: 200px;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    margin-top: 20px;
+    border-radius: 3px;
+  }
+  .search-image {
+    height: 100%;
+    float: left;
+  }
+  .search-card-content {
+    float: left;
+    padding: 0px 10px 0px 10px;
+    margin-top: -20px;
+  }
+  .subtext {
+    color: #555;
+    font-size: 18;
+    font-style: italic;
+    margin-top: -20px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .search-card {
+    height: 200px;
+    border: 1px solid #d9d9d9;
+    margin-top: 20px;
+    border-radius: 3px;
+  }
+  .search-image {
+    height: 100%;
+    float: left;
+  }
+  .search-card-content {
+    float: left;
+    padding: 0px 10px 0px 10px;
+    margin-top: -20px;
+  }
+  .subtext {
+    color: #555;
+    font-size: 18;
+    font-style: italic;
+    margin-top: -20px;
+  }
+}/*# sourceMappingURL=main.css.map */

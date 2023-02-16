@@ -4,7 +4,7 @@
     .search-card {
         height: 200px;
         width: 100%;
-        border: 1px solid var(--gray);
+        border: 1px solid $gray;
         margin-top: 20px;
         border-radius: 3px;
     }
@@ -27,7 +27,7 @@
 @media only screen and (max-width: 1000px) { 
     .search-card {
         height: 200px;
-        border: 1px solid var(--gray);
+        border: 1px solid $gray;
         margin-top: 20px;
         border-radius: 3px;
     }
