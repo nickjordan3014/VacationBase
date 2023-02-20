@@ -19,12 +19,13 @@ h3 { /* is for ____ */
   font-size: 26px;
 }
 
-h4 { /* is for ____ */
-  font-family: source-serif-pro, serif;
-  font-weight: 400;
-  font-size: 22;
-  margin: 5px;
-  padding: 0;
+h4 { /* is for Card Titling*/
+  font-family: open-sans, arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0px 5px 0px 5px;
+  overflow-x: hidden;
+  white-space: nowrap;
 }
 
 p, .captions, label, button, ul, li { /* is for all paragraph-style text */
@@ -39,6 +40,9 @@ p, label, button {
 .captions {
   font-size: 14px;
   color: #555;
+  margin: 5px;
+  overflow-x: hidden;
+  white-space: nowrap;
 }
 
 a {
@@ -126,103 +130,91 @@ body {
   }
 }
 /*<-------------------- CARDS AND CAROUSELS -------------------->*/
-.card-row { /* houses everything in row: the carousel, its cards, descriptive text etc */
+/* houses everything in row */
+.card-row {
+  width: 100%;
   margin-top: 20px;
+  position: relative;
 }
 
-.inline {
-  display: inline-block;
+/* text above cards */
+.row-title {
+  float: left;
+  margin-bottom: 10px;
+  padding-left: 4px;
 }
 
-.black {
-  color: black; /* .black?? are we serious lmao */
-}
-
-.actPage {
-  text-decoration: none;
-}
-
-.actPage:visited {
+.row-link {
+  float: right;
+  margin-top: 12px;
+  padding-right: 4px;
   color: black;
 }
 
-@media only screen and (min-width: 1000px) {
-  .carousel {
-    overflow-x: hidden;
-    white-space: nowrap;
-    width: 100%;
-  }
-  .carouselInline {
-    display: inline-flex;
-    width: 65vw;
-    align-items: center;
-    justify-content: center;
-  }
-  .carouselArrow {
+/* the scrolling part and its toggles */
+.carousel {
+  width: 100%;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.caro-btn-left {
+  border: none;
+  background: none;
+  position: absolute;
+  left: -70px;
+  top: calc(50% - 50px);
+  width: 60px;
+  height: 100px;
+}
+
+.caro-btn-right {
+  border: none;
+  background: none;
+  position: absolute;
+  right: -70px;
+  top: calc(50% - 50px);
+  width: 60px;
+  height: 100px;
+}
+
+/* the cards and content within */
+.card {
+  display: inline-block;
+  margin: 0px 5px 0px 5px;
+  background-color: #fff;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+}
+
+@media only screen and (min-width: 1000px) { /* desktop screens */
+  .caro-arrow {
     display: absolute;
     padding: 10px;
-    width: 30px;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
   }
-  .carouselRight {
-    float: right;
-  }
-  .carouselLeft {
-    float: left;
-  }
-  .logo-area {
-    display: inline-block;
-    margin: auto;
-    margin-top: 15px;
-    text-align: center;
-  }
   .card {
-    display: inline-block;
-    margin: 0px 5px 0px 5px;
     width: calc(25% - 15px);
-    height: 99%;
-    background-color: #fff;
-    border: 1px solid #d9d9d9;
-    border-radius: 3px;
   }
-  .clickcard p {
-    margin-top: -20px;
-  }
-  .image {
+  .card-image {
     width: 100%;
     height: 100%;
     background-color: gray;
   }
 }
-@media only screen and (max-width: 1000px) {
-  .carousel {
-    overflow-x: scroll;
-    white-space: nowrap;
-    width: 92vw;
-  }
-  .carouselArrow {
+@media only screen and (max-width: 1000px) { /* mobile screens */
+  .caro-arrow {
     display: none;
-  }
-  .carouselArrow {
-    display: none;
-  }
-  .logo-area {
-    display: block;
-    margin-top: 15px;
-    text-align: left;
-  }
-  .logo {
-    margin-left: -1rem;
   }
   .card {
-    display: inline-block;
-    margin: 0px 5px 0px 5px;
     width: 200px;
     height: 150px;
-    background-color: #fff;
-    border: 1px solid #d9d9d9;
   }
-  .image {
+  .card-image {
     width: 200px;
     height: 150px;
     background-color: gray;
@@ -267,6 +259,24 @@ body {
     height: 600px;
     width: 300px;
     background-color: #d9d9d9;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .logo-area {
+    display: inline-block;
+    margin: auto;
+    margin-top: 15px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .logo-area {
+    display: block;
+    margin-top: 15px;
+    text-align: left;
+  }
+  .logo {
+    margin-left: -1rem;
   }
 }
 /* Houses CSS specific to homepage */

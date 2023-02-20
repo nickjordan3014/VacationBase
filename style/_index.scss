@@ -1,3 +1,24 @@
+// this was in caro css for some reason. dumping it here until it can be put where it belongs
+@media only screen and (min-width: 1000px) {
+    .logo-area {
+        display: inline-block;
+        margin: auto;
+        margin-top: 15px;
+        text-align: center;
+    } 
+}
+@media only screen and (max-width: 1000px) {
+    .logo-area {
+        display: block;
+        margin-top: 15px;
+        text-align: left;
+    } 
+    .logo {
+        margin-left: -1rem;
+    }
+}
+
+
 /* Houses CSS specific to homepage */
 
 /*<-------------------- Home Logo and Search -------------------->*/
