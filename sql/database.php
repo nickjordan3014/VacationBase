@@ -5,52 +5,24 @@
     $password = "";
     $database = "events";
 
-    // Global connection
-    $connection = null;
-
-    function connect() {
-        global $server;
-        global $username;
-        global $password;
-        global $database;
-        global $connection;
-
-        // Is $connection null?
-        // If so, connect to the database server.
-        // If not, do nothing (because the connection already exists).
-        if($connection == null) {
-            // Connect to server
-            $connection = mysqli_connect($server, $username, $password, $database);
-        }
+    try{
+        // this library makes security issues go away so that people cannot hijack, code attack or delete our DB
+        // this manages our connection
+        $db = new PDO("mysql:host={$servername};dbname={$database}",$username, $password);
+        // writing sql statements to pull, fetch, and insert data
+        // setting up attributes to help us troubleshoot exceptions
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }
+    catch(PDOEXCEPTION $e){
+        echo $e->getMessage();
     }
 
-    // building a function that is supposed to collect all the event names from the database that are listed themePark = Y and return those
-    function theme_parks(){
-        // Use global $connection locally.
-        global $connection;
-        
-         // Is $connection null?
-         // If so, do nothing (because a connection has not been made yet).
-        if($connection != null) {
-
-            $query = "SELECT `event_name` FROM `orlando_florida` WHERE `isThemePark`= "Y"; ";
-            $results = mysqli_query($connection, $query);
-
-            // For every row, generate a new HTML row.
-            while($row = mysqli_fetch_assoc($results)) {
-                echo(<>"<p>" . $row["event_name"] . "</p>");
-            }
+    // if a user is already logged in, instead of taking the user to the log in/sign up forms, it will redirect them home
+    function authRedirect(){
+         // if the session variable is set and we have a user parameter
+        if(isset($_SESSION['user'])){
+            // redirect to this location
+            header("location: index.php");
         }
     }
-
-    function close() {
-        // Use the global $connection
-        global $connection;
-
-        // Unlike connect(), we test for a value *not* equal to null.
-        if($connection != null) {
-            // Close the connection
-            mysqli_close($connection);
-        }
-    }
-?>
+    
