@@ -3,6 +3,8 @@
         <section>
             <img src="img/icons-VB/orange_icon.png" alt="Profile Picture" class="profile-pic">
             <p class="username">USERNAME</p>
+
+            <a href="logout.php"><button class="logout_btn">Log Out</button></a>
         </section>
         <section class="profile-navbar">
             <button class="nobtndecor profile-nav" id="itineraries-link">Itineraries</button>

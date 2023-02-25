@@ -1,8 +1,9 @@
 <?php
+    include("phpconnect/connSearch.php");
     include("template/head.html");
-    include("pages/search/searchHead.html");
+    include("pages/search/searchHead.php");
     include("template/nav.html");
-    include("template/loginStatus.html");
-    include("pages/search/searchBody.html");
+    include("template/loginStatus.php");
+    include("pages/search/searchBody.php");
     include("template/footer.html");
 ?>

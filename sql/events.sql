@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 30, 2023 at 08:06 AM
+-- Generation Time: Feb 22, 2023 at 12:20 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -20,6 +20,23 @@ SET time_zone = "+00:00";
 --
 -- Database: `events`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `accounts`
+--
+
+CREATE TABLE `accounts` (
+  `id` int(11) NOT NULL,
+  `first_name` char(255) NOT NULL,
+  `last_name` char(255) NOT NULL,
+  `email` char(255) NOT NULL,
+  `password` char(255) NOT NULL,
+  `profile_pic` char(255) DEFAULT NULL,
+  `saved_itin` varchar(1000) DEFAULT NULL,
+  `prev_purch` varchar(1000) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -67,6 +84,12 @@ INSERT INTO `orlando_florida` (`id`, `event_name`, `images`, `address`, `url`, `
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `accounts`
+--
+ALTER TABLE `accounts`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `orlando_florida`

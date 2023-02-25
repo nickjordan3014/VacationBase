@@ -1,8 +1,7 @@
 <?php
     include("template/head.html");
-    include("pages/profile/profileHead.html");
+    include("pages/profile/profileHead.php");
     include("template/nav.html");
-    include("template/loginStatus.html");
-    include("pages/profile/profileBody.html");
+    include("pages/profile/profileBody.php");
     include("template/footer.html");
 ?>

@@ -1,8 +1,9 @@
 <?php
+    include("phpconnect/connActivity.php");
     include("template/head.html");
-    include("pages/activity/activityHead.html");
+    include("pages/activity/activityHead.php");
     include("template/nav.html");
-    include("template/loginStatus.html");
-    include("pages/activity/activityBody.html");
+    include("template/loginStatus.php");
+    include("pages/activity/activityBody.php");
     include("template/footer.html");
 ?>

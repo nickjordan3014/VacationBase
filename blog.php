@@ -1,8 +1,9 @@
 <?php
+    include("phpconnect/connBlog.php");
     include("template/head.html");
-    include("pages/blogs/blogHead.html");
+    include("pages/blogs/blogHead.php");
     include("template/nav.html");
-    include("template/loginStatus.html");
-    include("pages/blogs/blogBody.html");
+    include("template/loginStatus.php");
+    include("pages/blogs/blogBody.php");
     include("template/footer.html");
 ?>
