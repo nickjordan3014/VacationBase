@@ -7,15 +7,12 @@
     <div class="margActivity">
         <!-- ARTICLE HEADER -->
         <section class="activity-title">
-            <?php
-                echo("hello");
-            ?>
             <h1>Magic Kingdom Park</h1>
         </section>
 
         <!-- IMAGE SECTION -->
         <section class="image-sec">
-            <img src="img/images/magickingdombackup.jpeg" class="mapSize" alt="Magic Kingdom Castle">
+            <img src="img/images/magickingdom/magickingdom5.jpg" class="mapSize" alt="Magic Kingdom Castle">
            
         </section>
 

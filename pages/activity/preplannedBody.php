@@ -12,7 +12,7 @@
 
         <!-- IMAGE SECTION -->
         <section class="image-sec">
-            <img src="img/images/magickingdombackup.jpeg" class="mapSize" alt="Magic Kingdom Castle">
+            <img src="img/images/magickingdom/magickingdom5.jpg" class="mapSize" alt="Magic Kingdom Castle">
            
         </section>
 
