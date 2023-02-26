@@ -1,9 +1,14 @@
+<?php
+    if(isset($_SESSION['user'])){
+?>
+
 <section class="main-content">
     <section class="inner-content">
         <section>
             <img src="img/icons-VB/orange_icon.png" alt="Profile Picture" class="profile-pic">
-            <p class="username">USERNAME</p>
-
+            <?php
+                echo("<p class='username'><b>".$_SESSION['user']['firstName']." ".$_SESSION['user']['lastName']."</b></p>");
+            ?>
             <a href="logout.php"><button class="logout_btn">Log Out</button></a>
         </section>
         <section class="profile-navbar">
@@ -127,3 +132,13 @@
         </form>
     </section>
 </section>
+<?php
+    }
+?>
+<?php
+    if(!isset($_SESSION['user'])){
+        header("location: signup.php");
+?>
+<?php
+   }
+?>

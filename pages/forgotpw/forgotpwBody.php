@@ -21,7 +21,10 @@
                     <button type="submit" class="buttons" name="fp_btn">Send Link</button>
                 </form>
             </div>
+            <br>
             <p class="no-account">Already a member? <a href="login.php" class="loginhere">Sign In</a></p>
+            <br>
+            <br>
             <p class="caption">By proceeding, you agree to our Terms of Use and confirm you have read our Privacy and Cookie Statement. This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
     </div>
 </section></section>

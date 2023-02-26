@@ -12,8 +12,8 @@
         
         // filtering/sanitizing the variables prior to storage to make sure these variables are simply
         // what the data is asking for and not any code injections or attacks
-        $firstName = htmlspecialchars($_REQUEST['firstName']);
-        $lastName = htmlspecialchars($_REQUEST['lastName']);
+        $firstName = htmlspecialchars(ucwords($_REQUEST['firstName']));
+        $lastName = htmlspecialchars(ucwords($_REQUEST['lastName']));
         $emailAddress = filter_var(strtolower($_REQUEST['emailAddress']), FILTER_SANITIZE_EMAIL);
         $pass = strip_tags($_REQUEST['pass']);
         $newpass = strip_tags($_REQUEST['newpass']);

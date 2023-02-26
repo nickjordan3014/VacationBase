@@ -14,7 +14,7 @@
             <section>
                 <img class="mapSize" src="img/images/magickingdombackup.jpeg" alt="Magic Kingdom Castle">
             </section>
-
+            <br>
             <section>
                 <p>Orlando's theme parks offer a magical and unforgettable experience 
                     for visitors of all ages. With world-renowned attractions, thrilling 
@@ -25,11 +25,13 @@
                     entertainment options, and endless fun, visiting Orlando's theme parks is 
                     a must-do experience.
                 </p>
+                <br>
                 <p>
                     <h3>Orlando’s Amazing Theme Parks</h3>
                 </p>
+                <br>
                 <p>
-                    <a href="blog.php">Magic Kingdom</a> is a theme park at Walt Disney World Resort in Florida. 
+                    <a href="blog.php" style="color: black;font-weight:bold;text-decoration:none">Magic Kingdom</a> is a theme park at Walt Disney World Resort in Florida. 
                     It is the most visited theme park in the world, with an average annual 
                     attendance of over 20 million visitors. The park is divided into several 
                     themed lands, such as Adventureland, Fantasyland, Frontierland, Liberty Square, 
@@ -42,8 +44,9 @@
                     nightly fireworks shows, parades and special events throughout the year. It is a 
                     must-see destination for families and Disney fans.
                 </p>
+                <br>
                 <p>
-                    <a href="blog.php">Universal Studios Florida</a> is a theme park located at Universal Orlando Resort 
+                    <a href="blog.php" style="color: black;font-weight:bold;text-decoration:none">Universal Studios Florida</a> is a theme park located at Universal Orlando Resort 
                     in Florida. It is one of the most popular theme parks in the world, known for its 
                     immersive experiences and thrilling attractions. The park is divided into several 
                     different areas, each with its own theme, such as Hollywood, Production Central, 
@@ -56,8 +59,9 @@
                     Universal Studios Florida also offers a variety of dining options, from quick-service 
                     restaurants to sit-down dining experiences. It's a perfect destination for movie and TV fans.
                 </p>
+                <br>
                 <p>
-                    <a href="blog.php">SeaWorld Orlando</a> is a marine-life based theme park located in Orlando, Florida. 
+                    <a href="blog.php" style="color: black;font-weight:bold;text-decoration:none">SeaWorld Orlando</a> is a marine-life based theme park located in Orlando, Florida. 
                     It is one of the most popular theme parks in the area, known for its variety of 
                     animal exhibits, shows, and attractions. Visitors can explore the park and see a 
                     wide range of marine animals, such as killer whales, dolphins, sharks, and sea 
@@ -70,8 +74,9 @@
                     dining experiences. It is a perfect destination for families, animal lovers and those 
                     who love marine life.
                 </p>
+                <br>
                 <p>
-                    <a href="blog.php">LEGOLAND Florida</a> is a theme park located in Winter Haven, Florida. It is a 
+                    <a href="blog.php" style="color: black;font-weight:bold;text-decoration:none">LEGOLAND Florida</a> is a theme park located in Winter Haven, Florida. It is a 
                     popular destination for families with children, as it features over 50 rides, shows, 
                     and attractions all built entirely out of LEGOs. The park is divided into several 
                     themed areas, such as Lego City, Imagination Zone, and Land of Adventure. Visitors 
@@ -84,6 +89,7 @@
                     dining experiences. It's a perfect destination for families with children, especially 
                     those who love LEGOs.
                 </p>
+                <br>
             </section>
         </div>
 

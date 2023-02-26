@@ -35,12 +35,9 @@
                 ]);
                 // if theer's an email match, we bring all of the data in for that user and make sure the password matches
                 $row = $select_statement->fetch(PDO::FETCH_ASSOC);
-
-                echo("here after row assignment");
                 
                 // if there was a row returned, then we can check the password (if not greater than 0, the user doesnt exist in the database)
                 if($select_statement->rowCount() > 0){
-                    echo("password match");
                     // if this is true, the passwords match
                     if(password_verify($pass, $row['password'])){
 
@@ -55,12 +52,10 @@
 
                     }
                     else{
-                        echo("Wrong password did not match");
                         $errorMsg[2][] = 'Wrong email or password';
                     }
                 }
                 else{
-                    echo("Wrong 2");
                     $errorMsg[2][] = 'Wrong email or password';
                 }
             }

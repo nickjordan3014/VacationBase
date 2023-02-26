@@ -112,11 +112,30 @@
         </button>
 
     <section class="carousel" id="scroll0">
-        <div class="card" id="tpC0"> <!--Naming Convention for cards tpC0 = theme park card 0-->
+            <!-- DYNAMIC CARD CODE -->
+            <?php
+                // $ctr = 0;
+                // foreach($results AS $result){
+                //     $img = $result["img1"];
+                //     $name = $result["event_name"];
+                //     echo(
+                //         "<div class='card' id='tpC$ctr' title='$name'>
+                //             <a class='actPage' href='activity.php'>
+                //                 <div class='clickCard'>
+                //                     <img class='image' src='img/images/$img' alt='Magic Kingdom Castle'>
+                //                     <p>".$result["event_name"]."</p>
+                //                 </div>
+                //             </a>
+                //         </div>"
+                //     );
+                //     $ctr = $ctr+1;
+                // }
+            ?>
+        <div class="card" id="tpC0">
             <a class= "actPage" href="activity.php">
                 <div class="clickCard">
                     <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom Park</p> <!--Will worry about text styling later-->
+                    <p>Magic Kingdom Park</p>
                 </div>
             </a>
         </div>
@@ -125,7 +144,7 @@
             <a class= "actPage" href="activity.php">
                 <div class="clickCard">
                     <img src="img/images/legoland.jpg" class="image" alt="Magic Kingdom Castle">
-                    <p>Legoland Florida</p> <!--Will worry about text styling later-->
+                    <p>Legoland Florida</p>
                 </div>
             </a>
         </div>
@@ -134,7 +153,7 @@
             <a class= "actPage" href="activity.php">
                 <div class="clickCard">
                     <img src="img/images/universal.jpg" class="image" alt="Magic Kingdom Castle">
-                    <p>Universal Studios</p> <!--Will worry about text styling later-->
+                    <p>Universal Studios</p>
                 </div>
             </a>
         </div>
@@ -143,7 +162,7 @@
             <a class= "actPage" href="activity.php">
                 <div class="clickCard">
                     <img src="img/images/aquatica.jpg" class="image" alt="Magic Kingdom Castle">
-                    <p>Aquatica Orlando</p> <!--Will worry about text styling later-->
+                    <p>Aquatica Orlando</p>
                 </div>
             </a>
         </div>
@@ -152,7 +171,7 @@
             <a class= "actPage" href="activity.php">
                 <div class="clickCard">
                     <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Dynamic Activity 5</p> <!--Will worry about text styling later-->
+                    <p>Dynamic Activity 5</p>
                 </div>
             </a>
         </div>
@@ -161,7 +180,7 @@
             <a class= "actPage" href="activity.php">
                 <div class="clickCard">
                     <img src="img/images/aquatica.jpg" class="image" alt="Magic Kingdom Castle">
-                    <p>Dynamic Activity 6</p> <!--Will worry about text styling later-->
+                    <p>Dynamic Activity 6</p>
                 </div>
             </a>
         </div>
@@ -170,7 +189,7 @@
             <a class= "actPage" href="activity.php">
                 <div class="clickCard">
                     <img src="img/images/legoland.jpg" class="image" alt="Magic Kingdom Castle">
-                    <p>Dynamic Activity 7</p> <!--Will worry about text styling later-->
+                    <p>Dynamic Activity 7</p>
                 </div>
             </a>
         </div>
@@ -179,7 +198,7 @@
             <a class= "actPage" href="activity.php">
                 <div class="clickCard">
                     <img src="img/images/universal.jpg" class="image" alt="Magic Kingdom Castle">
-                    <p>Dynamic Activity 8</p> <!--Will worry about text styling later-->
+                    <p>Dynamic Activity 8</p>
                 </div>
             </a>
         </div>

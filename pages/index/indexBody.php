@@ -22,24 +22,40 @@
 <!-- FIRST CARD ROW -->
 
     <section class="card-row">
-
+        
         <h2 class="row-title">Orlando's Signature: Theme Parks</h2>
         <a class="row-link" href="search.php"><p>See All Theme Park Activities</p></a>
-
+        
         <button class="caro-btn-left" id="autoLeft0">
             <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
         </button>
 
         <!--Cards-->
         <section class="carousel" id="scroll0">
+            <?php
+                $ctr = 0;
+                foreach($results AS $result){
+                    $img = $result["img1"];
+                    $name = $result["event_name"];
+                    $altText = $result["alt_text_img1"];
+                    echo(
+                        "<a class='card' id='cardA$ctr' title='$name' href='activity.php'>
+                        <img class='card-image' src='img/images/$img' alt='$altText'>
+                        <h4>".$result["event_name"]."</h4>
+                        <p class='captions'>From $".$result["price"].(($result["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($result["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($result["isLocal"] == 'Y') ? " | Local Activity" : "").(($result["isGoodValue"] == 'Y') ? " | Good Value" : "").(($result["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($result["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($result["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($result["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
+                        </a>"
+                    );
+                    $ctr = $ctr+1;
+                }
+            ?>
 
-            <a class="card" id="cardA0" href="activity.php">
+            <!-- <a class="card" id="cardA0" href="activity.php">
                 <img class="card-image" src="img/images/magickingdom.jpeg" alt="Magic Kingdom Castle">
                 <h4>Magic Kingdom Park</h4>
                 <p class="captions">From $109 | Family-Friendly | Theme Park Here Yessir</p>
-            </a>
+            </a> -->
 
-            <a class="card" id="cardA1" href="activity.php">
+            <!-- <a class="card" id="cardA1" href="activity.php">
                 <img class="card-image" src="img/images/magickingdom.jpeg" alt="Magic Kingdom Castle">
                 <h4>Magic Kingdom Park</h4>
                 <p class="captions">From $109 | Family-Friendly</p>
@@ -79,7 +95,7 @@
                 <img class="card-image" src="img/images/magickingdom.jpeg" alt="Magic Kingdom Castle">
                 <h4>Magic Kingdom Park</h4>
                 <p class="captions">From $109 | Family-Friendly</p>
-            </a>
+            </a> -->
 
         </section>
 

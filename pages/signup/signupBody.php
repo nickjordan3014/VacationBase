@@ -9,6 +9,7 @@
                 <!-- <dt><label for="name">Full Name</label></dt> -->
                 <dd class="form-labels">
                     <span style="float:left;">
+                        <br>
                         <input type="text" name="firstName" class="box-size-short box-pad" value="<?php echo $firstName;?>" placeholder="First name">
                         <?php
                             if(isset($errorMsg[0])){
@@ -30,6 +31,7 @@
                         ?>
                     </span>
                     <span style="float: left;">
+                        <br>
                         <input type="text" name="lastName" class="box-size-short" value="<?php echo $lastName;?>" placeholder="Last name">
                         <?php
                             if(isset($errorMsg[2])){
@@ -108,7 +110,10 @@
                 <button type="submit" id="submit" name="signup_btn" class="buttons">Join</button>
             </form>
         </div>
+        <br>
         <p class="no-account">Already a member? <a href="login.php" class="registerhere">Sign In</a></p>
+        <br>
+        <br>
         <p class="caption">By proceeding, you agree to our Terms of Use and confirm you have read our Privacy and Cookie Statement. This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. </p>
     </div>
 </section></section>

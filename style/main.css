@@ -185,7 +185,7 @@ body {
   background-color: #fff;
   text-decoration: none;
   color: black;
-  border: 1px solid #d9d9d9;
+  border: 2px solid #d9d9d9;
   border-radius: 3px;
 }
 
@@ -402,14 +402,16 @@ body {
 @media only screen and (min-width: 1000px) {
   .login-status {
     position: absolute;
-    right: 15px;
+    right: 20px;
+    padding-top: 15px;
   }
 }
 @media only screen and (max-width: 1000px) {
   .login-status {
     position: absolute;
-    right: 5px;
+    right: 10px;
     display: none;
+    padding-top: 5px;
   }
 }
 /*<-------------------- FOOTER -------------------->*/
@@ -465,6 +467,7 @@ body {
 }
 
 .price-click {
+  align-items: center;
   display: flex;
   width: 50%;
 }
@@ -896,6 +899,7 @@ input[type=password]:focus {
 }
 
 .no-pass {
+  text-align: center;
   font-size: 14px;
   padding: 5px;
   margin: 0;
@@ -929,7 +933,7 @@ input[type=password]:focus {
 .username {
   text-align: center;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 24px;
 }
 .logout_btn {
   text-align: center;

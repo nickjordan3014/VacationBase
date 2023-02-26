@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+.profile-drop {
+    position: relative;
+    width: fit-content;
+    right: 10px;
+}
+
+.drop-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    cursor: pointer;
+}
+
+.drop-list {
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    border-radius: 5px;
+    right: 0;
+    width: 150px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s;
+}
+
+.drop-list.active {
+    max-height: 500px;
+}
+
+.drop-list hr{
+    border: 0.5px solid #ffbd59;
+}
+
+.drop-items {
+    padding: 0.5rem 0 0 1rem;
+}
+
+.drop-items:hover {
+    background-color: #ffebcd;
+}
+
+.drop-items a {
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    height: 30px;
+}
+
+.drop-items a i {
+    margin-right: 1rem;
+    color: #FFBD59;
+    text-align: center;
+}
+
+
+/* profile page styling */
+/* .user {
+    font-size: 20px;
+} */
+
+/* .card-profile-side1 {
+    background-color: gray;
+    color: green;
+    height: 100%;
+} */
+
+/* .card-profile-side1 a{
+    margin-left: 10px;
+    display: block;
+    color: green;
+    font-size: 25px;
+    text-decoration: none;
+} */
+
+/* .card-profile-sides {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+} */

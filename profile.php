@@ -1,4 +1,5 @@
 <?php
+    include("phpconnect/connProfile.php");
     include("template/head.html");
     include("pages/profile/profileHead.php");
     include("template/nav.html");
