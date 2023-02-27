@@ -89,6 +89,7 @@ body {
   .rightalign {
     float: right;
     font-style: italic;
+    color: black;
   }
   .mobileLogo {
     display: none;

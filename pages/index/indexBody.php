@@ -24,7 +24,7 @@
     <section class="card-row">
         
         <h2 class="row-title">Orlando's Signature: Theme Parks</h2>
-        <a class="row-link" href="search.php"><p>See All Theme Park Activities</p></a>
+        <a class="row-link" href="search.php"><p class="inline rightalign">See All Theme Park Activities</p></a>
         
         <button class="caro-btn-left" id="autoLeft0">
             <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
@@ -34,15 +34,38 @@
         <section class="carousel" id="scroll0">
             <?php
                 $ctr = 0;
+                $inc = 1;
                 foreach($results AS $result){
-                    $img = $result["img1"];
-                    $name = $result["event_name"];
-                    $altText = $result["alt_text_img1"];
+                    $id[] = $result["id"];
+                    $name[] = $result["event_name"];
+                    $img1[] = $result["img1"];
+                    $altText1[] = $result["alt_text_img1"];
+                    $price[] = $result["price"];
+                    $address[] = $result["address"];
+                    $url[] = $result["url"];
+                    $meta[] = $result["meta_description"];
+                    $map[] = $result["map_img"];
+                    $map_link[] = $result["map_link"];
+
+                    // Session sends
+                    $_SESSION['id'] = $id;
+                    $_SESSION['event_name'] = $name;
+                    $_SESSION['price'] = $price;
+                    $_SESSION['img1'] = $img1;
+                    $_SESSION['alt_text_img1'] = $altText1;
+                    $_SESSION['address'] = $address;
+                    $_SESSION['url'] = $url;
+                    $_SESSION['meta_description'] = $meta;
+                    $_SESSION['map_img'] = $map;
+                    $_SESSION['map_link'] = $map_link;
+
+                    // echo($img1);
+
                     echo(
-                        "<a class='card' id='cardA$ctr' title='$name' href='activity.php'>
-                        <img class='card-image' src='img/images/$img' alt='$altText'>
-                        <h4>".$result["event_name"]."</h4>
-                        <p class='captions'>From $".$result["price"].(($result["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($result["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($result["isLocal"] == 'Y') ? " | Local Activity" : "").(($result["isGoodValue"] == 'Y') ? " | Good Value" : "").(($result["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($result["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($result["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($result["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
+                        "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr'>
+                        <img class='card-image' src='img/images/$img1[$ctr]' alt='$altText1[$ctr]'>
+                        <h4>$name[$ctr]</h4>
+                        <p class='captions'>From $".$price[$ctr].(($result["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($result["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($result["isLocal"] == 'Y') ? " | Local Activity" : "").(($result["isGoodValue"] == 'Y') ? " | Good Value" : "").(($result["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($result["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($result["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($result["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
                         </a>"
                     );
                     $ctr = $ctr+1;
@@ -110,8 +133,8 @@
 
     <!--Blogs-->
     <section class="card-row">
-        <h2 class="inline">Blogs about Orlando</h2>
-        <p class="inline rightalign"><a href="search.php" class="black">See All Orlando Blogs</a></p>
+        <h2 class="row-title">Blogs about Orlando</h2>
+        <a href="search.php" class="row-link"><p class="inline rightalign">See All Orlando Blogs</p></a>
         <div class="carouselInline">
             <button class="nobtndecor" id="autoLeft1">
                 <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow carouselRight"> <!--Using add icon as a placeholder for css purposes-->
@@ -194,8 +217,8 @@
     </article>
     <!--Articles-->
     <section class="card-row">
-        <h2 class="inline">Local Orlando Vibes</h2>
-        <p class="inline rightalign"><a href="search.php" class="black">See All Orlando Local Vibes</a></p>
+        <h2 cclass="row-title">Local Orlando Vibes</h2>
+        <a href="search.php" class="row-link"><p class="inline rightalign">See All Orlando Local Vibes</p></a>
         <!--Cards-->
         <div class="carouselInline">
             <button class="nobtndecor" id="autoLeft2">
@@ -242,8 +265,8 @@
     </section>
     <!--Preplanned-->
     <section class="card-row">
-        <h2 class="inline">Preplanned Orlando Itineraries</h2>
-        <p class="inline rightalign"><a href="search.php" class="black">See All Preplanned Orlando Itineraries</a></p>
+        <h2 class="row-title">Preplanned Orlando Itineraries</h2>
+        <a href="search.php" class="row-link"><p class="inline rightalign">See All Preplanned Orlando Itineraries</p></a>
         <div class="carouselInline">
             <button class="nobtndecor" id="autoLeft3">
                 <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow carouselLeft"> <!--Using add icon as a placeholder for css purposes-->

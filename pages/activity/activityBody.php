@@ -7,20 +7,40 @@
     <div class="margActivity">
         <!-- ARTICLE HEADER -->
         <section class="activity-title">
-            <h1>Magic Kingdom Park</h1>
+            <?php
+                $ctr = $_GET['count'];
+
+                // Session variables
+                $id = $_SESSION['id'][$ctr];
+                $name = $_SESSION['event_name'][$ctr];
+                $price = $_SESSION['price'][$ctr];
+                $img1 = $_SESSION['img1'][$ctr];
+                $altText1 = $_SESSION['alt_text_img1'][$ctr];
+                $address = $_SESSION['address'][$ctr];
+                $url = $_SESSION['url'][$ctr];
+                $meta = $_SESSION['meta_description'][$ctr];
+                $map = $_SESSION['map_img'];
+                $map_link = $_SESSION['map_link'];
+
+
+                echo("<h1>$name</h1>");
+            ?>
         </section>
 
         <!-- IMAGE SECTION -->
         <section class="image-sec">
-            <img src="img/images/magickingdom/magickingdom5.jpg" class="mapSize" alt="Magic Kingdom Castle">
-           
+            <?php
+                echo("<img src='img/images/$img1' class='mapSize' alt='$altText1'>")
+            ?>
         </section>
 
         <!-- PRICE AND BUTTON SECTION -->
         <section>
             <div class="price-click">
                 <div class="priceOf">
-                    <p>Adult tickets start at <b>$109</b><p>
+                    <?php
+                         echo("<p>Adult tickets start at <b>$$price</b><p>");
+                    ?>
                 </div>
                 <div class="actButton">
                     <button class="addACTButton activityButton" onclick="location.href = 'itinerary.php';"><b>Add To Itinerary</b></button>
@@ -34,42 +54,85 @@
         <!-- ACTIVITY BLURB -->
         <section>
                 <p class="actInfoTwo">
-                    <b class="actInfo">Disney's Magic Kingdom </b> is a theme park located at the Walt Disney World Resort in Orlando, Florida. It is one of the four theme parks within the resort, and it is the first park to be built at the complex, opening its doors in 1971. 
-                                       The Magic Kingdom is a fairytale-themed park, and it has become one of the most famous and recognizable theme parks in the world.
-                                       The Magic Kingdom has seven themed lands, each of which is designed to transport visitors to different fairy tale and fantasy worlds: <br><br>
-                                       <a href="activity.php" style="color: black;font-weight:bold;text-decoration:none">Main Street USA</a> is the first land visitors encounter as they enter the park, and it is designed to resemble a typical small American town from the turn of the 20th century.
-                                       Visitors can explore this land and take in the sights and sounds of a bygone era, including the iconic Cinderella Castle, which serves as the centerpiece of the park. <br><br>
-                                       <a href="activity.php" style="color: black;font-weight:bold;text-decoration:none">Adventureland </a>is the next land visitors encounter, and it is designed to transport them to exotic lands such as the Caribbean, Africa, and Asia. Visitors can explore this land and experience attractions such as Pirates of the Caribbean, a classic boat ride through a pirate-filled Caribbean Island, and the Jungle Cruise, a boat ride through the Amazon rainforest. <br><br>
-                                       <a href="activity.php" style="color: black;font-weight:bold;text-decoration:none">Frontierland</a> is a western-themed land that transports visitors to the American Old West. Attractions here include Big Thunder Mountain Railroad, a roller coaster that takes visitors on a wild ride through a western mining town, as well as Frontierland Riverboat Landing, a riverboat ride on the Liberty Belle that offers views of Frontierland and surrounding lands. <br><br>
-                                       <a href="activity.php" style="color: black;font-weight:bold;text-decoration:none">Liberty Square</a> is a colonial-themed land that recreates the atmosphere of colonial America and celebrates the birth of the United States. Visitors can explore this land and take in attractions such as the Hall of Presidents, an audio-animatronic show that features all of the U.S. presidents, and the Haunted Mansion, a spooky tour through a haunted house.<br><br>
-                                       <a href="activity.php" style="color: black;font-weight:bold;text-decoration:none">Fantasyland</a> is the largest of the seven lands, and it is designed to transport visitors to the world of classic Disney fairytales. Attractions here include It's a Small World, a boat ride through a world filled with singing animatronics, and Peter Pan's Flight, a ride that takes visitors on a magical flight over London.<br><br>
-                                       <a href="activity.php" style="color: black;font-weight:bold;text-decoration:none">Tomorrowland</a> is a futuristic-themed land that takes visitors to a world of innovation and technology. Attractions here include Space Mountain, a roller coaster that takes visitors on a high-speed journey through outer space, and Buzz Lightyear's Space Ranger Spin, an interactive ride where visitors help Buzz Lightyear save the universe.<br><br>
-                                       Finally,<a href="activity.php" style="color: black;font-weight:bold;text-decoration:none"> Mickey's Toontown Fair</a> is a cartoon-themed land that takes visitors to the world of classic Disney cartoon characters. Visitors can explore this land and take in attractions such as Mickey's Country House, a tour through Mickey Mouse's home, and Minnie's House, a tour through Minnie Mouse's home.<br><br>
-                                       In addition to the seven themed lands, the Magic Kingdom is home to many parades, shows, and other live performances. The nightly fireworks show, "Happily Ever After," is a highlight of any visit to the park, and it is a stunning display of pyrotechnics that is set against the backdrop of Cinderella Castle.<br><br>
-                                       Disney's Magic Kingdom is a magical and enchanting theme park that is sure to captivate visitors of all ages. Whether you're a fan of classic Disney fairytales, futuristic technology, or anything in between, there's something for everyone at this iconic park.<br><br>
+                        <?php
+                            echo("$meta<br><br>");
+
+                            if ($ctr == 0){
+                        ?>
+                        
+                            <a href="#" style="color: black;font-weight:bold;text-decoration:none">Main Street USA</a> is the first land visitors encounter as they enter the park, and it is designed to resemble a typical small American town from the turn of the 20th century.
+                            Visitors can explore this land and take in the sights and sounds of a bygone era, including the iconic Cinderella Castle, which serves as the centerpiece of the park. 
+                            <br>
+                            <br>
+                                        
+                            <a href="#" style="color: black;font-weight:bold;text-decoration:none">Adventureland </a>is the next land visitors encounter, and it is designed to transport them to exotic lands such as the Caribbean, Africa, and Asia. Visitors can explore this land and experience attractions such as Pirates of the Caribbean, a classic boat ride through a pirate-filled Caribbean Island, and the Jungle Cruise, a boat ride through the Amazon rainforest. <br><br>
+                            
+                            <a href="#" style="color: black;font-weight:bold;text-decoration:none">Frontierland</a> is a western-themed land that transports visitors to the American Old West. Attractions here include Big Thunder Mountain Railroad, a roller coaster that takes visitors on a wild ride through a western mining town, as well as Frontierland Riverboat Landing, a riverboat ride on the Liberty Belle that offers views of Frontierland and surrounding lands. <br><br>
+                            
+                            <a href="#" style="color: black;font-weight:bold;text-decoration:none">Liberty Square</a> is a colonial-themed land that recreates the atmosphere of colonial America and celebrates the birth of the United States. Visitors can explore this land and take in attractions such as the Hall of Presidents, an audio-animatronic show that features all of the U.S. presidents, and the Haunted Mansion, a spooky tour through a haunted house.<br><br>
+                            
+                            <a href="#" style="color: black;font-weight:bold;text-decoration:none">Fantasyland</a> is the largest of the seven lands, and it is designed to transport visitors to the world of classic Disney fairytales. Attractions here include It's a Small World, a boat ride through a world filled with singing animatronics, and Peter Pan's Flight, a ride that takes visitors on a magical flight over London.<br><br>
+                            
+                            <a href="#" style="color: black;font-weight:bold;text-decoration:none">Tomorrowland</a> is a futuristic-themed land that takes visitors to a world of innovation and technology. Attractions here include Space Mountain, a roller coaster that takes visitors on a high-speed journey through outer space, and Buzz Lightyear's Space Ranger Spin, an interactive ride where visitors help Buzz Lightyear save the universe.<br><br>
+                            
+                            Finally,<a href="#" style="color: black;font-weight:bold;text-decoration:none"> Mickey's Toontown Fair</a> is a cartoon-themed land that takes visitors to the world of classic Disney cartoon characters. Visitors can explore this land and take in attractions such as Mickey's Country House, a tour through Mickey Mouse's home, and Minnie's House, a tour through Minnie Mouse's home.<br><br>
+                            In addition to the seven themed lands, the Magic Kingdom is home to many parades, shows, and other live performances. The nightly fireworks show, "Happily Ever After," is a highlight of any visit to the park, and it is a stunning display of pyrotechnics that is set against the backdrop of Cinderella Castle.<br><br>
+                            Disney's Magic Kingdom is a magical and enchanting theme park that is sure to captivate visitors of all ages. Whether you're a fan of classic Disney fairytales, futuristic technology, or anything in between, there's something for everyone at this iconic park.<br><br>
+
+                        <?php
+                            }
+                            else if ($ctr == 1){
+                                echo("Insert content about $name here!<br><br>");
+                            }
+                            else if ($ctr == 2){
+                                echo("Insert content about $name here!<br><br>");
+                            }
+                            else if ($ctr == 3){
+                                echo("Insert content about $name here!<br><br>");
+                            }
+                            else if ($ctr == 4){
+                                echo("Insert content about $name here!<br><br>");
+                            }
+                            else if ($ctr == 5){
+                                echo("Insert content about $name here!<br><br>");
+                            }
+                            else if ($ctr == 6){
+                                echo("Insert content about $name here!<br><br>");
+                            }
+                            else if ($ctr == 7){
+                                echo("Insert content about $name here!<br><br>");
+                            }
+                        ?>
                 </p>
         </section>
 
         <!-- WEBSITE LINK -->
         <section>
             <p class="actInfoThree">
-                Their website: <a href="https://disneyworld.disney.go.com/destinations/magic-kingdom/" target="_blank" class="actWebLink">https://disneyworld.disney.go.com/destinations/magic-kingdom/</a>
+                <?php
+                    echo("<b>Their website:</b> <a href='$url' target='_blank' class='actWebLink'>$url</a>");
+                ?>
             </p>
         </section>
 
         <!-- MAPPING SECTION -->
         <section>
-            <div>
-                <a href="https://www.google.com/maps/place/Magic+Kingdom+Park/@28.417636,-81.5830477,16.7z/data=!4m5!3m4!1s0x88dd7e536aa54b81:0x66b8bcd58da841a!8m2!3d28.418579!4d-81.5812062" target="_blank">
-                    <img src="img/images/mggooglemap.png" class="mapSize" alt="Magic Kingdom Map">
+            <?php
+            echo("<div>
+                <a href='$map_link[$ctr]' target='_blank'>
+                    <img src='img/images/mggooglemap.png' class='mapSize' alt='$name Map'>
                 </a>
-            </div>
+            </div>");
+            ?>
             <p class="actInfoThree">
-                Located At: <a href="https://www.google.com/maps/place/Magic+Kingdom+Park/@28.417636,-81.5830477,16.7z/data=!4m5!3m4!1s0x88dd7e536aa54b81:0x66b8bcd58da841a!8m2!3d28.418579!4d-81.5812062" target="_blank" class="actWebLink">1180 Seven Seas Drive, Lake Buena Vista, FL 32830</a>
+                <?php
+                    echo("<b>Located At:</b> <a href='$address' target='_blank' class='actWebLink'>$address</a>");
+                ?>
             </p>
         </section>
     </div>
-
+    <br>
+    <br>
     <!-- AD AGAIN -->
     <article class="adleaderboardTwo">
         <p>[ad here]</p> <!-- where does it go?! figure out later -->
