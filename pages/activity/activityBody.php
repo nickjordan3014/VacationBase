@@ -1,10 +1,12 @@
 <section class="main-content"><section class="inner-content">
+   
     <!-- PAGE TOP AD -->
     <article class="adleaderboard">
-        <p>[ad here]</p> <!-- where does it go?! figure out later -->
+        <p>[ad here]</p>
     </article>
  
     <div class="margActivity">
+
         <!-- ARTICLE HEADER -->
         <section class="activity-title">
             <?php
@@ -131,164 +133,88 @@
             </p>
         </section>
     </div>
+
+
     <br>
     <br>
+    <br>
+    <br>
+
+
     <!-- AD AGAIN -->
     <article class="adleaderboardTwo">
         <p>[ad here]</p> <!-- where does it go?! figure out later -->
     </article>
 
-    <!-- <div class="margActivity"> -->
-    <!-- OTHER ACTIVITIES -->
-    <!-- <div class="margActivity"> -->
-        <!-- SIMILAR ACTIVITES NEARBY -->
-        <section>
-            <p class="recCapt">
-                Similar Activities Around Orlando 
-            </p>
-        </section>
-        
 
-        
-        <section class="card-row carouselInline">
-            <button class="nobtndecor" id="autoLeft0">
-                <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow"> <!--Using add icon as a placeholder for css purposes-->
-            </button>
-            <!--Cards-->
-            <section class="carousel" id="scroll0">
-                <div class="card" id="tpC0"> <!--Naming Convention for cards tpC0 = theme park card 0-->
-                    <a class= "actPage" href="activity.php">
-                        <div class="clickCard">
-                            <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                            <p>Magic Kingdom 1</p> <!--Will worry about text styling later-->
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card" id="tpC1">
-                    <a class= "actPage" href="activity.php">
-                        <div class="clickCard">
-                            <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                            <p>Magic Kingdom 2</p> <!--Will worry about text styling later-->
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card" id="tpC2">
-                    <a class= "actPage" href="activity.php">
-                        <div class="clickCard">
-                            <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                            <p>Magic Kingdom 3</p> <!--Will worry about text styling later-->
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card" id="tpC3">
-                    <a class= "actPage" href="activity.php">
-                        <div class="clickCard">
-                            <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                            <p>Magic Kingdom 4</p> <!--Will worry about text styling later-->
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card" id="tpC4">
-                    <a class= "actPage" href="activity.php">
-                        <div class="clickCard">
-                            <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                            <p>Magic Kingdom 5</p> <!--Will worry about text styling later-->
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card" id="tpC5">
-                    <a class= "actPage" href="activity.php">
-                        <div class="clickCard">
-                            <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                            <p>Magic Kingdom 6</p> <!--Will worry about text styling later-->
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card" id="tpC6">
-                    <a class= "actPage" href="activity.php">
-                        <div class="clickCard">
-                            <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                            <p>Magic Kingdom 7</p> <!--Will worry about text styling later-->
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card" id="tpC7">
-                    <a class= "actPage" href="activity.php">
-                        <div class="clickCard">
-                            <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                            <p>Magic Kingdom 8</p> <!--Will worry about text styling later-->
-                        </div>
-                    </a>
-                </div>
-            </section>
-            <button class="nobtndecor" id="autoRight0">
-                <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow"> <!--Using add icon as a placeholder for css purposes-->
-            </button>
-        </section>
+    <br>
+    <br>
+    <br>
+    <br>
 
 
-        <!-- RECOMMENDED BLOGS AND ARTICLES -->
-        <section>
-            <p class="recCapt">
-                Orlando Blogs and Articles
-            </p>
-        </section>
-
-
-
-        <section class="card-row carouselInline">
-            <button class="nobtndecor" id="autoLeft1">
-                <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow"> <!--Using add icon as a placeholder for css purposes-->
-            </button>
-            <!--Cards-->
-            <section class="carousel" id="scroll1">
-                <div class="card" id="bC0"> <!--Naming Convention for cards bC0 = blog card 0-->
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom 1</p> <!--Will worry about text styling later-->
-                </div>
-                <div class="card" id="bC1">
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom 2</p>
-                </div>
-                <div class="card" id="bC2">
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom 3</p>
-                </div>
-                <div class="card" id="bC3">
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom 4</p>
-                </div>
-                <div class="card" id="bC4">
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom 5</p>
-                </div>
-                <div class="card" id="bC5">
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom 6</p>
-                </div>
-                <div class="card" id="bC6">
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom 7</p>
-                </div>
-                <div class="card" id="bC7">
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom 8</p>
-                </div>
-            </section>
-            <button class="nobtndecor" id="autoRight1">
-                <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow"> <!--Using add icon as a placeholder for css purposes-->
-            </button>
-        </section>
-    <!-- </div> -->
-
+    <!-- SIMILAR ACTIVITES NEARBY -->
+    <section>
+        <p class="recCapt">
+            Similar Activities Around Orlando 
+        </p>
+    </section>
     
+    <section class="card-row">
+
+        <button class="caro-btn-left" id="autoLeft0">
+            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
+        </button>
+
+        <!--Cards-->
+        <section class="carousel" id="scroll0">
+            
+            <?php
+
+                $val = 0;
+
+                foreach($other_results AS $result){
+                    
+                    // trying to skip the event of the current page we are on to reccommend other activities
+                    if ($ctr == $val){
+                        $val = $val+1;
+                    }
+
+                    $id = $_SESSION['id'][$val];
+                    $name = $_SESSION['event_name'][$val];
+                    $price = $_SESSION['price'][$val];
+                    $img1 = $_SESSION['img1'][$val];
+                    $altText1 = $_SESSION['alt_text_img1'][$val];
+                    $address = $_SESSION['address'][$val];
+                    $url = $_SESSION['url'][$val];
+                    $meta = $_SESSION['meta_description'][$val];
+                    $map = $_SESSION['map_img'];
+                    $map_link = $_SESSION['map_link'];
+
+                    echo(
+                        "<a class='card' id='cardA$ctr' title='$name' href='activity.php?count=$ctr'>
+                        <img class='card-image' src='img/images/$img1' alt='$altText1'>
+                        <h4>$name</h4>
+                        <p class='captions'>From $".$price.(($result["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($result["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($result["isLocal"] == 'Y') ? " | Local Activity" : "").(($result["isGoodValue"] == 'Y') ? " | Good Value" : "").(($result["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($result["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($result["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($result["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
+                        </a>&nbsp;"
+                    );
+                    $val = $val+1;
+                }
+            ?>
+
+        </section>
+
+        <button class="caro-btn-right" id="autoRight0">
+            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
+        </button>
+
+    </section>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+
 
     <!-- THIRD AD -->
     <article class="adleaderboardTwo">

@@ -12,7 +12,7 @@
             </section>
 
             <section>
-                <img class="mapSize" src="img/images/magickingdom/magickingdom5.jpg" alt="Magic Kingdom Castle">
+                <img class="mapSize" src="img/images/oblogs/popularTP.jpg" alt="Magic Kingdom Castle">
             </section>
             <br>
             <section>

@@ -12,7 +12,7 @@
 
         <!-- IMAGE SECTION -->
         <section class="image-sec">
-            <img src="img/images/magickingdom/magickingdom5.jpg" class="mapSize" alt="Magic Kingdom Castle">
+            <img src="img/images/preplanned/threedayTP.jpg" class="mapSize" alt="Universl Studios globe with people walking around">
            
         </section>
 
@@ -20,12 +20,17 @@
         <section>
             <div class="price-click">
                 
-                <div class="actButton">
-                    <button class="addACTButton activityButton" onclick="location.href = 'itinerary.php';"><b>Add To Itinerary</b></button>
+                <div class="priceOf">
+                    <p>Preplanned Adult Ticket Package start at <b>$317.99</b><p>
+                </div>
+                <div class="actButton"> 
+                    <button class="addACTButton activityButton" onclick="location.href = 'itinerary.php';"><b>Add Preplanned Itinerary</b></button>
                 </div>
             </div>
         </section>
 
+        <br>
+        <br>
         
         <!-- ACTIVITY BLURB -->
         <section>
@@ -54,7 +59,7 @@
                         
                 </p>
                 <p class="actInfoTwo">
-                     This preplanned itinerary offers a comprehensive and exciting exploration of some of the best theme parks in Orlando, it is a great opportunity to create lasting memories. Look no further and <a href="itinerary.php">add this preplanned itinerary to your itineraries!</a>
+                     This preplanned itinerary offers a comprehensive and exciting exploration of some of the best theme parks in Orlando, it is a great opportunity to create lasting memories. Look no further and add this preplanned itinerary to your itineraries!
                     </p><br>
         </section>
 
@@ -82,162 +87,82 @@
         </section>
     </div>
 
+    <br>
+    <br>
+    <br>
+    <br>
+
+
     <!-- AD AGAIN -->
     <article class="adleaderboardTwo">
         <p>[ad here]</p> <!-- where does it go?! figure out later -->
     </article>
+    
 
+    <br>
+    <br>
+    <br>
+    <br>
 
     <!-- OTHER ACTIVITIES -->
     <!-- <div class="margActivity"> -->
-        <!-- SIMILAR ACTIVITES NEARBY -->
-        <section>
-            <p class="recCapt">
-                Similar Activities Around Orlando 
-            </p>
-        </section>
-        
-
-        
-        <section class="card-row carouselInline">
-            <button class="nobtndecor" id="autoLeft0">
-                <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow"> <!--Using add icon as a placeholder for css purposes-->
-            </button>
-            <!--Cards-->
-            <section class="carousel" id="scroll0">
-                <div class="card" id="tpC0"> <!--Naming Convention for cards tpC0 = theme park card 0-->
-                    <a class= "actPage" href="activity.php">
-                        <div class="clickCard">
-                            <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                            <p>Magic Kingdom 1</p> <!--Will worry about text styling later-->
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card" id="tpC1">
-                    <a class= "actPage" href="activity.php">
-                        <div class="clickCard">
-                            <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                            <p>Magic Kingdom 2</p> <!--Will worry about text styling later-->
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card" id="tpC2">
-                    <a class= "actPage" href="activity.php">
-                        <div class="clickCard">
-                            <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                            <p>Magic Kingdom 3</p> <!--Will worry about text styling later-->
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card" id="tpC3">
-                    <a class= "actPage" href="activity.php">
-                        <div class="clickCard">
-                            <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                            <p>Magic Kingdom 4</p> <!--Will worry about text styling later-->
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card" id="tpC4">
-                    <a class= "actPage" href="activity.php">
-                        <div class="clickCard">
-                            <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                            <p>Magic Kingdom 5</p> <!--Will worry about text styling later-->
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card" id="tpC5">
-                    <a class= "actPage" href="activity.php">
-                        <div class="clickCard">
-                            <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                            <p>Magic Kingdom 6</p> <!--Will worry about text styling later-->
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card" id="tpC6">
-                    <a class= "actPage" href="activity.php">
-                        <div class="clickCard">
-                            <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                            <p>Magic Kingdom 7</p> <!--Will worry about text styling later-->
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card" id="tpC7">
-                    <a class= "actPage" href="activity.php">
-                        <div class="clickCard">
-                            <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                            <p>Magic Kingdom 8</p> <!--Will worry about text styling later-->
-                        </div>
-                    </a>
-                </div>
-            </section>
-            <button class="nobtndecor" id="autoRight0">
-                <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow"> <!--Using add icon as a placeholder for css purposes-->
-            </button>
-        </section>
-
-
-        <!-- RECOMMENDED BLOGS AND ARTICLES -->
-        <section>
-            <p class="recCapt">
-                Orlando Blogs and Articles
-            </p>
-        </section>
-
-
-
-        <section class="card-row carouselInline">
-            <button class="nobtndecor" id="autoLeft1">
-                <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow"> <!--Using add icon as a placeholder for css purposes-->
-            </button>
-            <!--Cards-->
-            <section class="carousel" id="scroll1">
-                <div class="card" id="bC0"> <!--Naming Convention for cards bC0 = blog card 0-->
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom 1</p> <!--Will worry about text styling later-->
-                </div>
-                <div class="card" id="bC1">
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom 2</p>
-                </div>
-                <div class="card" id="bC2">
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom 3</p>
-                </div>
-                <div class="card" id="bC3">
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom 4</p>
-                </div>
-                <div class="card" id="bC4">
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom 5</p>
-                </div>
-                <div class="card" id="bC5">
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom 6</p>
-                </div>
-                <div class="card" id="bC6">
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom 7</p>
-                </div>
-                <div class="card" id="bC7">
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom 8</p>
-                </div>
-            </section>
-            <button class="nobtndecor" id="autoRight1">
-                <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow"> <!--Using add icon as a placeholder for css purposes-->
-            </button>
-        </section>
-    <!-- </div> -->
+    <!-- SIMILAR ACTIVITES NEARBY -->
+    <section>
+        <p class="recCapt">
+            Similar Orlando Preplanned Itineraries
+        </p>
+    </section>
 
     
+    <section class="card-row">
+        
+        <button class="caro-btn-left" id="autoLeft0">
+            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
+        </button>
+        
+        <!--Cards-->
+        <section class="carousel" id="scroll0">
+
+            <a class= "card" href="preplanned.php">
+                <img src="img/images/preplanned/threedayTP.jpg" class="card-image" alt="">
+                <h4>Popular Theme Parks</h4>
+            </a>
+            <a class= "card" href="preplanned.php">
+                <img src="img/images/preplanned/threedayTP.jpg" class="card-image" alt="">
+                <h4>Popular Theme Parks</h4>
+            </a>
+            <a class= "card" href="preplanned.php">
+                <img src="img/images/preplanned/threedayTP.jpg" class="card-image" alt="">
+                <h4>Popular Theme Parks</h4>
+            </a>
+            <a class= "card" href="preplanned.php">
+                <img src="img/images/preplanned/threedayTP.jpg" class="card-image" alt="">
+                <h4>Popular Theme Parks</h4>
+            </a>
+            <a class= "card" href="preplanned.php">
+                <img src="img/images/preplanned/threedayTP.jpg" class="card-image" alt="">
+                <h4>Popular Theme Parks</h4>
+            </a>
+            <a class= "card" href="preplanned.php">
+                <img src="img/images/preplanned/threedayTP.jpg" class="card-image" alt="">
+                <h4>Popular Theme Parks</h4>
+            </a>
+            <a class= "card" href="preplanned.php">
+                <img src="img/images/preplanned/threedayTP.jpg" class="card-image" alt="">
+                <h4>Popular Theme Parks</h4>
+            </a>
+        </section>
+
+        <button class="caro-btn-right" id="autoRight0">
+            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
+        </button>
+
+    </section>
+    
+    <br>
+    <br>
+    <br>
+    <br>
 
     <!-- THIRD AD -->
     <article class="adleaderboardTwo">

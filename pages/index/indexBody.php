@@ -100,14 +100,14 @@
                 <?php
                     echo(
                         "<a class= 'card' id='bC0' href='blog.php'>
-                        <img src='img/images/magickingdom/magickingdom1.jpg' class='card-image' alt='Magic Kingdom Castle'>
+                        <img src='img/images/oblogs/popularTP.jpg' class='card-image' alt='People riding an attraction'>
                         <h4>The Popular Theme Parks</h4>
                         </a>&nbsp;"
                     );
                     echo(
                         "<a class= 'card' id='bC0' href='blog.php'>
-                        <img src='img/images/magickingdom/magickingdom1.jpg' class='card-image' alt='Magic Kingdom Castle'>
-                        <h4>Blog Title</h4>
+                        <img src='img/images/oblogs/beaches.jpg' class='card-image' alt='Sun setting at Cocoa Beach'>
+                        <h4>Best Beaches in the Area</h4>
                         </a>&nbsp;"
                     );
                     echo(
