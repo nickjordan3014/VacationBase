@@ -8,6 +8,4 @@
 
     $results = $db->query($select_themePark);
     
-    // echo($select_events);
-    // print_r($select_events);
 ?>
