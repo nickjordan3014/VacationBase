@@ -1,9 +1,19 @@
 <!-- This file will connect to the database server 'events' -->
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "events";
+    // print_r($_SERVER);
+
+    if ($_SERVER['SERVER_NAME'] == 'students.gaim.ucf.edu'){
+        $servername = "localhost";
+        $username = "my958474";
+        $password = "Myakkco1$@";
+        $database = "my958474";
+    }
+    else {
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "events";
+    }
 
     try{
         // this library makes security issues go away so that people cannot hijack, code attack or delete our DB
