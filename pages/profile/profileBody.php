@@ -137,7 +137,7 @@
 ?>
 <?php
     if(!isset($_SESSION['user'])){
-        header("location: signup.php");
+        header("location: login.php");
 ?>
 <?php
    }

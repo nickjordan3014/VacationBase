@@ -133,18 +133,21 @@
 
     <!--Blogs-->
     <section class="card-row">
+
         <h2 class="row-title">Blogs about Orlando</h2>
         <a href="search.php" class="row-link"><p class="inline rightalign">See All Orlando Blogs</p></a>
         <div class="carouselInline">
+
             <button class="nobtndecor" id="autoLeft1">
                 <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow carouselRight"> <!--Using add icon as a placeholder for css purposes-->
             </button>
+
             <section class="carousel" id="scroll1">
                 <div class="card" id="bC0"> <!--Naming Convention for cards bC0 = blog card 0-->
                     <a class= "actPage" href="blog.php">
                         <div class="clickCard">
                             <img src="img/images/popular.jpg" class="image" alt="Magic Kingdom Castle">
-                            <p>The Popular Themeparks</p> <!--Will worry about text styling later-->
+                            <p>The Popular Theme Parks</p> <!--Will worry about text styling later-->
                         </div>
                     </a>
                 </div>
@@ -205,19 +208,22 @@
                     </a>
                 </div>
             </section>
+
             <button class="nobtndecor" id="autoRight1">
                 <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow carouselLeft"> <!--Using add icon as a placeholder for css purposes-->
             </button>
         </div>
         <!--Cards-->
     </section>
+
     <!--Ad Space-->
     <article class="adleaderboard">
         <p>[ad here]</p>
     </article>
+
     <!--Articles-->
     <section class="card-row">
-        <h2 cclass="row-title">Local Orlando Vibes</h2>
+        <h2 class="row-title">Local Orlando Vibes</h2>
         <a href="search.php" class="row-link"><p class="inline rightalign">See All Orlando Local Vibes</p></a>
         <!--Cards-->
         <div class="carouselInline">
@@ -231,7 +237,7 @@
                 </div>
                 <div class="card" id="aC1">
                     <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>BEST: Themepark</p>
+                    <p>BEST: Theme Park</p>
                 </div>
                 <div class="card" id="aC2">
                     <img src="img/images/aquatica.jpg" class="image" alt="Magic Kingdom Castle">
@@ -276,7 +282,7 @@
                 <div class="card" id="piC0"> <!--Naming Convention for cards piC0 = preplanned itineraries card 0-->
                     <a class="actPage" href="preplanned.php">
                     <img src="img/images/popular.jpg" class="image" alt="Magic Kingdom Castle">
-                    <p>3 Day Themepark Trip</p> <!--Will worry about text styling later-->
+                    <p>3 Day Theme Park Trip</p> <!--Will worry about text styling later-->
                 </div>
                     </a>
                 <div class="card" id="piC1">
