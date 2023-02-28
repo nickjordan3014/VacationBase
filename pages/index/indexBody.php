@@ -59,8 +59,6 @@
                     $_SESSION['map_img'] = $map;
                     $_SESSION['map_link'] = $map_link;
 
-                    // echo($img1);
-
                     echo(
                         "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr'>
                         <img class='card-image' src='img/images/$img1[$ctr]' alt='$altText1[$ctr]'>

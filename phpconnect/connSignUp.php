@@ -58,8 +58,6 @@
         }
         // regExpr password
         else if(!(preg_match($regPassword, $pass))){
-            echo(preg_match($regPassword, $pass));
-            echo("password is: ".$pass);
             $errorMsg[11][] = "Enter a valid password that contains:<br> <li>At least 8 characters</li> <li>At least one uppercase and lowercase letter (a-z, A-Z)</li> <li>At least one number (0-9)</li><li>At least one special character</li>";
         }
 
