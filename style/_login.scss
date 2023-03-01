@@ -16,6 +16,7 @@
     .login-content { /*Also used for sign up and forgot password page*/
         grid-column: 3/9;
         margin-top: 10vh;
+        position: relative;
     }
 }
 
@@ -43,12 +44,12 @@
 
 .box-size-long {
     width: 300px;
-    height: 20px;
+    height: 30px;
 }
 
 .box-size-short {
-    width: 140px;
-    height: 20px;
+    width: 143px;
+    height: 30px;
 }
 
 .box-pad {
@@ -64,10 +65,14 @@
     border: 3px solid $orange;
     border-radius: 25px;
     font-size: 15px;
-    width: 250px;
-    height: 50px;
+    width: 180px;
+    height: 40px;
     cursor: pointer;
 }
+
+.nopass {
+    margin-top: 2px;
+  }
 
 .buttons:hover {
     background-color: $orange;
@@ -76,7 +81,39 @@
 
 .forgotpw {
     color: black;
+    text-decoration: none;
+    font-weight: bold;
 }
+
+.invalid-error {
+    border: 3px solid #f01e2c;
+  }
+  
+  .registerhere {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .loginhere {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .no-pass {
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    margin: 0;
+  }
+
+  .logout_btn {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+  }
 
 .no-account {
     text-align: center;
@@ -93,3 +130,50 @@
     text-align: center;
     font-size: 14px;
 }
+
+.form-border {
+    display: inline-block;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    padding: 5px 30px;
+  }
+  
+  input {
+    display: block;
+  }
+  
+  input[type=text] {
+    border: 1px solid lightgray;
+    padding: 4px 8px;
+    border-radius: 3px;
+  }
+  
+  input[type=text]:focus {
+    outline: none;
+    border: 2px solid #FFBD59;
+    border-radius: 3px;
+  }
+  
+  input[type=email] {
+    border: 1px solid lightgray;
+    padding: 4px 8px;
+    border-radius: 3px;
+  }
+  
+  input[type=email]:focus {
+    outline: none;
+    border: 2px solid #FFBD59;
+    border-radius: 3px;
+  }
+  
+  input[type=password] {
+    border: 1px solid lightgray;
+    padding: 4px 8px;
+    border-radius: 3px;
+  }
+  
+  input[type=password]:focus {
+    outline: none;
+    border: 2px solid #FFBD59;
+    border-radius: 3px;
+  }

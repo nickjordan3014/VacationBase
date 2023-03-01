@@ -403,8 +403,7 @@ body {
 @media only screen and (min-width: 1000px) {
   .login-status {
     position: absolute;
-    right: 20px;
-    padding-top: 15px;
+    right: 15px;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -764,14 +763,119 @@ div.button1 {
   .login-content { /*Also used for sign up and forgot password page*/
     grid-column: 3/9;
     margin-top: 10vh;
+    position: relative;
   }
 }
 .form-items {
   display: flex;
   justify-content: center;
-  /* border-style: solid; */
-  /* border-width: 2px; */
-  position: relative;
+}
+
+/*Text Styling*/
+.head-text {
+  padding-top: 20px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.head-desc {
+  margin-top: 0px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.form-labels {
+  margin: 0;
+}
+
+.box-size-long {
+  width: 300px;
+  height: 30px;
+}
+
+.box-size-short {
+  width: 143px;
+  height: 30px;
+}
+
+.box-pad {
+  margin-right: 9px;
+}
+
+.buttons {
+  display: block;
+  margin-inline: auto;
+  margin-top: 10px;
+  background-color: white;
+  color: #FFBD59;
+  border: 3px solid #FFBD59;
+  border-radius: 25px;
+  font-size: 15px;
+  width: 180px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.nopass {
+  margin-top: 2px;
+}
+
+.buttons:hover {
+  background-color: #FFBD59;
+  color: white;
+}
+
+.forgotpw {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.invalid-error {
+  border: 3px solid #f01e2c;
+}
+
+.registerhere {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.loginhere {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.no-pass {
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  margin: 0;
+}
+
+.logout_btn {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+}
+
+.no-account {
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  margin: 0;
+}
+
+.or {
+  text-align: center;
+}
+
+.caption {
+  text-align: center;
+  font-size: 14px;
 }
 
 .form-border {
@@ -821,107 +925,6 @@ input[type=password]:focus {
   border-radius: 3px;
 }
 
-/*Text Styling*/
-.head-text {
-  padding-top: 20px;
-  margin-bottom: 0px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.head-desc {
-  margin-top: 0px;
-  font-size: 18px;
-  text-align: center;
-}
-
-.form-labels {
-  margin: 0;
-  
-}
-
-.box-size-long {
-  width: 300px;
-  height: 30px;
-}
-
-.box-size-short {
-  width: 143px;
-  height: 30px;
-}
-
-.box-pad {
-  margin-right: 9px;
-}
-
-.buttons {
-  display: block;
-  margin-inline: auto;
-  margin-top: 10px;
-  background-color: white;
-  color: #FFBD59;
-  border: 3px solid #FFBD59;
-  border-radius: 25px;
-  font-size: 15px;
-  width: 180px;
-  height: 40px;
-  cursor: pointer;
-}
-
-.buttons:hover {
-  background-color: #FFBD59;
-  color: white;
-}
-
-.nopass {
-  margin-top: 2px;
-}
-
-.forgotpw {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.invalid-error {
-  border: 3px solid #f01e2c;
-}
-
-.registerhere {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.loginhere {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.no-pass {
-  text-align: center;
-  font-size: 14px;
-  padding: 5px;
-  margin: 0;
-}
-
-.no-account {
-  text-align: center;
-  font-size: 14px;
-  padding: 5px;
-  margin: 0;
-}
-
-.or {
-  text-align: center;
-}
-
-.caption {
-  text-align: center;
-  font-size: 14px;
-}
-
 /* Houses CSS specific to profile page */
 /*Top of Profile Page*/
 .profile-pic {
@@ -935,12 +938,6 @@ input[type=password]:focus {
   text-align: center;
   font-weight: 400;
   font-size: 24px;
-}
-.logout_btn {
-  text-align: center;
-  align-items: center;
-  align-content: center;
-  margin: auto;
 }
 
 .profile-nav:hover {
@@ -1169,4 +1166,90 @@ input[type=password]:focus {
     font-style: italic;
     margin-top: -20px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+.profile-drop {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  right: 10px;
+}
+
+.drop-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+  cursor: pointer;
+}
+
+.drop-list {
+  position: absolute;
+  top: 30px;
+  background-color: white;
+  border-radius: 5px;
+  right: 0;
+  width: 150px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s;
+}
+
+.drop-list.active {
+  max-height: 500px;
+}
+
+.drop-list hr {
+  border: 0.5px solid #ffbd59;
+}
+
+.drop-items {
+  padding: 0.5rem 0 0 1rem;
+}
+
+.drop-items:hover {
+  background-color: #ffebcd;
+}
+
+.drop-items a {
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+  height: 30px;
+}
+
+.drop-items a i {
+  margin-right: 1rem;
+  color: #FFBD59;
+  text-align: center;
+}
+
+/* profile page styling */
+/* .user {
+    font-size: 20px;
+} */
+/* .card-profile-side1 {
+    background-color: gray;
+    color: green;
+    height: 100%;
+} */
+/* .card-profile-side1 a{
+    margin-left: 10px;
+    display: block;
+    color: green;
+    font-size: 25px;
+    text-decoration: none;
+} */
+/* .card-profile-sides {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+} *//*# sourceMappingURL=main.css.map */
