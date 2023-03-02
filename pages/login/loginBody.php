@@ -9,18 +9,18 @@
                 <?php
                     if(isset($errorMsg[2])){
                         foreach($errorMsg[2] as $accError){
-                            echo("<errdiv style='font-family:source-serif-pro,serif;color:#f01e2c;font-size:14px;'>".$accError."</errdiv>");
+                            print("<errdiv style='font-family:source-serif-pro,serif;color:#f01e2c;font-size:14px;'>".$accError."</errdiv>");
                         }
                     }
                 ?>
                 <br>
                 <br>
                 <!-- <dt><label for="email">Email Address</label></dt> -->
-                <dd class="form-labels"><input type="text" class="box-size-long" name="emailAddress" value="<?php echo $emailAddress;?>" placeholder="Email"></dd>
+                <dd class="form-labels"><input type="text" class="box-size-long" name="emailAddress" value="<?php print $emailAddress;?>" placeholder="Email"></dd>
                 <?php
                     if(isset($errorMsg[0])){
                         foreach($errorMsg[0] as $emailError){
-                            echo("<errdiv style='font-family:source-serif-pro,serif;color:#f01e2c;font-size:12px;'>".$emailError."</errdiv>");
+                            print("<errdiv style='font-family:source-serif-pro,serif;color:#f01e2c;font-size:12px;'>".$emailError."</errdiv>");
                         }
                     }
                 ?>
@@ -31,7 +31,7 @@
                 <?php
                     if(isset($errorMsg[1])){
                         foreach($errorMsg[1] as $passErrors){
-                            echo("<errdiv style='font-family:source-serif-pro,serif;color:#f01e2c;font-size:12px;'>".$passErrors."</errdiv>");
+                            print("<errdiv style='font-family:source-serif-pro,serif;color:#f01e2c;font-size:12px;'>".$passErrors."</errdiv>");
                         }
                     }
                 ?>

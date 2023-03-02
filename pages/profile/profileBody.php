@@ -7,7 +7,7 @@
         <section>
             <img src="img/icons-VB/orange_icon.png" alt="Profile Picture" class="profile-pic">
             <?php
-                echo("<p class='username'><b>".$_SESSION['user']['firstName']." ".$_SESSION['user']['lastName']."</b></p>");
+                print("<p class='username'><b>".$_SESSION['user']['firstName']." ".$_SESSION['user']['lastName']."</b></p>");
             ?>
             <a href="logout.php"><button class="logout_btn">Log Out</button></a>
         </section>

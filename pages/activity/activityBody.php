@@ -25,14 +25,14 @@
                 $map_link = $_SESSION['map_link'];
 
 
-                echo("<h1>$name</h1>");
+                print("<h1>$name</h1>");
             ?>
         </section>
 
         <!-- IMAGE SECTION -->
         <section class="image-sec">
             <?php
-                echo("<img src='img/images/$img1' class='mapSize' alt='$altText1'>")
+                print("<img src='img/images/$img1' class='mapSize' alt='$altText1'>")
             ?>
         </section>
 
@@ -41,7 +41,7 @@
             <div class="price-click">
                 <div class="priceOf">
                     <?php
-                         echo("<p>Adult tickets start at <b>$$price</b><p>");
+                         print("<p>Adult tickets start at <b>$$price</b><p>");
                     ?>
                 </div>
                 <div class="actButton">
@@ -57,7 +57,7 @@
         <section>
                 <p class="actInfoTwo">
                         <?php
-                            echo("$meta<br><br>");
+                            print("$meta<br><br>");
 
                             if ($ctr == 0){
                         ?>
@@ -84,25 +84,25 @@
                         <?php
                             }
                             else if ($ctr == 1){
-                                echo("Insert content about $name here!<br><br>");
+                                print("Insert content about $name here!<br><br>");
                             }
                             else if ($ctr == 2){
-                                echo("Insert content about $name here!<br><br>");
+                                print("Insert content about $name here!<br><br>");
                             }
                             else if ($ctr == 3){
-                                echo("Insert content about $name here!<br><br>");
+                                print("Insert content about $name here!<br><br>");
                             }
                             else if ($ctr == 4){
-                                echo("Insert content about $name here!<br><br>");
+                                print("Insert content about $name here!<br><br>");
                             }
                             else if ($ctr == 5){
-                                echo("Insert content about $name here!<br><br>");
+                                print("Insert content about $name here!<br><br>");
                             }
                             else if ($ctr == 6){
-                                echo("Insert content about $name here!<br><br>");
+                                print("Insert content about $name here!<br><br>");
                             }
                             else if ($ctr == 7){
-                                echo("Insert content about $name here!<br><br>");
+                                print("Insert content about $name here!<br><br>");
                             }
                         ?>
                 </p>
@@ -112,7 +112,7 @@
         <section>
             <p class="actInfoThree">
                 <?php
-                    echo("<b>Their website:</b> <a href='$url' target='_blank' class='actWebLink'>$url</a>");
+                    print("<b>Their website:</b> <a href='$url' target='_blank' class='actWebLink'>$url</a>");
                 ?>
             </p>
         </section>
@@ -120,7 +120,7 @@
         <!-- MAPPING SECTION -->
         <section>
             <?php
-            echo("<div>
+            print("<div>
                 <a href='$map_link[$ctr]' target='_blank'>
                     <img src='img/images/mggooglemap.png' class='mapSize' alt='$name Map'>
                 </a>
@@ -128,7 +128,7 @@
             ?>
             <p class="actInfoThree">
                 <?php
-                    echo("<b>Located At:</b> <a href='$address' target='_blank' class='actWebLink'>$address</a>");
+                    print("<b>Located At:</b> <a href='$address' target='_blank' class='actWebLink'>$address</a>");
                 ?>
             </p>
         </section>
@@ -191,7 +191,7 @@
                     $map = $_SESSION['map_img'];
                     $map_link = $_SESSION['map_link'];
 
-                    echo(
+                    print(
                         "<a class='card' id='cardA$ctr' title='$name' href='activity.php?count=$ctr'>
                         <img class='card-image' src='img/images/$img1' alt='$altText1'>
                         <h4>$name</h4>
