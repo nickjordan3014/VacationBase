@@ -9,7 +9,7 @@
                 <?php
                     if(isset($errorMsg[2])){
                         foreach($errorMsg[2] as $accError){
-                            print("<errdiv style='font-family:source-serif-pro,serif;color:#f01e2c;font-size:14px;'>".$accError."</errdiv>");
+                            echo("<errdiv style='font-family:source-serif-pro,serif;color:#f01e2c;font-size:14px;'>".$accError."</errdiv>");
                         }
                     }
                 ?>
@@ -20,7 +20,7 @@
                 <?php
                     if(isset($errorMsg[0])){
                         foreach($errorMsg[0] as $emailError){
-                            print("<errdiv style='font-family:source-serif-pro,serif;color:#f01e2c;font-size:12px;'>".$emailError."</errdiv>");
+                            echo("<errdiv style='font-family:source-serif-pro,serif;color:#f01e2c;font-size:12px;'>".$emailError."</errdiv>");
                         }
                     }
                 ?>
@@ -31,7 +31,7 @@
                 <?php
                     if(isset($errorMsg[1])){
                         foreach($errorMsg[1] as $passErrors){
-                            print("<errdiv style='font-family:source-serif-pro,serif;color:#f01e2c;font-size:12px;'>".$passErrors."</errdiv>");
+                            echo("<errdiv style='font-family:source-serif-pro,serif;color:#f01e2c;font-size:12px;'>".$passErrors."</errdiv>");
                         }
                     }
                 ?>

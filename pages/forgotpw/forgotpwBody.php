@@ -12,7 +12,7 @@
                     <?php
                         if(isset($errorMsg[0])){
                             foreach($errorMsg[0] as $emailError){
-                                print("<errdiv style='font-family:source-serif-pro,serif;color:#f01e2c;font-size:12px;'>".$emailError."</errdiv>");
+                                echo("<errdiv style='font-family:source-serif-pro,serif;color:#f01e2c;font-size:12px;'>".$emailError."</errdiv>");
                             }
                         }
                     ?>
