@@ -2,8 +2,8 @@
     include("phpconnect/connIndex.php");
     include("template/head.html");
     include("pages/index/indexHead.php");
-    include("template/nav.html");
     include("template/loginStatus.php");
+    include("template/nav.html");
     include("pages/index/indexBody.php");
     include("template/footer.html");
 ?>

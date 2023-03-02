@@ -4,8 +4,12 @@
 ?>
 <section class="login-status">
     <div class="margActivity">
-        <p>New Here? <a href="signup.php">Sign Up!</a></p>
-        <p>Or, <a href="login.php">Log-In</a></p>
+        <span>
+            <?php
+                print("<p>New Here? <a href='signup.php'>Sign Up!</a></p>
+                <p>Or, <a href='login.php'>Log-In</a></p>");
+            ?>
+        </span>
     </div>
 </section>
 <?php
@@ -19,7 +23,7 @@
         <div class="drop-btn" onclick="toggle()" >
             <span>
                 <?php
-                    echo("<h4><p style='text-decoration:none;color:black;font-weight:700;'>Hey there, ".$_SESSION['user']['firstName']."</p></h4>");
+                    print("<h4><p style='text-decoration:none;color:black;font-weight:700;'>Hey there, ".$_SESSION['user']['firstName']."</p></h4>");
                 ?>
             </span>
         </div>

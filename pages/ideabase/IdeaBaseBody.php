@@ -118,7 +118,7 @@
                 // foreach($results AS $result){
                 //     $img = $result["img1"];
                 //     $name = $result["event_name"];
-                //     echo(
+                //     print(
                 //         "<div class='card' id='tpC$ctr' title='$name'>
                 //             <a class='actPage' href='activity.php'>
                 //                 <div class='clickCard'>

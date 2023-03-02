@@ -17,7 +17,7 @@
             </form>
         </section>
         <hr class="hsline">
-        <section class="search-card" href="activity.php">
+        <!-- <section class="search-card" href="activity.php">
             <img src="img/images/magickingdom.jpeg" class="search-image" alt="Magic Kingdom Castle">
             <article class="search-card-content">
                 <h3>Magic Kingdom Park | From $109</h3>
@@ -56,7 +56,7 @@
                 <p class ="subtext">$$$, Themepark, Disney, Family-Friendly, Outdoors</p>
                 <p>Magic Kingdom park is a theme park at...</p>
             </article>
-        </section>
+        </section> -->
     </section>
     <section class="filter-content">
         <form action="filter.php" class="filter-form">
