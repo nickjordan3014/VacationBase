@@ -11,6 +11,9 @@ const data = {
         },
         {
             "scrollid": "scroll3"
+        },
+        {
+            "scrollid": "scroll4"
         }
     ]
 }
@@ -64,6 +67,12 @@ function init() { //intializes the function
     }
     document.getElementById("autoLeft3").onclick = function() { //Second Carousel moves right if clicked
         scrollLeft(data.ids[3].scrollid);
+    }
+    document.getElementById("autoRight4").onclick = function() { //Forth Carousel moves right if clicked
+        scrollRight(data.ids[4].scrollid);
+    }
+    document.getElementById("autoLeft4").onclick = function() { //Second Carousel moves right if clicked
+        scrollLeft(data.ids[4].scrollid);
     }
 }
 
