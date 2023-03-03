@@ -9,7 +9,6 @@
     </p>
 
     <!--idea base cards-->
-
     <section class="card-row">
         <button class="caro-btn-left" id="autoLeft4">
             <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
@@ -91,10 +90,9 @@
     </section>
 
 
-    <!-- FIRST CARD ROW -->
+    <!--Orlando Signature-->
     <section class="card-row">
         <h2 class="row-title">Orlando's Signature: Theme Parks</h2>
-        
         <a href="search.php" class="row-link"><p class="inline rightalign">See All Theme Park Activities</p></a>
         <!--Cards-->
 
@@ -209,7 +207,6 @@
     <section class="card-row">
         <h2 class="row-title">Blogs about Orlando</h2>
         <a href="search.php" class="row-link"><p class="inline rightalign">See All Orlando Blogs</p></a>
-        <!-- <div class="carouselInline"> -->
 
 
         <button class="caro-btn-left" id="autoLeft1">
