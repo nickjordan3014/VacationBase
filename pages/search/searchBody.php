@@ -8,24 +8,57 @@
     <img src="img/icons-VB/VacationBase_Logo.png" alt="Vacation Base Logo" class="mobileLogo">
     <section class="search-content">
         <section class="logo-area">
-            <form action="search.php" class="logo-area">     
+            <form action="search.php" method="POST" class="logo-area">     
                     <label for="search" class="searchlabel">Show me... </label>
-                    <input type="text" name="search" class="searchpagebox">
-                    <button class="nobtndecor">
+                    <input type="text" name="searchbar" class="searchpagebox">
+                    <button class="nobtndecor" type="submit" name="search_btn">
                         <img src="img/icons-VB/Search_Icon.png" alt="Search Icon" class="searchico">
                     </button>
             </form>
         </section>
         <hr class="hsline">
+        <?php
+
+            $search_tp = array(metaphone("park"), metaphone("water park"), metaphone("theme park"), metaphone("roller coaster"), metaphone("amusement park"), metaphone("carnival"), metaphone("fair"), metaphone("attraction"), metaphone("adventure"));
+            // $search_res = array();
+
+            // if there is nothing in the search bar
+            if (!isset($_POST['searchbar']) || empty($_POST['searchbar'])){
+                print("You have not searched for anything yet. Search for an event");
+            }
+
+            // else if there is something in the search bar
+            else {
+                // returns the value of whatever the user enters on the search bar
+                $results = $_POST['searchbar'];
+
+                // if what the user searches matches matches something from the meta data
+                if (in_array(metaphone($results), $search_tp)){
+                    echo "We have found a theme park match match!";
+
+
+                    foreach($searchThemePark AS $searchTP){
+                        $id = $searchTP["id"];
+                        $name = $searchTP["event_name"];
+
+                        print(
+                            "<a href='itinerary.php'>
+                                <section class='search-card'>    
+                                    $name
+                                </section>
+                            </a>"
+                        );
+                    }
+                }
+
+                // else if what the yser searches doesnt match anything
+                else {
+                    print("We couldnt find any results for the search '".$results."'");
+                }
+
+            }
+        ?>
         <!-- <section class="search-card" href="activity.php">
-            <img src="img/images/magickingdom.jpeg" class="search-image" alt="Magic Kingdom Castle">
-            <article class="search-card-content">
-                <h3>Magic Kingdom Park | From $109</h3>
-                <p class ="subtext">$$$, Themepark, Disney, Family-Friendly, Outdoors</p>
-                <p>Magic Kingdom park is a theme park at...</p>
-            </article>
-        </section>
-        <section class="search-card" href="activity.php">
             <img src="img/images/legoland.jpg" class="search-image" alt="Magic Kingdom Castle">
             <article class="search-card-content">
                 <h3>Legoland Florida | From $84</h3>
