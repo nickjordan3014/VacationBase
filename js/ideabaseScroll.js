@@ -1,8 +1,8 @@
 const data = {
     "ids" : [
-        {
-            "scrollid": "scrollBase"
-        },
+        // {
+        //     "scrollid": "scroll4"
+        // },
         {
             "scrollid": "scroll0" 
         },
@@ -42,11 +42,10 @@ function scrollLeft(id) { // function to move carousel over to the right
 }
 
 function init() { //intializes the function
-
-    // document.getElementById("autoRightIB").onclick = function() { //Forth Carousel moves right if clicked
+    // document.getElementById("autoRight4").onclick = function() { //Forth Carousel moves right if clicked
     //     scrollRight(data.ids[4].scrollid);
     // }
-    // document.getElementById("autoLeftIB").onclick = function() { //Second Carousel moves right if clicked
+    // document.getElementById("autoLeft4").onclick = function() { //Fourth Carousel moves right if clicked
     //     scrollLeft(data.ids[4].scrollid);
     // }
 
