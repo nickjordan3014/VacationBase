@@ -30,7 +30,7 @@
             // else if there is something in the search bar
             else {
                 // returns the value of whatever the user enters on the search bar
-                $results = $_POST['searchbar'];
+                $results = strtolower($_POST['searchbar']);
                 echo($results);
                 echo("<br>");
                 echo(metaphone($results));
