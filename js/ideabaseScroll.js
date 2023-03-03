@@ -1,6 +1,9 @@
 const data = {
     "ids" : [
         {
+            "scrollid": "scrollBase"
+        },
+        {
             "scrollid": "scroll0" 
         },
         {
@@ -11,10 +14,8 @@ const data = {
         },
         {
             "scrollid": "scroll3"
-        },
-        {
-            "scrollid": "scrollBase"
         }
+        
     ]
 }
 
@@ -41,6 +42,14 @@ function scrollLeft(id) { // function to move carousel over to the right
 }
 
 function init() { //intializes the function
+
+    // document.getElementById("autoRightIB").onclick = function() { //Forth Carousel moves right if clicked
+    //     scrollRight(data.ids[4].scrollid);
+    // }
+    // document.getElementById("autoLeftIB").onclick = function() { //Second Carousel moves right if clicked
+    //     scrollLeft(data.ids[4].scrollid);
+    // }
+
     document.getElementById("autoRight0").onclick = function() { //First Carousel moves right if clicked
         scrollRight(data.ids[0].scrollid);
     }
@@ -58,21 +67,15 @@ function init() { //intializes the function
     document.getElementById("autoRight2").onclick = function() { //Third Carousel moves right if clicked
         scrollRight(data.ids[2].scrollid);
     }
-    document.getElementById("autoLeft2").onclick = function() { //Second Carousel moves right if clicked
+    document.getElementById("autoLeft2").onclick = function() { //Third Carousel moves right if clicked
         scrollLeft(data.ids[2].scrollid);
     }
 
     document.getElementById("autoRight3").onclick = function() { //Forth Carousel moves right if clicked
         scrollRight(data.ids[3].scrollid);
     }
-    document.getElementById("autoLeft3").onclick = function() { //Second Carousel moves right if clicked
+    document.getElementById("autoLeft3").onclick = function() { //Fourth Carousel moves right if clicked
         scrollLeft(data.ids[3].scrollid);
-    }
-    document.getElementById("autoRightIB").onclick = function() { //Forth Carousel moves right if clicked
-        scrollRight(data.ids[4].scrollid);
-    }
-    document.getElementById("autoLeftIB").onclick = function() { //Second Carousel moves right if clicked
-        scrollLeft(data.ids[4].scrollid);
     }
 }
 

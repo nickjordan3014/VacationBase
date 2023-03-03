@@ -9,10 +9,12 @@
     </p>
 
     <!--idea base cards-->
-    <section class="card-row carouselInline">
-        <button class="nobtndecor" id="autoLeftIB">
-            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow carouselLeft"> <!--Using add icon as a placeholder for css purposes-->
+
+    <section class="card-row">
+        <button class="caro-btn-left" id="autoLeftIB">
+            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
         </button>
+
         <!--Cards-->
         <section class="carousel" id="scrollBase">
             <div class="ideabase-card" id="ibC0"> 
@@ -93,25 +95,28 @@
                 </a>
             </div>
         </section>
-        <button class="nobtndecor" id="autoRightIB">
-            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow carouselRight"> <!--Using add icon as a placeholder for css purposes-->
+
+
+        <button class="caro-btn-right" id="autoRightIB">
+            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
         </button>
     </section>
 
 
- <!-- FIRST CARD ROW -->
+    <!-- FIRST CARD ROW -->
+    <section class="card-row">
+        <h2 class="inline">Orlando's Signature: Theme Parks</h2>
+        
+        <p class="inline rightalign"><a href="search.php" class="black">See All Theme Park Activities</a></p>
+        <!--Cards-->
+        <!-- <div class="carouselInline"> -->
 
- <section class="card-row">
-    <h2 class="inline">Orlando's Signature: Theme Parks</h2>
-    
-    <p class="inline rightalign"><a href="search.php" class="black">See All Theme Park Activities</a></p>
-    <!--Cards-->
-    <div class="carouselInline">
-        <button class="nobtndecor" id="autoLeft0">
-            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow carouselRight"> <!--Using add icon as a placeholder for css purposes-->
+
+        <button class="caro-btn-left" id="autoLeft0">
+            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
         </button>
 
-    <section class="carousel" id="scroll0">
+        <section class="carousel" id="scroll0">
             <!-- DYNAMIC CARD CODE -->
             <?php
                 // $ctr = 0;
@@ -131,96 +136,102 @@
                 //     $ctr = $ctr+1;
                 // }
             ?>
-        <div class="card" id="tpC0">
-            <a class= "actPage" href="activity.php">
-                <div class="clickCard">
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Magic Kingdom Park</p>
-                </div>
-            </a>
-        </div>
+            <div class="card" id="tpC0">
+                <a class= "actPage" href="activity.php">
+                    <div class="clickCard">
+                        <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                        <p>Magic Kingdom Park</p>
+                    </div>
+                </a>
+            </div>
 
-        <div class="card" id="tpC1">
-            <a class= "actPage" href="activity.php">
-                <div class="clickCard">
-                    <img src="img/images/legoland.jpg" class="image" alt="Magic Kingdom Castle">
-                    <p>Legoland Florida</p>
-                </div>
-            </a>
-        </div>
+            <div class="card" id="tpC1">
+                <a class= "actPage" href="activity.php">
+                    <div class="clickCard">
+                        <img src="img/images/legoland.jpg" class="image" alt="Magic Kingdom Castle">
+                        <p>Legoland Florida</p>
+                    </div>
+                </a>
+            </div>
 
-        <div class="card" id="tpC2">
-            <a class= "actPage" href="activity.php">
-                <div class="clickCard">
-                    <img src="img/images/universal.jpg" class="image" alt="Magic Kingdom Castle">
-                    <p>Universal Studios</p>
-                </div>
-            </a>
-        </div>
+            <div class="card" id="tpC2">
+                <a class= "actPage" href="activity.php">
+                    <div class="clickCard">
+                        <img src="img/images/universal.jpg" class="image" alt="Magic Kingdom Castle">
+                        <p>Universal Studios</p>
+                    </div>
+                </a>
+            </div>
 
-        <div class="card" id="tpC3">
-            <a class= "actPage" href="activity.php">
-                <div class="clickCard">
-                    <img src="img/images/aquatica.jpg" class="image" alt="Magic Kingdom Castle">
-                    <p>Aquatica Orlando</p>
-                </div>
-            </a>
-        </div>
+            <div class="card" id="tpC3">
+                <a class= "actPage" href="activity.php">
+                    <div class="clickCard">
+                        <img src="img/images/aquatica.jpg" class="image" alt="Magic Kingdom Castle">
+                        <p>Aquatica Orlando</p>
+                    </div>
+                </a>
+            </div>
 
-        <div class="card" id="tpC4">
-            <a class= "actPage" href="activity.php">
-                <div class="clickCard">
-                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                    <p>Dynamic Activity 5</p>
-                </div>
-            </a>
-        </div>
+            <div class="card" id="tpC4">
+                <a class= "actPage" href="activity.php">
+                    <div class="clickCard">
+                        <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                        <p>Dynamic Activity 5</p>
+                    </div>
+                </a>
+            </div>
 
-        <div class="card" id="tpC5">
-            <a class= "actPage" href="activity.php">
-                <div class="clickCard">
-                    <img src="img/images/aquatica.jpg" class="image" alt="Magic Kingdom Castle">
-                    <p>Dynamic Activity 6</p>
-                </div>
-            </a>
-        </div>
+            <div class="card" id="tpC5">
+                <a class= "actPage" href="activity.php">
+                    <div class="clickCard">
+                        <img src="img/images/aquatica.jpg" class="image" alt="Magic Kingdom Castle">
+                        <p>Dynamic Activity 6</p>
+                    </div>
+                </a>
+            </div>
 
-        <div class="card" id="tpC6">
-            <a class= "actPage" href="activity.php">
-                <div class="clickCard">
-                    <img src="img/images/legoland.jpg" class="image" alt="Magic Kingdom Castle">
-                    <p>Dynamic Activity 7</p>
-                </div>
-            </a>
-        </div>
+            <div class="card" id="tpC6">
+                <a class= "actPage" href="activity.php">
+                    <div class="clickCard">
+                        <img src="img/images/legoland.jpg" class="image" alt="Magic Kingdom Castle">
+                        <p>Dynamic Activity 7</p>
+                    </div>
+                </a>
+            </div>
 
-        <div class="card" id="tpC7">
-            <a class= "actPage" href="activity.php">
-                <div class="clickCard">
-                    <img src="img/images/universal.jpg" class="image" alt="Magic Kingdom Castle">
-                    <p>Dynamic Activity 8</p>
-                </div>
-            </a>
-        </div>
+            <div class="card" id="tpC7">
+                <a class= "actPage" href="activity.php">
+                    <div class="clickCard">
+                        <img src="img/images/universal.jpg" class="image" alt="Magic Kingdom Castle">
+                        <p>Dynamic Activity 8</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+
+        <button class="caro-btn-right" id="autoRight0">
+            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
+        </button>
+
+        <!-- </div> -->
     </section>
 
-    <button class="nobtndecor arrowBG" id="autoRight0">
-        <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow carouselLeft"> <!--Using add icon as a placeholder for css purposes-->
-    </button>
-    </div>
-</section>
+
+    <!-- TBD -->
 
 
-<!-- TBD -->
+    <!--Blogs-->
+    <section class="card-row">
+        <h2 class="inline">Blogs about Orlando</h2>
+        <p class="inline rightalign"><a href="search.php" class="black">See All Orlando Blogs</a></p>
+        <!-- <div class="carouselInline"> -->
 
-<!--Blogs-->
-<section class="card-row">
-    <h2 class="inline">Blogs about Orlando</h2>
-    <p class="inline rightalign"><a href="search.php" class="black">See All Orlando Blogs</a></p>
-    <div class="carouselInline">
-        <button class="nobtndecor" id="autoLeft1">
-            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow carouselRight"> <!--Using add icon as a placeholder for css purposes-->
+
+        <button class="caro-btn-left" id="autoLeft1">
+            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
         </button>
+
         <section class="carousel" id="scroll1">
             <div class="card" id="bC0"> <!--Naming Convention for cards bC0 = blog card 0-->
                 <a class= "actPage" href="blog.php">
@@ -287,25 +298,34 @@
                 </a>
             </div>
         </section>
-        <button class="nobtndecor" id="autoRight1">
-            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow carouselLeft"> <!--Using add icon as a placeholder for css purposes-->
+
+        <button class="caro-btn-right" id="autoRight1">
+            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
         </button>
-    </div>
-    <!--Cards-->
-</section>
-<!--Ad Space-->
-<article class="adleaderboard">
-    <p>[ad here]</p>
-</article>
-<!--Articles-->
-<section class="card-row">
-    <h2 class="inline">Local Orlando Vibes</h2>
-    <p class="inline rightalign"><a href="search.php" class="black">See All Orlando Local Vibes</a></p>
-    <!--Cards-->
-    <div class="carouselInline">
-        <button class="nobtndecor" id="autoLeft2">
-            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow carouselLeft"> <!--Using add icon as a placeholder for css purposes-->
+
+        <!-- </div> -->
+        <!--Cards-->
+    </section>
+
+
+    <!--Ad Space-->
+    <article class="adleaderboard">
+        <p>[ad here]</p>
+    </article>
+
+
+    <!--Articles-->
+    <section class="card-row">
+        <h2 class="inline">Local Orlando Vibes</h2>
+        <p class="inline rightalign"><a href="search.php" class="black">See All Orlando Local Vibes</a></p>
+        <!--Cards-->
+        <!-- <div class="carouselInline"> -->
+
+
+        <button class="caro-btn-left" id="autoLeft2">
+            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
         </button>
+
         <section class="carousel" id="scroll2">
             <div class="card" id="aC0"> <!--Naming Convention for cards aC0 = articles card 0-->
                 <img src="img/images/beach.jpg" class="image" alt="Magic Kingdom Castle">
@@ -339,77 +359,89 @@
                 <img src="img/images/universal.jpg" class="image" alt="Magic Kingdom Castle">
                 <p>Dynamic Vibe 8</p>
             </div>
+
         </section>
-        <button class="nobtndecor inline" id="autoRight2">
-            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow carouselRight"> <!--Using add icon as a placeholder for css purposes-->
+
+
+        <button class="caro-btn-right" id="autoRigh2">
+            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
         </button>
-    </div> 
-</section>
-<!--Preplanned-->
-<section class="card-row">
-    <h2 class="inline">Preplanned Orlando Itineraries</h2>
-    <p class="inline rightalign"><a href="search.php" class="black">See All Preplanned Orlando Itineraries</a></p>
-    <div class="carouselInline">
-        <button class="nobtndecor" id="autoLeft3">
-            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="carouselArrow carouselLeft"> <!--Using add icon as a placeholder for css purposes-->
-        </button>        
-        <!--Cards-->
-        <section class="carousel" id="scroll3">
-            <div class="card" id="piC0"> <!--Naming Convention for cards piC0 = preplanned itineraries card 0-->
-                <a class="actPage" href="preplanned.php">
-                <img src="img/images/popular.jpg" class="image" alt="Magic Kingdom Castle">
-                <p>3 Day Themepark Trip</p> <!--Will worry about text styling later-->
-            </div>
-                </a>
-            <div class="card" id="piC1">
-                <a class="actPage" href="preplanned.php">
-                <img src="img/images/beach.jpg" class="image" alt="Magic Kingdom Castle">
-                <p>Visiting Brevard County</p>
-            </div>
-                </a>
-            <div class="card" id="piC2">
-                <a class="actPage" href="preplanned.php">
-                <img src="img/images/legoland.jpg" class="image" alt="Magic Kingdom Castle">
-                <p>Family Florida Fun</p>
-            </div>
-                </a>
-            <div class="card" id="piC3">
-                <a class="actPage" href="preplanned.php">
-                <img src="img/images/i4.jpg" class="image" alt="Magic Kingdom Castle">
-                <p>Top Tourist Traps</p>
-            </div>
-                </a>
-            <div class="card" id="piC4">
-                <a class="actPage" href="preplanned.php">
-                <img src="img/images/aquatica.jpg" class="image" alt="Magic Kingdom Castle">
-                <p>Dynamic Preplanned 5</p>
-            </div>
-                </a>
-            <div class="card" id="piC5">
-                <a class="actPage" href="preplanned.php">
-                <img src="img/images/legoland.jpg" class="image" alt="Magic Kingdom Castle">
-                <p>Dynamic Preplanned 6</p>
-            </div>
-                </a>
-            <div class="card" id="piC6">
-                <a class="actPage" href="preplanned.php">
-                <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
-                <p>Dynamic Preplanned 7</p>
-            </div>
-                </a>
-            <div class="card" id="piC7">
-                <a class="actPage" href="preplanned.php">
-                <img src="img/images/beach.jpg" class="image" alt="Magic Kingdom Castle">
-                <p>Dynamic Preplanned 8</p>
-            </div>
-                </a>
-        </section>
-        <button class="nobtndecor" id="autoRight3">
-            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="carouselArrow carouselRight"> <!--Using add icon as a placeholder for css purposes-->
-        </button>
-    </div>
-    
-</section>
+        <!-- </div>  -->
+    </section>
+
+
+    <!--Preplanned-->
+    <section class="card-row">
+        <h2 class="inline">Preplanned Orlando Itineraries</h2>
+        <p class="inline rightalign"><a href="search.php" class="black">See All Preplanned Orlando Itineraries</a></p>
+        <!-- <div class="carouselInline"> -->
+
+
+            <button class="caro-btn-left" id="autoLeft3">
+                <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
+            </button>
+            
+            
+            <!--Cards-->
+            <section class="carousel" id="scroll3">
+                <div class="card" id="piC0"> <!--Naming Convention for cards piC0 = preplanned itineraries card 0-->
+                    <a class="actPage" href="preplanned.php">
+                    <img src="img/images/popular.jpg" class="image" alt="Magic Kingdom Castle">
+                    <p>3 Day Themepark Trip</p> <!--Will worry about text styling later-->
+                </div>
+                    </a>
+                <div class="card" id="piC1">
+                    <a class="actPage" href="preplanned.php">
+                    <img src="img/images/beach.jpg" class="image" alt="Magic Kingdom Castle">
+                    <p>Visiting Brevard County</p>
+                </div>
+                    </a>
+                <div class="card" id="piC2">
+                    <a class="actPage" href="preplanned.php">
+                    <img src="img/images/legoland.jpg" class="image" alt="Magic Kingdom Castle">
+                    <p>Family Florida Fun</p>
+                </div>
+                    </a>
+                <div class="card" id="piC3">
+                    <a class="actPage" href="preplanned.php">
+                    <img src="img/images/i4.jpg" class="image" alt="Magic Kingdom Castle">
+                    <p>Top Tourist Traps</p>
+                </div>
+                    </a>
+                <div class="card" id="piC4">
+                    <a class="actPage" href="preplanned.php">
+                    <img src="img/images/aquatica.jpg" class="image" alt="Magic Kingdom Castle">
+                    <p>Dynamic Preplanned 5</p>
+                </div>
+                    </a>
+                <div class="card" id="piC5">
+                    <a class="actPage" href="preplanned.php">
+                    <img src="img/images/legoland.jpg" class="image" alt="Magic Kingdom Castle">
+                    <p>Dynamic Preplanned 6</p>
+                </div>
+                    </a>
+                <div class="card" id="piC6">
+                    <a class="actPage" href="preplanned.php">
+                    <img src="img/images/magickingdom.jpeg" class="image" alt="Magic Kingdom Castle">
+                    <p>Dynamic Preplanned 7</p>
+                </div>
+                    </a>
+                <div class="card" id="piC7">
+                    <a class="actPage" href="preplanned.php">
+                    <img src="img/images/beach.jpg" class="image" alt="Magic Kingdom Castle">
+                    <p>Dynamic Preplanned 8</p>
+                </div>
+                    </a>
+
+            </section>
+
+            <button class="caro-btn-right" id="autoRight3">
+                <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
+            </button>
+        <!-- </div> -->
+        
+    </section>
+
     <!--Ad Space-->
     <article class="adleaderboard">
         <p>[ad here]</p>
