@@ -40,7 +40,7 @@
 
                             
                             $id[$ctr] = $result["id"];
-                            // print($id[$ctr]);
+                            print($id[$ctr]);
                             $name[$ctr] = $result["event_name"];
                             $img1[$ctr] = $result["img1"];
                             $altText1[$ctr] = $result["alt_text_img1"];
@@ -51,6 +51,8 @@
                             $map[$ctr] = $result["map_img"];
                             $map_link[$ctr] = $result["map_link"];
                             $themePark = $result["isThemePark"];
+                            $foodDrink = $result["isFoodDrink"];
+                            $local = $result["isLocal"];
                             
                             // Session sends
                             $_SESSION['id_tp'.$ctr] = $id[$ctr];
@@ -63,22 +65,56 @@
                             $_SESSION['meta_description_tp'.$ctr] = $meta[$ctr];
                             $_SESSION['map_img_tp'.$ctr] = $map[$ctr];
                             $_SESSION['map_link_tp'.$ctr] = $map_link[$ctr];
-                            $_SESSION['isThemePark'.$ctr] = $themePark;
+                            
 
                             if($themePark == 'Y'){
                                 $themePark = 'ThemePark';
                             }
+                            else if ($themePark == 'N'){
+                                $themePark = 'Not Theme Park';
+                            }
 
-                            
+                            $_SESSION['isThemePark'.$ctr] = $themePark;
+
+                            $thmpk = $_SESSION['isThemePark'.$ctr];
+
+                            if($local == 'Y'){
+                                $local = 'LocalEvent';
+                            }
+                            else if ($local == 'N'){
+                                $local = 'Not Local Event';
+                            }
+    
+                            $_SESSION['isLocal'.$ctr] = $local;
+    
+                            $locpo = $_SESSION['isLocal'.$ctr];
+
+                            if($foodDrink == 'Y'){
+                                $foodDrink = 'Restaurant';
+                            }
+                            else if ($foodDrink == 'N'){
+                                $foodDrink = 'Not Food Drink';
+                            }
+    
+                            $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
+    
+                            $fd = $_SESSION['isFoodDrink'.$ctr];
+    
+    
+
                             print(
-                                "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&event=$themePark'>
+                                "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&event=$themePark&id=$id[$ctr]'>
                                 <img class='card-image' src='img/images/$img1[$ctr]' alt='$altText1[$ctr]'>
                                 <h4>$name[$ctr]</h4>
+                                <p>$thmpk</p>
+                                <p>$fd</p>
+                                <p>$locpo</p>
                                 <p class='captions'>From $".$price[$ctr].(($result["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($result["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($result["isLocal"] == 'Y') ? " | Local Activity" : "").(($result["isGoodValue"] == 'Y') ? " | Good Value" : "").(($result["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($result["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($result["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($result["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
                                 </a>&nbsp;"
                             );
                             $ctr = $ctr+1;
                         }
+                        print("ctr: ".$ctr);
                     ?>
             </section>
 
@@ -105,12 +141,12 @@
             <!--Cards-->
             <section class="carousel" id="scroll1">
                 <?php
-                    $ctr = 9;
+                    // $ctr = 9;
                     foreach($results_two AS $result_two){
                         // print($ctr);
 
                         $id[$ctr] = $result_two["id"];
-                        // print($id[$ctr]);
+                        print($id[$ctr]);
                         $name[$ctr] = $result_two["event_name"];
                         $img1[$ctr] = $result_two["img1"];
                         $altText1[$ctr] = $result_two["alt_text_img1"];
@@ -121,6 +157,8 @@
                         $map[$ctr] = $result_two["map_img"];
                         $map_link[$ctr] = $result_two["map_link"];
                         $foodDrink = $result_two["isFoodDrink"];
+                        $themePark = $result_two["isThemePark"];
+                        $local = $result_two["isLocal"];
 
                         // if($ctr != $id[$ctr]){
                         //     $ctr = $id[$ctr];
@@ -137,22 +175,55 @@
                         $_SESSION['meta_description_res'.$ctr] = $meta[$ctr];
                         $_SESSION['map_img_res'.$ctr] = $map[$ctr];
                         $_SESSION['map_link_res'.$ctr] = $map_link[$ctr];
-                        $_SESSION['isFoodDrink'] = $foodDrink[$ctr];
+                        
 
                         if($foodDrink == 'Y'){
                             $foodDrink = 'Restaurant';
                         }
+                        else if ($foodDrink == 'N'){
+                            $foodDrink = 'Not Food Drink';
+                        }
+
+                        $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
+
+                        $fd = $_SESSION['isFoodDrink'.$ctr];
+
+                        if($themePark == 'Y'){
+                            $themePark = 'ThemePark';
+                        }
+                        else if ($themePark == 'N'){
+                            $themePark = 'Not Theme Park';
+                        }
+
+                        $_SESSION['isThemePark'.$ctr] = $themePark;
+
+                        $thmpk = $_SESSION['isThemePark'.$ctr];
+
+                        if($local == 'Y'){
+                            $local = 'LocalEvent';
+                        }
+                        else if ($local == 'N'){
+                            $local = 'Not Local Event';
+                        }
+
+                        $_SESSION['isLocal'.$ctr] = $local;
+
+                        $locpo = $_SESSION['isLocal'.$ctr];
 
 
                         print(
-                            "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&event=$foodDrink'>
+                            "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&event=$foodDrink&id=$id[$ctr]'>
                             <img class='card-image' src='img/images/$img1[$ctr]' alt='$altText1[$ctr]'>
                             <h4>$name[$ctr]</h4>
+                            <p>$fd</p>
+                            <p>$thmpk</p>
+                            <p>$locpo</p>
                             <p class='captions'>".$price[$ctr].(($result_two["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($result_two["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($result_two["isLocal"] == 'Y') ? " | Local Activity" : "").(($result_two["isGoodValue"] == 'Y') ? " | Good Value" : "").(($result_two["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($result_two["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($result_two["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($result_two["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
                             </a>&nbsp;"
                         );
                         $ctr = $ctr+1;
                     }
+                    print("ctr: ".$ctr);
                     ?>
             </section>
 
@@ -254,84 +325,7 @@
     <br>
     <br>
 
-<!-- THIRD CARD ROW -->
 
-    <!--Travel TIps-->
-    <!-- <section class="card-row">
-
-        <h2 class="row-title">Orlando Travel Tips</h2>
-        <a href="search.php" class="row-link"><p class="inline rightalign">See All Orlando Travel Tips</p></a>
-
-        <button class="caro-btn-left" id="autoLeft3">
-            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
-        </button>
-            
-            
-            <section class="carousel" id="scroll3">
-
-                <?php
-                    print(
-                        "<a class= 'card' id='aC0' href=''>
-                        <img src='img/images/traveltips/i4.jpg' class='card-image' alt=''>
-                        <h4>Getting Around I-4</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='aC1' href=''>
-                        <img src='img/images/traveltips/shuttlebus.jpg' class='card-image' alt=''>
-                        <h4>Bus and Shuttle Routes</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='aC2' href=''>
-                        <img src='img/images/traveltips/carrent.jpg' class='card-image' alt=''>
-                        <h4>Car Rental Services</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='aC3' href=''>
-                        <img src='img/images/traveltips/toll.jpg' class='card-image' alt=''>
-                        <h4>E-Passes, Sunpasses and Quarters</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='aC4' href=''>
-                        <img src='img/images/traveltips/garage.jpg' class='card-image' alt=''>
-                        <h4>Parking Garage To-Dos</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='aC5' href=''>
-                        <img src='img/images/traveltips/scooter.jpg' class='card-image' alt=''>
-                        <h4>E-Scooters</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='aC6' href=''>
-                        <img src='img/images/traveltips/ubertaxi.jpg' class='card-image' alt=''>
-                        <h4>Ubers and Taxis</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='aC7' href=''>
-                        <img src='img/images/traveltips/night.jpg' class='card-image' alt=''>
-                        <h4>Walking Around at Night</h4>
-                        </a>&nbsp;"
-                    );
-                ?>
-
-            </section>
-
-        <button class="caro-btn-right" id="autoRight3">
-            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
-        </button>
-
-    </section> -->
-
-    <br>
-    <br>
-    <br>
-    <br>
 
     <!--local event-->
     <section class="card-row">
@@ -347,12 +341,12 @@
             <section class="carousel" id="scroll3">
 
                 <?php
-                    $ctr = 17;
+                    // $ctr = 17;
                     foreach($results_three AS $result_three){
                         // print($ctr);
 
                         $id[$ctr] = $result_three["id"];
-                        // print($id[$ctr]);
+                        print($id[$ctr]);
                         $name[$ctr] = $result_three["event_name"];
                         $img1[$ctr] = $result_three["img1"];
                         $altText1[$ctr] = $result_three["alt_text_img1"];
@@ -363,6 +357,8 @@
                         $map[$ctr] = $result_three["map_img"];
                         $map_link[$ctr] = $result_three["map_link"];
                         $local = $result_three["isLocal"];
+                        $themePark = $result_three["isThemePark"];
+                        $foodDrink = $result_three["isFoodDrink"];
 
                         // send data to session
                         $_SESSION['id_loc'.$ctr] = $id[$ctr];
@@ -375,22 +371,44 @@
                         $_SESSION['meta_description_loc'.$ctr] = $meta[$ctr];
                         $_SESSION['map_img_loc'.$ctr] = $map[$ctr];
                         $_SESSION['map_link_loc'.$ctr] = $map_link[$ctr];
-                        $_SESSION['isLocal'] = $local;
+                        
+                        
 
                         if($local == 'Y'){
                             $local = 'LocalEvent';
                         }
+                        else if ($local == 'N'){
+                            $local = 'Not Local Event';
+                        }
 
+                        $_SESSION['isLocal'.$ctr] = $local;
+
+                        $locpo = $_SESSION['isLocal'.$ctr];
+
+                        if($foodDrink == 'Y'){
+                            $foodDrink = 'Restaurant';
+                        }
+                        else if ($foodDrink == 'N'){
+                            $foodDrink = 'Not Food Drink';
+                        }
+
+                        $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
+
+                        $fd = $_SESSION['isFoodDrink'.$ctr];
 
                         print(
-                            "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&event=$local'>
+                            "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&event=$local&id=$id[$ctr]'>
                             <img class='card-image' src='img/images/$img1[$ctr]' alt='$altText1[$ctr]'>
                             <h4>$name[$ctr]</h4>
+                            <p>$locpo</p>
+                            <p>$fd</p>
+                            <p>$thmpk</p>
                             <p class='captions'>".$price[$ctr].(($result_three["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($result_three["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($result_three["isLocal"] == 'Y') ? " | Local Activity" : "").(($result_three["isGoodValue"] == 'Y') ? " | Good Value" : "").(($result_three["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($result_three["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($result_three["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($result_three["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
                             </a>&nbsp;"
                         );
                         $ctr = $ctr+1;
                     }
+                    print("ctr: ".$ctr);
                 ?>
 
             </section>

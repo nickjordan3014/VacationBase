@@ -10,6 +10,16 @@
             $ctr = $_GET['count'];
             $event = $_GET['event'];
 
+            
+
+            print($ctr);
+
+
+
+            print("Theme Park: ".$_SESSION['isThemePark'.$ctr]);
+            print("Restaurant: ".$_SESSION['isFoodDrink'.$ctr]);
+            print("Local Events: ".$_SESSION['isLocal'.$ctr]);
+
             if ($event == 'ThemePark'){
                 // Session variables
                 // $id[$ctr] = $_SESSION['id_tp'.$ctr];
@@ -33,7 +43,7 @@
                 $meta = $_SESSION['meta_description_tp'.$ctr];
                 $map = $_SESSION['map_img_tp'.$ctr];
                 $map_link = $_SESSION['map_link_tp'.$ctr];
-                $themePark = $_SESSION['isThemePark'];
+                // $themePark = $_SESSION['isThemePark'];
             }
             else if ($event == 'Restaurant'){
                 // Session variables
@@ -59,7 +69,7 @@
                 $meta = $_SESSION['meta_description_res'.$ctr];
                 $map = $_SESSION['map_img_res'.$ctr];
                 $map_link = $_SESSION['map_link_res'.$ctr];
-                $foodDrink = $_SESSION['isFoodDrink'];
+                // $foodDrink = $_SESSION['isFoodDrink'];
             }
             else if ($event == 'LocalEvent'){
                 // Session variables
@@ -73,7 +83,7 @@
                 $meta = $_SESSION['meta_description_loc'.$ctr];
                 $map = $_SESSION['map_img_loc'.$ctr];
                 $map_link = $_SESSION['map_link_loc'.$ctr];
-                $foodDrink = $_SESSION['isLocal'];
+                // $foodDrink = $_SESSION['isLocal'];
             }
 
             // print($name." - ".$ctr);
@@ -99,6 +109,7 @@
             <div class="price-click">
                 <div class="priceOf">
                     <?php
+                        print($themePark);
                         // We only want this print statement to display if the event type is a theme park AND the price is over $0
                         if((intval($price) > 0) && ($themePark == 'Y')){
                             print("<p>Adult tickets start at <b>$$price</b> (ticket prices vary for children)<p>");
@@ -124,7 +135,7 @@
                         <?php
                             print("$meta<br><br>");
 
-                            if ($ctr == 1){
+                            if ($id == 1){
                         ?>
                         
                             <a href="#" style="color: black;font-weight:bold;text-decoration:none">Main Street USA</a> is the first land visitors encounter as they enter the park, and it is designed to resemble a typical small American town from the turn of the 20th century.
@@ -217,11 +228,13 @@
         <section class="carousel" id="scroll0">
             
             <?php
-                
+
+                $ctr = 1;
                 $ctr2 = $ctr;
+                
 
                 if ($event == 'ThemePark'){
-                    $ctr = 1;
+                    // $ctr = 1;
                     
                     foreach($oth_resultsTP AS $other_result){
                         // print($ctr);
@@ -240,12 +253,12 @@
                         $map = $_SESSION['map_img_tp'.$ctr];
                         $map_link = $_SESSION['map_link_tp'.$ctr];
                         
-                        // print("id: ".$id);
+                        print("id: ".$id);
 
-                        // print("ctr: ".$ctr);
+                        print("ctr: ".$ctr);
 
                         print(
-                            "<a class='card' id='cardA$ctr' title='$name' href='activity.php?count=$ctr&event=$event'>
+                            "<a class='card' id='cardA$ctr' title='$name' href='activity.php?count=$ctr&event=$event&id=$id'>
                             <img class='card-image' src='img/images/$img1' alt='$altText1'>
                             <h4>$name</h4>
                             <p class='captions'>From $".$price.(($other_result["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($other_result["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($other_result["isLocal"] == 'Y') ? " | Local Activity" : "").(($other_result["isGoodValue"] == 'Y') ? " | Good Value" : "").(($other_result["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($other_result["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($other_result["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($other_result["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
@@ -253,10 +266,12 @@
                         );
                         $ctr = $ctr+1;
                     }
+
+                    print("ctr: ".$ctr);
                 }
 
                 else if ($event == 'Restaurant'){
-                    $ctr = 9;
+                    // $ctr = 9;
                     foreach($oth_resultsRes AS $other_result){
                         // print($ctr);
                         // skips over the activity were already on
@@ -274,12 +289,12 @@
                         $map = $_SESSION['map_img_res'.$ctr];
                         $map_link = $_SESSION['map_link_res'.$ctr];
                         
-                        // print("id: ".$id);
+                        print("id: ".$id);
 
-                        // print("ctr: ".$ctr);
+                        print("ctr: ".$ctr);
 
                         print(
-                            "<a class='card' id='cardA$ctr' title='$name' href='activity.php?count=$ctr&event=$event'>
+                            "<a class='card' id='cardA$ctr' title='$name' href='activity.php?count=$ctr&event=$event&id=$id'>
                             <img class='card-image' src='img/images/$img1' alt='$altText1'>
                             <h4>$name</h4>
                             <p class='captions'>From $".$price.(($other_result["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($other_result["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($other_result["isLocal"] == 'Y') ? " | Local Activity" : "").(($other_result["isGoodValue"] == 'Y') ? " | Good Value" : "").(($other_result["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($other_result["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($other_result["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($other_result["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
@@ -287,10 +302,11 @@
                         );
                         $ctr = $ctr+1;
                     }
+                    print("ctr: ".$ctr);
                 }
 
                 else if ($event == 'LocalEvent'){
-                    $ctr = 17;
+                    // $ctr = 17;
 
                     foreach($oth_resultsLoc AS $other_result){
                         // print($ctr);
@@ -309,12 +325,12 @@
                         $map = $_SESSION['map_img_loc'.$ctr];
                         $map_link = $_SESSION['map_link_loc'.$ctr];
                     
-                        // print("id: ".$id);
+                        print("id: ".$id);
 
-                        // print("ctr: ".$ctr);
+                        print("ctr: ".$ctr);
 
                         print(
-                            "<a class='card' id='cardA$ctr' title='$name' href='activity.php?count=$ctr&event=$event'>
+                            "<a class='card' id='cardA$ctr' title='$name' href='activity.php?count=$ctr&event=$eventi&id=$id'>
                             <img class='card-image' src='img/images/$img1' alt='$altText1'>
                             <h4>$name</h4>
                             <p class='captions'>From $".$price.(($other_result["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($other_result["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($other_result["isLocal"] == 'Y') ? " | Local Activity" : "").(($other_result["isGoodValue"] == 'Y') ? " | Good Value" : "").(($other_result["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($other_result["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($other_result["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($other_result["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
@@ -322,6 +338,7 @@
                         );
                         $ctr = $ctr+1;
                     }
+                    print("ctr: ".$ctr);
                 }
             ?>
 

@@ -54,11 +54,12 @@
                     foreach($searchThemePark AS $searchTP){
                         $id = $searchTP["id"];
                         $name = $searchTP["event_name"];
+                        $price = $searchTP["price"];
 
                         print(
                             "<a href='itinerary.php'>
-                                <section class='search-card'>    
-                                    $name
+                                <section class='search-card'>
+                                    <h3>$name | From $price</h3>
                                 </section>
                             </a>"
                         );
@@ -72,11 +73,12 @@
                     foreach($searchRestaurant AS $searchRes){
                         $id = $searchRes["id"];
                         $name = $searchRes["event_name"];
+                        $price = $searchRes["price"];
 
                         print(
                             "<a href='itinerary.php'>
-                                <section class='search-card'>    
-                                    $name
+                                <section class='search-card'>
+                                    <h3>$name | From $price</h3>
                                 </section>
                             </a>"
                         );
@@ -91,11 +93,12 @@
                     foreach($searchRainy AS $searchRain){
                         $id = $searchRain["id"];
                         $name = $searchRain["event_name"];
+                        $price = $searchRain["price"];
 
                         print(
                             "<a href='itinerary.php'>
-                                <section class='search-card'>    
-                                    $name
+                                <section class='search-card'>
+                                    <h3>$name | From $price</h3>
                                 </section>
                             </a>"
                         );
@@ -109,11 +112,12 @@
                     foreach($searchFamily AS $searchFF){
                         $id = $searchFF["id"];
                         $name = $searchFF["event_name"];
+                        $price = $searchFF["price"];
 
                         print(
                             "<a href='itinerary.php'>
-                                <section class='search-card'>    
-                                    $name
+                                <section class='search-card'>
+                                    <h3>$name | From $price</h3>
                                 </section>
                             </a>"
                         );
@@ -127,11 +131,12 @@
                     foreach($searchLocal AS $searchLoc){
                         $id = $searchLoc["id"];
                         $name = $searchLoc["event_name"];
+                        $price = $searchLoc["price"];
 
                         print(
                             "<a href='itinerary.php'>
-                                <section class='search-card'>    
-                                    $name
+                                <section class='search-card'>
+                                    <h3>$name | From $price</h3>
                                 </section>
                             </a>"
                         );
@@ -145,11 +150,12 @@
                     foreach($searchGoodVal AS $searchGood){
                         $id = $searchGood["id"];
                         $name = $searchGood["event_name"];
+                        $price = $searchGood["price"];
 
                         print(
                             "<a href='itinerary.php'>
-                                <section class='search-card'>    
-                                    $name
+                                <section class='search-card'>
+                                    <h3>$name | From $price</h3>
                                 </section>
                             </a>"
                         );
@@ -164,11 +170,12 @@
                     foreach($searchOutdoor AS $searchOut){
                         $id = $searchOut["id"];
                         $name = $searchOut["event_name"];
+                        $price = $searchOut["price"];
 
                         print(
                             "<a href='itinerary.php'>
-                                <section class='search-card'>    
-                                    $name
+                                <section class='search-card'>  
+                                    <h3>$name | From $price</h3>
                                 </section>
                             </a>"
                         );
@@ -182,11 +189,12 @@
                     foreach($searchLiveEvent AS $searchLive){
                         $id = $searchLive["id"];
                         $name = $searchLive["event_name"];
+                        $price = $searchLive["price"];
 
                         print(
                             "<a href='itinerary.php'>
-                                <section class='search-card'>    
-                                    $name
+                                <section class='search-card'>
+                                    <h3>$name | From $price</h3>
                                 </section>
                             </a>"
                         );
@@ -200,11 +208,12 @@
                     foreach($searchArts AS $searchArt){
                         $id = $searchArt["id"];
                         $name = $searchArt["event_name"];
+                        $price = $searchArt["price"];
 
                         print(
                             "<a href='itinerary.php'>
-                                <section class='search-card'>    
-                                    $name
+                                <section class='search-card'>
+                                    <h3>$name | From $price</h3>
                                 </section>
                             </a>"
                         );
