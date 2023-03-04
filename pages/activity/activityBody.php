@@ -257,6 +257,11 @@
 
                         print("ctr: ".$ctr);
 
+                        if ($id != $ctr){
+                            $ctr = $id;
+                            print("ctr update:  ".$ctr);
+                        }
+
                         print(
                             "<a class='card' id='cardA$ctr' title='$name' href='activity.php?count=$ctr&event=$event&id=$id'>
                             <img class='card-image' src='img/images/$img1' alt='$altText1'>
@@ -293,6 +298,11 @@
 
                         print("ctr: ".$ctr);
 
+                        if ($id != $ctr){
+                            $ctr = $id;
+                            print("ctr update:  ".$ctr);
+                        }
+
                         print(
                             "<a class='card' id='cardA$ctr' title='$name' href='activity.php?count=$ctr&event=$event&id=$id'>
                             <img class='card-image' src='img/images/$img1' alt='$altText1'>
@@ -328,6 +338,11 @@
                         print("id: ".$id);
 
                         print("ctr: ".$ctr);
+
+                        if ($id != $ctr){
+                            $ctr = $id;
+                            print("ctr update:  ".$ctr);
+                        }
 
                         print(
                             "<a class='card' id='cardA$ctr' title='$name' href='activity.php?count=$ctr&event=$eventi&id=$id'>

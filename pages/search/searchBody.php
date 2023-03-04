@@ -41,9 +41,9 @@
                 $search_rainy = array(metaphone("bad weather"), metaphone("weather"), metaphone("storm"), metaphone("rain"), metaphone("weather day"), metaphone("inside"), metaphone("jacket"), metaphone("thunder"), metaphone("wind"));
                 $search_fam = array(metaphone("child"), metaphone("children"), metaphone("kids"), metaphone("teens"), metaphone("teenagers"), metaphone("teenager"), metaphone("family"), metaphone("friend"), metaphone("families"), metaphone("friends"));
                 $search_local = array(metaphone("around"), metaphone("area"), metaphone("community"), metaphone("local"), metaphone("normal"), metaphone("nearby"), metaphone("corner"), metaphone("familiar"), metaphone("familiarity"), metaphone("UCF"), metaphone("university of central florida"), metaphone("college"), metaphone("football"), metaphone("native"));
-                $search_good = array(metaphone("cheap"), metaphone("poor"), metaphone("dollar"), metaphone("coin"), metaphone("price"), metaphone("cost"), metaphone("afford"), metaphone("affordable"), metaphone("bargain"), metaphone("special"), metaphone("reasonable"), metaphone("budget"), metaphone("reduce"), metaphone("money"));
-                $search_outdoor = array(metaphone("out"), metaphone("outdoor"), metaphone("outside"), metaphone("animal"), metaphone("animals"), metaphone("zoo"), metaphone("explore"), metaphone("exploring"), metaphone("land"), metaphone("sky"), metaphone("wind"), metaphone("exercise"), metaphone("garden"), metaphone("air"), metaphone("green"), metaphone("recreation"), metaphone("fresh"));
-                $search_live = array(metaphone("music"), metaphone("shows"), metaphone("concert"), metaphone("festival"), metaphone("show"), metaphone("social"), metaphone("musical"), metaphone("play"), metaphone("opera"), metaphone("nightclub"), metaphone("club"), metaphone("comedy"), metaphone("standup"), metaphone("band"), metaphone("venue"), metaphone("film"), metaphone("live"),metaphone("screen"));
+                $search_good = array(metaphone("cheap"), metaphone("poor"), metaphone("dollar"), metaphone("coin"), metaphone("price"), metaphone("cost"), metaphone("afford"), metaphone("affordable"), metaphone("bargain"), metaphone("special"), metaphone("reasonable"), metaphone("budget"), metaphone("reduce"), metaphone("money"), metaphone("broke"), metaphone("finance"));
+                $search_outdoor = array(metaphone("outdoor"), metaphone("outside"), metaphone("animal"), metaphone("animals"), metaphone("zoo"), metaphone("explore"), metaphone("exploring"), metaphone("land"), metaphone("sky"), metaphone("wind"), metaphone("exercise"), metaphone("garden"), metaphone("air"), metaphone("green"), metaphone("recreation"), metaphone("fresh"));
+                $search_live = array(metaphone("music"), metaphone("shows"), metaphone("concert"), metaphone("festival"), metaphone("show"), metaphone("social"), metaphone("musical"), metaphone("play"), metaphone("opera"), metaphone("comedy"), metaphone("standup"), metaphone("band"), metaphone("venue"), metaphone("film"), metaphone("live"),metaphone("screen"));
                 $search_art = array(metaphone("music"), metaphone("museum"), metaphone("shows"), metaphone("culture"), metaphone("show"), metaphone("paint"), metaphone("mural"), metaphone("artist"), metaphone("create"), metaphone("craft"), metaphone("brush"), metaphone("design"), metaphone("history"), metaphone("draw"), metaphone("photo"), metaphone("color"), metaphone("sketch"), metaphone("exhibit"), metaphone("easel"), metaphone("sculpt"), metaphone("media"), metaphone("animation"), metaphone("studio"), metaphone("display"), metaphone("heritage"), metaphone("renaissance"), metaphone("statue"), metaphone("mythology"));
                 
                 // if what the user searches matches matches something from the meta data
@@ -67,7 +67,7 @@
                 }
 
                 if (in_array(metaphone($results), $search_res) || strstr($results, 'eat') || strstr($results, 'food') || strstr($results, 'lunch') || strstr($results, 'dinner') || strstr($results, 'breakast') || strstr($results, 'meal') || strstr($results, 'cook') || strstr($results, 'drink')){
-                    echo "We have found a restaurant match match!";
+                    echo "We have found a restaurant match!";
 
 
                     foreach($searchRestaurant AS $searchRes){
@@ -87,7 +87,7 @@
 
 
                 if (in_array(metaphone($results), $search_rainy) || strstr($results, 'weater') || strstr($results, 'jacket') || strstr($results, 'inside') || strstr($results, 'rain')){
-                    echo "We have found a rainy day match match!";
+                    echo "We have found a rainy day match!";
 
 
                     foreach($searchRainy AS $searchRain){
@@ -106,7 +106,7 @@
                 }
 
                 if (in_array(metaphone($results), $search_fam) || strstr($results, 'child') || strstr($results, 'teen') || strstr($results, 'friend') || strstr($results, 'family') || strstr($results, 'sister') || strstr($results, 'brother') || strstr($results, 'daughter') || strstr($results, 'son') || strstr($results, 'father') || strstr($results, 'mother') || strstr($results, 'dad') || strstr($results, 'mom')){
-                    echo "We have found a family and friends match match!";
+                    echo "We have found a family and friends match!";
 
 
                     foreach($searchFamily AS $searchFF){
@@ -125,7 +125,7 @@
                 }
 
                 if (in_array(metaphone($results), $search_local) || strstr($results, 'local') || strstr($results, 'nearby') || strstr($results, 'area') || strstr($results, 'native')){
-                    echo "We have found a local event match match!";
+                    echo "We have found a local event match!";
 
 
                     foreach($searchLocal AS $searchLoc){
@@ -143,8 +143,8 @@
                     }
                 }
 
-                if (in_array(metaphone($results), $search_good) || strstr($results, 'cheap') || strstr($results, 'poor') || strstr($results, 'bargain') || strstr($results, 'cost') || strstr($results, 'dollar') || strstr($results, 'afford') || strstr($results, 'money')){
-                    echo "We have found a good value match match!";
+                if (in_array(metaphone($results), $search_good) || strstr($results, 'cheap') || strstr($results, 'poor') || strstr($results, 'bargain') || strstr($results, 'cost') || strstr($results, 'dollar') || strstr($results, 'afford') || strstr($results, 'money') || strstr($results, 'broke') || strstr($results, 'finance')){
+                    echo "We have found a good value match!";
 
 
                     foreach($searchGoodVal AS $searchGood){
@@ -163,8 +163,8 @@
                 }
 
 
-                if (in_array(metaphone($results), $search_outdoor) || strstr($results, 'out') || strstr($results, 'outside') || strstr($results, 'exercise') || strstr($results, 'air')){
-                    echo "We have found a outdoor events match match!";
+                if (in_array(metaphone($results), $search_outdoor) || strstr($results, 'exercise') || strstr($results, 'air')){
+                    echo "We have found a outdoor events match!";
 
 
                     foreach($searchOutdoor AS $searchOut){
@@ -183,7 +183,7 @@
                 }
 
                 if (in_array(metaphone($results), $search_live) || strstr($results, 'music') || strstr($results, 'club') || strstr($results, 'concert') || strstr($results, 'social')){
-                    echo "We have found a live events match match!";
+                    echo "We have found a live events match!";
 
 
                     foreach($searchLiveEvent AS $searchLive){
@@ -202,7 +202,7 @@
                 }
 
                 if (in_array(metaphone($results), $search_art) || strstr($results, 'art') || strstr($results, 'museum') || strstr($results, 'culture') || strstr($results, 'show') || strstr($results, 'exhibit') || strstr($results, 'draw') || strstr($results, 'color') || strstr($results, 'sculpt') || strstr($results, 'easel') || strstr($results, 'design')){
-                    echo "We have found a arts, museums, and culture match match!";
+                    echo "We have found a arts, museums, and culture match!";
 
 
                     foreach($searchArts AS $searchArt){
@@ -221,7 +221,7 @@
                 }
 
                 // else if what the yser searches doesnt match anything
-                else if (!(in_array(metaphone($results), $search_tp) || strstr($results, 'park') || strstr($results, 'theme') || strstr($results, 'amusement') || strstr($results, 'attraction')) && !(in_array(metaphone($results), $search_res) || strstr($results, 'eat') || strstr($results, 'food') || strstr($results, 'lunch') || strstr($results, 'dinner') || strstr($results, 'breakast') || strstr($results, 'meal') || strstr($results, 'cook') || strstr($results, 'drink')) && !(in_array(metaphone($results), $search_rainy) || strstr($results, 'weater') || strstr($results, 'jacket') || strstr($results, 'inside') || strstr($results, 'rain')) && !(in_array(metaphone($results), $search_fam) || strstr($results, 'child') || strstr($results, 'teen') || strstr($results, 'friend') || strstr($results, 'family') || strstr($results, 'sister') || strstr($results, 'brother') || strstr($results, 'daughter') || strstr($results, 'son') || strstr($results, 'father') || strstr($results, 'mother') || strstr($results, 'dad') || strstr($results, 'mom')) && !(in_array(metaphone($results), $search_local) || strstr($results, 'local') || strstr($results, 'nearby') || strstr($results, 'area') || strstr($results, 'native')) && !(in_array(metaphone($results), $search_good) || strstr($results, 'cheap') || strstr($results, 'poor') || strstr($results, 'bargain') || strstr($results, 'cost') || strstr($results, 'dollar') || strstr($results, 'afford') || strstr($results, 'money')) && !(in_array(metaphone($results), $search_outdoor) || strstr($results, 'out') || strstr($results, 'outside') || strstr($results, 'exercise') || strstr($results, 'air')) && !(in_array(metaphone($results), $search_live) || strstr($results, 'music') || strstr($results, 'club') || strstr($results, 'concert') || strstr($results, 'social')) && !(in_array(metaphone($results), $search_art) || strstr($results, 'art') || strstr($results, 'museum') || strstr($results, 'culture') || strstr($results, 'show') || strstr($results, 'exhibit') || strstr($results, 'draw') || strstr($results, 'color') || strstr($results, 'sculpt') || strstr($results, 'easel') || strstr($results, 'design'))) {
+                else if (!(in_array(metaphone($results), $search_tp) || strstr($results, 'park') || strstr($results, 'theme') || strstr($results, 'amusement') || strstr($results, 'attraction')) && !(in_array(metaphone($results), $search_res) || strstr($results, 'eat') || strstr($results, 'food') || strstr($results, 'lunch') || strstr($results, 'dinner') || strstr($results, 'breakast') || strstr($results, 'meal') || strstr($results, 'cook') || strstr($results, 'drink')) && !(in_array(metaphone($results), $search_rainy) || strstr($results, 'weater') || strstr($results, 'jacket') || strstr($results, 'inside') || strstr($results, 'rain')) && !(in_array(metaphone($results), $search_fam) || strstr($results, 'child') || strstr($results, 'teen') || strstr($results, 'friend') || strstr($results, 'family') || strstr($results, 'sister') || strstr($results, 'brother') || strstr($results, 'daughter') || strstr($results, 'son') || strstr($results, 'father') || strstr($results, 'mother') || strstr($results, 'dad') || strstr($results, 'mom')) && !(in_array(metaphone($results), $search_local) || strstr($results, 'local') || strstr($results, 'nearby') || strstr($results, 'area') || strstr($results, 'native')) && !(in_array(metaphone($results), $search_good) || strstr($results, 'cheap') || strstr($results, 'poor') || strstr($results, 'bargain') || strstr($results, 'cost') || strstr($results, 'dollar') || strstr($results, 'afford') || strstr($results, 'money')) && !(in_array(metaphone($results), $search_outdoor) || strstr($results, 'out') || strstr($results, 'outside') || strstr($results, 'exercise') || strstr($results, 'air')) && !(in_array(metaphone($results), $search_live) || strstr($results, 'music') || strstr($results, 'concert') || strstr($results, 'social')) && !(in_array(metaphone($results), $search_art) || strstr($results, 'art') || strstr($results, 'museum') || strstr($results, 'culture') || strstr($results, 'show') || strstr($results, 'exhibit') || strstr($results, 'draw') || strstr($results, 'color') || strstr($results, 'sculpt') || strstr($results, 'easel') || strstr($results, 'design'))) {
                     print("We couldnt find any results for the search '".$results."'");
                 }
 
@@ -309,7 +309,7 @@
                 <h4>Great For</h4>
                 <label for="storm" class="filter-label"><input type="checkbox">Stormy Weather</label>
                 <label for="fam" class="filter-label"><input type="checkbox">Families</label>
-                <label for="solo" class="filter-label"><input type="checkbox">Going Solor</label>
+                <label for="solo" class="filter-label"><input type="checkbox">Going Solo</label>
                 <label for="value" class="filter-label"><input type="checkbox">Awesome Value</label>
                 <label for="local" class="filter-label"><input type="checkbox">Living like a Local</label>
                 <label for="transit" class="filter-label"><input type="checkbox">Public Transit</label>
