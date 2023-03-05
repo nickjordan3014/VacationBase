@@ -18,6 +18,10 @@
     </section>
     <hr class="hsline">
 
+    <?php
+        $ctr = 1;
+    ?>
+
 
 
 <!-- FIRST CARD ROW -->
@@ -34,81 +38,85 @@
             <!--Cards-->
             <section class="carousel" id="scroll0">
                 <?php
-                        $ctr = 1;
-                        foreach($results_one AS $result){
-                            // print("ctr:  ".$ctr);
+                    // keeps count of how many cards are on the homescreen; if the count is greater than 8, we do not need to display that card
+                    $cardCount = 1;
 
-                            if ($result['id'] != $ctr){
-                                $ctr = $result['id'];
-                                // print("ctr update:  ".$ctr);
-                            }
-                            
-                            $id[$ctr] = $result["id"];
-                            // print("id: ".$id[$ctr]);
-                            $name[$ctr] = $result["event_name"];
-                            $img1[$ctr] = $result["img1"];
-                            $altText1[$ctr] = $result["alt_text_img1"];
-                            $price[$ctr] = $result["price"];
-                            $address[$ctr] = $result["address"];
-                            $url[$ctr] = $result["url"];
-                            $meta[$ctr] = $result["meta_description"];
-                            $map[$ctr] = $result["map_img"];
-                            $map_link[$ctr] = $result["map_link"];
-                            $themePark = $result["isThemePark"];
-                            $foodDrink = $result["isFoodDrink"];
-                            $local = $result["isLocal"];
-                            
-                            // Session sends
-                            $_SESSION['id_tp'.$ctr] = $id[$ctr];
-                            $_SESSION['event_name_tp'.$ctr] = $name[$ctr];
-                            $_SESSION['price_tp'.$ctr] = $price[$ctr];
-                            $_SESSION['img1_tp'.$ctr] = $img1[$ctr];
-                            $_SESSION['alt_text_img1_tp'.$ctr] = $altText1[$ctr];
-                            $_SESSION['address_tp'.$ctr] = $address[$ctr];
-                            $_SESSION['url_tp'.$ctr] = $url[$ctr];
-                            $_SESSION['meta_description_tp'.$ctr] = $meta[$ctr];
-                            $_SESSION['map_img_tp'.$ctr] = $map[$ctr];
-                            $_SESSION['map_link_tp'.$ctr] = $map_link[$ctr];
-                            
+                    foreach($results_one AS $result){
+                        // print("ctr:  ".$ctr);
 
-                            // if($themePark == 'Y'){
-                            //     $themePark = 'ThemePark';
-                            // }
-                            // else if ($themePark == 'N'){
-                            //     $themePark = 'Not Theme Park';
-                            // }
+                        if ($result['id'] != $ctr){
+                            $ctr = $result['id'];
+                            // print("ctr update:  ".$ctr);
+                        }
+                        
+                        $id[$ctr] = $result["id"];
+                        // print("id: ".$id[$ctr]);
+                        $name[$ctr] = $result["event_name"];
+                        $img1[$ctr] = $result["img1"];
+                        $altText1[$ctr] = $result["alt_text_img1"];
+                        $price[$ctr] = $result["price"];
+                        $address[$ctr] = $result["address"];
+                        $url[$ctr] = $result["url"];
+                        $meta[$ctr] = $result["meta_description"];
+                        $map[$ctr] = $result["map_img"];
+                        $map_link[$ctr] = $result["map_link"];
+                        $themePark = $result["isThemePark"];
+                        $foodDrink = $result["isFoodDrink"];
+                        $local = $result["isLocal"];
+                        
+                        // Session sends
+                        $_SESSION['id_tp'.$ctr] = $id[$ctr];
+                        $_SESSION['event_name_tp'.$ctr] = $name[$ctr];
+                        $_SESSION['price_tp'.$ctr] = $price[$ctr];
+                        $_SESSION['img1_tp'.$ctr] = $img1[$ctr];
+                        $_SESSION['alt_text_img1_tp'.$ctr] = $altText1[$ctr];
+                        $_SESSION['address_tp'.$ctr] = $address[$ctr];
+                        $_SESSION['url_tp'.$ctr] = $url[$ctr];
+                        $_SESSION['meta_description_tp'.$ctr] = $meta[$ctr];
+                        $_SESSION['map_img_tp'.$ctr] = $map[$ctr];
+                        $_SESSION['map_link_tp'.$ctr] = $map_link[$ctr];
+                        
 
-                            $_SESSION['isThemePark'.$ctr] = $themePark;
+                        if($themePark == 'Y'){
+                            $themePark = 'ThemePark';
+                        }
+                        else if ($themePark == 'N'){
+                            $themePark = 'Not Theme Park';
+                        }
 
-                            $thmpk = $_SESSION['isThemePark'.$ctr];
+                        $_SESSION['isThemePark'.$ctr] = $themePark;
 
-                            // if($local == 'Y'){
-                            //     $local = 'LocalEvent';
-                            // }
-                            // else if ($local == 'N'){
-                            //     $local = 'Not Local Event';
-                            // }
-    
-                            $_SESSION['isLocal'.$ctr] = $local;
-    
-                            $locpo = $_SESSION['isLocal'.$ctr];
+                        $thmpk = $_SESSION['isThemePark'.$ctr];
 
-                            // if($foodDrink == 'Y'){
-                            //     $foodDrink = 'Restaurant';
-                            // }
-                            // else if ($foodDrink == 'N'){
-                            //     $foodDrink = 'Not Food Drink';
-                            // }
-    
-                            $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
-    
-                            $fd = $_SESSION['isFoodDrink'.$ctr];
+                        if($local == 'Y'){
+                            $local = 'LocalEvent';
+                        }
+                        else if ($local == 'N'){
+                            $local = 'Not Local Event';
+                        }
+
+                        $_SESSION['isLocal'.$ctr] = $local;
+
+                        $locpo = $_SESSION['isLocal'.$ctr];
+
+                        if($foodDrink == 'Y'){
+                            $foodDrink = 'Restaurant';
+                        }
+                        else if ($foodDrink == 'N'){
+                            $foodDrink = 'Not Food Drink';
+                        }
+
+                        $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
+
+                        $fd = $_SESSION['isFoodDrink'.$ctr];
 
 
-                            // <p>$thmpk</p>
-                            // <p>$fd</p>
-                            // <p>$locpo</p>
+                        // <p>$thmpk</p>
+                        // <p>$fd</p>
+                        // <p>$locpo</p>
 
+
+                        if($cardCount <= 8){
                             print(
                                 "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&event=$themePark&id=$id[$ctr]'>
                                 <img class='card-image' src='img/images/$img1[$ctr]' alt='$altText1[$ctr]'>
@@ -116,9 +124,11 @@
                                 <p class='captions'>From $".$price[$ctr].(($result["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($result["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($result["isLocal"] == 'Y') ? " | Local Activity" : "").(($result["isGoodValue"] == 'Y') ? " | Good Value" : "").(($result["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($result["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($result["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($result["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
                                 </a>&nbsp;"
                             );
-                            $ctr = $ctr+1;
                         }
-                        print("ctr: ".$ctr);
+                        $ctr = $ctr+1;
+                        $cardCount = $cardCount+1;
+                    }
+                    // print("ctr: ".$ctr);
                     ?>
             </section>
 
@@ -145,7 +155,10 @@
             <!--Cards-->
             <section class="carousel" id="scroll1">
                 <?php
-                    // $ctr = 9;
+
+                    // keeps count of how many cards are on the homescreen; if the count is greater than 8, we do not need to display that card
+                    $cardCount = 1;
+
                     foreach($results_two AS $result_two){
                         // print("ctr:  ".$ctr);
 
@@ -186,34 +199,34 @@
                         $_SESSION['map_link_res'.$ctr] = $map_link[$ctr];
                         
 
-                        // if($foodDrink == 'Y'){
-                        //     $foodDrink = 'Restaurant';
-                        // }
-                        // else if ($foodDrink == 'N'){
-                        //     $foodDrink = 'Not Food Drink';
-                        // }
+                        if($foodDrink == 'Y'){
+                            $foodDrink = 'Restaurant';
+                        }
+                        else if ($foodDrink == 'N'){
+                            $foodDrink = 'Not Food Drink';
+                        }
 
                         $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
 
                         $fd = $_SESSION['isFoodDrink'.$ctr];
 
-                        // if($themePark == 'Y'){
-                        //     $themePark = 'ThemePark';
-                        // }
-                        // else if ($themePark == 'N'){
-                        //     $themePark = 'Not Theme Park';
-                        // }
+                        if($themePark == 'Y'){
+                            $themePark = 'ThemePark';
+                        }
+                        else if ($themePark == 'N'){
+                            $themePark = 'Not Theme Park';
+                        }
 
                         $_SESSION['isThemePark'.$ctr] = $themePark;
 
                         $thmpk = $_SESSION['isThemePark'.$ctr];
 
-                        // if($local == 'Y'){
-                        //     $local = 'LocalEvent';
-                        // }
-                        // else if ($local == 'N'){
-                        //     $local = 'Not Local Event';
-                        // }
+                        if($local == 'Y'){
+                            $local = 'LocalEvent';
+                        }
+                        else if ($local == 'N'){
+                            $local = 'Not Local Event';
+                        }
 
                         $_SESSION['isLocal'.$ctr] = $local;
 
@@ -222,17 +235,19 @@
                         // <p>$locpo</p>
                         // <p>$fd</p>
                         // <p>$thmpk</p>
-
-                        print(
-                            "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&event=$foodDrink&id=$id[$ctr]'>
-                            <img class='card-image' src='img/images/$img1[$ctr]' alt='$altText1[$ctr]'>
-                            <h4>$name[$ctr]</h4>
-                            <p class='captions'>".$price[$ctr].(($result_two["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($result_two["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($result_two["isLocal"] == 'Y') ? " | Local Activity" : "").(($result_two["isGoodValue"] == 'Y') ? " | Good Value" : "").(($result_two["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($result_two["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($result_two["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($result_two["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
-                            </a>&nbsp;"
-                        );
+                        if($cardCount <= 8){
+                            print(
+                                "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&event=$foodDrink&id=$id[$ctr]'>
+                                <img class='card-image' src='img/images/$img1[$ctr]' alt='$altText1[$ctr]'>
+                                <h4>$name[$ctr]</h4>
+                                <p class='captions'>".$price[$ctr].(($result_two["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($result_two["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($result_two["isLocal"] == 'Y') ? " | Local Activity" : "").(($result_two["isGoodValue"] == 'Y') ? " | Good Value" : "").(($result_two["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($result_two["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($result_two["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($result_two["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
+                                </a>&nbsp;"
+                            );
+                        }
                         $ctr = $ctr+1;
+                        $cardCount = $cardCount+1;
                     }
-                    print("ctr: ".$ctr);
+                    // print("ctr: ".$ctr);
                     ?>
             </section>
 
@@ -350,7 +365,9 @@
             <section class="carousel" id="scroll3">
 
                 <?php
-                    // $ctr = 17;
+                    // keeps count of how many cards are on the homescreen; if the count is greater than 8, we do not need to display that card
+                    $cardCount = 1;
+
                     foreach($results_three AS $result_three){
                         // print("ctr:  ".$ctr);
 
@@ -388,34 +405,34 @@
                         
                         
 
-                        // if($local == 'Y'){
-                        //     $local = 'LocalEvent';
-                        // }
-                        // else if ($local == 'N'){
-                        //     $local = 'Not Local Event';
-                        // }
+                        if($local == 'Y'){
+                            $local = 'LocalEvent';
+                        }
+                        else if ($local == 'N'){
+                            $local = 'Not Local Event';
+                        }
 
                         $_SESSION['isLocal'.$ctr] = $local;
 
                         $locpo = $_SESSION['isLocal'.$ctr];
 
-                        // if($foodDrink == 'Y'){
-                        //     $foodDrink = 'Restaurant';
-                        // }
-                        // else if ($foodDrink == 'N'){
-                        //     $foodDrink = 'Not Food Drink';
-                        // }
+                        if($foodDrink == 'Y'){
+                            $foodDrink = 'Restaurant';
+                        }
+                        else if ($foodDrink == 'N'){
+                            $foodDrink = 'Not Food Drink';
+                        }
 
                         $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
 
                         $fd = $_SESSION['isFoodDrink'.$ctr];
 
-                        // if($themePark == 'Y'){
-                        //     $themePark = 'ThemePark';
-                        // }
-                        // else if ($themePark == 'N'){
-                        //     $themePark = 'Not Theme Park';
-                        // }
+                        if($themePark == 'Y'){
+                            $themePark = 'ThemePark';
+                        }
+                        else if ($themePark == 'N'){
+                            $themePark = 'Not Theme Park';
+                        }
 
                         $_SESSION['isThemePark'.$ctr] = $themePark;
 
@@ -424,17 +441,19 @@
                         // <p>$locpo</p>
                         // <p>$fd</p>
                         // <p>$thmpk</p>
-
-                        print(
-                            "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&event=$local&id=$id[$ctr]'>
-                            <img class='card-image' src='img/images/$img1[$ctr]' alt='$altText1[$ctr]'>
-                            <h4>$name[$ctr]</h4>
-                            <p class='captions'>".$price[$ctr].(($result_three["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($result_three["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($result_three["isLocal"] == 'Y') ? " | Local Activity" : "").(($result_three["isGoodValue"] == 'Y') ? " | Good Value" : "").(($result_three["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($result_three["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($result_three["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($result_three["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
-                            </a>&nbsp;"
-                        );
+                        if($cardCount <= 8){
+                            print(
+                                "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&event=$local&id=$id[$ctr]'>
+                                <img class='card-image' src='img/images/$img1[$ctr]' alt='$altText1[$ctr]'>
+                                <h4>$name[$ctr]</h4>
+                                <p class='captions'>".$price[$ctr].(($result_three["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($result_three["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($result_three["isLocal"] == 'Y') ? " | Local Activity" : "").(($result_three["isGoodValue"] == 'Y') ? " | Good Value" : "").(($result_three["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($result_three["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($result_three["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($result_three["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
+                                </a>&nbsp;"
+                            );
+                        }
                         $ctr = $ctr+1;
+                        $cardCount = $cardCount+1;
                     }
-                    print("ctr: ".$ctr);
+                    // print("ctr: ".$ctr);
                 ?>
 
             </section>

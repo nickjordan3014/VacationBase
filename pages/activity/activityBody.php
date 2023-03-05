@@ -12,7 +12,7 @@
 
             
 
-            print($ctr);
+            // print($ctr);
 
 
 
@@ -21,18 +21,6 @@
             print("Local Events: ".$_SESSION['isLocal'.$ctr]);
 
             if ($event == 'ThemePark'){
-                // Session variables
-                // $id[$ctr] = $_SESSION['id_tp'.$ctr];
-                // $name[$ctr] = $_SESSION['event_name_tp'.$ctr];
-                // $price[$ctr] = $_SESSION['price_tp'.$ctr];
-                // $img1[$ctr] = $_SESSION['img1_tp'.$ctr];
-                // $altText1[$ctr] = $_SESSION['alt_text_img1_tp'.$ctr];
-                // $address[$ctr] = $_SESSION['address_tp'.$ctr];
-                // $url[$ctr] = $_SESSION['url_tp'.$ctr];
-                // $meta[$ctr] = $_SESSION['meta_description_tp'.$ctr];
-                // $map[$ctr] = $_SESSION['map_img_tp'.$ctr];
-                // $map_link[$ctr] = $_SESSION['map_link_tp'.$ctr];
-                // $themePark = $_SESSION['isThemePark'];
                 $id = $_SESSION['id_tp'.$ctr];
                 $name = $_SESSION['event_name_tp'.$ctr];
                 $price = $_SESSION['price_tp'.$ctr];
@@ -43,22 +31,9 @@
                 $meta = $_SESSION['meta_description_tp'.$ctr];
                 $map = $_SESSION['map_img_tp'.$ctr];
                 $map_link = $_SESSION['map_link_tp'.$ctr];
-                // $themePark = $_SESSION['isThemePark'];
+                $themePark = $_SESSION['isThemePark'];
             }
             else if ($event == 'Restaurant'){
-                // Session variables
-                // $id[$ctr] = $_SESSION['id_res'.$ctr];
-                // $name[$ctr] = $_SESSION['event_name_res'.$ctr];
-                // $price[$ctr] = $_SESSION['price_res'.$ctr];
-                // $img1[$ctr] = $_SESSION['img1_res'.$ctr];
-                // $altText1[$ctr] = $_SESSION['alt_text_img1_res'.$ctr];
-                // $address[$ctr] = $_SESSION['address_res'.$ctr];
-                // $url[$ctr] = $_SESSION['url_res'.$ctr];
-                // $meta[$ctr] = $_SESSION['meta_description_res'.$ctr];
-                // $map[$ctr] = $_SESSION['map_img_res'.$ctr];
-                // $map_link[$ctr] = $_SESSION['map_link_res'.$ctr];
-                // $foodDrink = $_SESSION['isFoodDrink'];
-
                 $id = $_SESSION['id_res'.$ctr];
                 $name = $_SESSION['event_name_res'.$ctr];
                 $price = $_SESSION['price_res'.$ctr];
@@ -69,7 +44,7 @@
                 $meta = $_SESSION['meta_description_res'.$ctr];
                 $map = $_SESSION['map_img_res'.$ctr];
                 $map_link = $_SESSION['map_link_res'.$ctr];
-                // $foodDrink = $_SESSION['isFoodDrink'];
+                $foodDrink = $_SESSION['isFoodDrink'];
             }
             else if ($event == 'LocalEvent'){
                 // Session variables
@@ -83,10 +58,8 @@
                 $meta = $_SESSION['meta_description_loc'.$ctr];
                 $map = $_SESSION['map_img_loc'.$ctr];
                 $map_link = $_SESSION['map_link_loc'.$ctr];
-                // $foodDrink = $_SESSION['isLocal'];
+                $foodDrink = $_SESSION['isLocal'];
             }
-
-            // print($name." - ".$ctr);
             
         ?>
 
@@ -109,9 +82,8 @@
             <div class="price-click">
                 <div class="priceOf">
                     <?php
-                        print($themePark);
                         // We only want this print statement to display if the event type is a theme park AND the price is over $0
-                        if((intval($price) > 0) && ($themePark == 'Y')){
+                        if((intval($price) > 0) && ($themePark == 'ThemePark')){
                             print("<p>Adult tickets start at <b>$$price</b> (ticket prices vary for children)<p>");
                         }
                         // else we want this to display if the event is a theme park and the price is not clear
@@ -229,18 +201,24 @@
             
             <?php
 
-                $ctr = 1;
+                // $ctr = 1;
                 $ctr2 = $ctr;
-                
 
+                // print("ctr: ".$ctr);
+                // print("ctr2: ".$ctr2);
+                
+                
                 if ($event == 'ThemePark'){
-                    // $ctr = 1;
+                    // variable used to display different activities in the similar activities area
+                    $ctr3 = 1;
                     
                     foreach($oth_resultsTP AS $other_result){
                         // print($ctr);
                         // skips over the activity were already on
-                        if ($ctr == $ctr2){
+                        if ($ctr == $ctr3){
+                            // echo("our counter is: ".$ctr." and our ctr3 is: ".$ctr3." ");
                             $ctr = $ctr+1;
+                            // echo("ctr3 update: ".$ctr3);
                         }
                         $id = $_SESSION['id_tp'.$ctr];
                         $name = $_SESSION['event_name_tp'.$ctr];
@@ -253,13 +231,13 @@
                         $map = $_SESSION['map_img_tp'.$ctr];
                         $map_link = $_SESSION['map_link_tp'.$ctr];
                         
-                        print("id: ".$id);
+                        // print("id: ".$id);
 
-                        print("ctr: ".$ctr);
+                        // print("ctr: ".$ctr);
 
                         if ($id != $ctr){
                             $ctr = $id;
-                            print("ctr update:  ".$ctr);
+                            // print("ctr update:  ".$ctr);
                         }
 
                         print(
@@ -270,17 +248,18 @@
                             </a>&nbsp;"
                         );
                         $ctr = $ctr+1;
+                        $ctr3 = $ctr3+1;
                     }
 
-                    print("ctr: ".$ctr);
+                    // print("ctr: ".$ctr);
                 }
 
                 else if ($event == 'Restaurant'){
-                    // $ctr = 9;
+                    $ctr3 = 1;
+
                     foreach($oth_resultsRes AS $other_result){
-                        // print($ctr);
                         // skips over the activity were already on
-                        if ($ctr == $ctr2){
+                        if ($ctr == $ctr3){
                             $ctr = $ctr+1;
                         }
                         $id = $_SESSION['id_res'.$ctr];
@@ -294,13 +273,13 @@
                         $map = $_SESSION['map_img_res'.$ctr];
                         $map_link = $_SESSION['map_link_res'.$ctr];
                         
-                        print("id: ".$id);
+                        // print("id: ".$id);
 
-                        print("ctr: ".$ctr);
+                        // print("ctr: ".$ctr);
 
                         if ($id != $ctr){
                             $ctr = $id;
-                            print("ctr update:  ".$ctr);
+                            // print("ctr update:  ".$ctr);
                         }
 
                         print(
@@ -311,19 +290,21 @@
                             </a>&nbsp;"
                         );
                         $ctr = $ctr+1;
+                        $ctr3 = $ctr3+1;
                     }
-                    print("ctr: ".$ctr);
+                    // print("ctr: ".$ctr);
                 }
 
                 else if ($event == 'LocalEvent'){
-                    // $ctr = 17;
+                    $ctr3 = 1;
 
                     foreach($oth_resultsLoc AS $other_result){
                         // print($ctr);
                         // trying to skip the event of the current page we are on to reccommend other activities
-                        if ($ctr == $ctr2){
+                        if ($ctr == $ctr3){
                             $ctr = $ctr+1;
                         }
+
                         $id = $_SESSION['id_loc'.$ctr];
                         $name = $_SESSION['event_name_loc'.$ctr];
                         $price = $_SESSION['price_loc'.$ctr];
@@ -335,13 +316,13 @@
                         $map = $_SESSION['map_img_loc'.$ctr];
                         $map_link = $_SESSION['map_link_loc'.$ctr];
                     
-                        print("id: ".$id);
+                        // print("id: ".$id);
 
-                        print("ctr: ".$ctr);
+                        // print("ctr: ".$ctr);
 
                         if ($id != $ctr){
                             $ctr = $id;
-                            print("ctr update:  ".$ctr);
+                            // print("ctr update:  ".$ctr);
                         }
 
                         print(
@@ -352,8 +333,9 @@
                             </a>&nbsp;"
                         );
                         $ctr = $ctr+1;
+                        $ctr3 = $ctr3+1;
                     }
-                    print("ctr: ".$ctr);
+                    // print("ctr: ".$ctr);
                 }
             ?>
 
