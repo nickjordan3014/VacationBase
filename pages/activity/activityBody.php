@@ -83,7 +83,7 @@
                 <div class="priceOf">
                     <?php
                         // We only want this print statement to display if the event type is a theme park AND the price is over $0
-                        if((intval($price) > 0) && ($themePark == 'ThemePark')){
+                        if((intval($price) > 0) && ($themePark == 'Y')){
                             print("<p>Adult tickets start at <b>$$price</b> (ticket prices vary for children)<p>");
                         }
                         // else we want this to display if the event is a theme park and the price is not clear
