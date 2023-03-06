@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 02, 2023 at 11:57 PM
+-- Generation Time: Mar 06, 2023 at 07:46 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -20,38 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `orlando-events`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `accounts`
---
-
-CREATE TABLE `accounts` (
-  `id` int(11) NOT NULL,
-  `first_name` char(255) NOT NULL,
-  `last_name` char(255) NOT NULL,
-  `email` char(255) NOT NULL,
-  `password` char(255) NOT NULL,
-  `profile_pic` char(255) DEFAULT NULL,
-  `saved_itin` varchar(1000) DEFAULT NULL,
-  `prev_purch` varchar(1000) DEFAULT NULL,
-  `timeCreated` datetime NOT NULL,
-  `userIsActive` char(11) DEFAULT NULL,
-  `emailIsVerified` char(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `accounts`
---
-
-INSERT INTO `accounts` (`id`, `first_name`, `last_name`, `email`, `password`, `profile_pic`, `saved_itin`, `prev_purch`, `timeCreated`, `userIsActive`, `emailIsVerified`) VALUES
-(1, 'my', 'name is', 'helloworld@code.dev', '$2y$10$R/qBkMp9XVcJ5WH6lebzr.0INZduqVFu6bBbgzIyZ3/YBW.Aom996', NULL, NULL, NULL, '2023-02-24 20:37:12', NULL, NULL),
-(4, 'my name', 'is', 'nothelloworld@code.dev', '$2y$10$BdkfbbwcpRwCRDXvk2u/2u4gpyl60uNRKeK2l1iqrhK1lrZIOCj1m', NULL, NULL, NULL, '2023-02-24 21:26:48', NULL, NULL),
-(5, 'Mykeria', 'Cooks', 'myemail@dev.co', '$2y$10$6iYoFDHIfa4WemKXMAfmsOy0ERwOHp3Gt3T.4TVg7GAr/nbkBUqH6', NULL, NULL, NULL, '2023-02-25 01:30:32', NULL, NULL),
-(6, 'Nicki', 'Minaj', 'nicki@gmail.com', '$2y$10$ewLb10P/G8Ky/zNbmcojlObbKsqEKwNvhmxpQJOpCfA23TbBeQ2OC', NULL, NULL, NULL, '2023-02-25 01:33:51', NULL, NULL),
-(7, 'Mya', 'Davis', 'myadavis@gmail.com', '$2y$10$ufkuTl49cdKJpaJAlmB0fuSo0gL4ZMcNwxyHzu2Cr7NsBsCw4pvRe', NULL, NULL, NULL, '2023-02-25 01:39:48', NULL, NULL),
-(8, 'Mykeria', 'Cooks', 'mykeria@gmail.com', '$2y$10$GwVQd5kskMFFTCaiyfr92OHWklNgHXM.jUt5LvyFsd1L164jOBdv6', NULL, NULL, NULL, '2023-02-25 04:19:11', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -115,31 +83,16 @@ INSERT INTO `orlando_florida` (`id`, `event_name`, `img1`, `alt_text_img1`, `img
 (18, 'The Melting Pot', 'melt/melt1.jpg', '', 'melt/melt2.jpg', '', 'melt/melt3.jpg', '', 'melt/melt4.jpg', '', '7549 W Sand Lake Rd, Orlando, FL 32819', 'https://www.meltingpot.com/orlando-fl/', 'melt/meltmap.jpg', 'https://www.google.com/maps/place/The+Melting+Pot/@28.5703644,-81.5085198,12z/data=!4m10!1m2!2m1!1smelting+pot!3m6!1s0x88e77fa654b7e4a7:0x48a2b1fe2455c27e!8m2!3d28.4507542!4d-81.4855943!15sCgttZWx0aW5nIHBvdCIDiAEBWg0iC21lbHRpbmcgcG90kgERZm9uZHVlX3Jlc3RhdXJhbnTgAQA!16s%2Fg%2F1tzgq0vf', 'Enjoy an unforgettable fondue experience at The Melting Pot and explore a world of delicious dishes, amazing cocktails, and unforgettable memories!', '$$$', 'M,T,W,Th,F,Sa,Su', 0, 'Y', 'Y', 'Y', 'N', 'Y', 'N', 'N', 'N', 'N', ''),
 (19, 'The Capital Grille', 'capgrille/capgrille1.jpg', '', 'capgrille/capgrille2.jpg', '', 'capgrille/capgrille3.jpg', '', 'capgrille/capgrille4.jpg', '', '9101 International Dr Suite 1000, Orlando, FL 32819', 'https://www.thecapitalgrille.com/locations/fl/orlando/orlando-i-drive/8025', 'capgrille/capgrillemap.jpg', 'https://www.google.com/maps/place/The+Capital+Grille/@28.4308409,-81.4723843,17z/data=!3m2!4b1!5s0x88e77e4b1da3fa15:0x7edf0a3a7257fc65!4m6!3m5!1s0x88e77e4ade2aa501:0x3a2b2c88d2acb985!8m2!3d28.4308362!4d-81.4701956!16s%2Fg%2F1tp282mr', 'Enjoy an exquisite dining experience at The Capital Grille and explore a world of delicious dishes, amazing cocktails, and unforgettable memories!', '$$$$', 'M,T,W,Th,F,Sa,Su', 0, 'Y', 'Y', 'Y', 'N', 'Y', 'N', 'N', 'N', 'N', ''),
 (20, 'Fogo de Chão Brazilian Steakhouse', 'fogo/fogo1.jpg', '', 'fogo/fogo2.jpg', '', 'fogo/fogo3.jpg', '', 'fogo/fogo4.jpg', '', '8282 International Dr, Orlando, FL 32819', 'https://fogodechao.com/location/orlando/', 'fogo/fogomap.jpg', 'https://www.google.com/maps/place/Fogo+de+Chão+Brazilian+Steakhouse/@28.4458479,-81.4738958,17z/data=!3m1!4b1!4m6!3m5!1s0x88e77e5350a0d697:0xf2135e27aa52033!8m2!3d28.4458432!4d-81.4717071!16s%2Fg%2F1hc4ljw52', 'Fogo de Chão Brazilian Steakhouse is a premier dining experience that offers a unique blend of authentic Southern Brazilian cuisine, with a variety of high-quality, simply prepared meats fire-roasted to perfection.', '$$$', 'M,T,W,Th,F,Sa,Su', 0, 'Y', 'Y', 'Y', 'N', 'Y', 'N', 'N', 'N', 'N', '');
+
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `accounts`
---
-ALTER TABLE `accounts`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `orlando_florida`
 --
 ALTER TABLE `orlando_florida`
   ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `accounts`
---
-ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

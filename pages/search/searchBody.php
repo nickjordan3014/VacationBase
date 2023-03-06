@@ -55,10 +55,11 @@
                         $id = $searchTP["id"];
                         $name = $searchTP["event_name"];
                         $price = $searchTP["price"];
+                        $ctr = $id;
 
                         print(
-                            "<a href='itinerary.php'>
-                                <section class='search-card'>
+                            "<a href='activity.php?count=$ctr&id=$id'>
+                                <section class='search-card' >
                                     <h3>$name | From $price</h3>
                                 </section>
                             </a>"
@@ -74,9 +75,10 @@
                         $id = $searchRes["id"];
                         $name = $searchRes["event_name"];
                         $price = $searchRes["price"];
+                        $ctr = $id;
 
                         print(
-                            "<a href='itinerary.php'>
+                            "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
                                     <h3>$name | From $price</h3>
                                 </section>
@@ -94,9 +96,10 @@
                         $id = $searchRain["id"];
                         $name = $searchRain["event_name"];
                         $price = $searchRain["price"];
+                        $ctr = $id;
 
                         print(
-                            "<a href='itinerary.php'>
+                            "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
                                     <h3>$name | From $price</h3>
                                 </section>
@@ -113,9 +116,10 @@
                         $id = $searchFF["id"];
                         $name = $searchFF["event_name"];
                         $price = $searchFF["price"];
+                        $ctr = $id;
 
                         print(
-                            "<a href='itinerary.php'>
+                            "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
                                     <h3>$name | From $price</h3>
                                 </section>
@@ -132,9 +136,10 @@
                         $id = $searchLoc["id"];
                         $name = $searchLoc["event_name"];
                         $price = $searchLoc["price"];
+                        $ctr = $id;
 
                         print(
-                            "<a href='itinerary.php'>
+                            "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
                                     <h3>$name | From $price</h3>
                                 </section>
@@ -151,9 +156,10 @@
                         $id = $searchGood["id"];
                         $name = $searchGood["event_name"];
                         $price = $searchGood["price"];
+                        $ctr = $id;
 
                         print(
-                            "<a href='itinerary.php'>
+                            "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
                                     <h3>$name | From $price</h3>
                                 </section>
@@ -171,9 +177,10 @@
                         $id = $searchOut["id"];
                         $name = $searchOut["event_name"];
                         $price = $searchOut["price"];
+                        $ctr = $id;
 
                         print(
-                            "<a href='itinerary.php'>
+                            "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>  
                                     <h3>$name | From $price</h3>
                                 </section>
@@ -190,9 +197,10 @@
                         $id = $searchLive["id"];
                         $name = $searchLive["event_name"];
                         $price = $searchLive["price"];
+                        $ctr = $id;
 
                         print(
-                            "<a href='itinerary.php'>
+                            "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
                                     <h3>$name | From $price</h3>
                                 </section>
@@ -209,9 +217,10 @@
                         $id = $searchArt["id"];
                         $name = $searchArt["event_name"];
                         $price = $searchArt["price"];
+                        $ctr = $id;
 
                         print(
-                            "<a href='itinerary.php'>
+                            "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
                                     <h3>$name | From $price</h3>
                                 </section>

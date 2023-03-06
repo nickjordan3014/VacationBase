@@ -62,53 +62,55 @@
                         $map_link[$ctr] = $result["map_link"];
                         $themePark = $result["isThemePark"];
                         $foodDrink = $result["isFoodDrink"];
+                        // print($foodDrink);
                         $local = $result["isLocal"];
                         
                         // Session sends
-                        $_SESSION['id_tp'.$ctr] = $id[$ctr];
-                        $_SESSION['event_name_tp'.$ctr] = $name[$ctr];
-                        $_SESSION['price_tp'.$ctr] = $price[$ctr];
-                        $_SESSION['img1_tp'.$ctr] = $img1[$ctr];
-                        $_SESSION['alt_text_img1_tp'.$ctr] = $altText1[$ctr];
-                        $_SESSION['address_tp'.$ctr] = $address[$ctr];
-                        $_SESSION['url_tp'.$ctr] = $url[$ctr];
-                        $_SESSION['meta_description_tp'.$ctr] = $meta[$ctr];
-                        $_SESSION['map_img_tp'.$ctr] = $map[$ctr];
-                        $_SESSION['map_link_tp'.$ctr] = $map_link[$ctr];
+                        $_SESSION['id'.$ctr] = $id[$ctr];
+                        $_SESSION['event_name'.$ctr] = $name[$ctr];
+                        $_SESSION['price'.$ctr] = $price[$ctr];
+                        $_SESSION['img1'.$ctr] = $img1[$ctr];
+                        $_SESSION['alt_text_img1'.$ctr] = $altText1[$ctr];
+                        $_SESSION['address'.$ctr] = $address[$ctr];
+                        $_SESSION['url'.$ctr] = $url[$ctr];
+                        $_SESSION['meta_description'.$ctr] = $meta[$ctr];
+                        $_SESSION['map_img'.$ctr] = $map[$ctr];
+                        $_SESSION['map_link'.$ctr] = $map_link[$ctr];
+
                         
 
-                        if($themePark == 'Y'){
-                            $themePark = 'ThemePark';
-                        }
-                        else if ($themePark == 'N'){
-                            $themePark = 'Not Theme Park';
-                        }
+                        // if($themePark == 'Y'){
+                        //     $themePark = 'ThemePark';
+                        // }
+                        // else if ($themePark == 'N'){
+                        //     $themePark = 'Not Theme Park';
+                        // }
 
-                        $_SESSION['isThemePark'.$ctr] = $themePark;
+                        // $_SESSION['isThemePark'.$ctr] = $themePark;
 
-                        $thmpk = $_SESSION['isThemePark'.$ctr];
+                        // $thmpk = $_SESSION['isThemePark'.$ctr];
 
-                        if($local == 'Y'){
-                            $local = 'LocalEvent';
-                        }
-                        else if ($local == 'N'){
-                            $local = 'Not Local Event';
-                        }
+                        // if($local == 'Y'){
+                        //     $local = 'LocalEvent';
+                        // }
+                        // else if ($local == 'N'){
+                        //     $local = 'Not Local Event';
+                        // }
 
-                        $_SESSION['isLocal'.$ctr] = $local;
+                        // $_SESSION['isLocal'.$ctr] = $local;
 
-                        $locpo = $_SESSION['isLocal'.$ctr];
+                        // $locpo = $_SESSION['isLocal'.$ctr];
 
-                        if($foodDrink == 'Y'){
-                            $foodDrink = 'Restaurant';
-                        }
-                        else if ($foodDrink == 'N'){
-                            $foodDrink = 'Not Food Drink';
-                        }
+                        // if($foodDrink == 'Y'){
+                        //     $foodDrink = 'Restaurant';
+                        // }
+                        // else if ($foodDrink == 'N'){
+                        //     $foodDrink = 'Not Food Drink';
+                        // }
 
-                        $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
+                        // $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
 
-                        $fd = $_SESSION['isFoodDrink'.$ctr];
+                        // $fd = $_SESSION['isFoodDrink'.$ctr];
 
 
                         // <p>$thmpk</p>
@@ -118,7 +120,7 @@
 
                         if($cardCount <= 8){
                             print(
-                                "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&event=$themePark&id=$id[$ctr]'>
+                                "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&id=$id[$ctr]'>
                                 <img class='card-image' src='img/images/$img1[$ctr]' alt='$altText1[$ctr]'>
                                 <h4>$name[$ctr]</h4>
                                 <p class='captions'>From $".$price[$ctr].(($result["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($result["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($result["isLocal"] == 'Y') ? " | Local Activity" : "").(($result["isGoodValue"] == 'Y') ? " | Good Value" : "").(($result["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($result["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($result["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($result["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
@@ -187,57 +189,57 @@
                         // }
 
                         // send data to session
-                        $_SESSION['id_res'.$ctr] = $id[$ctr];
-                        $_SESSION['event_name_res'.$ctr] = $name[$ctr];
-                        $_SESSION['price_res'.$ctr] = $price[$ctr];
-                        $_SESSION['img1_res'.$ctr] = $img1[$ctr];
-                        $_SESSION['alt_text_img1_res1'.$ctr] = $altText1[$ctr];
-                        $_SESSION['address_res'.$ctr] = $address[$ctr];
+                        $_SESSION['id'.$ctr] = $id[$ctr];
+                        $_SESSION['event_name'.$ctr] = $name[$ctr];
+                        $_SESSION['price'.$ctr] = $price[$ctr];
+                        $_SESSION['img1'.$ctr] = $img1[$ctr];
+                        $_SESSION['alt_text_img1'.$ctr] = $altText1[$ctr];
+                        $_SESSION['address'.$ctr] = $address[$ctr];
                         $_SESSION['url_res'.$ctr] = $url[$ctr];
-                        $_SESSION['meta_description_res'.$ctr] = $meta[$ctr];
-                        $_SESSION['map_img_res'.$ctr] = $map[$ctr];
-                        $_SESSION['map_link_res'.$ctr] = $map_link[$ctr];
+                        $_SESSION['meta_description'.$ctr] = $meta[$ctr];
+                        $_SESSION['map_img'.$ctr] = $map[$ctr];
+                        $_SESSION['map_link'.$ctr] = $map_link[$ctr];
                         
 
-                        if($foodDrink == 'Y'){
-                            $foodDrink = 'Restaurant';
-                        }
-                        else if ($foodDrink == 'N'){
-                            $foodDrink = 'Not Food Drink';
-                        }
+                        // if($foodDrink == 'Y'){
+                        //     $foodDrink = 'Restaurant';
+                        // }
+                        // else if ($foodDrink == 'N'){
+                        //     $foodDrink = 'Not Food Drink';
+                        // }
 
-                        $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
+                        // $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
 
-                        $fd = $_SESSION['isFoodDrink'.$ctr];
+                        // $fd = $_SESSION['isFoodDrink'.$ctr];
 
-                        if($themePark == 'Y'){
-                            $themePark = 'ThemePark';
-                        }
-                        else if ($themePark == 'N'){
-                            $themePark = 'Not Theme Park';
-                        }
+                        // if($themePark == 'Y'){
+                        //     $themePark = 'ThemePark';
+                        // }
+                        // else if ($themePark == 'N'){
+                        //     $themePark = 'Not Theme Park';
+                        // }
 
-                        $_SESSION['isThemePark'.$ctr] = $themePark;
+                        // $_SESSION['isThemePark'.$ctr] = $themePark;
 
-                        $thmpk = $_SESSION['isThemePark'.$ctr];
+                        // $thmpk = $_SESSION['isThemePark'.$ctr];
 
-                        if($local == 'Y'){
-                            $local = 'LocalEvent';
-                        }
-                        else if ($local == 'N'){
-                            $local = 'Not Local Event';
-                        }
+                        // if($local == 'Y'){
+                        //     $local = 'LocalEvent';
+                        // }
+                        // else if ($local == 'N'){
+                        //     $local = 'Not Local Event';
+                        // }
 
-                        $_SESSION['isLocal'.$ctr] = $local;
+                        // $_SESSION['isLocal'.$ctr] = $local;
 
-                        $locpo = $_SESSION['isLocal'.$ctr];
+                        // $locpo = $_SESSION['isLocal'.$ctr];
 
                         // <p>$locpo</p>
                         // <p>$fd</p>
                         // <p>$thmpk</p>
                         if($cardCount <= 8){
                             print(
-                                "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&event=$foodDrink&id=$id[$ctr]'>
+                                "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&id=$id[$ctr]'>
                                 <img class='card-image' src='img/images/$img1[$ctr]' alt='$altText1[$ctr]'>
                                 <h4>$name[$ctr]</h4>
                                 <p class='captions'>".$price[$ctr].(($result_two["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($result_two["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($result_two["isLocal"] == 'Y') ? " | Local Activity" : "").(($result_two["isGoodValue"] == 'Y') ? " | Good Value" : "").(($result_two["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($result_two["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($result_two["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($result_two["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
@@ -392,58 +394,59 @@
                         $foodDrink = $result_three["isFoodDrink"];
 
                         // send data to session
-                        $_SESSION['id_loc'.$ctr] = $id[$ctr];
-                        $_SESSION['event_name_loc'.$ctr] = $name[$ctr];
-                        $_SESSION['price_loc'.$ctr] = $price[$ctr];
-                        $_SESSION['img1_loc'.$ctr] = $img1[$ctr];
-                        $_SESSION['alt_text_img1_loc'.$ctr] = $altText1[$ctr];
-                        $_SESSION['address_loc'.$ctr] = $address[$ctr];
-                        $_SESSION['url_loc'.$ctr] = $url[$ctr];
-                        $_SESSION['meta_description_loc'.$ctr] = $meta[$ctr];
-                        $_SESSION['map_img_loc'.$ctr] = $map[$ctr];
-                        $_SESSION['map_link_loc'.$ctr] = $map_link[$ctr];
+                        $_SESSION['id'.$ctr] = $id[$ctr];
+                        $_SESSION['event_name'.$ctr] = $name[$ctr];
+                        $_SESSION['price'.$ctr] = $price[$ctr];
+                        $_SESSION['img1'.$ctr] = $img1[$ctr];
+                        $_SESSION['alt_text_img1'.$ctr] = $altText1[$ctr];
+                        $_SESSION['address'.$ctr] = $address[$ctr];
+                        $_SESSION['url'.$ctr] = $url[$ctr];
+                        $_SESSION['meta_description'.$ctr] = $meta[$ctr];
+                        $_SESSION['map_img'.$ctr] = $map[$ctr];
+                        $_SESSION['map_link'.$ctr] = $map_link[$ctr];
                         
                         
+                        
 
-                        if($local == 'Y'){
-                            $local = 'LocalEvent';
-                        }
-                        else if ($local == 'N'){
-                            $local = 'Not Local Event';
-                        }
+                        // if($local == 'Y'){
+                        //     $local = 'LocalEvent';
+                        // }
+                        // else if ($local == 'N'){
+                        //     $local = 'Not Local Event';
+                        // }
 
-                        $_SESSION['isLocal'.$ctr] = $local;
+                        // $_SESSION['isLocal'.$ctr] = $local;
 
-                        $locpo = $_SESSION['isLocal'.$ctr];
+                        // $locpo = $_SESSION['isLocal'.$ctr];
 
-                        if($foodDrink == 'Y'){
-                            $foodDrink = 'Restaurant';
-                        }
-                        else if ($foodDrink == 'N'){
-                            $foodDrink = 'Not Food Drink';
-                        }
+                        // if($foodDrink == 'Y'){
+                        //     $foodDrink = 'Restaurant';
+                        // }
+                        // else if ($foodDrink == 'N'){
+                        //     $foodDrink = 'Not Food Drink';
+                        // }
 
-                        $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
+                        // $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
 
-                        $fd = $_SESSION['isFoodDrink'.$ctr];
+                        // $fd = $_SESSION['isFoodDrink'.$ctr];
 
-                        if($themePark == 'Y'){
-                            $themePark = 'ThemePark';
-                        }
-                        else if ($themePark == 'N'){
-                            $themePark = 'Not Theme Park';
-                        }
+                        // if($themePark == 'Y'){
+                        //     $themePark = 'ThemePark';
+                        // }
+                        // else if ($themePark == 'N'){
+                        //     $themePark = 'Not Theme Park';
+                        // }
 
-                        $_SESSION['isThemePark'.$ctr] = $themePark;
+                        // $_SESSION['isThemePark'.$ctr] = $themePark;
 
-                        $thmpk = $_SESSION['isThemePark'.$ctr];
+                        // $thmpk = $_SESSION['isThemePark'.$ctr];
 
                         // <p>$locpo</p>
                         // <p>$fd</p>
                         // <p>$thmpk</p>
                         if($cardCount <= 8){
                             print(
-                                "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&event=$local&id=$id[$ctr]'>
+                                "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&id=$id[$ctr]'>
                                 <img class='card-image' src='img/images/$img1[$ctr]' alt='$altText1[$ctr]'>
                                 <h4>$name[$ctr]</h4>
                                 <p class='captions'>".$price[$ctr].(($result_three["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($result_three["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($result_three["isLocal"] == 'Y') ? " | Local Activity" : "").(($result_three["isGoodValue"] == 'Y') ? " | Good Value" : "").(($result_three["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($result_three["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($result_three["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($result_three["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
