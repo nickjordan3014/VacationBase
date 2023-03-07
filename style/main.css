@@ -135,6 +135,7 @@ body {
 .card-row {
   width: 100%;
   margin-top: 20px;
+  padding-bottom: 20px;
   position: relative;
 }
 
@@ -228,24 +229,28 @@ body {
     height: 90px;
     width: 970px;
     background-color: #d9d9d9;
+    display: none;
   }
   .adleaderboardTwo {
     margin: auto;
     height: 160px;
     width: 850px;
     background-color: #d9d9d9;
+    display: none;
   }
   .ad-banner {
     margin: auto;
     height: 180px;
     width: 930px;
     background-color: #d9d9d9;
+    display: none;
   }
   .sa {
     margin: auto;
     height: 600px;
     width: 300px;
     background-color: #d9d9d9;
+    display: none;
   }
 }
 @media only screen and (max-width: 1000px) {
