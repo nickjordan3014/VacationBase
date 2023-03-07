@@ -140,15 +140,12 @@
 
     </section>
 
-    <br>
-    <br>
-    <br>
-    <br>
+
 
     <section class="card-row">
         
-        <h2 class="row-title">Orlando's Signature: Restaurants</h2>
-        <a class="row-link" href="search.php"><p class="inline rightalign">See All Restaurant Activities</p></a>
+        <h2 class="row-title">Hot Orlando Restaurants</h2>
+        <a class="row-link" href="search.php"><p class="inline rightalign">See All Food & Drink Activities</p></a>
         
         <button class="caro-btn-left" id="autoLeft1">
             <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
@@ -259,104 +256,10 @@
 
     </section>
 
-    <br>
-    <br>
-    <br>
-    <br>
-
-<!-- SECOND CARD ROW -->
-
-    <!--Blogs-->
-    <section class="card-row">
-
-        <h2 class="row-title">Blogs about Orlando</h2>
-        <a href="search.php" class="row-link"><p class="inline rightalign">See All Orlando Blogs</p></a>
-
-        <button class="caro-btn-left" id="autoLeft2">
-            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
-        </button>
-            
-            <!--Cards-->
-            <section class="carousel" id="scroll2">
-                <?php
-                    print(
-                        "<a class= 'card' id='bC0' href='blog.php'>
-                        <img src='img/images/oblogs/popularTP.jpg' class='card-image' alt='People riding an attraction'>
-                        <h4>The Popular Theme Parks</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='bC0' href='blog.php'>
-                        <img src='img/images/oblogs/beaches.jpg' class='card-image' alt='Sun setting at Cocoa Beach'>
-                        <h4>Best Beaches in the Area</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='bC0' href='blog.php'>
-                        <img src='img/images/magickingdom/magickingdom1.jpg' class='card-image' alt='Magic Kingdom Castle'>
-                        <h4>Blog Title</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='bC0' href='blog.php'>
-                        <img src='img/images/magickingdom/magickingdom1.jpg' class='card-image' alt='Magic Kingdom Castle'>
-                        <h4>Blog Title</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='bC0' href='blog.php'>
-                        <img src='img/images/magickingdom/magickingdom1.jpg' class='card-image' alt='Magic Kingdom Castle'>
-                        <h4>Blog Title</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='bC0' href='blog.php'>
-                        <img src='img/images/magickingdom/magickingdom1.jpg' class='card-image' alt='Magic Kingdom Castle'>
-                        <h4>Blog Title</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='bC0' href='blog.php'>
-                        <img src='img/images/magickingdom/magickingdom1.jpg' class='card-image' alt='Magic Kingdom Castle'>
-                        <h4>Blog Title</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='bC0' href='blog.php'>
-                        <img src='img/images/magickingdom/magickingdom1.jpg' class='card-image' alt='Magic Kingdom Castle'>
-                        <h4>Blog Title</h4>
-                        </a>&nbsp;"
-                    );
-                ?>
-            </section>
-
-        <button class="caro-btn-right" id="autoRight2">
-            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
-        </button>
-
-    </section>
-    
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <!--Ad Space-->
-    <article class="adleaderboard">
-        <p>[ad here]</p>
-    </article>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-
     <!--local event-->
     <section class="card-row">
 
-        <h2 class="row-title">Orlando's Signature: Local Event</h2>
+        <h2 class="row-title">Catch Some Local Events</h2>
         <a href="search.php" class="row-link"><p class="inline rightalign">See All Orlando Local Events</p></a>
 
         <button class="caro-btn-left" id="autoLeft3">
@@ -467,97 +370,238 @@
 
     </section>
 
-    <br>
-    <br>
-    <br>
-    <br>
 
-<!-- FOURTH CARD ROW -->
-
-    <!--Preplanned-->
+    <!-- outdoors card row -->
     <section class="card-row">
-
-        <h2 class="row-title">Preplanned Orlando Itineraries</h2>
-        <a href="search.php" class="row-link"><p class="inline rightalign">See All Preplanned Orlando Itineraries</p></a>
-
-        <button class="caro-btn-left" id="autoLeft4">
+        
+        <h2 class="row-title">Get Outside & Active!</h2>
+        <a class="row-link" href="search.php"><p class="inline rightalign">See All Outdoor Activities</p></a>
+        
+        <button class="caro-btn-left" id="autoLeft1">
             <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
-        </button>  
+        </button>
 
-        <!--Cards-->
-        <section class="carousel" id="scroll4">
-        <?php
-            print(
-                "<a class= 'card' id='piC0' href='preplanned.php'>
-                <img src='img/images/preplanned/threedayTP.jpg' class='card-image' alt=''>
-                <h4>3 Day Theme Park Trip</h4>
-                </a>&nbsp;"
-            );
-            print(
-                "<a class= 'card' id='piC1' href='preplanned.php'>
-                <img src='img/images/preplanned/family.jpg' class='card-image' alt=''>
-                <h4>Family Vacation</h4>
-                </a>&nbsp;"
-            );
-            print(
-                "<a class= 'card' id='piC2' href='preplanned.php'>
-                <img src='img/images/preplanned/21.jpg' class='card-image' alt=''>
-                <h4>21+ Weekend of Fun</h4>
-                </a>&nbsp;"
-            );
-            print(
-                "<a class= 'card' id='piC3' href='preplanned.php'>
-                <img src='img/images/preplanned/budget.jpg' class='card-image' alt=''>
-                <h4>On a Budget Getaway</h4>
-                </a>&nbsp;"
-            );
-            print(
-                "<a class= 'card' id='piC4' href='preplanned.php'>
-                <img src='img/images/preplanned/friends.jpg' class='card-image' alt=''>
-                <h4>Friends Trip</h4>
-                </a>&nbsp;"
-            );
-            print(
-                "<a class= 'card' id='piC5' href='preplanned.php'>
-                <img src='img/images/preplanned/restaurant.jpg' class='card-image' alt=''>
-                <h4>Restaurant Dine and Dash</h4>
-                </a>&nbsp;"
-            );
-            print(
-                "<a class= 'card' id='piC6' href='preplanned.php'>
-                <img src='img/images/preplanned/outside.jpg' class='card-image' alt=''>
-                <h4>Outdoor Fun</h4>
-                </a>&nbsp;"
-            );
-            print(
-                "<a class= 'card' id='piC7' href='preplanned.php'>
-                <img src='img/images/preplanned/local.jpg' class='card-image' alt=''>
-                <h4>Living Like a Local</h4>
-                </a>&nbsp;"
-            );
-        ?>
-            
-        </section>
+            <!--Cards-->
+            <section class="carousel" id="scroll1">
+                <?php
 
-        <button class="caro-btn-right" id="autoRight4">
+                    // keeps count of how many cards are on the homescreen; if the count is greater than 8, we do not need to display that card
+                    $cardCount = 1;
+
+                    foreach($results_four AS $result_four){
+                        // print("ctr:  ".$ctr);
+
+                        if ($result_four['id'] != $ctr){
+                            $ctr = $result_four['id'];
+                            // print("ctr update:  ".$ctr);
+                        }
+
+                        $id[$ctr] = $result_four["id"];
+                        // print("id: ".$id[$ctr]);
+                        $name[$ctr] = $result_four["event_name"];
+                        $img1[$ctr] = $result_four["img1"];
+                        $altText1[$ctr] = $result_four["alt_text_img1"];
+                        $price[$ctr] = $result_four["price"];
+                        $address[$ctr] = $result_four["address"];
+                        $url[$ctr] = $result_four["url"];
+                        $meta[$ctr] = $result_four["meta_description"];
+                        $map[$ctr] = $result_four["map_img"];
+                        $map_link[$ctr] = $result_four["map_link"];
+                        $foodDrink = $result_four["isFoodDrink"];
+                        $themePark = $result_four["isThemePark"];
+                        $local = $result_four["isLocal"];
+
+                        // if($ctr != $id[$ctr]){
+                        //     $ctr = $id[$ctr];
+                        // }
+
+                        // send data to session
+                        $_SESSION['id'.$ctr] = $id[$ctr];
+                        $_SESSION['event_name'.$ctr] = $name[$ctr];
+                        $_SESSION['price'.$ctr] = $price[$ctr];
+                        $_SESSION['img1'.$ctr] = $img1[$ctr];
+                        $_SESSION['alt_text_img1'.$ctr] = $altText1[$ctr];
+                        $_SESSION['address'.$ctr] = $address[$ctr];
+                        $_SESSION['url_res'.$ctr] = $url[$ctr];
+                        $_SESSION['meta_description'.$ctr] = $meta[$ctr];
+                        $_SESSION['map_img'.$ctr] = $map[$ctr];
+                        $_SESSION['map_link'.$ctr] = $map_link[$ctr];
+                        
+
+                        // if($foodDrink == 'Y'){
+                        //     $foodDrink = 'Restaurant';
+                        // }
+                        // else if ($foodDrink == 'N'){
+                        //     $foodDrink = 'Not Food Drink';
+                        // }
+
+                        // $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
+
+                        // $fd = $_SESSION['isFoodDrink'.$ctr];
+
+                        // if($themePark == 'Y'){
+                        //     $themePark = 'ThemePark';
+                        // }
+                        // else if ($themePark == 'N'){
+                        //     $themePark = 'Not Theme Park';
+                        // }
+
+                        // $_SESSION['isThemePark'.$ctr] = $themePark;
+
+                        // $thmpk = $_SESSION['isThemePark'.$ctr];
+
+                        // if($local == 'Y'){
+                        //     $local = 'LocalEvent';
+                        // }
+                        // else if ($local == 'N'){
+                        //     $local = 'Not Local Event';
+                        // }
+
+                        // $_SESSION['isLocal'.$ctr] = $local;
+
+                        // $locpo = $_SESSION['isLocal'.$ctr];
+
+                        // <p>$locpo</p>
+                        // <p>$fd</p>
+                        // <p>$thmpk</p>
+                        if($cardCount <= 8){
+                            print(
+                                "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&id=$id[$ctr]'>
+                                <img class='card-image' src='img/images/$img1[$ctr]' alt='$altText1[$ctr]'>
+                                <h4>$name[$ctr]</h4>
+                                <p class='captions'>".$price[$ctr].(($result_four["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($result_four["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($result_four["isLocal"] == 'Y') ? " | Local Activity" : "").(($result_four["isGoodValue"] == 'Y') ? " | Good Value" : "").(($result_four["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($result_four["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($result_four["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($result_four["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
+                                </a>&nbsp;"
+                            );
+                        }
+                        $ctr = $ctr+1;
+                        $cardCount = $cardCount+1;
+                    }
+                    // print("ctr: ".$ctr);
+                    ?>
+            </section>
+
+        <button class="caro-btn-right" id="autoRight1">
             <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
         </button>
-                
+
     </section>
 
-    <br>
-    <br>
-    <br>
-    <br>
 
-    <!--Ad Space-->
-    <article class="adleaderboard">
-        <p>[ad here]</p>
-    </article>
 
-    <br>
-    <br>
-    <br>
-    <br>
+        <!-- value card row -->
+        <section class="card-row">
+        
+        <h2 class="row-title">Orlando's Cheap Thrills</h2>
+        <a class="row-link" href="search.php"><p class="inline rightalign">See All Value Activities</p></a>
+        
+        <button class="caro-btn-left" id="autoLeft1">
+            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
+        </button>
+
+            <!--Cards-->
+            <section class="carousel" id="scroll1">
+                <?php
+
+                    // keeps count of how many cards are on the homescreen; if the count is greater than 8, we do not need to display that card
+                    $cardCount = 1;
+
+                    foreach($results_five AS $result_five){
+                        // print("ctr:  ".$ctr);
+
+                        if ($result_five['id'] != $ctr){
+                            $ctr = $result_five['id'];
+                            // print("ctr update:  ".$ctr);
+                        }
+
+                        $id[$ctr] = $result_five["id"];
+                        // print("id: ".$id[$ctr]);
+                        $name[$ctr] = $result_five["event_name"];
+                        $img1[$ctr] = $result_five["img1"];
+                        $altText1[$ctr] = $result_five["alt_text_img1"];
+                        $price[$ctr] = $result_five["price"];
+                        $address[$ctr] = $result_five["address"];
+                        $url[$ctr] = $result_five["url"];
+                        $meta[$ctr] = $result_five["meta_description"];
+                        $map[$ctr] = $result_five["map_img"];
+                        $map_link[$ctr] = $result_five["map_link"];
+                        $foodDrink = $result_five["isFoodDrink"];
+                        $themePark = $result_five["isThemePark"];
+                        $local = $result_five["isLocal"];
+
+                        // if($ctr != $id[$ctr]){
+                        //     $ctr = $id[$ctr];
+                        // }
+
+                        // send data to session
+                        $_SESSION['id'.$ctr] = $id[$ctr];
+                        $_SESSION['event_name'.$ctr] = $name[$ctr];
+                        $_SESSION['price'.$ctr] = $price[$ctr];
+                        $_SESSION['img1'.$ctr] = $img1[$ctr];
+                        $_SESSION['alt_text_img1'.$ctr] = $altText1[$ctr];
+                        $_SESSION['address'.$ctr] = $address[$ctr];
+                        $_SESSION['url_res'.$ctr] = $url[$ctr];
+                        $_SESSION['meta_description'.$ctr] = $meta[$ctr];
+                        $_SESSION['map_img'.$ctr] = $map[$ctr];
+                        $_SESSION['map_link'.$ctr] = $map_link[$ctr];
+                        
+
+                        // if($foodDrink == 'Y'){
+                        //     $foodDrink = 'Restaurant';
+                        // }
+                        // else if ($foodDrink == 'N'){
+                        //     $foodDrink = 'Not Food Drink';
+                        // }
+
+                        // $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
+
+                        // $fd = $_SESSION['isFoodDrink'.$ctr];
+
+                        // if($themePark == 'Y'){
+                        //     $themePark = 'ThemePark';
+                        // }
+                        // else if ($themePark == 'N'){
+                        //     $themePark = 'Not Theme Park';
+                        // }
+
+                        // $_SESSION['isThemePark'.$ctr] = $themePark;
+
+                        // $thmpk = $_SESSION['isThemePark'.$ctr];
+
+                        // if($local == 'Y'){
+                        //     $local = 'LocalEvent';
+                        // }
+                        // else if ($local == 'N'){
+                        //     $local = 'Not Local Event';
+                        // }
+
+                        // $_SESSION['isLocal'.$ctr] = $local;
+
+                        // $locpo = $_SESSION['isLocal'.$ctr];
+
+                        // <p>$locpo</p>
+                        // <p>$fd</p>
+                        // <p>$thmpk</p>
+                        if($cardCount <= 8){
+                            print(
+                                "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&id=$id[$ctr]'>
+                                <img class='card-image' src='img/images/$img1[$ctr]' alt='$altText1[$ctr]'>
+                                <h4>$name[$ctr]</h4>
+                                <p class='captions'>".$price[$ctr].(($result_five["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($result_five["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($result_five["isLocal"] == 'Y') ? " | Local Activity" : "").(($result_five["isGoodValue"] == 'Y') ? " | Good Value" : "").(($result_five["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($result_five["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($result_five["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($result_five["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
+                                </a>&nbsp;"
+                            );
+                        }
+                        $ctr = $ctr+1;
+                        $cardCount = $cardCount+1;
+                    }
+                    // print("ctr: ".$ctr);
+                    ?>
+            </section>
+
+        <button class="caro-btn-right" id="autoRight1">
+            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
+        </button>
+
+    </section>
+
 
 </section></section>
