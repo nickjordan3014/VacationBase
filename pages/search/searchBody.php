@@ -45,8 +45,14 @@
                 $search_outdoor = array(metaphone("outdoor"), metaphone("outside"), metaphone("animal"), metaphone("animals"), metaphone("zoo"), metaphone("explore"), metaphone("exploring"), metaphone("land"), metaphone("sky"), metaphone("wind"), metaphone("exercise"), metaphone("garden"), metaphone("air"), metaphone("green"), metaphone("recreation"), metaphone("fresh"));
                 $search_live = array(metaphone("music"), metaphone("shows"), metaphone("concert"), metaphone("festival"), metaphone("show"), metaphone("social"), metaphone("musical"), metaphone("play"), metaphone("opera"), metaphone("comedy"), metaphone("standup"), metaphone("band"), metaphone("venue"), metaphone("film"), metaphone("live"),metaphone("screen"));
                 $search_art = array(metaphone("music"), metaphone("museum"), metaphone("shows"), metaphone("culture"), metaphone("show"), metaphone("paint"), metaphone("mural"), metaphone("artist"), metaphone("create"), metaphone("craft"), metaphone("brush"), metaphone("design"), metaphone("history"), metaphone("draw"), metaphone("photo"), metaphone("color"), metaphone("sketch"), metaphone("exhibit"), metaphone("easel"), metaphone("sculpt"), metaphone("media"), metaphone("animation"), metaphone("studio"), metaphone("display"), metaphone("heritage"), metaphone("renaissance"), metaphone("statue"), metaphone("mythology"));
+
+                // foreach($searchThemePark AS $tpmatch){
+                //     if(metaphone($results) == metaphone($tpmatch)){
+                //         print($results."exists in the database as event: ".$tpmatch);
+                //     }
+                // }
                 
-                // if what the user searches matches matches something from the meta data
+                // if what the user searches matches matches something from the meta data. (also test for if what user enters metaphone($results) matches a name in the database)
                 if (in_array(metaphone($results), $search_tp) || strstr($results, 'park') || strstr($results, 'theme') || strstr($results, 'amusement') || strstr($results, 'attraction')){
                     echo "We have found a theme park match match!";
 
@@ -55,18 +61,39 @@
                         $id = $searchTP["id"];
                         $name = $searchTP["event_name"];
                         $price = $searchTP["price"];
+                        $img = $searchTP["img1"];
+                        $meta = $searchTP["meta_description"];
                         $ctr = $id;
 
                         print(
                             "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card' >
                                     <h3>$name | From $price</h3>
+                                    <p>$meta</p>
                                 </section>
                             </a>"
                         );
                     }
                 }
+                /*
+                else {
+                    // print($result);
+                    // print($)
+                    foreach($searchThemePark AS $tpmatch){
 
+                        // print("result: ".(metaphone($results)));
+                        // print("\n");
+                        $themeparkmatch = $tpmatch['event_name'];
+                        // print("theme park: ".metaphone($themeparkmatch));
+                        // print("\n");
+
+                        if(metaphone($results) == metaphone($themeparkmatch)){
+                            print($results." exists in the database as event: ".$themeparkmatch);
+                        }
+                    }
+                }
+                */
+                
                 if (in_array(metaphone($results), $search_res) || strstr($results, 'eat') || strstr($results, 'food') || strstr($results, 'lunch') || strstr($results, 'dinner') || strstr($results, 'breakast') || strstr($results, 'meal') || strstr($results, 'cook') || strstr($results, 'drink')){
                     echo "We have found a restaurant match!";
 
@@ -75,12 +102,15 @@
                         $id = $searchRes["id"];
                         $name = $searchRes["event_name"];
                         $price = $searchRes["price"];
+                        $img = $searchRes["img1"];
+                        $meta = $searchRes["meta_description"];
                         $ctr = $id;
 
                         print(
                             "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
                                     <h3>$name | From $price</h3>
+                                    <p>$meta</p>
                                 </section>
                             </a>"
                         );
@@ -96,12 +126,15 @@
                         $id = $searchRain["id"];
                         $name = $searchRain["event_name"];
                         $price = $searchRain["price"];
+                        $img = $searchRain["img1"];
+                        $meta = $searchRain["meta_description"];
                         $ctr = $id;
 
                         print(
                             "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
                                     <h3>$name | From $price</h3>
+                                    <p>$meta</p>
                                 </section>
                             </a>"
                         );
@@ -116,12 +149,15 @@
                         $id = $searchFF["id"];
                         $name = $searchFF["event_name"];
                         $price = $searchFF["price"];
+                        $img = $searchFF["img1"];
+                        $meta = $searchFF["meta_description"];
                         $ctr = $id;
 
                         print(
                             "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
                                     <h3>$name | From $price</h3>
+                                    <p>$meta</p>
                                 </section>
                             </a>"
                         );
@@ -136,12 +172,15 @@
                         $id = $searchLoc["id"];
                         $name = $searchLoc["event_name"];
                         $price = $searchLoc["price"];
+                        $img = $searchLoc["img1"];
+                        $meta = $searchLoc["meta_description"];
                         $ctr = $id;
 
                         print(
                             "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
                                     <h3>$name | From $price</h3>
+                                    <p>$meta</p>
                                 </section>
                             </a>"
                         );
@@ -156,12 +195,15 @@
                         $id = $searchGood["id"];
                         $name = $searchGood["event_name"];
                         $price = $searchGood["price"];
+                        $img = $searchGood["img1"];
+                        $meta = $searchGood["meta_description"];
                         $ctr = $id;
 
                         print(
                             "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
                                     <h3>$name | From $price</h3>
+                                    <p>$meta</p>
                                 </section>
                             </a>"
                         );
@@ -177,12 +219,15 @@
                         $id = $searchOut["id"];
                         $name = $searchOut["event_name"];
                         $price = $searchOut["price"];
+                        $img = $searchOut["img1"];
+                        $meta = $searchOut["meta_description"];
                         $ctr = $id;
 
                         print(
                             "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>  
                                     <h3>$name | From $price</h3>
+                                    <p>$meta</p>
                                 </section>
                             </a>"
                         );
@@ -197,12 +242,15 @@
                         $id = $searchLive["id"];
                         $name = $searchLive["event_name"];
                         $price = $searchLive["price"];
+                        $img = $searchLive["img1"];
+                        $meta = $searchLive["meta_description"];
                         $ctr = $id;
 
                         print(
                             "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
                                     <h3>$name | From $price</h3>
+                                    <p>$meta</p>
                                 </section>
                             </a>"
                         );
@@ -217,12 +265,15 @@
                         $id = $searchArt["id"];
                         $name = $searchArt["event_name"];
                         $price = $searchArt["price"];
+                        $img = $searchArt["img1"];
+                        $meta = $searchArt["meta_description"];
                         $ctr = $id;
 
                         print(
                             "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
                                     <h3>$name | From $price</h3>
+                                    <p>$meta</p>
                                 </section>
                             </a>"
                         );

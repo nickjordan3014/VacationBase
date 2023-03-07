@@ -15,6 +15,10 @@
     $select_local = "SELECT * FROM orlando_florida WHERE isLocal = 'Y'";
     // $select_local = "SELECT * FROM orlando_florida WHERE isLocal = 'Y' LIMIT 8";
 
+    $select_family = "SELECT * FROM orlando_florida WHERE isFamily = 'Y'";
+
+    // $selec
+
     $results_one = $db->query($select_themePark);
     $results_two = $db->query($select_restaurant);
     $results_three = $db->query($select_local);

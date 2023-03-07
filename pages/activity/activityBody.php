@@ -200,16 +200,16 @@
                             $ctr = $ctr+1;
                             // echo("ctr3 update: ".$ctr3);
                         }
-                        $id = $_SESSION['id_tp'.$ctr];
-                        $name = $_SESSION['event_name_tp'.$ctr];
-                        $price = $_SESSION['price_tp'.$ctr];
-                        $img1 = $_SESSION['img1_tp'.$ctr];
-                        $altText1 = $_SESSION['alt_text_img1_tp'.$ctr];
-                        $address = $_SESSION['address_tp'.$ctr];
-                        $url = $_SESSION['url_tp'.$ctr];
-                        $meta = $_SESSION['meta_description_tp'.$ctr];
-                        $map = $_SESSION['map_img_tp'.$ctr];
-                        $map_link = $_SESSION['map_link_tp'.$ctr];
+                        $id = $_SESSION['id'.$ctr];
+                        $name = $_SESSION['event_name'.$ctr];
+                        $price = $_SESSION['pricep'.$ctr];
+                        $img1 = $_SESSION['img1'.$ctr];
+                        $altText1 = $_SESSION['alt_text_img1'.$ctr];
+                        $address = $_SESSION['address'.$ctr];
+                        $url = $_SESSION['url'.$ctr];
+                        $meta = $_SESSION['meta_description'.$ctr];
+                        $map = $_SESSION['map_img'.$ctr];
+                        $map_link = $_SESSION['map_link'.$ctr];
                         
                         // print("id: ".$id);
 
@@ -242,16 +242,16 @@
                         if ($ctr == $ctr3){
                             $ctr = $ctr+1;
                         }
-                        $id = $_SESSION['id_res'.$ctr];
-                        $name = $_SESSION['event_name_res'.$ctr];
-                        $price = $_SESSION['price_res'.$ctr];
-                        $img1 = $_SESSION['img1_res'.$ctr];
-                        $altText1 = $_SESSION['alt_text_img1_res'.$ctr];
-                        $address = $_SESSION['address_res'.$ctr];
-                        $url = $_SESSION['url_res'.$ctr];
-                        $meta = $_SESSION['meta_description_res'.$ctr];
-                        $map = $_SESSION['map_img_res'.$ctr];
-                        $map_link = $_SESSION['map_link_res'.$ctr];
+                        $id = $_SESSION['id'.$ctr];
+                        $name = $_SESSION['event_name'.$ctr];
+                        $price = $_SESSION['price'.$ctr];
+                        $img1 = $_SESSION['img1'.$ctr];
+                        $altText1 = $_SESSION['alt_text_img1'.$ctr];
+                        $address = $_SESSION['address'.$ctr];
+                        $url = $_SESSION['url'.$ctr];
+                        $meta = $_SESSION['meta_description'.$ctr];
+                        $map = $_SESSION['map_img'.$ctr];
+                        $map_link = $_SESSION['map_link'.$ctr];
                         
                         // print("id: ".$id);
 
@@ -286,16 +286,16 @@
                             $ctr = $ctr+1;
                         }
 
-                        $id = $_SESSION['id_loc'.$ctr];
-                        $name = $_SESSION['event_name_loc'.$ctr];
-                        $price = $_SESSION['price_loc'.$ctr];
-                        $img1 = $_SESSION['img1_loc'.$ctr];
-                        $altText1 = $_SESSION['alt_text_img1_loc'.$ctr];
-                        $address = $_SESSION['address_loc'.$ctr];
-                        $url = $_SESSION['url_loc'.$ctr];
-                        $meta = $_SESSION['meta_description_loc'.$ctr];
-                        $map = $_SESSION['map_img_loc'.$ctr];
-                        $map_link = $_SESSION['map_link_loc'.$ctr];
+                        $id = $_SESSION['id'.$ctr];
+                        $name = $_SESSION['event_name'.$ctr];
+                        $price = $_SESSION['price'.$ctr];
+                        $img1 = $_SESSION['img1'.$ctr];
+                        $altText1 = $_SESSION['alt_text_img1'.$ctr];
+                        $address = $_SESSION['address'.$ctr];
+                        $url = $_SESSION['url'.$ctr];
+                        $meta = $_SESSION['meta_description'.$ctr];
+                        $map = $_SESSION['map_img'.$ctr];
+                        $map_link = $_SESSION['map_link'.$ctr];
                     
                         // print("id: ".$id);
 
