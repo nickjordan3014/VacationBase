@@ -1,3 +1,5 @@
+<?php $see = $_GET['eventType']; ?>
+
 <section class="main-content">
     <section class="inner-content">
         <article class="adleaderboard">
@@ -19,6 +21,9 @@
         <hr class="hsline">
         <?php
 
+            // $see = $_GET['eventType'];
+
+            // print($see);
             // $search_tp = array( str_contains($results, metaphone("park")) , metaphone("water park") , metaphone("theme park") , metaphone("roller coaster") , metaphone("amusement park") , metaphone("carnival") , metaphone("fair") , metaphone("attraction") , metaphone("adventure"));
             // $search_res = array(metaphone("eat"), metaphone("eating"), metaphone("eatery"), metaphone("food"), metaphone("drink"), metaphone("drinks"), metaphone("lunch"), metaphone("dinner"), metaphone("breakfast"), metaphone("cafe"), metaphone("dish"), );
 
@@ -31,13 +36,15 @@
             else {
                 // returns the value of whatever the user enters on the search bar
                 $results = strtolower($_POST['searchbar']);
-                echo($results);
+                // echo($results);
                 echo("<br>");
-                echo(metaphone($results));
+                // echo(metaphone($results));
                 echo("<br>");
+                $somePrint = 'false';
+                $oneName = 'false';
 
-                $search_tp = array(metaphone("park"), metaphone("water park"), metaphone("theme park"), metaphone("roller coaster"), metaphone("amusement park"), metaphone("carnival"), metaphone("fair"), metaphone("attraction"), metaphone("adventure"), metaphone("shows"),);
-                $search_res = array(metaphone("eat"), metaphone("eating"), metaphone("eatery"), metaphone("food"), metaphone("drink"), metaphone("drinks"), metaphone("lunch"), metaphone("dinner"), metaphone("breakfast"), metaphone("cafe"), metaphone("dish"), metaphone("dishes"), metaphone("hungry"), metaphone("thirsty"), metaphone("meal"), metaphone("cook"), metaphone("snack"), metaphone("beverage"), metaphone("cater"), metaphone("munch"), metaphone("feed"));
+                $search_tp = array(metaphone("parks"), metaphone("water parks"), metaphone("theme parks"), metaphone("roller coasters"), metaphone("amusement parks"), metaphone("carnivals"), metaphone("fairs"), metaphone("attractions"), metaphone("adventures"), metaphone("shows"),);
+                $search_res = array(metaphone("restaurants"), metaphone("eat"), metaphone("eating"), metaphone("eatery"), metaphone("food"), metaphone("drink"), metaphone("drinks"), metaphone("lunch"), metaphone("dinner"), metaphone("breakfast"), metaphone("cafe"), metaphone("dish"), metaphone("dishes"), metaphone("hungry"), metaphone("thirsty"), metaphone("meal"), metaphone("cook"), metaphone("snack"), metaphone("beverage"), metaphone("cater"), metaphone("munch"), metaphone("feed"));
                 $search_rainy = array(metaphone("bad weather"), metaphone("weather"), metaphone("storm"), metaphone("rain"), metaphone("weather day"), metaphone("inside"), metaphone("jacket"), metaphone("thunder"), metaphone("wind"));
                 $search_fam = array(metaphone("child"), metaphone("children"), metaphone("kids"), metaphone("teens"), metaphone("teenagers"), metaphone("teenager"), metaphone("family"), metaphone("friend"), metaphone("families"), metaphone("friends"));
                 $search_local = array(metaphone("around"), metaphone("area"), metaphone("community"), metaphone("local"), metaphone("normal"), metaphone("nearby"), metaphone("corner"), metaphone("familiar"), metaphone("familiarity"), metaphone("UCF"), metaphone("university of central florida"), metaphone("college"), metaphone("football"), metaphone("native"));
@@ -52,8 +59,9 @@
                 //     }
                 // }
                 
+                
                 // if what the user searches matches matches something from the meta data. (also test for if what user enters metaphone($results) matches a name in the database)
-                if (in_array(metaphone($results), $search_tp) || strstr($results, 'park') || strstr($results, 'theme') || strstr($results, 'amusement') || strstr($results, 'attraction')){
+                if (in_array(metaphone($results), $search_tp) || strstr($results, 'parks') || strstr($results, 'theme') || strstr($results, 'amusement') || strstr($results, 'attractions')){
                     echo "We have found a theme park match match!";
 
 
@@ -65,7 +73,9 @@
                         $meta = $searchTP["meta_description"];
                         $ctr = $id;
 
+                        $somePrint = 'true';
                         print(
+                            
                             "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card' >
                                     <h3>$name | From $price</h3>
@@ -75,24 +85,6 @@
                         );
                     }
                 }
-                /*
-                else {
-                    // print($result);
-                    // print($)
-                    foreach($searchThemePark AS $tpmatch){
-
-                        // print("result: ".(metaphone($results)));
-                        // print("\n");
-                        $themeparkmatch = $tpmatch['event_name'];
-                        // print("theme park: ".metaphone($themeparkmatch));
-                        // print("\n");
-
-                        if(metaphone($results) == metaphone($themeparkmatch)){
-                            print($results." exists in the database as event: ".$themeparkmatch);
-                        }
-                    }
-                }
-                */
                 
                 if (in_array(metaphone($results), $search_res) || strstr($results, 'eat') || strstr($results, 'food') || strstr($results, 'lunch') || strstr($results, 'dinner') || strstr($results, 'breakast') || strstr($results, 'meal') || strstr($results, 'cook') || strstr($results, 'drink')){
                     echo "We have found a restaurant match!";
@@ -106,6 +98,7 @@
                         $meta = $searchRes["meta_description"];
                         $ctr = $id;
 
+                        $somePrint = 'true';
                         print(
                             "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
@@ -130,6 +123,7 @@
                         $meta = $searchRain["meta_description"];
                         $ctr = $id;
 
+                        $somePrint = 'true';
                         print(
                             "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
@@ -152,6 +146,8 @@
                         $img = $searchFF["img1"];
                         $meta = $searchFF["meta_description"];
                         $ctr = $id;
+
+                        $somePrint = 'true';
 
                         print(
                             "<a href='activity.php?count=$ctr&id=$id'>
@@ -176,6 +172,8 @@
                         $meta = $searchLoc["meta_description"];
                         $ctr = $id;
 
+                        $somePrint = 'true';
+
                         print(
                             "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
@@ -199,6 +197,8 @@
                         $meta = $searchGood["meta_description"];
                         $ctr = $id;
 
+                        $somePrint = 'true';
+
                         print(
                             "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
@@ -215,13 +215,17 @@
                     echo "We have found a outdoor events match!";
 
 
-                    foreach($searchOutdoor AS $searchOut){
-                        $id = $searchOut["id"];
-                        $name = $searchOut["event_name"];
-                        $price = $searchOut["price"];
-                        $img = $searchOut["img1"];
-                        $meta = $searchOut["meta_description"];
+                    foreach($searchOutdoor AS $searchOutside){
+                        $id = $searchOutside["id"];
+                        $name = $searchOutside["event_name"];
+                        $price = $searchOutside["price"];
+                        $img = $searchOutside["img1"];
+                        $meta = $searchOutside["meta_description"];
                         $ctr = $id;
+
+                        print($name);
+
+                        $somePrint = 'true';
 
                         print(
                             "<a href='activity.php?count=$ctr&id=$id'>
@@ -246,6 +250,8 @@
                         $meta = $searchLive["meta_description"];
                         $ctr = $id;
 
+                        $somePrint = 'true';
+
                         print(
                             "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
@@ -269,6 +275,8 @@
                         $meta = $searchArt["meta_description"];
                         $ctr = $id;
 
+                        $somePrint = 'true';
+
                         print(
                             "<a href='activity.php?count=$ctr&id=$id'>
                                 <section class='search-card'>
@@ -281,11 +289,46 @@
                 }
 
                 // else if what the yser searches doesnt match anything
-                else if (!(in_array(metaphone($results), $search_tp) || strstr($results, 'park') || strstr($results, 'theme') || strstr($results, 'amusement') || strstr($results, 'attraction')) && !(in_array(metaphone($results), $search_res) || strstr($results, 'eat') || strstr($results, 'food') || strstr($results, 'lunch') || strstr($results, 'dinner') || strstr($results, 'breakast') || strstr($results, 'meal') || strstr($results, 'cook') || strstr($results, 'drink')) && !(in_array(metaphone($results), $search_rainy) || strstr($results, 'weater') || strstr($results, 'jacket') || strstr($results, 'inside') || strstr($results, 'rain')) && !(in_array(metaphone($results), $search_fam) || strstr($results, 'child') || strstr($results, 'teen') || strstr($results, 'friend') || strstr($results, 'family') || strstr($results, 'sister') || strstr($results, 'brother') || strstr($results, 'daughter') || strstr($results, 'son') || strstr($results, 'father') || strstr($results, 'mother') || strstr($results, 'dad') || strstr($results, 'mom')) && !(in_array(metaphone($results), $search_local) || strstr($results, 'local') || strstr($results, 'nearby') || strstr($results, 'area') || strstr($results, 'native')) && !(in_array(metaphone($results), $search_good) || strstr($results, 'cheap') || strstr($results, 'poor') || strstr($results, 'bargain') || strstr($results, 'cost') || strstr($results, 'dollar') || strstr($results, 'afford') || strstr($results, 'money')) && !(in_array(metaphone($results), $search_outdoor) || strstr($results, 'out') || strstr($results, 'outside') || strstr($results, 'exercise') || strstr($results, 'air')) && !(in_array(metaphone($results), $search_live) || strstr($results, 'music') || strstr($results, 'concert') || strstr($results, 'social')) && !(in_array(metaphone($results), $search_art) || strstr($results, 'art') || strstr($results, 'museum') || strstr($results, 'culture') || strstr($results, 'show') || strstr($results, 'exhibit') || strstr($results, 'draw') || strstr($results, 'color') || strstr($results, 'sculpt') || strstr($results, 'easel') || strstr($results, 'design'))) {
-                    print("We couldnt find any results for the search '".$results."'");
-                }
+                else if ($somePrint == 'false' && $oneName == 'false'){
+                    foreach($allResults AS $all){
+                        
+                        // print("<br>resultsss: ".metaphone($results). "  database: ".metaphone($all["event_name"]));
+                        // print('&nbsp;');
+                        // print('&nbsp;');
+    
+                        $id = $all["id"];
+                        $name = $all["event_name"];
+                        $price = $all["price"];
+                        $img = $all["img1"];
+                        $meta = $all["meta_description"];
+                        $ctr = $id;
 
+                        $tpFullName = metaphone($name);
+
+                        
+    
+                        if(metaphone($results) == $tpFullName/* ||strstr(strtolower($name), $results)*/){
+                            $oneName = 'true';
+                            print('in else if');
+                            print(
+                                "<a href='activity.php?count=$ctr&id=$id'>
+                                    <section class='search-card' >
+                                        <h3>$name | From $price</h3>
+                                        <p>$meta</p>
+                                    </section>
+                                </a>"
+                            );
+                        }
+                        
+                    }
+
+                    if ($oneName == 'false'){
+                        print("<br>We couldnt find any results for the search '".$results."'");
+                    }
+                    
+                }
             }
+
         ?>
         <!-- <section class="search-card" href="activity.php">
             <img src="img/images/legoland.jpg" class="search-image" alt="Magic Kingdom Castle">
@@ -373,6 +416,9 @@
                 <label for="value" class="filter-label"><input type="checkbox">Awesome Value</label>
                 <label for="local" class="filter-label"><input type="checkbox">Living like a Local</label>
                 <label for="transit" class="filter-label"><input type="checkbox">Public Transit</label>
+            </section>
+            <section>
+                <button type="submit" name="filter-btn">Go</button>
             </section>
         </form>
         <article class="sa">

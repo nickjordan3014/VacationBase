@@ -33,12 +33,6 @@
             $themePark = $_SESSION['isThemePark'];
             $foodDrink = $_SESSION['isFoodDrink'];
             $local = $_SESSION['isLocal'];
-
-            print("theme park: ".$themePark);
-            print("food drink: ".$foodDrink);
-            print("local: ".$local);
-
-            
             
         ?>
 
@@ -188,6 +182,7 @@
                 
                 
                 if ($themePark == 'Y'){
+                    $cardCount = 1;
                     // variable used to display different activities in the similar activities area
                     $ctr3 = $ctr;
                     
@@ -219,16 +214,19 @@
                             $ctr = $id;
                             // print("ctr update:  ".$ctr);
                         }
-
-                        print(
-                            "<a class='card' id='cardA$ctr' title='$name' href='activity.php?count=$ctr&id=$id'>
-                            <img class='card-image' src='img/images/$img1' alt='$altText1'>
-                            <h4>$name</h4>
-                            <p class='captions'>From $".$price.(($other_result["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($other_result["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($other_result["isLocal"] == 'Y') ? " | Local Activity" : "").(($other_result["isGoodValue"] == 'Y') ? " | Good Value" : "").(($other_result["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($other_result["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($other_result["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($other_result["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
-                            </a>&nbsp;"
-                        );
+                        
+                        if ($cardCount <= 6){
+                            print(
+                                "<a class='card' id='cardA$ctr' title='$name' href='activity.php?count=$ctr&id=$id'>
+                                <img class='card-image' src='img/images/$img1' alt='$altText1'>
+                                <h4>$name</h4>
+                                <p class='captions'>From $".$price.(($other_result["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($other_result["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($other_result["isLocal"] == 'Y') ? " | Local Activity" : "").(($other_result["isGoodValue"] == 'Y') ? " | Good Value" : "").(($other_result["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($other_result["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($other_result["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($other_result["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
+                                </a>&nbsp;"
+                            );
+                        }
                         $ctr = $ctr+1;
                         $ctr3 = $ctr3+1;
+                        $cardCount = $cardCount+1;
                     }
                     // $ctr3 = 0;
                     // print("ctr: ".$ctr);

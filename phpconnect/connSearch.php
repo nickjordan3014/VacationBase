@@ -48,4 +48,8 @@
     $searchArt = "SELECT * FROM orlando_florida WHERE isArts = 'Y'";
 
     $searchArts = $db->query($searchArt);
+
+    $searchAll = "SELECT * FROM orlando_florida";
+
+    $allResults = $db->query($searchAll);
 ?>

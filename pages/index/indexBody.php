@@ -77,46 +77,6 @@
                         $_SESSION['map_img'.$ctr] = $map[$ctr];
                         $_SESSION['map_link'.$ctr] = $map_link[$ctr];
 
-                        
-
-                        // if($themePark == 'Y'){
-                        //     $themePark = 'ThemePark';
-                        // }
-                        // else if ($themePark == 'N'){
-                        //     $themePark = 'Not Theme Park';
-                        // }
-
-                        // $_SESSION['isThemePark'.$ctr] = $themePark;
-
-                        // $thmpk = $_SESSION['isThemePark'.$ctr];
-
-                        // if($local == 'Y'){
-                        //     $local = 'LocalEvent';
-                        // }
-                        // else if ($local == 'N'){
-                        //     $local = 'Not Local Event';
-                        // }
-
-                        // $_SESSION['isLocal'.$ctr] = $local;
-
-                        // $locpo = $_SESSION['isLocal'.$ctr];
-
-                        // if($foodDrink == 'Y'){
-                        //     $foodDrink = 'Restaurant';
-                        // }
-                        // else if ($foodDrink == 'N'){
-                        //     $foodDrink = 'Not Food Drink';
-                        // }
-
-                        // $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
-
-                        // $fd = $_SESSION['isFoodDrink'.$ctr];
-
-
-                        // <p>$thmpk</p>
-                        // <p>$fd</p>
-                        // <p>$locpo</p>
-
 
                         if($cardCount <= 8){
                             print(
@@ -145,7 +105,7 @@
     <section class="card-row">
         
         <h2 class="row-title">Hot Orlando Restaurants</h2>
-        <a class="row-link" href="search.php"><p class="inline rightalign">See All Food & Drink Activities</p></a>
+        <a class="row-link" href="search.php"><p class="inline rightalign">See All Restaurant Activities</p></a>
         
         <button class="caro-btn-left" id="autoLeft1">
             <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
@@ -159,11 +119,9 @@
                     $cardCount = 1;
 
                     foreach($results_two AS $result_two){
-                        // print("ctr:  ".$ctr);
 
                         if ($result_two['id'] != $ctr){
                             $ctr = $result_two['id'];
-                            // print("ctr update:  ".$ctr);
                         }
 
                         $id[$ctr] = $result_two["id"];
@@ -181,10 +139,6 @@
                         $themePark = $result_two["isThemePark"];
                         $local = $result_two["isLocal"];
 
-                        // if($ctr != $id[$ctr]){
-                        //     $ctr = $id[$ctr];
-                        // }
-
                         // send data to session
                         $_SESSION['id'.$ctr] = $id[$ctr];
                         $_SESSION['event_name'.$ctr] = $name[$ctr];
@@ -196,44 +150,7 @@
                         $_SESSION['meta_description'.$ctr] = $meta[$ctr];
                         $_SESSION['map_img'.$ctr] = $map[$ctr];
                         $_SESSION['map_link'.$ctr] = $map_link[$ctr];
-                        
 
-                        // if($foodDrink == 'Y'){
-                        //     $foodDrink = 'Restaurant';
-                        // }
-                        // else if ($foodDrink == 'N'){
-                        //     $foodDrink = 'Not Food Drink';
-                        // }
-
-                        // $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
-
-                        // $fd = $_SESSION['isFoodDrink'.$ctr];
-
-                        // if($themePark == 'Y'){
-                        //     $themePark = 'ThemePark';
-                        // }
-                        // else if ($themePark == 'N'){
-                        //     $themePark = 'Not Theme Park';
-                        // }
-
-                        // $_SESSION['isThemePark'.$ctr] = $themePark;
-
-                        // $thmpk = $_SESSION['isThemePark'.$ctr];
-
-                        // if($local == 'Y'){
-                        //     $local = 'LocalEvent';
-                        // }
-                        // else if ($local == 'N'){
-                        //     $local = 'Not Local Event';
-                        // }
-
-                        // $_SESSION['isLocal'.$ctr] = $local;
-
-                        // $locpo = $_SESSION['isLocal'.$ctr];
-
-                        // <p>$locpo</p>
-                        // <p>$fd</p>
-                        // <p>$thmpk</p>
                         if($cardCount <= 8){
                             print(
                                 "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&id=$id[$ctr]'>
@@ -262,12 +179,12 @@
         <h2 class="row-title">Catch Some Local Events</h2>
         <a href="search.php" class="row-link"><p class="inline rightalign">See All Orlando Local Events</p></a>
 
-        <button class="caro-btn-left" id="autoLeft3">
+        <button class="caro-btn-left" id="autoLeft2">
             <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
         </button>
             
             
-            <section class="carousel" id="scroll3">
+            <section class="carousel" id="scroll2">
 
                 <?php
                     // keeps count of how many cards are on the homescreen; if the count is greater than 8, we do not need to display that card
@@ -309,44 +226,6 @@
                         $_SESSION['map_link'.$ctr] = $map_link[$ctr];
                         
                         
-                        
-
-                        // if($local == 'Y'){
-                        //     $local = 'LocalEvent';
-                        // }
-                        // else if ($local == 'N'){
-                        //     $local = 'Not Local Event';
-                        // }
-
-                        // $_SESSION['isLocal'.$ctr] = $local;
-
-                        // $locpo = $_SESSION['isLocal'.$ctr];
-
-                        // if($foodDrink == 'Y'){
-                        //     $foodDrink = 'Restaurant';
-                        // }
-                        // else if ($foodDrink == 'N'){
-                        //     $foodDrink = 'Not Food Drink';
-                        // }
-
-                        // $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
-
-                        // $fd = $_SESSION['isFoodDrink'.$ctr];
-
-                        // if($themePark == 'Y'){
-                        //     $themePark = 'ThemePark';
-                        // }
-                        // else if ($themePark == 'N'){
-                        //     $themePark = 'Not Theme Park';
-                        // }
-
-                        // $_SESSION['isThemePark'.$ctr] = $themePark;
-
-                        // $thmpk = $_SESSION['isThemePark'.$ctr];
-
-                        // <p>$locpo</p>
-                        // <p>$fd</p>
-                        // <p>$thmpk</p>
                         if($cardCount <= 8){
                             print(
                                 "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&id=$id[$ctr]'>
@@ -364,7 +243,7 @@
 
             </section>
 
-        <button class="caro-btn-right" id="autoRight3">
+        <button class="caro-btn-right" id="autoRight2">
             <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
         </button>
 
@@ -377,12 +256,12 @@
         <h2 class="row-title">Get Outside & Active!</h2>
         <a class="row-link" href="search.php"><p class="inline rightalign">See All Outdoor Activities</p></a>
         
-        <button class="caro-btn-left" id="autoLeft1">
+        <button class="caro-btn-left" id="autoLeft3">
             <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
         </button>
 
             <!--Cards-->
-            <section class="carousel" id="scroll1">
+            <section class="carousel" id="scroll3">
                 <?php
 
                     // keeps count of how many cards are on the homescreen; if the count is greater than 8, we do not need to display that card
@@ -427,43 +306,7 @@
                         $_SESSION['map_img'.$ctr] = $map[$ctr];
                         $_SESSION['map_link'.$ctr] = $map_link[$ctr];
                         
-
-                        // if($foodDrink == 'Y'){
-                        //     $foodDrink = 'Restaurant';
-                        // }
-                        // else if ($foodDrink == 'N'){
-                        //     $foodDrink = 'Not Food Drink';
-                        // }
-
-                        // $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
-
-                        // $fd = $_SESSION['isFoodDrink'.$ctr];
-
-                        // if($themePark == 'Y'){
-                        //     $themePark = 'ThemePark';
-                        // }
-                        // else if ($themePark == 'N'){
-                        //     $themePark = 'Not Theme Park';
-                        // }
-
-                        // $_SESSION['isThemePark'.$ctr] = $themePark;
-
-                        // $thmpk = $_SESSION['isThemePark'.$ctr];
-
-                        // if($local == 'Y'){
-                        //     $local = 'LocalEvent';
-                        // }
-                        // else if ($local == 'N'){
-                        //     $local = 'Not Local Event';
-                        // }
-
-                        // $_SESSION['isLocal'.$ctr] = $local;
-
-                        // $locpo = $_SESSION['isLocal'.$ctr];
-
-                        // <p>$locpo</p>
-                        // <p>$fd</p>
-                        // <p>$thmpk</p>
+                        
                         if($cardCount <= 8){
                             print(
                                 "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&id=$id[$ctr]'>
@@ -480,7 +323,7 @@
                     ?>
             </section>
 
-        <button class="caro-btn-right" id="autoRight1">
+        <button class="caro-btn-right" id="autoRight3">
             <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
         </button>
 
@@ -492,14 +335,14 @@
         <section class="card-row">
         
         <h2 class="row-title">Orlando's Cheap Thrills</h2>
-        <a class="row-link" href="search.php"><p class="inline rightalign">See All Value Activities</p></a>
+        <a class="row-link" href="search.php"><p class="inline rightalign">See All Good Value Activities</p></a>
         
-        <button class="caro-btn-left" id="autoLeft1">
+        <button class="caro-btn-left" id="autoLeft4">
             <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
         </button>
 
             <!--Cards-->
-            <section class="carousel" id="scroll1">
+            <section class="carousel" id="scroll4">
                 <?php
 
                     // keeps count of how many cards are on the homescreen; if the count is greater than 8, we do not need to display that card
@@ -544,43 +387,7 @@
                         $_SESSION['map_img'.$ctr] = $map[$ctr];
                         $_SESSION['map_link'.$ctr] = $map_link[$ctr];
                         
-
-                        // if($foodDrink == 'Y'){
-                        //     $foodDrink = 'Restaurant';
-                        // }
-                        // else if ($foodDrink == 'N'){
-                        //     $foodDrink = 'Not Food Drink';
-                        // }
-
-                        // $_SESSION['isFoodDrink'.$ctr] = $foodDrink;
-
-                        // $fd = $_SESSION['isFoodDrink'.$ctr];
-
-                        // if($themePark == 'Y'){
-                        //     $themePark = 'ThemePark';
-                        // }
-                        // else if ($themePark == 'N'){
-                        //     $themePark = 'Not Theme Park';
-                        // }
-
-                        // $_SESSION['isThemePark'.$ctr] = $themePark;
-
-                        // $thmpk = $_SESSION['isThemePark'.$ctr];
-
-                        // if($local == 'Y'){
-                        //     $local = 'LocalEvent';
-                        // }
-                        // else if ($local == 'N'){
-                        //     $local = 'Not Local Event';
-                        // }
-
-                        // $_SESSION['isLocal'.$ctr] = $local;
-
-                        // $locpo = $_SESSION['isLocal'.$ctr];
-
-                        // <p>$locpo</p>
-                        // <p>$fd</p>
-                        // <p>$thmpk</p>
+                        
                         if($cardCount <= 8){
                             print(
                                 "<a class='card' id='cardA$ctr' title='$name[$ctr]' href='activity.php?count=$ctr&id=$id[$ctr]'>
@@ -597,7 +404,7 @@
                     ?>
             </section>
 
-        <button class="caro-btn-right" id="autoRight1">
+        <button class="caro-btn-right" id="autoRight4">
             <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
         </button>
 
