@@ -307,9 +307,9 @@
 
                         
     
-                        if(metaphone($results) == $tpFullName/* ||strstr(strtolower($name), $results)*/){
+                        if(metaphone($results) == $tpFullName ||strstr(strtolower($name), $results)){
                             $oneName = 'true';
-                            print('in else if');
+                            
                             print(
                                 "<a href='activity.php?count=$ctr&id=$id'>
                                     <section class='search-card' >
