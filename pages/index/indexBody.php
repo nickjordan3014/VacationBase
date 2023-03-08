@@ -9,9 +9,9 @@
     <section class="logo-area">
         <img src="img/icons-VB/VacationBase_Logo.png" alt="Vacation Base Logo" class="logo">
         <form action="search.php" class="logo-area">     
-                <label for="home_search" class="">Where to? Enter a City or Zip Code to see activities there: </label>
-                <input type="text" name="home_search" class="searchbox">
-                <button class="nobtndecor">
+                <label for="home_search" class="logo-item">Where to? Enter a City or Zip Code to see activities there: </label>
+                <input type="text" name="home_search" class="searchbox logo-item">
+                <button class="nobtndecor logo-item">
                     <img src="img/icons-VB/Search_Icon.png" alt="Search Icon" class="searchico">
                 </button>
         </form>
