@@ -4,6 +4,6 @@
     include("pages/itinerary/itineraryHead.php");
     include("template/nav.html");
     include("template/loginStatus.php");
-    include("pages/itinerary/itineraryBody.php");
+    include("pages/itinerary/itineraryBody2.php");
     include("template/footer.html");
 ?>

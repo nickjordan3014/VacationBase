@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "mohammadmd.vscode-sassc"
+        "mohammadmd.vscode-sassc",
+        "glenn2223.live-sass"
     ]
 }
