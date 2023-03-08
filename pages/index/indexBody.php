@@ -60,10 +60,11 @@
                         $meta[$ctr] = $result["meta_description"];
                         $map[$ctr] = $result["map_img"];
                         $map_link[$ctr] = $result["map_link"];
-                        $themePark = $result["isThemePark"];
-                        $foodDrink = $result["isFoodDrink"];
-                        // print($foodDrink);
-                        $local = $result["isLocal"];
+                        $themePark[$ctr] = $result["isThemePark"];
+                        $foodDrink[$ctr] = $result["isFoodDrink"];
+                        $local[$ctr] = $result["isLocal"];
+                        $outdoor[$ctr] = $result["isOutdoorActive"];
+                        $good[$ctr] = $result["isGoodVal"];
                         
                         // Session sends
                         $_SESSION['id'.$ctr] = $id[$ctr];
@@ -76,6 +77,11 @@
                         $_SESSION['meta_description'.$ctr] = $meta[$ctr];
                         $_SESSION['map_img'.$ctr] = $map[$ctr];
                         $_SESSION['map_link'.$ctr] = $map_link[$ctr];
+                        $_SESSION['isThemePark'.$ctr] = $themePark[$ctr];
+                        $_SESSION['isFOodDrink'.$ctr] = $foodDrink[$ctr];
+                        $_SESSION['isLocal'.$ctr] = $local[$ctr];
+                        $_SESSION['isOutdoorActive'.$ctr] = $themePark[$ctr];
+                        $_SESSION['isGoodVal'.$ctr] = $foodDrink[$ctr];
 
 
                         if($cardCount <= 8){
@@ -135,9 +141,9 @@
                         $meta[$ctr] = $result_two["meta_description"];
                         $map[$ctr] = $result_two["map_img"];
                         $map_link[$ctr] = $result_two["map_link"];
-                        $foodDrink = $result_two["isFoodDrink"];
-                        $themePark = $result_two["isThemePark"];
-                        $local = $result_two["isLocal"];
+                        $themePark[$ctr] = $result_two["isThemePark"];
+                        $foodDrink[$ctr] = $result_two["isFoodDrink"];
+                        $local[$ctr] = $result_two["isLocal"];
 
                         // send data to session
                         $_SESSION['id'.$ctr] = $id[$ctr];
@@ -150,6 +156,9 @@
                         $_SESSION['meta_description'.$ctr] = $meta[$ctr];
                         $_SESSION['map_img'.$ctr] = $map[$ctr];
                         $_SESSION['map_link'.$ctr] = $map_link[$ctr];
+                        $_SESSION['isThemePark'.$ctr] = $themePark[$ctr];
+                        $_SESSION['isFOodDrink'.$ctr] = $foodDrink[$ctr];
+                        $_SESSION['isLocal'.$ctr] = $local[$ctr];
 
                         if($cardCount <= 8){
                             print(
@@ -209,9 +218,9 @@
                         $meta[$ctr] = $result_three["meta_description"];
                         $map[$ctr] = $result_three["map_img"];
                         $map_link[$ctr] = $result_three["map_link"];
-                        $local = $result_three["isLocal"];
-                        $themePark = $result_three["isThemePark"];
-                        $foodDrink = $result_three["isFoodDrink"];
+                        $themePark[$ctr] = $result_three["isThemePark"];
+                        $foodDrink[$ctr] = $result_three["isFoodDrink"];
+                        $local[$ctr] = $result_three["isLocal"];
 
                         // send data to session
                         $_SESSION['id'.$ctr] = $id[$ctr];
@@ -224,6 +233,9 @@
                         $_SESSION['meta_description'.$ctr] = $meta[$ctr];
                         $_SESSION['map_img'.$ctr] = $map[$ctr];
                         $_SESSION['map_link'.$ctr] = $map_link[$ctr];
+                        $_SESSION['isThemePark'.$ctr] = $themePark[$ctr];
+                        $_SESSION['isFOodDrink'.$ctr] = $foodDrink[$ctr];
+                        $_SESSION['isLocal'.$ctr] = $local[$ctr];
                         
                         
                         if($cardCount <= 8){
@@ -286,9 +298,9 @@
                         $meta[$ctr] = $result_four["meta_description"];
                         $map[$ctr] = $result_four["map_img"];
                         $map_link[$ctr] = $result_four["map_link"];
-                        $foodDrink = $result_four["isFoodDrink"];
-                        $themePark = $result_four["isThemePark"];
-                        $local = $result_four["isLocal"];
+                        $themePark[$ctr] = $result_four["isThemePark"];
+                        $foodDrink[$ctr] = $result_four["isFoodDrink"];
+                        $local[$ctr] = $result_four["isLocal"];
 
                         // if($ctr != $id[$ctr]){
                         //     $ctr = $id[$ctr];
@@ -305,6 +317,9 @@
                         $_SESSION['meta_description'.$ctr] = $meta[$ctr];
                         $_SESSION['map_img'.$ctr] = $map[$ctr];
                         $_SESSION['map_link'.$ctr] = $map_link[$ctr];
+                        $_SESSION['isThemePark'.$ctr] = $themePark[$ctr];
+                        $_SESSION['isFOodDrink'.$ctr] = $foodDrink[$ctr];
+                        $_SESSION['isLocal'.$ctr] = $local[$ctr];
                         
                         
                         if($cardCount <= 8){
@@ -367,9 +382,9 @@
                         $meta[$ctr] = $result_five["meta_description"];
                         $map[$ctr] = $result_five["map_img"];
                         $map_link[$ctr] = $result_five["map_link"];
-                        $foodDrink = $result_five["isFoodDrink"];
-                        $themePark = $result_five["isThemePark"];
-                        $local = $result_five["isLocal"];
+                        $themePark[$ctr] = $result["isThemePark"];
+                        $foodDrink[$ctr] = $result["isFoodDrink"];
+                        $local[$ctr] = $result["isLocal"];
 
                         // if($ctr != $id[$ctr]){
                         //     $ctr = $id[$ctr];
@@ -386,6 +401,9 @@
                         $_SESSION['meta_description'.$ctr] = $meta[$ctr];
                         $_SESSION['map_img'.$ctr] = $map[$ctr];
                         $_SESSION['map_link'.$ctr] = $map_link[$ctr];
+                        $_SESSION['isThemePark'.$ctr] = $themePark[$ctr];
+                        $_SESSION['isFOodDrink'.$ctr] = $foodDrink[$ctr];
+                        $_SESSION['isLocal'.$ctr] = $local[$ctr];
                         
                         
                         if($cardCount <= 8){

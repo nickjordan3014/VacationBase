@@ -30,9 +30,9 @@
             $meta = $_SESSION['meta_description'.$ctr];
             $map = $_SESSION['map_img'.$ctr];
             $map_link = $_SESSION['map_link'.$ctr];
-            $themePark = $_SESSION['isThemePark'];
-            $foodDrink = $_SESSION['isFoodDrink'];
-            $local = $_SESSION['isLocal'];
+            $themePark = $_SESSION['isThemePark'.$ctr];
+            $foodDrink = $_SESSION['isFoodDrink'.$ctr];
+            $local = $_SESSION['isLocal'.$ctr];
             
         ?>
 
@@ -205,6 +205,9 @@
                         $meta = $_SESSION['meta_description'.$ctr];
                         $map = $_SESSION['map_img'.$ctr];
                         $map_link = $_SESSION['map_link'.$ctr];
+                        $themePark = $_SESSION['isThemePark'.$ctr];
+                        $foodDrink = $_SESSION['isFoodDrink'.$ctr];
+                        $local = $_SESSION['isLocal'.$ctr];
                         
                         // print("id: ".$id);
 
@@ -250,6 +253,9 @@
                         $meta = $_SESSION['meta_description'.$ctr];
                         $map = $_SESSION['map_img'.$ctr];
                         $map_link = $_SESSION['map_link'.$ctr];
+                        $themePark = $_SESSION['isThemePark'.$ctr];
+                        $foodDrink = $_SESSION['isFoodDrink'.$ctr];
+                        $local = $_SESSION['isLocal'.$ctr];
                         
                         // print("id: ".$id);
 
@@ -294,6 +300,9 @@
                         $meta = $_SESSION['meta_description'.$ctr];
                         $map = $_SESSION['map_img'.$ctr];
                         $map_link = $_SESSION['map_link'.$ctr];
+                        $themePark = $_SESSION['isThemePark'.$ctr];
+                        $foodDrink = $_SESSION['isFoodDrink'.$ctr];
+                        $local = $_SESSION['isLocal'.$ctr];
                     
                         // print("id: ".$id);
 
