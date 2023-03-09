@@ -382,9 +382,9 @@
                         $meta[$ctr] = $result_five["meta_description"];
                         $map[$ctr] = $result_five["map_img"];
                         $map_link[$ctr] = $result_five["map_link"];
-                        $themePark[$ctr] = $result["isThemePark"];
-                        $foodDrink[$ctr] = $result["isFoodDrink"];
-                        $local[$ctr] = $result["isLocal"];
+                        $themePark[$ctr] = $result_five["isThemePark"];
+                        $foodDrink[$ctr] = $result_five["isFoodDrink"];
+                        $local[$ctr] = $result_five["isLocal"];
 
                         // if($ctr != $id[$ctr]){
                         //     $ctr = $id[$ctr];

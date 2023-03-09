@@ -37,9 +37,9 @@
                 // returns the value of whatever the user enters on the search bar
                 $results = strtolower($_POST['searchbar']);
                 // echo($results);
-                echo("<br>");
+                // echo("<br>");
                 // echo(metaphone($results));
-                echo("<br>");
+                // echo("<br>");
                 $somePrint = 'false';
                 $oneName = 'false';
 
@@ -52,12 +52,6 @@
                 $search_outdoor = array(metaphone("outdoor"), metaphone("outside"), metaphone("animal"), metaphone("animals"), metaphone("zoo"), metaphone("explore"), metaphone("exploring"), metaphone("land"), metaphone("sky"), metaphone("wind"), metaphone("exercise"), metaphone("garden"), metaphone("air"), metaphone("green"), metaphone("recreation"), metaphone("fresh"));
                 $search_live = array(metaphone("music"), metaphone("shows"), metaphone("concert"), metaphone("festival"), metaphone("show"), metaphone("social"), metaphone("musical"), metaphone("play"), metaphone("opera"), metaphone("comedy"), metaphone("standup"), metaphone("band"), metaphone("venue"), metaphone("film"), metaphone("live"),metaphone("screen"));
                 $search_art = array(metaphone("music"), metaphone("museum"), metaphone("shows"), metaphone("culture"), metaphone("show"), metaphone("paint"), metaphone("mural"), metaphone("artist"), metaphone("create"), metaphone("craft"), metaphone("brush"), metaphone("design"), metaphone("history"), metaphone("draw"), metaphone("photo"), metaphone("color"), metaphone("sketch"), metaphone("exhibit"), metaphone("easel"), metaphone("sculpt"), metaphone("media"), metaphone("animation"), metaphone("studio"), metaphone("display"), metaphone("heritage"), metaphone("renaissance"), metaphone("statue"), metaphone("mythology"));
-
-                // foreach($searchThemePark AS $tpmatch){
-                //     if(metaphone($results) == metaphone($tpmatch)){
-                //         print($results."exists in the database as event: ".$tpmatch);
-                //     }
-                // }
                 
                 
                 // if what the user searches matches matches something from the meta data. (also test for if what user enters metaphone($results) matches a name in the database)
@@ -211,13 +205,14 @@
                 }
 
 
-                if (in_array(metaphone($results), $search_outdoor) || strstr($results, 'exercise') || strstr($results, 'air')){
+                if (in_array(metaphone($results), $search_outdoor) || strstr($results, 'exercise') || strstr($results, 'air') || strstr($results, 'outside')){
                     echo "We have found a outdoor events match!";
 
 
-                    foreach($searchOutdoor AS $searchOutside){
-                        $id = $searchOutside["id"];
-                        $name = $searchOutside["event_name"];
+                    foreach($searchOutdoor AS $searchOuts){
+                        print("outside");
+                        $id = $searchOuts["id"];
+                        $name = $searchOuts["event_name"];
                         $price = $searchOutside["price"];
                         $img = $searchOutside["img1"];
                         $meta = $searchOutside["meta_description"];
@@ -307,7 +302,7 @@
 
                         
     
-                        if(metaphone($results) == $tpFullName ||strstr(strtolower($name), $results)){
+                        if(metaphone($results) == $tpFullName || strstr(strtolower($name), $results)){
                             $oneName = 'true';
                             
                             print(

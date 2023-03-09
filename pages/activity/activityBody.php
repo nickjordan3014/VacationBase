@@ -123,11 +123,11 @@
         <!-- MAPPING SECTION -->
         <section>
             <?php
-            print("<div>
-                <a href='$map_link' target='_blank'>
-                    <img src='img/images/mggooglemap.png' class='mapSize' alt='$name Map'>
-                </a>
-            </div>");
+            // print("<div>
+            //     <a href='$map_link' target='_blank'>
+            //         <img src='img/images/mggooglemap.png' class='mapSize' alt='$name Map'>
+            //     </a>
+            // </div>");
             ?>
             <p class="actInfoThree">
                 <?php

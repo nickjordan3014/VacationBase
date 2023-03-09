@@ -30,6 +30,6 @@
     $results_three = $db->query($select_local);
     $results_four = $db->query($select_outdoors);
     $results_five = $db->query($select_value);
-    $results_six = $db->query($select_family);
-    $results_seven = $db->query($select_outdoor);
+    // $results_six = $db->query($select_family);
+    // $results_seven = $db->query($select_outdoor);
 ?>
