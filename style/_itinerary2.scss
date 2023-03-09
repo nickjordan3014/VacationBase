@@ -1,0 +1,55 @@
+.carousel-itinerary {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    
+}
+
+.li-itin {
+    display: inline;
+}
+
+.card-it {
+    display: inline-block;
+    margin: 0px 5px 0px 5px;
+    background-color: #fff;
+    text-decoration: none;
+    color: black;
+    border: 2px solid $gray;
+    border-radius: 3px;
+    width: calc(25% - 15px);
+}
+.card-it-2 {
+    display: block;
+    margin: 0px 5px 0px 5px;
+    background-color: #fff;
+    text-decoration: none;
+    color: black;
+    border: 2px solid $gray;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.center-text {
+    text-align: center;
+}
+
+
+.card-yt {
+    display: inline-block;
+    position: relative;
+    top:0px;
+    margin: 0px 5px 0px 5px;
+    width: calc(30% - 15px);
+    border: 2px solid $gray;
+    border-radius: 3px;
+}
+
+.itin-h {
+    height: 1000px;
+}
+
+.highlight-box {
+    background-color: $gray;
+}
