@@ -11,9 +11,6 @@
     $select_restaurant = "SELECT * FROM orlando_florida WHERE isFoodDrink = 'Y'";
     // $select_restaurant = "SELECT * FROM orlando_florida WHERE isFoodDrink = 'Y' LIMIT 8";
 
-
-    $select_family = "SELECT * FROM orlando_florida WHERE isFamily = 'Y'";
-
     // Pulls results strictly for the first 8 local events in the database
     $select_local = "SELECT * FROM orlando_florida WHERE isLocal = 'Y'";
     // $select_local = "SELECT * FROM orlando_florida WHERE isLocal = 'Y' LIMIT 8";
@@ -22,7 +19,7 @@
 
     $select_value = "SELECT * FROM orlando_florida WHERE isGoodValue = 'Y'";
 
-    $select_outdoor = "SELECT * FROM orlando_florida WHERE isOutdoorActive = 'Y'";
+    // $select_family = "SELECT * FROM orlando_florida WHERE isFamily = 'Y'";
 
 
     $results_one = $db->query($select_themePark);
