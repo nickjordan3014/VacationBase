@@ -270,9 +270,13 @@ body {
 @media only screen and (min-width: 1000px) {
   .logo-area {
     display: inline-block;
+    width: 100%;
     margin: auto;
     margin-top: 15px;
     text-align: center;
+  }
+  .logo-item {
+    display: inline-block;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -280,6 +284,7 @@ body {
     display: block;
     margin-top: 15px;
     text-align: left;
+    background-color: peachpuff;
   }
   .logo {
     margin-left: -1rem;
@@ -319,6 +324,7 @@ body {
 
 .hsline {
   width: 100%;
+  margin: 10px;
   margin-inline: auto;
 }
 
@@ -409,7 +415,10 @@ body {
 @media only screen and (min-width: 1000px) {
   .login-status {
     position: absolute;
+    text-align: right;
+    top: 15px;
     right: 15px;
+    width: 250px;
   }
 }
 @media only screen and (max-width: 1000px) {
