@@ -46,21 +46,53 @@
         <h2>Your Itinerary</h2>
 
             <section class='card-yt'>
-                <h3 class="center-text">March 1st</h3><hr>
+                <h3 class="center-text">Day 1</h3><hr>
                 <ul id="day_0" class="itin-h">
                     
                 </ul>
             </section>
 
-            
-
             <section class='card-yt'>
-                <h3 style='text-align:center'>March 2nd</h3><hr>
+                <h3 style='text-align:center'>Day 2</h3><hr>
                 <ul id="day_1" class="itin-h"> 
                     
                 </ul>
             </section>
 
+            <section class='card-yt'>
+                <h3 style='text-align:center'>Day 3</h3><hr>
+                <ul id="day_2" class="itin-h"> 
+                    
+                </ul>
+            </section>
+
+            <section class='card-yt'>
+                <h3 style='text-align:center'>Day 4</h3><hr>
+                <ul id="day_3" class="itin-h"> 
+                    
+                </ul>
+            </section>
+
+            <section class='card-yt'>
+                <h3 style='text-align:center'>Day 5</h3><hr>
+                <ul id="day_4" class="itin-h"> 
+                    
+                </ul>
+            </section>
+
+            <section class='card-yt'>
+                <h3 style='text-align:center'>Day 6</h3><hr>
+                <ul id="day_5" class="itin-h"> 
+                    
+                </ul>
+            </section>
+
+            <section class='card-yt'>
+                <h3 style='text-align:center'>Day 7</h3><hr>
+                <ul id="day_6" class="itin-h"> 
+                    
+                </ul>
+            </section>
 
     </section>
 </section>
