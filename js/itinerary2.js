@@ -24,7 +24,7 @@ $( function() {
     //Droppable Functions
     droppables($selection, $dayArray)
     
-    dayDroppables($dayArray[0], $selection, $dayAmount);
+    dayDroppables($dayArray[0], $selection);
     dayDroppables($dayArray[1], $selection);
     dayDroppables($dayArray[2], $selection);
     dayDroppables($dayArray[3], $selection);
@@ -64,7 +64,6 @@ function appendToSelection( $item, selection ) {
     $item.appendTo(selection);
     $("a", $item).removeClass("card-it-2");
     $("a", $item).addClass("card-it");
-    console.log("dropped item into day");
     console.log("dropped item into selection")
 }
 

@@ -22,21 +22,21 @@
         <li class='li-itin'>
             <a href="" class='card-it'>
             <img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'>
-            <h4>Magic Kingdom</h4>
+            <h4>Magic Kingdom 1</h4>
             <p class='captions'>Words Words Words</p>
             </a>
         </li>
         <li class='li-itin'>
-            <a href="" class='card-it'><img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'><h4>Magic Kingdom</h4><p class='captions'>Words Words Words</p></a>
+            <a href="" class='card-it'><img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'><h4>Magic Kingdom 2</h4><p class='captions'>Words Words Words</p></a>
         </li>
         <li class='li-itin'>
-            <a href="" class='card-it'><img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'><h4>Magic Kingdom</h4><p class='captions'>Words Words Words</p></a>
+            <a href="" class='card-it'><img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'><h4>Magic Kingdom 3</h4><p class='captions'>Words Words Words</p></a>
         </li>
         <li class='li-itin'>
-            <a href="" class='card-it'><img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'><h4>Magic Kingdom</h4><p class='captions'>Words Words Words</p></a>
+            <a href="" class='card-it'><img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'><h4>Magic Kingdom 4</h4><p class='captions'>Words Words Words</p></a>
         </li>
         <li class='li-itin'>
-            <a href="" class='card-it'><img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'><h4>Magic Kingdom</h4><p class='captions'>Words Words Words</p></a>
+            <a href="" class='card-it'><img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'><h4>Magic Kingdom 5</h4><p class='captions'>Words Words Words</p></a>
         </li>
     </ul>
 

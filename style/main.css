@@ -776,7 +776,7 @@ div.button1 {
 }
 
 .card-it-2 {
-  display: inline-block;
+  display: block;
   margin: 0px 5px 0px 5px;
   background-color: #fff;
   text-decoration: none;
@@ -792,6 +792,8 @@ div.button1 {
 
 .card-yt {
   display: inline-block;
+  position: relative;
+  top: 0px;
   margin: 0px 5px 0px 5px;
   width: calc(30% - 15px);
   border: 2px solid #d9d9d9;
