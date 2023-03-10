@@ -31,7 +31,7 @@
                     User Profile
                 </a>
             </li>
-            <li class="drop-items">
+            <!-- <li class="drop-items">
                 <a href="#">
                     <i class="fa-solid fa-question"></i>
                     FAQ
@@ -42,7 +42,7 @@
                     <i class="fa-regular fa-envelope"></i>
                     Contact Us
                 </a>
-            </li>
+            </li> -->
             <hr />
             <li class="drop-items">
                 <a href="logout.php">

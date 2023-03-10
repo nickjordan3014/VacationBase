@@ -93,7 +93,7 @@
     <!--Orlando Signature-->
     <section class="card-row">
 
-        <h2 class="row-title">Blogs about Orlando</h2>
+        <h2 class="row-title">The Best of Orlando Blogs</h2>
 
         <button class="caro-btn-left" id="autoLeft1">
             <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
@@ -103,51 +103,31 @@
             <section class="carousel" id="scroll1">
                 <?php
                     print(
-                        "<a class= 'card' id='bC0' href='blog.php'>
+                        "<a class= 'card' id='bC0' href='blog.php?blog=1'>
                         <img src='img/images/oblogs/popularTP.jpg' class='card-image' alt='People riding an attraction'>
                         <h4>The Popular Theme Parks</h4>
+                        <p class='captions'>Caption Here</p>
                         </a>&nbsp;"
                     );
                     print(
-                        "<a class= 'card' id='bC0' href='blog.php'>
+                        "<a class= 'card' id='bC0' href='blog.php?blog=2'>
                         <img src='img/images/oblogs/beaches.jpg' class='card-image' alt='Sun setting at Cocoa Beach'>
                         <h4>Best Beaches in the Area</h4>
+                        <p class='captions'>Caption Here</p>
                         </a>&nbsp;"
                     );
                     print(
-                        "<a class= 'card' id='bC0' href='blog.php'>
-                        <img src='img/images/magickingdom/magickingdom1.jpg' class='card-image' alt='Magic Kingdom Castle'>
-                        <h4>Blog Title</h4>
+                        "<a class= 'card' id='bC0' href='blog.php?blog=3'>
+                        <img src='img/images/oblogs/idrive.jpg' class='card-image' alt='I-Drive'>
+                        <h4>I-Drive</h4>
+                        <p class='captions'>Caption Here</p>
                         </a>&nbsp;"
                     );
                     print(
-                        "<a class= 'card' id='bC0' href='blog.php'>
-                        <img src='img/images/magickingdom/magickingdom1.jpg' class='card-image' alt='Magic Kingdom Castle'>
-                        <h4>Blog Title</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='bC0' href='blog.php'>
-                        <img src='img/images/magickingdom/magickingdom1.jpg' class='card-image' alt='Magic Kingdom Castle'>
-                        <h4>Blog Title</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='bC0' href='blog.php'>
-                        <img src='img/images/magickingdom/magickingdom1.jpg' class='card-image' alt='Magic Kingdom Castle'>
-                        <h4>Blog Title</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='bC0' href='blog.php'>
-                        <img src='img/images/magickingdom/magickingdom1.jpg' class='card-image' alt='Magic Kingdom Castle'>
-                        <h4>Blog Title</h4>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='bC0' href='blog.php'>
-                        <img src='img/images/magickingdom/magickingdom1.jpg' class='card-image' alt='Magic Kingdom Castle'>
-                        <h4>Blog Title</h4>
+                        "<a class= 'card' id='bC0' href='blog.php?blog=4'>
+                        <img src='img/images/oblogs/downtown.jpg' class='card-image' alt='Downtown Orlando'>
+                        <h4>Downtown Orlando</h4>
+                        <p class='captions'>Caption Here</p>
                         </a>&nbsp;"
                     );
                 ?>
@@ -176,51 +156,31 @@
         <section class="carousel" id="scroll2">
             <?php
                 print(
-                    "<a class= 'card' id='piC0' href='preplanned.php'>
+                    "<a class= 'card' id='piC0' href='preplanned.php?preplanned=1'>
                     <img src='img/images/preplanned/threedayTP.jpg' class='card-image' alt=''>
                     <h4>3 Day Theme Park Trip</h4>
+                    <p class='captions'>Starting at $317.99</p>
                     </a>&nbsp;"
                 );
                 print(
-                    "<a class= 'card' id='piC1' href='preplanned.php'>
-                    <img src='img/images/preplanned/family.jpg' class='card-image' alt=''>
-                    <h4>Family Vacation</h4>
+                    "<a class= 'card' id='piC1' href='preplanned.php?preplanned=2'>
+                    <img src='img/images/preplanned/museum.jpg' class='card-image' alt=''>
+                    <h4>4 Days of Art and Culture</h4>
+                    <p class='captions'>Starting at $???</p>
                     </a>&nbsp;"
                 );
                 print(
-                    "<a class= 'card' id='piC2' href='preplanned.php'>
-                    <img src='img/images/preplanned/21.jpg' class='card-image' alt=''>
-                    <h4>21+ Weekend of Fun</h4>
+                    "<a class= 'card' id='piC2' href='preplanned.php?preplanned=3'>
+                    <img src='img/images/preplanned/nightlife.jpg' class='card-image' alt=''>
+                    <h4>A Week of Orlando Nightlife</h4>
+                    <p class='captions'>Starting at $???</p>
                     </a>&nbsp;"
                 );
                 print(
-                    "<a class= 'card' id='piC3' href='preplanned.php'>
-                    <img src='img/images/preplanned/budget.jpg' class='card-image' alt=''>
-                    <h4>On a Budget Getaway</h4>
-                    </a>&nbsp;"
-                );
-                print(
-                    "<a class= 'card' id='piC4' href='preplanned.php'>
-                    <img src='img/images/preplanned/friends.jpg' class='card-image' alt=''>
-                    <h4>Friends Trip</h4>
-                    </a>&nbsp;"
-                );
-                print(
-                    "<a class= 'card' id='piC5' href='preplanned.php'>
-                    <img src='img/images/preplanned/restaurant.jpg' class='card-image' alt=''>
-                    <h4>Restaurant Dine and Dash</h4>
-                    </a>&nbsp;"
-                );
-                print(
-                    "<a class= 'card' id='piC6' href='preplanned.php'>
+                    "<a class= 'card' id='piC3' href='preplanned.php?preplanned=4'>
                     <img src='img/images/preplanned/outside.jpg' class='card-image' alt=''>
-                    <h4>Outdoor Fun</h4>
-                    </a>&nbsp;"
-                );
-                print(
-                    "<a class= 'card' id='piC7' href='preplanned.php'>
-                    <img src='img/images/preplanned/local.jpg' class='card-image' alt=''>
-                    <h4>Living Like a Local</h4>
+                    <h4>3 Day Outdoor Fun</h4>
+                    <p class='captions'>Starting at $???</p>
                     </a>&nbsp;"
                 );
             ?>
@@ -243,52 +203,32 @@
             <section class="carousel" id="scroll3">
 
                 <?php
-                    echo(
-                        "<a class= 'card' id='aC0' href=''>
+                    print(
+                        "<a class= 'card' id='aC0' href='triptips.php?tips=1'>
+                        <img src='img/images/traveltips/sunrail.jpg' class='card-image' alt=''>
+                        <h4>Orlando's SunRails</h4>
+                        <p class='captions'>Caption Here</p>
+                        </a>&nbsp;"
+                    );
+                    print(
+                        "<a class= 'card' id='aC1' href='triptips.php?tips=2'>
                         <img src='img/images/traveltips/i4.jpg' class='card-image' alt=''>
                         <h4>Getting Around I-4</h4>
+                        <p class='captions'>Caption Here</p>
                         </a>&nbsp;"
                     );
                     echo(
-                        "<a class= 'card' id='aC1' href=''>
-                        <img src='img/images/traveltips/shuttlebus.jpg' class='card-image' alt=''>
-                        <h4>Bus and Shuttle Routes</h4>
-                        </a>&nbsp;"
-                    );
-                    echo(
-                        "<a class= 'card' id='aC2' href=''>
+                        "<a class= 'card' id='aC2' href='triptips.php?tips=3'>
                         <img src='img/images/traveltips/carrent.jpg' class='card-image' alt=''>
-                        <h4>Car Rental Services</h4>
+                        <h4>Transportation Services</h4>
+                        <p class='captions'>Caption Here</p>
                         </a>&nbsp;"
                     );
-                    echo(
-                        "<a class= 'card' id='aC3' href=''>
+                    print(
+                        "<a class= 'card' id='aC3' href='triptips.php?tips=4'>
                         <img src='img/images/traveltips/toll.jpg' class='card-image' alt=''>
                         <h4>E-Passes, Sunpasses and Quarters</h4>
-                        </a>&nbsp;"
-                    );
-                    echo(
-                        "<a class= 'card' id='aC4' href=''>
-                        <img src='img/images/traveltips/garage.jpg' class='card-image' alt=''>
-                        <h4>Parking Garage To-Dos</h4>
-                        </a>&nbsp;"
-                    );
-                    echo(
-                        "<a class= 'card' id='aC5' href=''>
-                        <img src='img/images/traveltips/scooter.jpg' class='card-image' alt=''>
-                        <h4>E-Scooters</h4>
-                        </a>&nbsp;"
-                    );
-                    echo(
-                        "<a class= 'card' id='aC6' href=''>
-                        <img src='img/images/traveltips/ubertaxi.jpg' class='card-image' alt=''>
-                        <h4>Ubers and Taxis</h4>
-                        </a>&nbsp;"
-                    );
-                    echo(
-                        "<a class= 'card' id='aC7' href=''>
-                        <img src='img/images/traveltips/night.jpg' class='card-image' alt=''>
-                        <h4>Walking Around at Night</h4>
+                        <p class='captions'>Caption Here</p>
                         </a>&nbsp;"
                     );
                 ?>

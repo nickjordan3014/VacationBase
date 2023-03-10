@@ -1,7 +1,7 @@
 <?php
     include("phpconnect/connPreplanned.php");
     include("template/head.html");
-    include("pages/activity/activityHead.php");
+    include("pages/activity/preplannedHead.php");
     include("template/nav.html");
     include("template/loginStatus.php");
     include("pages/activity/preplannedBody.php");

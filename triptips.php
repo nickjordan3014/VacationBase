@@ -1,0 +1,9 @@
+<?php
+    include("phpconnect/connTripTips.php");
+    include("template/head.html");
+    include("pages/activity/triptipsHead.php");
+    include("template/nav.html");
+    include("template/loginStatus.php");
+    include("pages/activity/triptipsBody.php");
+    include("template/footer.html");
+?>
