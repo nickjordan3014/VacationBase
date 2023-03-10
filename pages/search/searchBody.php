@@ -10,9 +10,9 @@
     <img src="img/icons-VB/VacationBase_Logo.png" alt="Vacation Base Logo" class="mobileLogo">
     <section class="search-content">
         <section class="logo-area">
-            <form action="search.php" method="POST" class="logo-area">     
-                    <label for="search" class="searchlabel">Show me... </label>
-                    <input type="text" name="searchbar" class="searchpagebox">
+            <form action="search.php" method="POST" class="logo-item">     
+                    <label for="search" class="searchlabel logo-item">Show me... </label>
+                    <input type="text" name="searchbar" class="searchpagebox logo-item">
                     <button class="nobtndecor" type="submit" name="search_btn">
                         <img src="img/icons-VB/Search_Icon.png" alt="Search Icon" class="searchico">
                     </button>
