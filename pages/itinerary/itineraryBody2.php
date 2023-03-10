@@ -1,5 +1,7 @@
+<?php
+    if(isset($_SESSION['user'])){
+?>
 <section class="main-content"><section class="inner-content">
-
 <!-- 
     *If user not logged in, prompt user to log in or create account
 
@@ -102,3 +104,8 @@
 
 
 </section></section>
+<?php
+    } else{
+        header("location: login.php");
+    }
+?>

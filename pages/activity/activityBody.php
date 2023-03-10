@@ -67,7 +67,18 @@
                     ?>
                 </div>
                 <div class="actButton">
-                    <button class="addACTButton activityButton" onclick="location.href = 'itinerary.php';"><b>Add To Itinerary</b></button>
+                    <?php
+                        if(isset($_SESSION['user'])){
+                    ?>
+                            <button class="addACTButton activityButton" name="addtoitin_btn" onclick="location.href = 'itinerary.php';"><b>Add To Itinerary</b></button>
+                    <?php
+                        }
+                        else {
+                    ?>
+                            <button class="addACTButton activityButton" name="addtoitin_btn" onclick="location.href = 'login.php';"><b>Add To Itinerary</b></button>
+                    <?php    
+                        }
+                    ?>
                 </div>
             </div>
         </section>

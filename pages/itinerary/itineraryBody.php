@@ -1,5 +1,6 @@
 <section class="main-content">
     <section class="inner-content">
+        
         <div class="rows">
             <div class="col">
                 <h1 class="head">Unadded Saved Activities</h1>
