@@ -20,36 +20,12 @@
         <hr class="hsline">
     </section>
     <!--Itineraries-->
-    <section class="profile-split-left" id="itinerary-left"> 
-        <h2 class="itinerary-header">Saved Itineraries</h2>
-        <div class="itinerary-card">
-            <img src="img/images/magickingdom.jpeg" alt="Example Image" class="itinerary-card-img">
-            <div class="card-col">
-                <p class="card-title">Disney Trip 1</p>
-                <p class="card-date">1/02/22</p>
-            </div>
-            <div class="card-col">
-                <div class="card-icons">
-                    <img src="img/icons-VB/share_icon.png" alt="Share Icon" class="icons">
-                    <img src="img/icons-VB/edit_icon.png" alt="Edit Icon" class="icons">
-                </div>
-                <p class="card-remove" id="remove-1">remove</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="profile-split-right" id="itinerary-right"> 
-        <h2 class="itinerary-header">Previous Purchases</h2>
-        <div class="itinerary-card">
-            <img src="img/images/magickingdom.jpeg" alt="Example Image" class="itinerary-card-img">
-            <div class="card-col">
-                <p class="card-title">Disney Trip 1</p>
-                <p class="card-date">1/02/22</p>
-            </div>
-            <div class="card-col">
-                <img src="img/icons-VB/share_icon.png" alt="Share Icon" class="share-icon">
-                <button class="card-button">Add to Cart</button>
-            </div>
+    <section class="inner-content center-section" id="saved-itinerary"> 
+        <h2 class="itinerary-header">Saved Itinerary</h2>
+        <div>
+            <a href="saved-itinerary.php">
+                Click Here to View Your Saved Itinerary
+            </a>
         </div>
     </section>
 

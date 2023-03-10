@@ -1,7 +1,7 @@
 $( function() {
     //Variables
-    let $selection = $("#selection");
-    let $dayAmount = $("ul", "#itinerary");
+    let $selection = $("#selection"); 
+    let $dayAmount = $("ul", "#itinerary"); //Selects all day ids of length reasons
     const $dayArray = [
         $day0 = $("#day_0"),
         $day1 = $("#day_1"),
@@ -15,15 +15,22 @@ $( function() {
 
     //Draggable functions
 
-    draggables( $( "li", $selection) );
+    draggables( $( "li", $selection) ); //Makes list items from the selection id draggable
 
     for (i = 0; i <  $dayAmount.length; i++) {
-        draggables( $( "li", $dayAmount[i]) );
+        draggables( $( "li", $dayAmount[i]) ); //iterates through day ids to make all list items from day sections draggable
     }
 
-    //Droppable Functions
-    droppables($selection, $dayArray)
+    //Droppable back into days   **Does not work yet
+    droppables($selection, $dayArray[0]);
+    droppables($selection, $dayArray[1]);
+    droppables($selection, $dayArray[2]);
+    droppables($selection, $dayArray[3]);
+    droppables($selection, $dayArray[4]);
+    droppables($selection, $dayArray[5]);
+    droppables($selection, $dayArray[6]);
     
+    //Drop in Selection   **Functional
     dayDroppables($dayArray[0], $selection);
     dayDroppables($dayArray[1], $selection);
     dayDroppables($dayArray[2], $selection);
@@ -35,15 +42,16 @@ $( function() {
 })
 
 function appendToDay ( $item, selection, element ) {
-    $item.detach(selection);
-    $item.appendTo(element);
-    $("a", $item).removeClass("card-it");
-    $("a", $item).addClass("card-it-2");
+    $item.detach(selection); //removes item from selection
+    $item.appendTo(element); //attaches item to the correct day
+    $("span", $item).removeClass("card-it"); //takes away class for card in selection area
+    $("span", $item).addClass("card-it-2"); //adds class for when card is in a day div
+    //Going to add position script here later, so things dont jump around everywhere
     console.log("dropped item into day");
 }
 
 
-function dayDroppables(element, selection) {
+function dayDroppables(element, selection) { //Fully Functional
     element.droppable({
         accept: $("li", selection),
         drop: function( event, ui ) {
@@ -59,7 +67,7 @@ function dayDroppables(element, selection) {
     })
 }
 
-function appendToSelection( $item, selection ) {
+function appendToSelection( $item, selection ) { //Currently Not Working
     $item.detach("#itinerary");
     $item.appendTo(selection);
     $("a", $item).removeClass("card-it-2");
@@ -67,9 +75,9 @@ function appendToSelection( $item, selection ) {
     console.log("dropped item into selection")
 }
 
-function droppables(element, days) {
+function droppables(element, day) { //Currently not working
     element.droppable({
-        accept: $("li", "#itinerary"),
+        accept: $("li", day),
         drop: function( event, ui ) {
             appendToSelection( ui.draggable, element )
             element.removeClass("highlight-box")
@@ -85,10 +93,15 @@ function droppables(element, days) {
     })
 }
 
-function draggables(element) {
+function draggables(element) { //Controls the behavior of items when dragged around
     element.draggable({
         revert: "invalid",
         containment: "document",
         cursor: "move",
     });
+}
+
+function itineraryString() { //Function that makes itinerary into string to move into database
+    let itin = document.getElementById("itinerary").innerHTML;
+    alert(itin);
 }

@@ -20,23 +20,23 @@
 <section class="carousel-itinerary">
     <ul id="selection" class="ul-itin">
         <li class='li-itin'>
-            <a href="" class='card-it'>
+            <span class='card-it'>
             <img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'>
             <h4>Magic Kingdom 1</h4>
             <p class='captions'>Words Words Words</p>
-            </a>
+            </span>
         </li>
         <li class='li-itin'>
-            <a href="" class='card-it'><img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'><h4>Magic Kingdom 2</h4><p class='captions'>Words Words Words</p></a>
+            <span href="" class='card-it'><img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'><h4>Magic Kingdom 2</h4><p class='captions'>Words Words Words</p></span>
         </li>
         <li class='li-itin'>
-            <a href="" class='card-it'><img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'><h4>Magic Kingdom 3</h4><p class='captions'>Words Words Words</p></a>
+            <span href="" class='card-it'><img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'><h4>Magic Kingdom 3</h4><p class='captions'>Words Words Words</p></span>
         </li>
         <li class='li-itin'>
-            <a href="" class='card-it'><img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'><h4>Magic Kingdom 4</h4><p class='captions'>Words Words Words</p></a>
+            <span href="" class='card-it'><img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'><h4>Magic Kingdom 4</h4><p class='captions'>Words Words Words</p></span>
         </li>
         <li class='li-itin'>
-            <a href="" class='card-it'><img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'><h4>Magic Kingdom 5</h4><p class='captions'>Words Words Words</p></a>
+            <span href="" class='card-it'><img src="img/images/animalkingdom/animalkingdom1.jpg" alt="" class='card-image'><h4>Magic Kingdom 5</h4><p class='captions'>Words Words Words</p></span>
         </li>
     </ul>
 
@@ -92,10 +92,11 @@
                 <ul id="day_6" class="itin-h"> 
                     
                 </ul>
-            </section>
-
+            </section>       
     </section>
+    <button onclick=itineraryString()>Save Itinerary</button> <!--Last function in itinerary2.js operates this onclick-->
 </section>
+
 
 
 </section></section>
