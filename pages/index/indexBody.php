@@ -52,6 +52,7 @@
                         $id[$ctr] = $result["id"];
                         // print("id: ".$id[$ctr]);
                         $name[$ctr] = $result["event_name"];
+                        $blurb[$ctr] = $result["activity_blurb"];
                         $img1[$ctr] = $result["img1"];
                         $altText1[$ctr] = $result["alt_text_img1"];
                         $price[$ctr] = $result["price"];
@@ -69,6 +70,7 @@
                         // Session sends
                         $_SESSION['id'.$ctr] = $id[$ctr];
                         $_SESSION['event_name'.$ctr] = $name[$ctr];
+                        $_SESSION['activity_blurb'.$ctr] = $blurb[$ctr];
                         $_SESSION['price'.$ctr] = $price[$ctr];
                         $_SESSION['img1'.$ctr] = $img1[$ctr];
                         $_SESSION['alt_text_img1'.$ctr] = $altText1[$ctr];
@@ -133,6 +135,7 @@
                         $id[$ctr] = $result_two["id"];
                         // print("id: ".$id[$ctr]);
                         $name[$ctr] = $result_two["event_name"];
+                        $blurb[$ctr] = $result_two["activity_blurb"];
                         $img1[$ctr] = $result_two["img1"];
                         $altText1[$ctr] = $result_two["alt_text_img1"];
                         $price[$ctr] = $result_two["price"];
@@ -148,6 +151,7 @@
                         // send data to session
                         $_SESSION['id'.$ctr] = $id[$ctr];
                         $_SESSION['event_name'.$ctr] = $name[$ctr];
+                        $_SESSION['activity_blurb'.$ctr] = $blurb[$ctr];
                         $_SESSION['price'.$ctr] = $price[$ctr];
                         $_SESSION['img1'.$ctr] = $img1[$ctr];
                         $_SESSION['alt_text_img1'.$ctr] = $altText1[$ctr];
@@ -210,6 +214,7 @@
                         $id[$ctr] = $result_three["id"];
                         // print("id: ".$id[$ctr]);
                         $name[$ctr] = $result_three["event_name"];
+                        $blurb[$ctr] = $result_three["activity_blurb"];
                         $img1[$ctr] = $result_three["img1"];
                         $altText1[$ctr] = $result_three["alt_text_img1"];
                         $price[$ctr] = $result_three["price"];
@@ -225,6 +230,7 @@
                         // send data to session
                         $_SESSION['id'.$ctr] = $id[$ctr];
                         $_SESSION['event_name'.$ctr] = $name[$ctr];
+                        $_SESSION['activity_blurb'.$ctr] = $blurb[$ctr];
                         $_SESSION['price'.$ctr] = $price[$ctr];
                         $_SESSION['img1'.$ctr] = $img1[$ctr];
                         $_SESSION['alt_text_img1'.$ctr] = $altText1[$ctr];
@@ -290,6 +296,7 @@
                         $id[$ctr] = $result_four["id"];
                         // print("id: ".$id[$ctr]);
                         $name[$ctr] = $result_four["event_name"];
+                        $blurb[$ctr] = $result_four["activity_blurb"];
                         $img1[$ctr] = $result_four["img1"];
                         $altText1[$ctr] = $result_four["alt_text_img1"];
                         $price[$ctr] = $result_four["price"];
@@ -309,6 +316,7 @@
                         // send data to session
                         $_SESSION['id'.$ctr] = $id[$ctr];
                         $_SESSION['event_name'.$ctr] = $name[$ctr];
+                        $_SESSION['activity_blurb'.$ctr] = $blurb[$ctr];
                         $_SESSION['price'.$ctr] = $price[$ctr];
                         $_SESSION['img1'.$ctr] = $img1[$ctr];
                         $_SESSION['alt_text_img1'.$ctr] = $altText1[$ctr];
@@ -374,6 +382,7 @@
                         $id[$ctr] = $result_five["id"];
                         // print("id: ".$id[$ctr]);
                         $name[$ctr] = $result_five["event_name"];
+                        $blurb[$ctr] = $result_five["activity_blurb"];
                         $img1[$ctr] = $result_five["img1"];
                         $altText1[$ctr] = $result_five["alt_text_img1"];
                         $price[$ctr] = $result_five["price"];
@@ -393,6 +402,7 @@
                         // send data to session
                         $_SESSION['id'.$ctr] = $id[$ctr];
                         $_SESSION['event_name'.$ctr] = $name[$ctr];
+                        $_SESSION['activity_blurb'.$ctr] = $blurb[$ctr];
                         $_SESSION['price'.$ctr] = $price[$ctr];
                         $_SESSION['img1'.$ctr] = $img1[$ctr];
                         $_SESSION['alt_text_img1'.$ctr] = $altText1[$ctr];

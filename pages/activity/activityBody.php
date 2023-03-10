@@ -22,6 +22,7 @@
 
             $id = $_SESSION['id'.$ctr];
             $name = $_SESSION['event_name'.$ctr];
+            $blurb = $_SESSION['activity_blurb'.$ctr];
             $price = $_SESSION['price'.$ctr];
             $img1= $_SESSION['img1'.$ctr];
             $altText1 = $_SESSION['alt_text_img1'.$ctr];
@@ -77,37 +78,11 @@
         <!-- ACTIVITY BLURB -->
         <section>
                 <p class="actInfoTwo">
-                        <?php
-                            print("$meta<br><br>");
+                    <?php
+                        // print("$meta<br><br>");
 
-                            if ($id == 1){
-                        ?>
-                        
-                            <a href="#" style="color: black;font-weight:bold;text-decoration:none">Main Street USA</a> is the first land visitors encounter as they enter the park, and it is designed to resemble a typical small American town from the turn of the 20th century.
-                            Visitors can explore this land and take in the sights and sounds of a bygone era, including the iconic Cinderella Castle, which serves as the centerpiece of the park. 
-                            <br>
-                            <br>
-                                        
-                            <a href="#" style="color: black;font-weight:bold;text-decoration:none">Adventureland </a>is the next land visitors encounter, and it is designed to transport them to exotic lands such as the Caribbean, Africa, and Asia. Visitors can explore this land and experience attractions such as Pirates of the Caribbean, a classic boat ride through a pirate-filled Caribbean Island, and the Jungle Cruise, a boat ride through the Amazon rainforest. <br><br>
-                            
-                            <a href="#" style="color: black;font-weight:bold;text-decoration:none">Frontierland</a> is a western-themed land that transports visitors to the American Old West. Attractions here include Big Thunder Mountain Railroad, a roller coaster that takes visitors on a wild ride through a western mining town, as well as Frontierland Riverboat Landing, a riverboat ride on the Liberty Belle that offers views of Frontierland and surrounding lands. <br><br>
-                            
-                            <a href="#" style="color: black;font-weight:bold;text-decoration:none">Liberty Square</a> is a colonial-themed land that recreates the atmosphere of colonial America and celebrates the birth of the United States. Visitors can explore this land and take in attractions such as the Hall of Presidents, an audio-animatronic show that features all of the U.S. presidents, and the Haunted Mansion, a spooky tour through a haunted house.<br><br>
-                            
-                            <a href="#" style="color: black;font-weight:bold;text-decoration:none">Fantasyland</a> is the largest of the seven lands, and it is designed to transport visitors to the world of classic Disney fairytales. Attractions here include It's a Small World, a boat ride through a world filled with singing animatronics, and Peter Pan's Flight, a ride that takes visitors on a magical flight over London.<br><br>
-                            
-                            <a href="#" style="color: black;font-weight:bold;text-decoration:none">Tomorrowland</a> is a futuristic-themed land that takes visitors to a world of innovation and technology. Attractions here include Space Mountain, a roller coaster that takes visitors on a high-speed journey through outer space, and Buzz Lightyear's Space Ranger Spin, an interactive ride where visitors help Buzz Lightyear save the universe.<br><br>
-                            
-                            Finally,<a href="#" style="color: black;font-weight:bold;text-decoration:none"> Mickey's Toontown Fair</a> is a cartoon-themed land that takes visitors to the world of classic Disney cartoon characters. Visitors can explore this land and take in attractions such as Mickey's Country House, a tour through Mickey Mouse's home, and Minnie's House, a tour through Minnie Mouse's home.<br><br>
-                            In addition to the seven themed lands, the Magic Kingdom is home to many parades, shows, and other live performances. The nightly fireworks show, "Happily Ever After," is a highlight of any visit to the park, and it is a stunning display of pyrotechnics that is set against the backdrop of Cinderella Castle.<br><br>
-                            Disney's Magic Kingdom is a magical and enchanting theme park that is sure to captivate visitors of all ages. Whether you're a fan of classic Disney fairytales, futuristic technology, or anything in between, there's something for everyone at this iconic park.<br><br>
-
-                        <?php
-                            }
-                            else if ($ctr > 1){
-                                print("Insert content about $name here!<br><br>");
-                            }
-                        ?>
+                        print("$blurb<br><br>");
+                    ?>
                 </p>
         </section>
 
@@ -197,6 +172,7 @@
                         }
                         $id = $_SESSION['id'.$ctr];
                         $name = $_SESSION['event_name'.$ctr];
+                        $blurb = $_SESSION['activity_blurb'.$ctr];
                         $price = $_SESSION['pricep'.$ctr];
                         $img1 = $_SESSION['img1'.$ctr];
                         $altText1 = $_SESSION['alt_text_img1'.$ctr];
@@ -245,6 +221,7 @@
                         }
                         $id = $_SESSION['id'.$ctr];
                         $name = $_SESSION['event_name'.$ctr];
+                        $blurb = $_SESSION['activity_blurb'.$ctr];
                         $price = $_SESSION['price'.$ctr];
                         $img1 = $_SESSION['img1'.$ctr];
                         $altText1 = $_SESSION['alt_text_img1'.$ctr];
@@ -292,6 +269,7 @@
 
                         $id = $_SESSION['id'.$ctr];
                         $name = $_SESSION['event_name'.$ctr];
+                        $blurb = $_SESSION['activity_blurb'.$ctr];
                         $price = $_SESSION['price'.$ctr];
                         $img1 = $_SESSION['img1'.$ctr];
                         $altText1 = $_SESSION['alt_text_img1'.$ctr];
