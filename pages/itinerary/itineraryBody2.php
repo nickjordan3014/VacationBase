@@ -40,6 +40,8 @@
         </li>
     </ul>
 
+    <br>
+    <br>
 
     <section class="" id="itinerary">
 
@@ -94,9 +96,9 @@
                 </ul>
             </section>       
     </section>
-    <button onclick=itineraryString()>Save Itinerary</button> <!--Last function in itinerary2.js operates this onclick-->
+    <!-- button used to be here -->
 </section>
-
+<button onclick=itineraryString()>Save Itinerary</button> <!--Last function in itinerary2.js operates this onclick-->
 
 
 </section></section>
