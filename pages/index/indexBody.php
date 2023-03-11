@@ -5,10 +5,6 @@
     </article>
 
 <!-- HOMEPAGE HEADER -->
-    <?php
-        $_SESSION['myLook'] = "Theme Park";
-    ?>
-    
     <section class="logo-area">
         <img src="img/icons-VB/VacationBase_Logo.png" alt="Vacation Base Logo" class="logo">
         <form action="search.php" class="logo-area">     

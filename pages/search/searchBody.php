@@ -1,4 +1,13 @@
-<?php $see = $_GET['home_search']; ?>
+<?php 
+if(isset($_GET['home_search'])){
+    $see = $_GET['home_search']; 
+}
+else if(isset($_POST['event1'])){
+    $see = $_POST['event1'];
+}
+
+
+?>
 
 <section class="main-content">
     <section class="inner-content">
