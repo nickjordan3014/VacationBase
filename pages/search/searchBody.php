@@ -360,60 +360,67 @@
     </section>
     <section class="filter-content">
         <form action="filter.php" class="filter-form">
-            <section>
+            <section class="filter-segment">
                 <h4>Days Open</h4>
-                <label for="daysOpen" class="filter-label">
+                <hr class="tightline">
+                <label for="daysOpen" class="inline">
+                    Sun
                     <input type="checkbox">
-                    Sunday
                 </label>
-                <label for="daysOpen" class="filter-label">
+                <label for="daysOpen" class="inline">
+                    Mon
                     <input type="checkbox">
-                    Monday
                 </label>
-                <label for="daysOpen" class="filter-label">
+                <label for="daysOpen" class="inline">
+                    Tue
                     <input type="checkbox">
-                    Tuesday
                 </label>
-                <label for="daysOpen" class="filter-label">
+                <label for="daysOpen" class="inline">
+                    Wed
                     <input type="checkbox">
-                    Wednesday
                 </label>
-                <label for="daysOpen" class="filter-label">
+                <label for="daysOpen" class="inline">
+                    Thur
                     <input type="checkbox">
-                    Thursday
                 </label>
-                <label for="daysOpen" class="filter-label">
+                <label for="daysOpen" class="inline">
+                    Fri
                     <input type="checkbox">
-                    Friday
                 </label>
-                <label for="daysOpen" class="filter-label">
+                <label for="daysOpen" class="inline">
+                    Sat
                     <input type="checkbox">
-                    Saturday
                 </label>
             </section>
-            <section>
+
+            <section class="filter-segment">
                 <h4>Budget</h4>
-                <label for="budget">No more per person minimum than </label>
-                <input type="text" placeholder="$" class="filter-text">
+                <hr class="tightline">
+                <label for="budget" class="inline">Max per-person cost: </label>
+                <input type="text" placeholder="$" class="filter-text inline">
             </section>
-            <section>
+
+            <section class="filter-segment">
                 <h4>Age Requirement</h4>
-                <label for="all"><input type="radio">All</label>
-                <label for="13"><input type="radio">13+</label>
-                <label for="18"><input type="radio">18+</label>
-                <label for="21"><input type="radio">21+</label>
+                <hr class="tightline">
+                <label for="all" class="inline">All<input type="radio"></label>
+                <label for="13" class="inline">13+<input type="radio"></label>
+                <label for="18" class="inline">18+<input type="radio"></label>
+                <label for="21" class="inline">21+<input type="radio"></label>
+            </section>
+
+            <section class="filter-segment">
+                <h4>Great For...</h4>
+                <hr class="tightline">
+                <label for="storm" class="filter-label"><input type="checkbox" class="inline list">Stormy Weather</label>
+                <label for="fam" class="filter-label"><input type="checkbox" class="inline list">Families</label>
+                <label for="solo" class="filter-label"><input type="checkbox" class="inline list">Going Solo</label>
+                <label for="value" class="filter-label"><input type="checkbox" class="inline list">Awesome Value</label>
+                <label for="local" class="filter-label"><input type="checkbox" class="inline list">Living like a Local</label>
+                <label for="transit" class="filter-label"><input type="checkbox" class="inline list">Public Transit</label>
             </section>
             <section>
-                <h4>Great For</h4>
-                <label for="storm" class="filter-label"><input type="checkbox">Stormy Weather</label>
-                <label for="fam" class="filter-label"><input type="checkbox">Families</label>
-                <label for="solo" class="filter-label"><input type="checkbox">Going Solo</label>
-                <label for="value" class="filter-label"><input type="checkbox">Awesome Value</label>
-                <label for="local" class="filter-label"><input type="checkbox">Living like a Local</label>
-                <label for="transit" class="filter-label"><input type="checkbox">Public Transit</label>
-            </section>
-            <section>
-                <button type="submit" name="filter-btn">Go</button>
+                <button type="submit" name="filter-btn"> Filter Results </button>
             </section>
         </form>
         <article class="sa">

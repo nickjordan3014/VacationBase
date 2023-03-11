@@ -1,5 +1,30 @@
 /* Houses CSS specific to search page */
 
+.filter-segment {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.inline {
+    display: inline-block;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.tightline {
+    width: 100%;
+    margin: 5px;
+    margin-inline: auto;
+}
+.filter-text {
+    min-width: 50px;
+}
+.list {
+    padding-top: 4px;
+}
+.filter-btn {
+    padding-top: 20px;
+    margin: 4px;
+}
+
 @media only screen and (min-width: 1000px) {
     .search-card {
         height: 200px;
