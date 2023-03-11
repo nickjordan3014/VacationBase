@@ -1,5 +1,7 @@
 <?php
     if(isset($_SESSION['user'])){
+
+        
 ?>
 <section class="main-content"><section class="inner-content">
 <!-- 
@@ -16,7 +18,10 @@
         - user will drag and drop activities from top carousel to carousel with dates to create itinerary
         - activites dropped will be saved into the back end when the user hits the save button
 -->
-
+<?php
+    // print($_SESSION['user']['id']);
+    // print("hello");
+?>
 <h1>Itinerary Builder</h1>
 <h2>Selected Activities</h2><br>
 <section class="carousel-itinerary">
@@ -100,8 +105,10 @@
     </section>
     <!-- button used to be here -->
 </section>
-<button onclick=itineraryString()>Save Itinerary</button> <!--Last function in itinerary2.js operates this onclick-->
-
+<button onclick=itineraryString() name="saveitin_btn">Save Itinerary</button> <!--Last function in itinerary2.js operates this onclick-->
+<?php
+    // print("null stores: ".$null);
+?>
 
 </section></section>
 <?php

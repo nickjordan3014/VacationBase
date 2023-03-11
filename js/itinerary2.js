@@ -103,5 +103,5 @@ function draggables(element) { //Controls the behavior of items when dragged aro
 
 function itineraryString() { //Function that makes itinerary into string to move into database
     let itin = document.getElementById("itinerary").innerHTML;
-    alert(itin);
+    console.log(itin);
 }

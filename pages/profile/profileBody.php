@@ -11,12 +11,14 @@
             ?>
             <a href="logout.php"><button class="logout_btn">Log Out</button></a>
         </section>
+
         <section class="profile-navbar">
             <button class="nobtndecor profile-nav" id="itineraries-link">Itineraries</button>
             <button class="nobtndecor profile-nav" id="account-link">Account</button>
             <button class="nobtndecor profile-nav" id="about-link">About Us</button>
             <button class="nobtndecor profile-nav" id="rate-link">Rate & Review</button>
         </section>
+
         <hr class="hsline">
     </section>
     <!--Itineraries-->
@@ -71,8 +73,7 @@
     <!--About Us-->
     <section id="about-us-sec" class="inner-content about-us-text invisible">
         <h2>Who We Are</h2>
-        <p>Vacation Base is the perfect destination for planning your next getaway! Our travel itinerary website provides custom-tailored trips with detailed guides and recommended activities, making it easy to find the perfect trip for you. Whether you're looking for an adventure-packed vacation or a family friendly activites, Vacation Base has you covered!</p>
-        
+        <p>Vacation Base is the perfect destination for planning your next getaway! Our travel itinerary website provides custom-tailored trips with detailed guides and recommended activities, making it easy to find the perfect trip for you. Whether you're looking for an adventure-packed vacation or a family friendly activites, Vacation Base has you covered!</p>     
     </section>
     <!--Rate & Review-->
     <section id="rate-review-sec" class="inner-content center-section invisible">

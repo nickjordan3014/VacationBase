@@ -5,12 +5,15 @@
     </article>
 
 <!-- HOMEPAGE HEADER -->
+    <?php
+        $_SESSION['myLook'] = "Theme Park";
+    ?>
     
     <section class="logo-area">
         <img src="img/icons-VB/VacationBase_Logo.png" alt="Vacation Base Logo" class="logo">
         <form action="search.php" class="logo-area">     
                 <label for="home_search" class="logo-item">Ah, <i>Orlando</i>! Looking for anything in particular? </label>
-                <input type="text" name="home_search" value="Themeparks" class="searchbox logo-item">
+                <input type="text" name="home_search" value="Theme Park" class="searchbox logo-item">
                 <button class="nobtndecor logo-item">
                     <img src="img/icons-VB/Search_Icon.png" alt="Search Icon" class="searchico">
                 </button>
@@ -29,7 +32,7 @@
     <section class="card-row">
         
         <h2 class="row-title">Orlando's Signature: Theme Parks</h2>
-        <a class="row-link" href="search.php"><p class="inline rightalign">See All Theme Park Activities</p></a>
+        <a class="row-link" href="search.php?event='Theme Parks'"><p class="inline rightalign">See All Theme Park Activities</p></a>
         
         <button class="caro-btn-left" id="autoLeft0">
             <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
