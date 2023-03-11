@@ -13,18 +13,15 @@
         <button class="caro-btn-left" id="autoLeft0">
             <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
         </button>
-
         <!--Cards-->
         <section class="carousel" id="scroll0">
             <div class="ideabase-card" id="ibC0"> 
                 <a class= "actPage" href="search.php?eventType=Restaurants" onclick='post'>
-                    <!-- <div class="clickCard"> -->
                         <img 
                             src="img/gallery/bar_resturants.png" 
                             class="ideabase-image" 
                             alt="Bars and Restaurants Graphic" 
                         />
-                    <!-- </div> -->
                 </a>
             </div>
             <div class="ideabase-card" id="ibC1"> 
@@ -82,76 +79,14 @@
                 </a>
             </div>
         </section>
-
-
         <button class="caro-btn-right" id="autoRight0">
             <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
         </button>
     </section>
 
-
-    <!--Orlando Signature-->
+    <!-- premade itineraries -->
     <section class="card-row">
-
-        <h2 class="row-title">The Best of Orlando Blogs</h2>
-
-        <button class="caro-btn-left" id="autoLeft1">
-            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
-        </button>
-
-            <!--Cards-->
-            <section class="carousel" id="scroll1">
-                <?php
-                    print(
-                        "<a class= 'card' id='bC0' href='blog.php?blog=1'>
-                        <img src='img/images/oblogs/popularTP.jpg' class='card-image' alt='People riding an attraction'>
-                        <h4>The Popular Theme Parks</h4>
-                        <p class='captions'>Caption Here</p>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='bC0' href='blog.php?blog=2'>
-                        <img src='img/images/oblogs/beaches.jpg' class='card-image' alt='Sun setting at Cocoa Beach'>
-                        <h4>Best Beaches in the Area</h4>
-                        <p class='captions'>Caption Here</p>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='bC0' href='blog.php?blog=3'>
-                        <img src='img/images/oblogs/idrive.jpg' class='card-image' alt='I-Drive'>
-                        <h4>I-Drive</h4>
-                        <p class='captions'>Caption Here</p>
-                        </a>&nbsp;"
-                    );
-                    print(
-                        "<a class= 'card' id='bC0' href='blog.php?blog=4'>
-                        <img src='img/images/oblogs/downtown.jpg' class='card-image' alt='Downtown Orlando'>
-                        <h4>Downtown Orlando</h4>
-                        <p class='captions'>Caption Here</p>
-                        </a>&nbsp;"
-                    );
-                ?>
-            </section>
-
-        <button class="caro-btn-right" id="autoRight1">
-            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
-        </button>
-
-    </section>
-
-
-    <!-- TBD -->
-
-
-    <!--Blogs-->
-    
-    <section class="card-row">
-        <h2 class="row-title">Preplanned Orlando Itineraries</h2>
-
-        <button class="caro-btn-left" id="autoLeft2">
-            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
-        </button>  
-
+        <h2 class="row-title">Orlando Itineraries Just For You</h2>
         <!--Cards-->
         <section class="carousel" id="scroll2">
             <?php
@@ -185,60 +120,83 @@
                 );
             ?>
         </section>
-
-        <button class="caro-btn-right" id="autoRight2">
-            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
-        </button>
     </section>
 
+    <!-- travel tips -->
     <section class="card-row">
+    <h2 class="row-title">Tips for Traveling Orlando</h2>
+    <!--Cards-->
+    <section class="carousel" id="scroll3">
+        <?php
+            print(
+                "<a class= 'card' id='aC0' href='triptips.php?tips=1'>
+                <img src='img/images/traveltips/sunrail.jpg' class='card-image' alt=''>
+                <h4>Orlando's SunRails</h4>
+                <p class='captions'>Caption Here</p>
+                </a>&nbsp;"
+            );
+            print(
+                "<a class= 'card' id='aC1' href='triptips.php?tips=2'>
+                <img src='img/images/traveltips/i4.jpg' class='card-image' alt=''>
+                <h4>Getting Around I-4</h4>
+                <p class='captions'>Caption Here</p>
+                </a>&nbsp;"
+            );
+            echo(
+                "<a class= 'card' id='aC2' href='triptips.php?tips=3'>
+                <img src='img/images/traveltips/carrent.jpg' class='card-image' alt=''>
+                <h4>Transportation Services</h4>
+                <p class='captions'>Caption Here</p>
+                </a>&nbsp;"
+            );
+            print(
+                "<a class= 'card' id='aC3' href='triptips.php?tips=4'>
+                <img src='img/images/traveltips/toll.jpg' class='card-image' alt=''>
+                <h4>E-Passes, Sunpasses and Quarters</h4>
+                <p class='captions'>Caption Here</p>
+                </a>&nbsp;"
+            );
+        ?>
+    </section>
+    </section>
 
-        <h2 class="row-title">Orlando Travel Tips</h2>
 
-        <button class="caro-btn-left" id="autoLeft3">
-            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
-        </button>
-
+    <!--Orlando Best of's-->
+    <section class="card-row">
+        <h2 class="row-title">Orlando's Specialties</h2>
             <!--Cards-->
-            <section class="carousel" id="scroll3">
-
+            <section class="carousel" id="scroll1">
                 <?php
                     print(
-                        "<a class= 'card' id='aC0' href='triptips.php?tips=1'>
-                        <img src='img/images/traveltips/sunrail.jpg' class='card-image' alt=''>
-                        <h4>Orlando's SunRails</h4>
+                        "<a class= 'card' id='bC0' href='blog.php?blog=1'>
+                        <img src='img/images/oblogs/popularTP.jpg' class='card-image' alt='People riding an attraction'>
+                        <h4>The Popular Theme Parks</h4>
                         <p class='captions'>Caption Here</p>
                         </a>&nbsp;"
                     );
                     print(
-                        "<a class= 'card' id='aC1' href='triptips.php?tips=2'>
-                        <img src='img/images/traveltips/i4.jpg' class='card-image' alt=''>
-                        <h4>Getting Around I-4</h4>
-                        <p class='captions'>Caption Here</p>
-                        </a>&nbsp;"
-                    );
-                    echo(
-                        "<a class= 'card' id='aC2' href='triptips.php?tips=3'>
-                        <img src='img/images/traveltips/carrent.jpg' class='card-image' alt=''>
-                        <h4>Transportation Services</h4>
+                        "<a class= 'card' id='bC0' href='blog.php?blog=2'>
+                        <img src='img/images/oblogs/beaches.jpg' class='card-image' alt='Sun setting at Cocoa Beach'>
+                        <h4>Best Beaches in the Area</h4>
                         <p class='captions'>Caption Here</p>
                         </a>&nbsp;"
                     );
                     print(
-                        "<a class= 'card' id='aC3' href='triptips.php?tips=4'>
-                        <img src='img/images/traveltips/toll.jpg' class='card-image' alt=''>
-                        <h4>E-Passes, Sunpasses and Quarters</h4>
+                        "<a class= 'card' id='bC0' href='blog.php?blog=3'>
+                        <img src='img/images/oblogs/idrive.jpg' class='card-image' alt='I-Drive'>
+                        <h4>I-Drive</h4>
+                        <p class='captions'>Caption Here</p>
+                        </a>&nbsp;"
+                    );
+                    print(
+                        "<a class= 'card' id='bC0' href='blog.php?blog=4'>
+                        <img src='img/images/oblogs/downtown.jpg' class='card-image' alt='Downtown Orlando'>
+                        <h4>Downtown Orlando</h4>
                         <p class='captions'>Caption Here</p>
                         </a>&nbsp;"
                     );
                 ?>
-
             </section>
-
-        <button class="caro-btn-right" id="autoRight3">
-            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
-        </button>
-
     </section>
 
 </section></section>

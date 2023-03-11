@@ -75,6 +75,7 @@ body {
   }
   .inner-content {
     grid-column: 2/10;
+    margin-top: 40px;
   }
   .search-content { /*FOR SEARCH PAGE*/
     grid-column: 2/8;
@@ -284,7 +285,6 @@ body {
     display: block;
     margin-top: 15px;
     text-align: left;
-    /* background-color: peachpuff; */
   }
   .logo {
     margin-left: -1rem;
@@ -310,6 +310,9 @@ body {
 .searchbox {
   width: 10rem;
   height: 1.5rem;
+  margin-left: 20px;
+  margin-right: 10px;
+  color: #555;
 }
 
 .searchlabel {
