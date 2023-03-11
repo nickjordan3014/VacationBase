@@ -10,7 +10,7 @@
     <img src="img/icons-VB/VacationBase_Logo.png" alt="Vacation Base Logo" class="mobileLogo">
     <section class="search-content">
         <section class="logo-area">
-            <form action="search.php" method="POST" class="logo-item">     
+            <form action="search.php" method="POST" id="mainSearchForm" class="logo-item">     
                     <label for="search" class="logo-item">Show me... </label>
                     <input type="text" name="searchbar" class="searchpagebox logo-item" value='<?php print($see)?>'>
                     <button class="nobtndecor" type="submit" name="search_btn">
