@@ -19,9 +19,21 @@
 
     <?php
         $ctr = 1;
+
+        $lol = 1;
+
+        // multidimensional hellscape that will eventually make our php DRY and very easy to populate page and edit
+        foreach ($row_Objects AS $row_Object){ 
+            foreach($row_Object["results"] AS $result){
+                foreach($result AS $piece){
+                    print("<script>console.log('$lol')</script>");
+                    $lol = ($lol + 1);
+                }
+            }
+        }
     ?>
 
-
+    <hr>
 
 <!-- FIRST CARD ROW -->
 
@@ -64,7 +76,7 @@
                         $foodDrink[$ctr] = $result["isFoodDrink"];
                         $local[$ctr] = $result["isLocal"];
                         $outdoor[$ctr] = $result["isOutdoorActive"];
-                        $good[$ctr] = $result["isGoodVal"];
+                        $good[$ctr] = $result["isGoodValue"];
                         
                         // Session sends
                         $_SESSION['id'.$ctr] = $id[$ctr];

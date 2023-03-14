@@ -29,4 +29,24 @@
     $results_five = $db->query($select_value);
     // $results_six = $db->query($select_family);
     // $results_seven = $db->query($select_outdoor);
+
+    $row_Objects = array(
+        // theme park row data
+        array (
+            "name" => "theme parks",
+            "title" => "Orlando's Signature: Theme Parks",
+            "results" => $results_one,
+            "link" => "See All Theme Park Activities",
+            "href" => "search.php?event='Theme Parks'"
+        ),
+        // restaurant row data
+        array (
+            "name" => "restaurants",
+            "title" => "Hot Orlando Restaurants",
+            "results" => $results_two,
+            "link" => "See All Food & Drink Activities",
+            "href" => "search.php?event='restaurant"
+        )
+    )
+
 ?>
