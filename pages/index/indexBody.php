@@ -18,18 +18,23 @@
     <hr class="hsline">
 
     <?php
-        $ctr = 1;
+        
+        // takes $row_objects multidimensional array and builds rows and cards from its data, including query results
+        foreach ($row_objects AS $row_object){ 
 
-        $lol = 1;
+            // plugs in data for the row into html as needed to build a row's html dynamically up to its cards
+            $row_start = _build_row_start($row_object["name"], $row_object["title"], $row_object["link"], $row_object["href"]);
+            print("$row_start");
 
-        // multidimensional hellscape that will eventually make our php DRY and very easy to populate page and edit
-        foreach ($row_Objects AS $row_Object){ 
-            foreach($row_Object["results"] AS $result){
-                foreach($result AS $piece){
-                    print("<script>console.log('$lol')</script>");
-                    $lol = ($lol + 1);
-                }
+            foreach($row_object["results"] AS $result){
+                // code for each card
+                $this_card = _build_card($result);
+                print("$this_card");
             }
+
+            // code to complete each row
+            $row_end = _build_row_end($row_object["name"]);
+            print("$row_end");
         }
     ?>
 
