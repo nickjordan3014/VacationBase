@@ -83,13 +83,36 @@
     // when called fills and returns the html of a card with provided content
     function _build_card($result) {
 
+        // getting basic info for the card
+        $card_id = $result["id"];
         $card_name = $result["event_name"];
         $card_image = $result["img1"];
+        $card_alt = $result["alt_text_img1"];
+        $card_price = $result["price"];
 
-        $card_html = "<a class='card' id='cardA1' title='$card_name' href='activity.php?count=1&id=1'>
-        <img class='card-image' src='img/images/$card_image' alt='Magic Kingdom Castle'>
+        // removing decimals from price to free up space, or one $ from "$$$"s since we add one below
+        $priceCheck = $card_price[0];
+        if ($priceCheck == "$") {
+            $card_price = substr($card_price, 1);
+        }
+        else {
+            $card_price = rtrim($card_price, ".00");
+        }
+
+        // build card caption here, put more rare & interesting captions higher up so its not every activity saying "family-friendly"
+        // captions are to grab interest! so categorical tags like food & drink or arts belong in rows and searches rather than here
+        $card_caption = ("$" . $card_price . 
+            (($result["isLiveEvent"] == 'Y') ? " | Live Events" : "") .
+            (($result["isLocal"] == 'Y') ? " | Local Hangout" : "") .
+            (($result["isGoodValue"] == 'Y') ? " | Great Value" : "") .
+            (($result["isOutdoorActive"] == 'Y') ? " | Outdoors" : "") .
+            (($result["isFamily"] == 'Y') ? " | Family-Friendly" : "")
+        );
+
+        $card_html = "<a class='card' id='cardA1' title='$card_name' href='activity.php?id=$card_id'>
+        <img class='card-image' src='img/images/$card_image' alt='$card_alt'>
         <h4>$card_name</h4>
-        <p class='captions'>From $109.00 | Family-Friendly | Live Event</p>
+        <p class='captions'>$card_caption</p>
         </a>";
 
         return $card_html;
