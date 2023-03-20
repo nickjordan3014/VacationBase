@@ -64,7 +64,7 @@
             <h2 class='row-title'>$title</h2>
             <a class='row-link' href='$href'><p class='inline rightalign row-link-item'>$link</p></a>
             
-            <button class='caro-btn-left' id='autoLeft$row_count'>
+            <button class='caro-btn-left invis' id='autoLeft$row_count'>
                 <img src='img/icons-VB/left_arrow.png' alt='Arrow' class='caro-arrow'>
             </button>
             

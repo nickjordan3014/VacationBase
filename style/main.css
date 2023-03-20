@@ -173,6 +173,7 @@ body {
   top: calc(50% - 50px);
   width: 60px;
   height: 100px;
+  transition: 350ms;
 }
 
 .caro-btn-right {
@@ -183,6 +184,11 @@ body {
   top: calc(50% - 50px);
   width: 60px;
   height: 100px;
+  transition: 350ms;
+}
+
+.invis {
+  opacity: 0;
 }
 
 /* the cards and content within */
