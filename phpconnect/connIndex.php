@@ -58,17 +58,17 @@
     );
 
     // when called dynamically builds the top half of each row's html
-    function _build_row_start($name, $title, $link, $href) {
+    function _build_row_start($name, $title, $link, $href, $row_count) {
         $row_start_html = "<section class='card-row'>
 
             <h2 class='row-title'>$title</h2>
-            <a class='row-link' href='$href'><p class='inline rightalign'>$link</p></a>
+            <a class='row-link' href='$href'><p class='inline rightalign row-link-item'>$link</p></a>
             
-            <button class='caro-btn-left' id='autoLeft0'>
+            <button class='caro-btn-left' id='autoLeft$row_count'>
                 <img src='img/icons-VB/left_arrow.png' alt='Arrow' class='caro-arrow'>
             </button>
             
-            <section class='carousel' id='scroll0'>";
+            <section class='carousel' id='scroll$row_count'>";
         
         return $row_start_html;
     }
@@ -87,7 +87,7 @@
     }
     
     // when called fills and returns the html of a card with provided content
-    function _build_card($result) {
+    function _build_card($result, $card_count) {
 
         // getting basic info for the card
         $card_id = $result["id"];
@@ -116,7 +116,7 @@
             (($result["isFamily"] == 'Y') ? " | Family-Friendly" : "")
         );
 
-        $card_html = "<a class='card' id='cardA1' title='$card_name' href='activity.php?count=$card_id&id=$card_id'>
+        $card_html = "<a class='card' id='cardA1' title='$card_name' href='activity.php?count=$card_count&id=$card_id'>
             <img class='card-image' src='img/images/$card_image' alt='$card_alt'>
             <h4>$card_name</h4>
             <p class='captions'>$card_caption</p>

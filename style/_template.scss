@@ -13,7 +13,7 @@
         border-right: solid;
         border-width: 2px;
         border-color: $gray;
-        background-color: white;
+        background-color: $transwhite;
     }
     .nav-home {
         display: block;
@@ -46,7 +46,7 @@
 @media only screen and (max-width: 1000px) { 
 
     nav { 
-        background-color: white;
+        background-color: $transwhite;
         overflow: hidden;
         position: fixed;
         bottom: 0;
@@ -99,7 +99,6 @@
         padding-right: calc(8%);
         padding-top: 40px;
         padding-bottom: 80px;
-        background-color: $offwhite;
     }
     .footer-item {
         margin: 0px 0px 0px 20px;
@@ -123,7 +122,6 @@
         padding-right: calc(8%);
         padding-top: 40px;
         padding-bottom: 220px;
-        background-color: $offwhite;
     }
     .footer-item {
         margin: 0px 20px 10px 0px;

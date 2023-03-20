@@ -16,17 +16,22 @@
 
 <!-- HOMEPAGE CONTENT -->
     <?php
+        
+        $row_count = 0;
+        $card_count = 0;
         // takes $row_objects multidimensional array and builds rows and cards from its data, including query results
         foreach ($row_objects AS $row_object){ 
 
             // plugs in data for the row into html as needed to build a row's html dynamically up to its cards
-            $row_start = _build_row_start($row_object["name"], $row_object["title"], $row_object["link"], $row_object["href"]);
+            $row_start = _build_row_start($row_object["name"], $row_object["title"], $row_object["link"], $row_object["href"], $row_count);
             print("$row_start");
+            $row_count++;
 
             foreach($row_object["results"] AS $result){
                 // code for each card
-                $this_card = _build_card($result);
+                $this_card = _build_card($result, $card_count);
                 print("$this_card");
+                $card_count++;
             }
 
             // code to complete each row
