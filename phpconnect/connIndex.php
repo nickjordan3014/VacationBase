@@ -74,10 +74,10 @@
     }
 
     // when called dynamically builds the bottom half of each row's html
-    function _build_row_end($name) {
+    function _build_row_end($name, $row_count) {
         $row_end_html = "</section>
 
-            <button class='caro-btn-right' id='autoRight0'>
+            <button class='caro-btn-right' id='autoRight$row_count'>
                 <img src='img/icons-VB/right_arrow.png' alt='Arrow' class='caro-arrow'>
             </button>
 

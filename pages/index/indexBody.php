@@ -25,7 +25,6 @@
             // plugs in data for the row into html as needed to build a row's html dynamically up to its cards
             $row_start = _build_row_start($row_object["name"], $row_object["title"], $row_object["link"], $row_object["href"], $row_count);
             print("$row_start");
-            $row_count++;
 
             foreach($row_object["results"] AS $result){
                 // code for each card
@@ -35,8 +34,9 @@
             }
 
             // code to complete each row
-            $row_end = _build_row_end($row_object["name"]);
+            $row_end = _build_row_end($row_object["name"], $row_count);
             print("$row_end");
+            $row_count++;
         }
     ?>
 
