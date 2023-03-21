@@ -116,7 +116,7 @@
             (($result["isFamily"] == 'Y') ? " | Family-Friendly" : "")
         );
 
-        $card_html = "<a class='card' id='cardA1' title='$card_name' href='activity.php?count=$card_count&id=$card_id'>
+        $card_html = "<a class='card' id='cardA1' title='$card_name' href='activity.php?id=$card_id'>
             <img class='card-image' src='img/images/$card_image' alt='$card_alt'>
             <h4>$card_name</h4>
             <p class='captions'>$card_caption</p>

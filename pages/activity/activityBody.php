@@ -1,46 +1,12 @@
 <section class="main-content"><section class="inner-content">
-   
-    <!-- PAGE TOP AD -->
-    <article class="adleaderboard">
-        <p>[ad here]</p>
-    </article>
  
     <div class="margActivity">
-        <?php
-            $ctr = $_GET['count'];
-            // $event = $_GET['event'];
-
-            
-
-            // print($ctr);
-
-
-
-            // print("Theme Park: ".$_SESSION['isThemePark'.$ctr]);
-            // print("Restaurant: ".$_SESSION['isFoodDrink'.$ctr]);
-            // print("Local Events: ".$_SESSION['isLocal'.$ctr]);
-
-            $id = $_SESSION['id'.$ctr];
-            $name = $_SESSION['event_name'.$ctr];
-            $blurb = $_SESSION['activity_blurb'.$ctr];
-            $price = $_SESSION['price'.$ctr];
-            $img1= $_SESSION['img1'.$ctr];
-            $altText1 = $_SESSION['alt_text_img1'.$ctr];
-            $address = $_SESSION['address'.$ctr];
-            $url = $_SESSION['url'.$ctr];
-            $meta = $_SESSION['meta_description'.$ctr];
-            $map = $_SESSION['map_img'.$ctr];
-            $map_link = $_SESSION['map_link'.$ctr];
-            $themePark = $_SESSION['isThemePark'.$ctr];
-            $foodDrink = $_SESSION['isFoodDrink'.$ctr];
-            $local = $_SESSION['isLocal'.$ctr];
-            
-        ?>
 
         <!-- ARTICLE HEADER -->
         <section class="activity-title">
             <?php
                 print("<h1>$name</h1>");
+                print("<p>debug! 1st row: '$first_suggestion', 2nd row: '$second_suggestion'</p>");
             ?>
         </section>
 
@@ -130,210 +96,31 @@
     <br>
 
 
-    <!-- AD AGAIN -->
-    <article class="adleaderboardTwo">
-        <p>[ad here]</p> <!-- where does it go?! figure out later -->
-    </article>
-
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-
     <!-- SIMILAR ACTIVITES NEARBY -->
-    <section>
-        <p class="recCapt">
-            Similar Activities Around Orlando 
-        </p>
-    </section>
-    
-    <section class="card-row">
 
-        <button class="caro-btn-left" id="autoLeft0">
-            <img src="img/icons-VB/left_arrow.png" alt="Arrow" class="caro-arrow">
-        </button>
+    <?php
+        
+        $row_count = 0;
+        $card_count = 0;
+        // takes $row_objects multidimensional array and builds rows and cards from its data, including query results
+        foreach ($row_objects AS $row_object){ 
 
-        <!--Cards-->
-        <section class="carousel" id="scroll0">
-            
-            <?php
+            // plugs in data for the row into html as needed to build a row's html dynamically up to its cards
+            $row_start = _build_row_start($row_object["name"], $row_object["title"], $row_object["link"], $row_object["href"], $row_count);
+            print("$row_start");
 
-                // $ctr = 1;
-                $ctr2 = $ctr;
+            foreach($row_object["results"] AS $result){
+                // code for each card
+                $this_card = _build_card($result, $card_count);
+                print("$this_card");
+                $card_count++;
+            }
 
-                // print("ctr: ".$ctr);
-                // print("ctr2: ".$ctr2);
-                
-                
-                if ($themePark == 'Y'){
-                    $cardCount = 1;
-                    // variable used to display different activities in the similar activities area
-                    $ctr3 = $ctr;
-                    
-                    foreach($oth_resultsTP AS $other_result){
-                        // print($ctr);
-                        // echo("ctr: ".$ctr."ctr3: ".$ctr3." ");
-                        // skips over the activity were already on
-                        if ($ctr == $ctr3){
-                            // echo("our counter is: ".$ctr." and our ctr3 is: ".$ctr3." ");
-                            $ctr = $ctr+1;
-                            // echo("ctr3 update: ".$ctr3);
-                        }
-                        $id = $_SESSION['id'.$ctr];
-                        $name = $_SESSION['event_name'.$ctr];
-                        $blurb = $_SESSION['activity_blurb'.$ctr];
-                        $price = $_SESSION['pricep'.$ctr];
-                        $img1 = $_SESSION['img1'.$ctr];
-                        $altText1 = $_SESSION['alt_text_img1'.$ctr];
-                        $address = $_SESSION['address'.$ctr];
-                        $url = $_SESSION['url'.$ctr];
-                        $meta = $_SESSION['meta_description'.$ctr];
-                        $map = $_SESSION['map_img'.$ctr];
-                        $map_link = $_SESSION['map_link'.$ctr];
-                        $themePark = $_SESSION['isThemePark'.$ctr];
-                        $foodDrink = $_SESSION['isFoodDrink'.$ctr];
-                        $local = $_SESSION['isLocal'.$ctr];
-                        
-                        // print("id: ".$id);
-
-                        // print("ctr: ".$ctr);
-
-                        if ($id != $ctr){
-                            $ctr = $id;
-                            // print("ctr update:  ".$ctr);
-                        }
-                        
-                        if ($cardCount <= 6){
-                            print(
-                                "<a class='card' id='cardA$ctr' title='$name' href='activity.php?count=$ctr&id=$id'>
-                                <img class='card-image' src='img/images/$img1' alt='$altText1'>
-                                <h4>$name</h4>
-                                <p class='captions'>From $".$price.(($other_result["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($other_result["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($other_result["isLocal"] == 'Y') ? " | Local Activity" : "").(($other_result["isGoodValue"] == 'Y') ? " | Good Value" : "").(($other_result["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($other_result["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($other_result["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($other_result["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
-                                </a>&nbsp;"
-                            );
-                        }
-                        $ctr = $ctr+1;
-                        $ctr3 = $ctr3+1;
-                        $cardCount = $cardCount+1;
-                    }
-                    // $ctr3 = 0;
-                    // print("ctr: ".$ctr);
-                }
-
-                if ($foodDrink == 'Y'){
-                    $ctr3 = $ctr;
-
-                    foreach($oth_resultsRes AS $other_result){
-                        // skips over the activity were already on
-                        if ($ctr == $ctr3){
-                            $ctr = $ctr+1;
-                        }
-                        $id = $_SESSION['id'.$ctr];
-                        $name = $_SESSION['event_name'.$ctr];
-                        $blurb = $_SESSION['activity_blurb'.$ctr];
-                        $price = $_SESSION['price'.$ctr];
-                        $img1 = $_SESSION['img1'.$ctr];
-                        $altText1 = $_SESSION['alt_text_img1'.$ctr];
-                        $address = $_SESSION['address'.$ctr];
-                        $url = $_SESSION['url'.$ctr];
-                        $meta = $_SESSION['meta_description'.$ctr];
-                        $map = $_SESSION['map_img'.$ctr];
-                        $map_link = $_SESSION['map_link'.$ctr];
-                        $themePark = $_SESSION['isThemePark'.$ctr];
-                        $foodDrink = $_SESSION['isFoodDrink'.$ctr];
-                        $local = $_SESSION['isLocal'.$ctr];
-                        
-                        // print("id: ".$id);
-
-                        // print("ctr: ".$ctr);
-
-                        if ($id != $ctr){
-                            $ctr = $id;
-                            // print("ctr update:  ".$ctr);
-                        }
-
-                        print(
-                            "<a class='card' id='cardA$ctr' title='$name' href='activity.php?count=$ctr&id=$id'>
-                            <img class='card-image' src='img/images/$img1' alt='$altText1'>
-                            <h4>$name</h4>
-                            <p class='captions'>From $".$price.(($other_result["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($other_result["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($other_result["isLocal"] == 'Y') ? " | Local Activity" : "").(($other_result["isGoodValue"] == 'Y') ? " | Good Value" : "").(($other_result["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($other_result["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($other_result["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($other_result["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
-                            </a>&nbsp;"
-                        );
-                        $ctr = $ctr+1;
-                        $ctr3 = $ctr3+1;
-                    }
-                    // print("ctr: ".$ctr);
-                    // $ctr3 = 0;
-                }
-
-                if ($local == 'Y'){
-                    $ctr3 = $ctr;
-
-                    foreach($oth_resultsLoc AS $other_result){
-                        // print($ctr);
-                        // trying to skip the event of the current page we are on to reccommend other activities
-                        if ($ctr == $ctr3){
-                            $ctr = $ctr+1;
-                        }
-
-                        $id = $_SESSION['id'.$ctr];
-                        $name = $_SESSION['event_name'.$ctr];
-                        $blurb = $_SESSION['activity_blurb'.$ctr];
-                        $price = $_SESSION['price'.$ctr];
-                        $img1 = $_SESSION['img1'.$ctr];
-                        $altText1 = $_SESSION['alt_text_img1'.$ctr];
-                        $address = $_SESSION['address'.$ctr];
-                        $url = $_SESSION['url'.$ctr];
-                        $meta = $_SESSION['meta_description'.$ctr];
-                        $map = $_SESSION['map_img'.$ctr];
-                        $map_link = $_SESSION['map_link'.$ctr];
-                        $themePark = $_SESSION['isThemePark'.$ctr];
-                        $foodDrink = $_SESSION['isFoodDrink'.$ctr];
-                        $local = $_SESSION['isLocal'.$ctr];
-                    
-                        // print("id: ".$id);
-
-                        // print("ctr: ".$ctr);
-
-                        if ($id != $ctr){
-                            $ctr = $id;
-                            // print("ctr update:  ".$ctr);
-                        }
-
-                        print(
-                            "<a class='card' id='cardA$ctr' title='$name' href='activity.php?count=$ctr&id=$id'>
-                            <img class='card-image' src='img/images/$img1' alt='$altText1'>
-                            <h4>$name</h4>
-                            <p class='captions'>From $".$price.(($other_result["isFamily"] == 'Y') ? " | Family-Friendly" : "").(($other_result["isRainy"] == 'Y') ? " | Rainy Evet" : "").(($other_result["isLocal"] == 'Y') ? " | Local Activity" : "").(($other_result["isGoodValue"] == 'Y') ? " | Good Value" : "").(($other_result["isFoodDrink"] == 'Y') ? " | Food & Drink" : "").(($other_result["isOutdoorActive"] == 'Y') ? " | Outdoor Activity" : "").(($other_result["isLiveEvent"] == 'Y') ? " | Live Event" : "").(($other_result["isArts"] == 'Y') ? " | Art, Museum, and Culture" : "")."</p>
-                            </a>&nbsp;"
-                        );
-                        $ctr = $ctr+1;
-                        $ctr3 = $ctr3+1;
-                    }
-                    // $ctr3 = 0;
-                    // print("ctr: ".$ctr);
-                }
-            ?>
-
-        </section>
-
-        <button class="caro-btn-right" id="autoRight0">
-            <img src="img/icons-VB/right_arrow.png" alt="Arrow" class="caro-arrow">
-        </button>
-
-    </section>
-    
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-    <!-- THIRD AD -->
-    <article class="adleaderboardTwo">
-        <p>[ad here]</p> <!-- where does it go?! figure out later -->
-    </article>
+            // code to complete each row
+            $row_end = _build_row_end($row_object["name"], $row_count);
+            print("$row_end");
+            $row_count++;
+        }
+    ?>
 
 </section></section>
