@@ -192,14 +192,19 @@ body {
 /* the cards and content within */
 .card { 
     display: inline-block;
-    margin: 0px 5px 0px 5px;
+    margin: 2px 5px 0px 5px;
+    padding-bottom: 5px;
     background: $transwhite;
     text-decoration: none;
     color: black;
-    border: 3px solid $gray;
+    // border: 3px solid $gray;
+    box-shadow: 0px 0px 6px $gray;
     border-radius: 10px;
     overflow: hidden;
 } 
+.card-image {
+    margin-bottom: 5px;
+}
 
 @media only screen and (min-width: 1000px) { /* desktop screens */
     .caro-arrow {
@@ -210,7 +215,7 @@ body {
         cursor: pointer; 
     }
     .card { 
-        width: calc(25% - 15px);
+        width: calc(25% - 10px);
     } 
     .card-image {
         width: 100%;

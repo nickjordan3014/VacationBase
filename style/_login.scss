@@ -133,7 +133,7 @@
 
 .form-border {
     display: inline-block;
-    border: 2px solid lightgrey;
+    border: 2px solid $gray;
     border-radius: 5px;
     padding: 5px 30px;
   }
@@ -143,37 +143,37 @@
   }
   
   input[type=text] {
-    border: 1px solid lightgray;
+    border: 1px solid $gray;
     padding: 4px 8px;
-    border-radius: 3px;
+    border-radius: 99px;
   }
   
   input[type=text]:focus {
     outline: none;
-    border: 2px solid #FFBD59;
+    border: 2px solid $orange;
     border-radius: 3px;
   }
   
   input[type=email] {
-    border: 1px solid lightgray;
+    border: 1px solid $gray;
     padding: 4px 8px;
     border-radius: 3px;
   }
   
   input[type=email]:focus {
     outline: none;
-    border: 2px solid #FFBD59;
+    border: 2px solid $orange;
     border-radius: 3px;
   }
   
   input[type=password] {
-    border: 1px solid lightgray;
+    border: 1px solid $gray;
     padding: 4px 8px;
     border-radius: 3px;
   }
   
   input[type=password]:focus {
     outline: none;
-    border: 2px solid #FFBD59;
+    border: 2px solid $orange;
     border-radius: 3px;
   }
