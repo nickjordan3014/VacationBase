@@ -1,205 +1,68 @@
-<section class="main-content">
-    <section class="inner-content">
+<?php
+  //  if(isset($_SESSION['user'])){
+
         
-        <div class="rows">
-            <div class="col">
-                <h1 class="head">Unadded Saved Activities</h1>
-                <p class="para">Drag An Event Onto Your Itinerary Plan And Select Your Dates</p>
-                <section>
-                        <!-- <div class="dragBox"> -->
-                            <div id="div0" class="it-container" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                <ul class="groups">
-                                    <li>
-                                        <!-- <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> -->
-                                            <!-- <img src="img/images/magickingdom.jpeg" alt="Magic Kingdom Castle"> -->
-                                            <div id="drag1" class="itcard" draggable="true" ondragstart="drag(event)">
-                                                <div class="it-img">
-                                                    <span class="img" style="background:url('img/images/magickingdom.jpeg') ;"></span>
-                                                    <!-- <img class="img" src="magickingdom.jpeg" alt=""> -->
-                                                </div>
-                                                <div class="it-data">
-                                                    <div class="itbody">
-                                                        <h2 class="title">
-                                                            Magic Kingdom
-                                                        </h2>
-                                                        <p>Magic Kingdom park is a theme park at...</p>
-                                                    </div>
-                                                    <div class="footer">
-                                                        <button type="button" class="removeButton">Remove</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        <!-- </div> -->
-                                    </li>
-                                </ul>
-                            </div>
-                        <!-- </div> -->
-                        <!-- <div id="div1" class="it-container" ondrop="drop(event)" ondragover="allowDrop(event)">
-                            <ul class="groups">
-                                <li>
-                                        <div class="card" id="drag2" draggable="true" ondragstart="drag(event)">
-                                            <div class="it-img">
-                                                <span class="img" style="background:url('img/images/magickingdom.jpeg') ;"></span>
-                                            </div>
-                                            <div class="it-data">
-                                                <div class="body">
-                                                    <h2 class="title">
-                                                        Magic Kingdom
-                                                    </h2>
-                                                    <p>Magic Kingdom park is a theme park at...</p>
-                                                </div>
-                                                <div class="footer">
-                                                    <button type="button" class="removeButton">Remove</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                </li>
-                            </ul>
-                        </div> -->
-                </section>
-                
-            </div>
-            <div class="col">
-                <h1 class="head">Current Itinerary Plan</h1>
-                <section>
-                    <h2>Friday, July 23rd</h2>
-                    <div class="it-container">
-                        <ul class="groups">
-                            <li>
-                                <div class="itcard">
-                                    <div class="it-img">
-                                        <span class="img" style="background:url('img/images/magickingdom.jpeg') ;"></span>
-                                        <!-- <img class="img" src="magickingdom.jpeg" alt=""> -->
-                                    </div>
-                                    <div class="it-data">
-                                        <div class="itbody">
-                                            <h2 class="title">
-                                                Magic Kingdom
-                                            </h2>
-                                            <p>Magic Kingdom park is a theme park at...</p>
-                                        </div>
-                                        <div class="footer">
-                                            <button type="button" class="removeButton">Remove</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="it-container">
-                        <ul class="groups">
-                            <li>
-                                <div class="itcard">
-                                    <div class="it-img">
-                                        <span class="img" style="background:url('img/images/magickingdom.jpeg') ;"></span>
-                                        <!-- <img class="img" src="magickingdom.jpeg" alt=""> -->
-                                    </div>
-                                    <div class="it-data">
-                                        <div class="itbody">
-                                            <h2 class="title">
-                                                Magic Kingdom
-                                            </h2>
-                                            <p>Magic Kingdom park is a theme park at...</p>
-                                        </div>
-                                        <div class="footer">
-                                            <button type="button" class="removeButton">Remove</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- UNCOMMENT THIS TO PUT BACK IN PLACE -->
-                    <div class="choice" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><p class="dropText">Drop Here</p></div>
-                    <!-- <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div> -->
-                </section>
-                <section>
-                    <h2>Saturday, July 24th</h2>
-                </section>
-                <section>
-                    <div class="it-container">
-                        <ul class="groups">
-                            <li>
-                                <div class="itcard">
-                                    <div class="it-img">
-                                        <span class="img" style="background:url('img/images/magickingdom.jpeg') ;"></span>
-                                        <!-- <img class="img" src="magickingdom.jpeg" alt=""> -->
-                                    </div>
-                                    <div class="it-data">
-                                        <div class="itbody">
-                                            <h2 class="title">
-                                                Magic Kingdom
-                                            </h2>
-                                            <p>Magic Kingdom park is a theme park at...</p>
-                                        </div>
-                                        <div class="footer">
-                                            <button type="button" class="removeButton">Remove</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section>
-                    <h2>Sunday, July 25th</h2>
-                    <div class="it-container">
-                        <ul class="groups">
-                            <li>
-                                <div class="itcard">
-                                    <div class="it-img">
-                                        <span class="img" style="background:url('img/images/magickingdom.jpeg') ;"></span>
-                                        <!-- <img class="img" src="magickingdom.jpeg" alt=""> -->
-                                    </div>
-                                    <div class="it-data">
-                                        <div class="itbody">
-                                            <h2 class="title">
-                                                Magic Kingdom
-                                            </h2>
-                                            <p>Magic Kingdom park is a theme park at...</p>
-                                        </div>
-                                        <div class="footer">
-                                            <!-- <p class="card-remove">remove</p> -->
-                                            <button type="button" class="removeButton">Remove</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="it-container">
-                        <ul class="groups">
-                            <li>
-                                <div class="itcard">
-                                    <div class="it-img">
-                                        <span class="img" style="background:url('img/images/magickingdom.jpeg') ;"></span>
-                                        <!-- <img class="img" src="magickingdom.jpeg" alt=""> -->
-                                    </div>
-                                    <div class="it-data">
-                                        <div class="itbody">
-                                            <h2 class="title">
-                                                Magic Kingdom
-                                            </h2>
-                                            <p>Magic Kingdom park is a theme park at...</p>
-                                        </div>
-                                        <div class="footer">
-                                            <button type="button" class="removeButton">Remove</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-        </div>
-        <div class="button1">
-            <button type="button" class="addACTButton activityButton">Complete</button>
-        </div>
-    </section>
+?>
+<section class="main-content">
+<!-- 
+TODOS
+
+ - Pass added activities into Half Content 1 Section as Draggables
+
+ - Users will then be able to drag activities into half content 2 in the 5 Premade day containers
+
+ - Save / Submit Button will save Itinerary into user itineraries where they can access on home page
+
+ - May want to add a mobile view that says must use computer to access this feature or figure out how js touch events work
+-->
+<?php
+    // print($_SESSION['user']['id']);
+    // print("hello");
+?>
+
+<section class="half-content-1">
+    <h2 class="itinerary-header">Selected Content</h2>
+    <div class="container-itin">
+        <p class="draggable" draggable="true">1</p>
+        <p class="draggable" draggable="true">2</p>
+    </div>
 </section>
-<!-- in lieu of footer these tags are needed here -->
-<br><hr><br>
-</main>
-</body>
-</html>
+<section class="half-content-2">
+    <h2 class="itinerary-header">Itinerary Builder</h2>
+    <h3>Day 1</h3>
+    <div class="container-itin">
+        <p class="draggable" draggable="true">3</p>
+        <p class="draggable" draggable="true">4</p>
+    </div>
+    <h3>Day 2</h3>
+    <div class="container-itin">
+        <p class="draggable" draggable="true">5</p>
+        <p class="draggable" draggable="true">6</p>
+    </div>
+    <h3>Day 3</h3>
+    <div class="container-itin">
+        <p class="draggable" draggable="true">7</p>
+        <p class="draggable" draggable="true">8</p>
+    </div>
+    <h3>Day 4</h3>
+    <div class="container-itin">
+        <p class="draggable" draggable="true">9</p>
+        <p class="draggable" draggable="true">10</p>
+    </div>
+    <h3>Day 5</h3>
+    <div class="container-itin">
+        <p class="draggable" draggable="true">11</p>
+        <p class="draggable" draggable="true">12</p>
+    </div>
+</section>
+
+<?php
+    // print("null stores: ".$null);
+?>
+
+</section>
+<?php
+   // } else{
+        //header("location: login.php");
+    //}
+?>
