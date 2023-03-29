@@ -17,7 +17,7 @@
         $emailAddress = filter_var(strtolower($_REQUEST['emailAddress']), FILTER_SANITIZE_EMAIL);
         $pass = strip_tags($_REQUEST['pass']);
         $newpass = strip_tags($_REQUEST['newpass']);
-
+        $profilePic = htmlspecialchars('orange_icon.png');
 
         // regExpr name
         $regName = "/^[a-z ,.'-]+$/i";
@@ -111,7 +111,7 @@
                     $created = $created->format('Y-m-d H:i:s');
 
                     // insert data into databse
-                    $insert_statement = $db->prepare("INSERT INTO accounts (first_name, last_name, email, password, timeCreated) VALUES (:firstName,:lastName,:emailAddress,:pass,:created)");
+                    $insert_statement = $db->prepare("INSERT INTO accounts (first_name, last_name, email, password, profile_pic, timeCreated) VALUES (:firstName,:lastName,:emailAddress,:pass,:profilePic,:created)");
                 
                     if(
                         $insert_statement->execute(
@@ -120,6 +120,7 @@
                                 ':lastName' => $lastName,
                                 ':emailAddress' => $emailAddress,
                                 ':pass' => $hash_password,
+                                ':profilePic' => $profilePic,
                                 ':created' => $created
                             ]
                         )

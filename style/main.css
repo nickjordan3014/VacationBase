@@ -32,6 +32,7 @@ h4 { /* is for Card Titling*/
 p, .captions, label, button, ul, li { /* is for all paragraph-style text */
   font-family: open-sans, arial, sans-serif;
   font-weight: 400;
+
 }
 
 p, label, button {
@@ -789,37 +790,37 @@ input {
 input[type=text] {
   border: 1px solid #c3c3c3;
   padding: 4px 8px;
-  border-radius: 99px;
+  border-radius: 20px;
 }
 
 input[type=text]:focus {
   outline: none;
   border: 2px solid #FFBD59;
-  border-radius: 3px;
+  border-radius: 20px;
 }
 
 input[type=email] {
   border: 1px solid #c3c3c3;
   padding: 4px 8px;
-  border-radius: 3px;
+  border-radius: 20px;
 }
 
 input[type=email]:focus {
   outline: none;
   border: 2px solid #FFBD59;
-  border-radius: 3px;
+  border-radius: 20px;
 }
 
 input[type=password] {
   border: 1px solid #c3c3c3;
   padding: 4px 8px;
-  border-radius: 3px;
+  border-radius: 20px;
 }
 
 input[type=password]:focus {
   outline: none;
   border: 2px solid #FFBD59;
-  border-radius: 3px;
+  border-radius: 20px;
 }
 
 /* Houses CSS specific to profile page */
