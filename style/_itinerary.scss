@@ -1,151 +1,29 @@
-/* Houses CSS specific to itinerary page */
+.half-content-1 {
+    grid-column: 2/6;
 
-/* split screen */
-* {
-    /* margin: 0; */
-    padding: 0;
-    box-sizing: border-box;
 }
 
-.head {
+.half-content-2 {
+    grid-column: 7/10;
+}
+
+.itinerary-header {
     text-align: center;
 }
 
-.para {
-    text-align: center;
+.container-itin {
+    background-color: black;
+    padding: 1rem;
+    margin-top: 1rem;
 }
 
-.col {
-    float: left;
-    width: 50%;
-    padding: 12px;
-}
-.rows::after{
-    content: "";
-    display: table;
-    clear: both;
+.draggable {
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    cursor: move;
 }
 
-.column {
-    width: 50%;
-    padding: 10px;
-    height: auto;
-    float: left;
-}
-
-.row::after {
-    content: none;
-    display: table;
-    clear: both;
-}
-
-.dragBox {
-    width: 100%;
-    height: 140px;
-    padding: 10px;
-    border: 3px solid #aaaaaa;
-    color: $darkgray;
-}
-
-/*  */
-#div2 {
-    width: 100%;
-    height: 140px;
-    padding: 10px;
-    border: 3px dashed #aaaaaa;
-    color: $darkgray;
-    background-color: $gray;
-}
-/* .dHere {
-    text-align: center;
-} */
-p.dropText {
-    font-size: 25px;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-}
-/* button  */
-.actButton {
-    margin-top: 3%;
-    margin-right: -100%;
-}
-.addACTButton {
-    cursor: pointer;
-    border: none;
-    color: $white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    align-items: center;
-}
-.activityButton {
-    background-color: $white; 
-    color: $orange; 
-    border: 3px solid $orange;
-    border-radius: 25px;
-    font-size: 18px;
-    padding: 10px 15px;
-}
-
-div.button1 {
-    align-items: center;
-    text-align: center;
-}
-.removeButton {
-    float: right;
-    padding: 2px;
-    padding-right: 2px;
-    border-radius: 15px;
-    border-color: $orange;
-    font-size: 12px;
-    color: $orange;
-    background-color: $white;
-}
-.resetDat {
-    float: right;
-    font-size: 12px;
-}
-.dragging {
-    background-color: $green;
-}
-.footer {
-    padding-right: 5px;
-}
-
-/* card */
-.itcard {
-    background-color: $green;
-}
-.itbody {
-    font-size: 16px;
-}
-
-.groups {
-    margin: 0 auto;
-    width: 30vw;
-    height: auto;
-    padding: 5px;
-}
-.groups li {
-    position:relative;
-    list-style: none;
-    margin-bottom: 10px;
-    overflow: hidden;
-}
-.groups .itcard {
-    overflow: hidden;
-    display: block;
-}
-.groups .it-img {
-    float: left;
-    overflow: hidden;
-    margin-right: 10px;
-}
-.groups .it-img .img{
-    width: 140px;
-    height: 130px;
-    display: block;
-    background-size: cover !important;
-    background-position: center;
+.draggable.dragging {
+    opacity: .5;
 }
