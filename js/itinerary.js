@@ -1,6 +1,7 @@
 const draggables = document.querySelectorAll('.draggable');
 const containers = document.querySelectorAll('.container-itin');
 
+//Function for when a draggable item is being dragged
 draggables.forEach(draggable => {
     draggable.addEventListener('dragstart', () => {
         draggable.classList.add('dragging')
@@ -11,6 +12,7 @@ draggables.forEach(draggable => {
     })
 })
 
+//Function to allow containers to be dropped in
 containers.forEach(container => {
     container.addEventListener('dragover', e => {
         e.preventDefault()
@@ -24,6 +26,7 @@ containers.forEach(container => {
     })
 })
 
+//Function that makes sure item is dropped in the right area
 function getDragAfterElement(container, y) {
     const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')]
 

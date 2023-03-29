@@ -53,7 +53,7 @@
                 <br>
                 <br>
                 <!-- <dt><label for="email">Email Address</label></dt> -->
-                <dd class="form-labels"><input type="email" name="emailAddress" class="box-size-long" value="<?php print $emailAddress;?>" placeholder="Email"></dd>
+                <dd class="form-labels"><input type="text" name="emailAddress" class="box-size-long" value="<?php print $emailAddress;?>" placeholder="Email"></dd>
                 <?php
                     if(isset($errorMsg[3])){
                         foreach($errorMsg[3] as $emailErrors){
