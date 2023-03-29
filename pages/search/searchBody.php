@@ -1,19 +1,11 @@
 <?php 
-if(isset($_GET['home_search'])){
-    $see = $_GET['home_search']; 
+if(isset($_GET['query'])){
+    $see = $_GET['query']; 
 }
-else if(isset($_POST['event1'])){
-    $see = $_POST['event1'];
-}
-
-
 ?>
 
 <section class="main-content">
     <section class="inner-content">
-        <article class="adleaderboard">
-            <p>[ad here]</p> <!-- where does it go?! figure out later -->
-        </article>
     </section>
     <!-- SEARCH PAGE HEADER -->
     <img src="img/icons-VB/VacationBase_Logo.png" alt="Vacation Base Logo" class="mobileLogo">
@@ -21,13 +13,15 @@ else if(isset($_POST['event1'])){
         <section class="logo-area">
             <form action="search.php" method="POST" id="mainSearchForm" class="logo-item">     
                     <label for="search" class="logo-item">Show me... </label>
-                    <input type="text" name="searchbar" class="searchpagebox logo-item" value='<?php print($see)?>'>
+                    <input type="text" name="searchbar" class="searchpagebox logo-item" value='<?php print($search_query)?>'>
                     <button class="nobtndecor" type="submit" name="search_btn">
                         <img src="img/icons-VB/Search_Icon.png" alt="Search Icon" class="searchico">
                     </button>
             </form>
         </section>
         <hr class="hsline">
+        
+        <!-- older code -->
         <?php
 
             // $see = $_GET['eventType'];
@@ -334,39 +328,43 @@ else if(isset($_POST['event1'])){
             }
 
         ?>
-        <!-- <section class="search-card" href="activity.php">
-            <img src="img/images/legoland.jpg" class="search-image" alt="Magic Kingdom Castle">
-            <article class="search-card-content">
-                <h3>Legoland Florida | From $84</h3>
-                <p class ="subtext">$$$, Themepark, Kid-Focused, Family-Friendly, Outdoors</p>
-                <p>Legoland is a themepark bursting with...</p>
-            </article>
-        </section>
-        <section class="search-card" href="activity.php">
-            <img src="img/images/universal.jpg" class="search-image" alt="Magic Kingdom Castle">
-            <article class="search-card-content">
-                <h3>Universal Studios FL | From $104</h3>
-                <p class ="subtext">$$$, Themepark, Universal, Fun Solo, Outdoors</p>
-                <p>With a theme of movies, TV, adventure, and...</p>
-            </article>
-        </section>
-        <section class="search-card" href="activity.php">
-            <img src="img/images/aquatica.jpg" class="search-image" alt="Magic Kingdom Castle">
-            <article class="search-card-content">
-                <h3>Aquatica Orlando | From $44</h3>
-                <p class ="subtext">$$$, Themepark, Waterpark, Family-Friendly, Outdoors</p>
-                <p>Aquatica combines high-speed thrills with...</p>
-            </article>
-        </section>
-        <section class="search-card" href="activity.php">
-            <img src="img/images/popular.jpg" class="search-image" alt="Magic Kingdom Castle">
-            <article class="search-card-content">
-                <h3>Magic Kingdom Park | From $109</h3>
-                <p class ="subtext">$$$, Themepark, Disney, Family-Friendly, Outdoors</p>
-                <p>Magic Kingdom park is a theme park at...</p>
-            </article>
+
+        <!-- old old code
+            <section class="search-card" href="activity.php">
+                <img src="img/images/legoland.jpg" class="search-image" alt="Magic Kingdom Castle">
+                <article class="search-card-content">
+                    <h3>Legoland Florida | From $84</h3>
+                    <p class ="subtext">$$$, Themepark, Kid-Focused, Family-Friendly, Outdoors</p>
+                    <p>Legoland is a themepark bursting with...</p>
+                </article>
+            </section>
+            <section class="search-card" href="activity.php">
+                <img src="img/images/universal.jpg" class="search-image" alt="Magic Kingdom Castle">
+                <article class="search-card-content">
+                    <h3>Universal Studios FL | From $104</h3>
+                    <p class ="subtext">$$$, Themepark, Universal, Fun Solo, Outdoors</p>
+                    <p>With a theme of movies, TV, adventure, and...</p>
+                </article>
+            </section>
+            <section class="search-card" href="activity.php">
+                <img src="img/images/aquatica.jpg" class="search-image" alt="Magic Kingdom Castle">
+                <article class="search-card-content">
+                    <h3>Aquatica Orlando | From $44</h3>
+                    <p class ="subtext">$$$, Themepark, Waterpark, Family-Friendly, Outdoors</p>
+                    <p>Aquatica combines high-speed thrills with...</p>
+                </article>
+            </section>
+            <section class="search-card" href="activity.php">
+                <img src="img/images/popular.jpg" class="search-image" alt="Magic Kingdom Castle">
+                <article class="search-card-content">
+                    <h3>Magic Kingdom Park | From $109</h3>
+                    <p class ="subtext">$$$, Themepark, Disney, Family-Friendly, Outdoors</p>
+                    <p>Magic Kingdom park is a theme park at...</p>
+                </article>
         </section> -->
     </section>
+
+    <!-- filtering -->
     <section class="filter-content">
         <form action="filter.php" class="filter-form">
             <section class="filter-segment">
@@ -432,8 +430,5 @@ else if(isset($_POST['event1'])){
                 <button type="submit" name="filter-btn"> Filter Results </button>
             </section>
         </form>
-        <article class="sa">
-            <p>[ad here]</p>
-        </article>
     </section>
 </section>

@@ -4,9 +4,9 @@
 <!-- HOMEPAGE HEADER -->
     <section class="logo-area">
         <img src="img/icons-VB/VacationBase_Logo.png" alt="Vacation Base Logo" class="logo">
-        <form action="search.php" class="logo-area">     
+        <form action="search.php" class="logo-area" method="get">     
                 <label for="home_search" class="logo-item">Ah, <i>Orlando</i>! Looking for anything in particular? </label>
-                <input type="text" name="home_search" value="Theme Parks" class="searchbox logo-item">
+                <input type="text" name="query" id="query" value="Theme Parks" class="searchbox logo-item">
                 <button class="nobtndecor logo-item">
                     <img src="img/icons-VB/Search_Icon.png" alt="Search Icon" class="searchico">
                 </button>
