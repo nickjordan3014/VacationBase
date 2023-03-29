@@ -6,7 +6,7 @@
         <section class="activity-title">
             <?php
                 print("<h1>$name</h1>");
-                print("<p>debug! 1st row: '$first_suggestion', 2nd row: '$second_suggestion'</p>");
+                // print("<p>debug! 1st row: '$first_suggestion', 2nd row: '$second_suggestion'</p>");
             ?>
         </section>
 
