@@ -11,20 +11,35 @@
         $search_query = "";
     }
 
-    // runs our search function if there's something to search
+    
+    // runs our search function if there's something to search, results get stored in $query_results
     $query_results = "";
     if ($search_query) {
         $query_results = _run_search($search_query);
     }
 
+
     // makes and performs query out of search input
     function _run_search($search_query) {
-        $total_results = "";
+        global $db;
+        // $total_results = "";
 
         // finds and appends total results with name matches, if search query is long enough
         if (strlen($search_query) > 2) {
-            $select_name = "SELECT * FROM orlando_florida WHERE event_name LIKE %$search_query%";
-            $total_results = $total_results . $db->query($select_name);
+            $select_name = "SELECT * FROM orlando_florida WHERE event_name LIKE '%$search_query%'";
+            $name_results = $db->query($select_name);
+            $total_results = $name_results;
+
+            $total_results = array(
+                array (
+                    "name" => "theme parks",
+                    "title" => "Orlando's Signature: Theme Parks",
+                    "results" => $db->query($select_name),
+                    "link" => "See All Theme Park Activities",
+                    "href" => "search.php?event='themeparks'"
+                )
+            );
+
         }
 
         // returns any viable category that $search_query may be
@@ -32,12 +47,21 @@
 
         // if $search_query was a viable category, performs a query for it and append results
         if ($category_query) {
-            $select_category = "SELECT * FROM orlando_florida WHERE $category_query = 'Y'";
-            $total_results = $total_results . $db->query($category_query);
+            $select_category = "SELECT * FROM orlando_florida WHERE '$category_query' = 'Y'";
+            $category_results = $db->query($select_category);
+
+            // appends results if there are any, if not just sets results
+            if ($total_results) {
+                $total_results = array_merge($total_results, $name_results);
+            }
+            else {
+                $total_results = $category_results;
+            }
         }
 
         return $total_results;
     }
+
 
     // if the provided input is a category or close to it, it will return that category. else, it returns null
     function _category_validation($search_query) {
@@ -93,7 +117,7 @@
             $category = "isLiveEvent";
             return $category;
         }
-        else if (in_array($search_query, $array_art)){
+        else if (in_array($search_query, $array_arts)){
             $category = "isLiveEvent";
             return $category;
         }
@@ -101,6 +125,47 @@
         // if not returned by now a category wasn't found!
         return $category;
     }
+
+
+    function _build_search_card($result) {
+
+        // getting basic info for the card
+        $card_id = $result["id"];
+        $card_name = $result["event_name"];
+        $card_image = $result["img1"];
+        $card_alt = $result["alt_text_img1"];
+        $card_price = $result["price"];
+
+        // removing empty decimals from numerical prices to free up space, or one $ from dollar sign prices since we add one below
+        $priceCheck = $card_price[0];
+        if ($priceCheck == "$") {
+            $card_price = substr($card_price, 1);
+        }
+        else {
+            $card_price = rtrim($card_price, ".00");
+        }
+
+        // build card caption here, put more rare & interesting captions higher up so its not every activity saying "family-friendly"
+        // captions are to grab interest! so categorical tags like food & drink or arts belong in rows and searches rather than here
+        $card_caption = ("$" . $card_price . 
+            (($result["isLiveEvent"] == 'Y') ? " | Live Events" : "") .
+            (($result["isLocal"] == 'Y') ? " | Local Hangout" : "") .
+            (($result["isGoodValue"] == 'Y') ? " | Great Value" : "") .
+            (($result["isOutdoorActive"] == 'Y') ? " | Outdoors" : "") .
+            (($result["isRainy"] == 'Y') ? " | Any Weather" : "") .
+            (($result["isFamily"] == 'Y') ? " | Family-Friendly" : "")
+        );
+
+        $card_html = "<a class='card' id='cardA1' title='$card_name' href='activity.php?id=$card_id'>
+            <img class='card-image' src='img/images/$card_image' alt='$card_alt'>
+            <h4>$card_name</h4>
+            <p class='captions'>$card_caption</p>
+            </a>";
+
+        return $card_html;
+    }
+
+
 
 
 

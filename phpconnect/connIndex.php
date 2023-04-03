@@ -7,7 +7,7 @@
     $select_themePark = "SELECT * FROM orlando_florida WHERE isThemePark = 'Y' LIMIT 8";
     $select_restaurant = "SELECT * FROM orlando_florida WHERE isFoodDrink = 'Y' LIMIT 8";
     $select_local = "SELECT * FROM orlando_florida WHERE isLocal = 'Y' LIMIT 8";
-    $select_outdoors = "SELECT * FROM orlando_florida WHERE isOutdoorActive = 'Y' LIMIT 8";
+    $select_outdoors = "SELECT * FROM orlando_florida WHERE isOutdoorActive = 'Y' LIMIT 5";
     $select_value = "SELECT * FROM orlando_florida WHERE isGoodValue = 'Y' LIMIT 8";
 
     // eventually we will want to pull more than 8 per row and build a function that returns the first 8 cards per row 

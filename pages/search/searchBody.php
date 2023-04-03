@@ -11,16 +11,30 @@ if(isset($_GET['query'])){
     <img src="img/icons-VB/VacationBase_Logo.png" alt="Vacation Base Logo" class="mobileLogo">
     <section class="search-content">
         <section class="logo-area">
-            <form action="search.php" method="POST" id="mainSearchForm" class="logo-item">     
+            <form action="search.php" method="get" id="mainSearchForm" class="logo-item">     
                     <label for="search" class="logo-item">Show me... </label>
-                    <input type="text" name="searchbar" class="searchpagebox logo-item" value='<?php print($search_query)?>'>
-                    <button class="nobtndecor" type="submit" name="search_btn">
+                    <input type="text" name="query" class="searchpagebox logo-item" value='<?php print($search_query)?>'>
+                    <button class="nobtndecor" type="submit">
                         <img src="img/icons-VB/Search_Icon.png" alt="Search Icon" class="searchico">
                     </button>
             </form>
         </section>
         <hr class="hsline">
+
+        <hr><hr>
+        <?php 
         
+        foreach ($query_results AS $search_result){ 
+            foreach ($search_result["results"] AS $debug){
+                $this_card = _build_search_card($debug);
+                print("$this_card");
+                print("<br>test2<br>");  // for debug
+            }
+            print("<br>test1<br>"); // for debug
+        }
+        ?>
+        <hr><hr>
+
         <!-- older code -->
         <?php
 
