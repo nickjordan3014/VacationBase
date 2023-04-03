@@ -11,7 +11,7 @@
         $search_query = "";
     }
 
-    
+
     // runs our search function if there's something to search, results get stored in $query_results
     $query_results = "";
     if ($search_query) {
@@ -29,17 +29,6 @@
             $select_name = "SELECT * FROM orlando_florida WHERE event_name LIKE '%$search_query%'";
             $name_results = $db->query($select_name);
             $total_results = $name_results;
-
-            $total_results = array(
-                array (
-                    "name" => "theme parks",
-                    "title" => "Orlando's Signature: Theme Parks",
-                    "results" => $db->query($select_name),
-                    "link" => "See All Theme Park Activities",
-                    "href" => "search.php?event='themeparks'"
-                )
-            );
-
         }
 
         // returns any viable category that $search_query may be
@@ -127,7 +116,8 @@
     }
 
 
-    function _build_search_card($result) {
+    // when called fills and returns the html of a search card with provided content
+    function _build_search_card($result, $card_count) {
 
         // getting basic info for the card
         $card_id = $result["id"];
@@ -156,67 +146,13 @@
             (($result["isFamily"] == 'Y') ? " | Family-Friendly" : "")
         );
 
-        $card_html = "<a class='card' id='cardA1' title='$card_name' href='activity.php?id=$card_id'>
-            <img class='card-image' src='img/images/$card_image' alt='$card_alt'>
-            <h4>$card_name</h4>
-            <p class='captions'>$card_caption</p>
-            </a>";
+        $card_html = "<a class='search-card' id='cardA1' title='$card_name' href='activity.php?id=$card_id'>
+                        <img class='search-image' src='img/images/$card_image' alt='$card_alt'>
+                        <h4>$card_name</h4>
+                        <p class='captions'>$card_caption</p>
+                    </a>";
 
         return $card_html;
     }
 
-
-
-
-
-    // if we have results, we populate them here!
-    if ($query_results) {
-        // build the result cards here
-    }
-
-    // if not, we display a message depending on if a search was attempted or it's a fresh visit
-    else {
-        if ($search_query) {
-            // something was searched but had no results
-        }
-        else {
-            // nothing was searched, they prolly clicked on the search nav icon
-        }
-    }
-
-
-
-
-
-        // old code below:
-
-    // $searchTP = "SELECT * FROM orlando_florida WHERE isThemePark = 'Y'";
-    // $searchThemePark = $db->query($searchTP);
-
-    // $searchRes = "SELECT * FROM orlando_florida WHERE isFoodDrink = 'Y'";
-    // $searchRestaurant = $db->query($searchRes);
-
-    // $searchRain = "SELECT * FROM orlando_florida WHERE isRainy = 'Y'";
-    // $searchRainy = $db->query($searchRain);
-
-    // $searchFF = "SELECT * FROM orlando_florida WHERE isFamily = 'Y'";
-    // $searchFamily = $db->query($searchFF);
-
-    // $searchLoc = "SELECT * FROM orlando_florida WHERE isLocal = 'Y'";
-    // $searchLocal = $db->query($searchLoc);
-
-    // $searchGood = "SELECT * FROM orlando_florida WHERE isGoodValue = 'Y'";
-    // $searchGoodVal = $db->query($searchGood);
-
-    // $searchOut = "SELECT * FROM orlando_florida WHERE isOutdoorActive = 'Y'";
-    // $searchOudoor = $db->query($searchOut);
-
-    // $searchLive = "SELECT * FROM orlando_florida WHERE isLiveEvent = 'Y'";
-    // $searchLiveEvent = $db->query($searchLive);
-
-    // $searchArt = "SELECT * FROM orlando_florida WHERE isArts = 'Y'";
-    // $searchArts = $db->query($searchArt);
-
-    // $searchAll = "SELECT * FROM orlando_florida";
-    // $allResults = $db->query($searchAll);
 ?>

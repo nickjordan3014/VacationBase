@@ -76,16 +76,6 @@ body {
         grid-column: 2/10;
         margin-top: 20px;
     }
-    .search-content { /*FOR SEARCH PAGE*/
-        grid-column: 2/8;
-    }
-    .searchpagebox { /*FOR SEARCH PAGE*/
-        width: 40vw;
-        height: 1.5rem;
-    } 
-    .filter-content {   /*FOR SEARCH PAGE*/
-        grid-column: 9/12;
-    }
     .rightalign {
         float: right;
         font-style: italic;
@@ -113,17 +103,6 @@ body {
     .inner-content {
         grid-column: 1/12;
         margin: 10px;
-    }
-    .search-content { /*FOR SEARCH PAGE*/
-        grid-column: 1/12;
-        margin: 10px;
-    }
-    .searchpagebox { /*FOR SEARCH PAGE*/
-        width: 70vw;
-        height: 1.5rem;
-    } 
-    .filter-content {   /*FOR SEARCH PAGE*/
-        display: none;
     }
     .mobileLogo {
         position: relative;
@@ -197,7 +176,6 @@ body {
     background: $transwhite;
     text-decoration: none;
     color: black;
-    // border: 3px solid $gray;
     box-shadow: 0px 0px 6px $gray;
     border-radius: 10px;
     overflow: hidden;

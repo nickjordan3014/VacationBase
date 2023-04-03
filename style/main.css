@@ -32,7 +32,6 @@ h4 { /* is for Card Titling*/
 p, .captions, label, button, ul, li { /* is for all paragraph-style text */
   font-family: open-sans, arial, sans-serif;
   font-weight: 400;
-
 }
 
 p, label, button {
@@ -78,16 +77,6 @@ body {
     grid-column: 2/10;
     margin-top: 20px;
   }
-  .search-content { /*FOR SEARCH PAGE*/
-    grid-column: 2/8;
-  }
-  .searchpagebox { /*FOR SEARCH PAGE*/
-    width: 40vw;
-    height: 1.5rem;
-  }
-  .filter-content { /*FOR SEARCH PAGE*/
-    grid-column: 9/12;
-  }
   .rightalign {
     float: right;
     font-style: italic;
@@ -113,17 +102,6 @@ body {
   .inner-content {
     grid-column: 1/12;
     margin: 10px;
-  }
-  .search-content { /*FOR SEARCH PAGE*/
-    grid-column: 1/12;
-    margin: 10px;
-  }
-  .searchpagebox { /*FOR SEARCH PAGE*/
-    width: 70vw;
-    height: 1.5rem;
-  }
-  .filter-content { /*FOR SEARCH PAGE*/
-    display: none;
   }
   .mobileLogo {
     position: relative;
@@ -347,24 +325,6 @@ body {
   width: 100%;
   margin: 10px;
   margin-inline: auto;
-}
-
-/*<-------------------- Forms -------------------->*/
-.filter-form {
-  background-color: #e2f0d9;
-  border: 1px #c3c3c3 solid;
-  border-radius: 2px;
-  margin-top: 40px;
-  padding: 10px;
-}
-
-.filter-label {
-  display: block;
-}
-
-.filter-text {
-  width: 2rem;
-  height: 1.5rem;
 }
 
 /* ITINERARY STYLING */
@@ -790,37 +750,37 @@ input {
 input[type=text] {
   border: 1px solid #c3c3c3;
   padding: 4px 8px;
-  border-radius: 20px;
+  border-radius: 99px;
 }
 
 input[type=text]:focus {
   outline: none;
   border: 2px solid #FFBD59;
-  border-radius: 20px;
+  border-radius: 3px;
 }
 
 input[type=email] {
   border: 1px solid #c3c3c3;
   padding: 4px 8px;
-  border-radius: 20px;
+  border-radius: 3px;
 }
 
 input[type=email]:focus {
   outline: none;
   border: 2px solid #FFBD59;
-  border-radius: 20px;
+  border-radius: 3px;
 }
 
 input[type=password] {
   border: 1px solid #c3c3c3;
   padding: 4px 8px;
-  border-radius: 20px;
+  border-radius: 3px;
 }
 
 input[type=password]:focus {
   outline: none;
   border: 2px solid #FFBD59;
-  border-radius: 20px;
+  border-radius: 3px;
 }
 
 /* Houses CSS specific to profile page */
@@ -1018,6 +978,24 @@ input[type=password]:focus {
 }
 
 /* Houses CSS specific to search page */
+.filter-form {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px #c3c3c3 solid;
+  border-radius: 5px;
+  margin-top: 80px;
+  padding: 15px;
+}
+
+.filter-label {
+  display: block;
+}
+
+.filter-text {
+  width: 2rem;
+  min-width: 50px;
+  height: 1.5rem;
+}
+
 .filter-segment {
   padding-top: 10px;
   padding-bottom: 20px;
@@ -1035,10 +1013,6 @@ input[type=password]:focus {
   margin-inline: auto;
 }
 
-.filter-text {
-  min-width: 50px;
-}
-
 .list {
   padding-top: 4px;
 }
@@ -1049,12 +1023,26 @@ input[type=password]:focus {
 }
 
 @media only screen and (min-width: 1000px) {
+  .search-content {
+    grid-column: 2/8;
+    margin-top: 60px;
+  }
+  .searchpagebox {
+    width: 40vw;
+    height: 1.5rem;
+  }
+  .filter-content {
+    grid-column: 8/12;
+  }
   .search-card {
+    display: inline-block;
     height: 200px;
     width: 100%;
-    border: 1px solid #c3c3c3;
-    margin-top: 20px;
-    border-radius: 3px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px #c3c3c3;
+    background-color: rgba(255, 255, 255, 0.6);
+    overflow: hidden;
   }
   .search-image {
     height: 100%;
@@ -1073,6 +1061,17 @@ input[type=password]:focus {
   }
 }
 @media only screen and (max-width: 1000px) {
+  .search-content {
+    grid-column: 1/12;
+    margin: 10px;
+  }
+  .searchpagebox {
+    width: 70vw;
+    height: 1.5rem;
+  }
+  .filter-content {
+    display: none;
+  }
   .search-card {
     height: 200px;
     border: 1px solid #c3c3c3;
