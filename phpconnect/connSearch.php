@@ -119,37 +119,41 @@
     // when called fills and returns the html of a search card with provided content
     function _build_search_card($result, $card_count) {
 
-        // getting basic info for the card
+        // getting info for the search card
         $card_id = $result["id"];
         $card_name = $result["event_name"];
         $card_image = $result["img1"];
         $card_alt = $result["alt_text_img1"];
         $card_price = $result["price"];
+        $description = $result["meta_description"];
 
-        // removing empty decimals from numerical prices to free up space, or one $ from dollar sign prices since we add one below
+        // corrects how we display numerical prices for cards
         $priceCheck = $card_price[0];
-        if ($priceCheck == "$") {
-            $card_price = substr($card_price, 1);
-        }
+        if ($priceCheck == "$") {}
         else {
-            $card_price = rtrim($card_price, ".00");
+            $card_price = ("From $" . rtrim($card_price, ".00"));
         }
 
-        // build card caption here, put more rare & interesting captions higher up so its not every activity saying "family-friendly"
-        // captions are to grab interest! so categorical tags like food & drink or arts belong in rows and searches rather than here
-        $card_caption = ("$" . $card_price . 
-            (($result["isLiveEvent"] == 'Y') ? " | Live Events" : "") .
-            (($result["isLocal"] == 'Y') ? " | Local Hangout" : "") .
-            (($result["isGoodValue"] == 'Y') ? " | Great Value" : "") .
-            (($result["isOutdoorActive"] == 'Y') ? " | Outdoors" : "") .
-            (($result["isRainy"] == 'Y') ? " | Any Weather" : "") .
-            (($result["isFamily"] == 'Y') ? " | Family-Friendly" : "")
+        // we match the caption from homepage here, but without price since it's a higher priority now that we have more space!
+        $card_caption = ( 
+            (($result["isLiveEvent"] == 'Y') ? "| Live Events " : "") .
+            (($result["isLocal"] == 'Y') ? "| Local Hangout " : "") .
+            (($result["isGoodValue"] == 'Y') ? "| Great Value " : "") .
+            (($result["isOutdoorActive"] == 'Y') ? "| Outdoors " : "") .
+            (($result["isRainy"] == 'Y') ? "| Any Weather " : "") .
+            (($result["isFamily"] == 'Y') ? "| Family-Friendly " : "")
         );
+        // ensures the caption doesn't start with a "|" character
+        $card_caption = trim($card_caption, '|');
 
         $card_html = "<a class='search-card' id='cardA1' title='$card_name' href='activity.php?id=$card_id'>
                         <img class='search-image' src='img/images/$card_image' alt='$card_alt'>
-                        <h4>$card_name</h4>
-                        <p class='captions'>$card_caption</p>
+                        <article class='search-card-content'>
+                            <h4 style='font-size: 16px;'>$card_name | <i>$card_price</i></h4>
+                            <p class='captions'>$card_caption</p>
+                            <br>
+                            <p>$description</p>
+                        </article>
                     </a>";
 
         return $card_html;

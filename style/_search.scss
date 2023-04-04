@@ -3,7 +3,7 @@
 .filter-form {
     background-color: $transwhite;
     border: 1px $gray solid;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 80px;
     padding: 15px;
 }
@@ -26,11 +26,6 @@
     padding-left: 4px;
     padding-right: 4px;
 }
-.tightline {
-    width: 100%;
-    margin: 5px;
-    margin-inline: auto;
-}
 .list {
     padding-top: 4px;
 }
@@ -50,25 +45,33 @@
     } 
     .filter-content {
         grid-column: 8/12;
+        position: sticky;
+        top: 0;
+        height: 100vh;
     }
     .search-card {
         display: inline-block;
-        height: 200px;
         width: 100%;
+        height: 200px;
         margin-top: 15px;
         border-radius: 10px;
-        box-shadow: 0px 0px 6px $gray;
+        color: black;
+        box-shadow: 0px 1px 6px $gray;
         background-color: $transwhite;
         overflow: hidden;
     }
     .search-image {
         height: 100%;
+        width: 300px;
+        background-color: $gray;
         float: left;
     }
     .search-card-content {
-        float: left;
-        padding: 0px 10px 0px 10px;
-        margin-top: -20px;
+        display: inline-block;
+        width: calc(100% - 300px);
+        padding: 10px;
+        padding-top: 15px;
+        overflow: hidden;
     }
     .subtext {
         color: #555;
