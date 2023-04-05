@@ -118,8 +118,10 @@
 }
 
 @media only screen and (max-width: 1000px) {
-
     footer {
+        display: none;
+    }
+    /*footer {
         width: 100%;
         padding-left: calc(8%);
         padding-right: calc(8%);
@@ -137,5 +139,5 @@
     .footer-icon {
         margin: 20px 20px 0px 0px;
         float: left;
-    }
+    }*/
 }

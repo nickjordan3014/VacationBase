@@ -1,5 +1,5 @@
 // this was in caro css for some reason. dumping it here until it can be put where it belongs
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) { /*desktop*/
     .logo-area {
         display: inline-block;
         width: 100%;
@@ -10,53 +10,82 @@
     .logo-item {
         display: inline-block;
     }
-}
-@media only screen and (max-width: 1000px) {
-    .logo-area {
-        display: block;
-        margin-top: 15px;
-        text-align: left;
-        // background-color: peachpuff;
-    } 
+    /* Houses CSS specific to homepage */
+
+    /*<-------------------- Home Logo and Search -------------------->*/
+
     .logo {
-        margin-left: -1rem;
+        width: 20rem;
+        vertical-align: -20px;
+    }
+    .nobtndecor {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+    }
+    .searchbox {
+        width: 10rem;
+        height: 1.5rem;
+        margin-left: 20px;
+        margin-right: 10px;
+        color: $darkgray;
+        background-color: $transwhite;
+    }
+    .searchlabel {
+        display: block;
+        text-align: left;
+    }
+    .searchico {
+        width: 2rem;
+        vertical-align: -10px;
     }
 }
 
+@media only screen and (max-width: 1000px) { /*mobile*/
+    .logo-area {
+        display: block;
+        margin-top: 15px;
+        text-align: center;
+    }
+    .logo-item {
+        display: inline-block;
+    }
 
-/* Houses CSS specific to homepage */
+    /*<-------------------- Home Logo and Search -------------------->*/
 
-/*<-------------------- Home Logo and Search -------------------->*/
-
-
-.logo {
-    width: 20rem;
-    vertical-align: -20px;
-}
-.nobtndecor {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-}
-.searchbox {
-    width: 10rem;
-    height: 1.5rem;
-    margin-left: 20px;
-    margin-right: 10px;
-    color: $darkgray;
-    background-color: $transwhite;
-}
-.searchlabel {
-    display: block;
-    text-align: left;
-}
-.searchico {
-    width: 2rem;
-    vertical-align: -10px;
+    .logo {
+        width: 20rem;
+        vertical-align: -20px;
+        margin-left: -1rem;
+    }
+    .nobtndecor {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+    }
+    .searchbox {
+        width: 10rem;
+        height: 1.5rem;
+        margin: auto;
+        color: $darkgray;
+        background-color: $transwhite;
+    }
+    .searchlabel {
+        display: block;
+        text-align: center;
+    }
+    .searchico {
+        width: 2rem;
+        vertical-align: -10px;
+    }
 }
 
 /* ITINERARY STYLING */
