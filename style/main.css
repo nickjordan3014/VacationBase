@@ -115,7 +115,8 @@ body {
   }
   .inner-content {
     grid-column: 1/12;
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .mobileLogo {
     position: relative;
@@ -133,31 +134,7 @@ body {
   position: relative;
 }
 
-/* text above cards */
-.row-title {
-  float: left;
-  margin-bottom: 10px;
-  padding-left: 4px;
-}
-
-.row-link {
-  float: right;
-  margin-top: 12px;
-  padding-right: 4px;
-}
-
-.row-link-item {
-  color: #282828;
-  text-decoration: underline;
-}
-
 /* the scrolling part and its toggles */
-.carousel {
-  width: 100%;
-  overflow-x: hidden;
-  white-space: nowrap;
-}
-
 .caro-btn-left {
   border: none;
   background: none;
@@ -217,6 +194,26 @@ body {
     height: 100%;
     background-color: #c3c3c3;
   }
+  .carousel {
+    width: 100%;
+    overflow-x: hidden;
+    white-space: nowrap;
+  }
+  /* text above cards */
+  .row-title {
+    float: left;
+    margin-bottom: 10px;
+    padding-left: 4px;
+  }
+  .row-link {
+    float: right;
+    margin-top: 12px;
+    padding-right: 4px;
+  }
+  .row-link-item {
+    color: #282828;
+    text-decoration: underline;
+  }
 }
 @media only screen and (max-width: 1000px) { /* mobile screens */
   .caro-arrow {
@@ -224,60 +221,37 @@ body {
   }
   .card {
     width: 200px;
-    height: 150px;
+    height: 215px;
   }
   .card-image {
     width: 200px;
     height: 150px;
     background-color: #c3c3c3;
   }
-}
-/*<-------------------- ADS -------------------->*/
-@media only screen and (min-width: 1000px) {
-  .adleaderboard {
-    margin: auto;
-    height: 90px;
-    width: 970px;
-    background-color: #c3c3c3;
-    display: none;
+  .carousel {
+    width: 100vw;
+    overflow-x: scroll;
+    white-space: nowrap;
   }
-  .adleaderboardTwo {
-    margin: auto;
-    height: 160px;
-    width: 850px;
-    background-color: #c3c3c3;
-    display: none;
+  /* text above cards */
+  .row-title {
+    float: left;
+    margin-bottom: 10px;
+    padding-left: 4px;
   }
-  .ad-banner {
-    margin: auto;
-    height: 180px;
-    width: 930px;
-    background-color: #c3c3c3;
+  .row-link {
     display: none;
+    float: right;
+    margin-top: 12px;
+    padding-right: 4px;
   }
-  .sa {
-    margin: auto;
-    height: 600px;
-    width: 300px;
-    background-color: #c3c3c3;
+  .row-link-item {
     display: none;
+    color: #282828;
+    text-decoration: underline;
   }
 }
-@media only screen and (max-width: 1000px) {
-  .adleaderboard {
-    display: none;
-  }
-  .ad-banner {
-    display: none;
-  }
-  .ad-halfpage {
-    margin: auto;
-    height: 600px;
-    width: 300px;
-    background-color: #c3c3c3;
-  }
-}
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) { /*desktop*/
   .logo-area {
     display: inline-block;
     width: 100%;
@@ -288,53 +262,78 @@ body {
   .logo-item {
     display: inline-block;
   }
+  /* Houses CSS specific to homepage */
+  /*<-------------------- Home Logo and Search -------------------->*/
+  .logo {
+    width: 20rem;
+    vertical-align: -20px;
+  }
+  .nobtndecor {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+  .searchbox {
+    width: 10rem;
+    height: 1.5rem;
+    margin-left: 20px;
+    margin-right: 10px;
+    color: #535353;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  .searchlabel {
+    display: block;
+    text-align: left;
+  }
+  .searchico {
+    width: 2rem;
+    vertical-align: -10px;
+  }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) { /*mobile*/
   .logo-area {
     display: block;
     margin-top: 15px;
-    text-align: left;
+    text-align: center;
   }
+  .logo-item {
+    display: inline-block;
+  }
+  /*<-------------------- Home Logo and Search -------------------->*/
   .logo {
+    width: 20rem;
+    vertical-align: -20px;
     margin-left: -1rem;
   }
+  .nobtndecor {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+  .searchbox {
+    width: 10rem;
+    height: 1.5rem;
+    margin: auto;
+    color: #535353;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  .searchlabel {
+    display: block;
+    text-align: center;
+  }
+  .searchico {
+    width: 2rem;
+    vertical-align: -10px;
+  }
 }
-/* Houses CSS specific to homepage */
-/*<-------------------- Home Logo and Search -------------------->*/
-.logo {
-  width: 20rem;
-  vertical-align: -20px;
-}
-
-.nobtndecor {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-}
-
-.searchbox {
-  width: 10rem;
-  height: 1.5rem;
-  margin-left: 20px;
-  margin-right: 10px;
-  color: #535353;
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-.searchlabel {
-  display: block;
-  text-align: left;
-}
-
-.searchico {
-  width: 2rem;
-  vertical-align: -10px;
-}
-
 /* ITINERARY STYLING */
 .trip {
   font-size: 28px;
@@ -442,24 +441,27 @@ body {
 }
 @media only screen and (max-width: 1000px) {
   footer {
-    width: 100%;
-    padding-left: 8%;
-    padding-right: 8%;
-    padding-top: 40px;
-    padding-bottom: 220px;
+    display: none;
+  }
+  /*footer {
+      width: 100%;
+      padding-left: calc(8%);
+      padding-right: calc(8%);
+      padding-top: 40px;
+      padding-bottom: 220px;
   }
   .footer-item {
-    margin: 0px 20px 10px 0px;
-    float: left;
+      margin: 0px 20px 10px 0px;
+      float: left;
   }
   .footer-item-right {
-    margin: 30px 20px 0px 0px;
-    float: right;
+      margin: 30px 20px 0px 0px;
+      float: right;
   }
   .footer-icon {
-    margin: 20px 20px 0px 0px;
-    float: left;
-  }
+      margin: 20px 20px 0px 0px;
+      float: left;
+  }*/
 }
 /* Houses CSS specific to activity and blog pages */
 /* Activity Page Content Styling */

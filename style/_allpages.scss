@@ -116,7 +116,8 @@ body {
     }
     .inner-content {
         grid-column: 1/12;
-        margin: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .mobileLogo {
         position: relative;
@@ -136,28 +137,10 @@ body {
     position: relative;
 }
 
-/* text above cards */
-.row-title {
-    float: left;
-    margin-bottom: 10px;
-    padding-left: 4px;
-}
-.row-link {
-    float: right;
-    margin-top: 12px;
-    padding-right: 4px;
-}
-.row-link-item {
-    color: $offblack;
-    text-decoration: underline;
-}
+
 
 /* the scrolling part and its toggles */
-.carousel {
-    width: 100%;
-    overflow-x: hidden;
-    white-space: nowrap;
-}
+
 .caro-btn-left {
     border: none;
     background: none;
@@ -214,6 +197,26 @@ body {
         height: 100%;
         background-color: $gray;
     }
+    .carousel {
+        width: 100%;
+        overflow-x: hidden;
+        white-space: nowrap;
+    }
+    /* text above cards */
+    .row-title {
+        float: left;
+        margin-bottom: 10px;
+        padding-left: 4px;
+    }
+    .row-link {
+        float: right;
+        margin-top: 12px;
+        padding-right: 4px;
+    }
+    .row-link-item {
+        color: $offblack;
+        text-decoration: underline;
+    }
 }
 
 @media only screen and (max-width: 1000px) { /* mobile screens */
@@ -222,61 +225,34 @@ body {
     }
     .card { 
         width: 200px;
-        height: 150px;
+        height: 215px;
     } 
     .card-image {
         width: 200px;
         height: 150px;
         background-color: $gray;
     }
-}
-
-/*<-------------------- ADS -------------------->*/
-
-@media only screen and (min-width: 1000px) {
-
-    .adleaderboard {
-        margin: auto;
-        height: 90px;
-        width: 970px;
-        background-color: $gray;
-        display: none;
+    .carousel {
+        width: 100vw;
+        overflow-x: scroll;
+        white-space: nowrap;
     }
-    .adleaderboardTwo {
-        margin: auto;
-        height: 160px;
-        width: 850px;
-        background-color: $gray;
-        display: none;
+    /* text above cards */
+    .row-title {
+        float: left;
+        margin-bottom: 10px;
+        padding-left: 4px;
     }
-    .ad-banner {
-        margin: auto;
-        height: 180px;
-        width: 930px;
-        background-color: $gray;
+    .row-link {
         display: none;
+        float: right;
+        margin-top: 12px;
+        padding-right: 4px;
     }
-    .sa {
-        margin: auto;
-        height: 600px;
-        width: 300px;
-        background-color: $gray;
+    .row-link-item {
         display: none;
+        color: $offblack;
+        text-decoration: underline;
     }
 }
 
-@media only screen and (max-width: 1000px) {
-
-    .adleaderboard {
-        display: none;
-    }
-    .ad-banner {
-        display: none;
-    }
-    .ad-halfpage {
-        margin: auto;
-        height: 600px;
-        width: 300px;
-        background-color: $gray;
-    }
-}
