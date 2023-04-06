@@ -1,0 +1,57 @@
+h1 {    /* is for ____ */
+    font-family: source-serif-pro, serif;
+    font-weight: 400;
+    font-size: 32px;
+}
+h2 {    /* is for Row Titling */
+    font-family: source-serif-pro, serif;
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 0;
+    color: $offblack;
+}
+h3 {    /* is for ____ */
+    font-family: source-serif-pro, serif;
+    font-weight: 400;
+    font-size: 26px;
+}
+h4 {    /* is for Card Titling*/
+    font-family: open-sans, arial, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0px 5px 0px 5px;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+p, .captions, label, button , ul, li{   /* is for all paragraph-style text */
+    font-family: open-sans, arial, sans-serif;
+    font-weight: 400;
+}
+p, label, button {
+    font-size: 16px;
+}
+.captions {
+    font-size: 14px;
+    color: $darkgray;
+    margin: 5px;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+a {
+    font-weight: 400;
+}
+
+.hsline {
+    width: 100%;
+    margin: 10px;
+    margin-inline: auto;
+    border: 1px solid $gray;
+}
+.tightline {
+    width: 100%;
+    margin: 5px;
+    margin-inline: auto;
+    border-top: 1px solid $gray;
+}

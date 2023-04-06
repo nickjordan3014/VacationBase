@@ -1,7 +1,12 @@
+/*Applies to all Pages*/
 @import '_variables.scss';
-@import '_allpages.scss';
-@import '_index.scss';
+@import '_text.scss';
+@import '_grid.scss';
+@import '_carousel.scss';
 @import '_template.scss';
+
+/*Applies to individual pages*/
+@import '_index.scss';
 @import '_activity.scss';
 @import '_ideabase.scss';
 @import '_itinerary.scss';
