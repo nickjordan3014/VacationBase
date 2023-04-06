@@ -1,0 +1,58 @@
+/* Houses CSS called by multiple/all pages: colors & fonts, page & CSS grid, cards & carousels  */
+/*<-------------------- PAGE AND CSS GRID -------------------->*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: $gradient;
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .grid-container {
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+        padding-bottom: 20px;
+    }
+    .main-content {
+        grid-column: 2/12;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 20px;
+    }
+    .inner-content {
+        grid-column: 2/10;
+        margin-top: 20px;
+    }
+    .rightalign {
+        float: right;
+        font-style: italic;
+        color: black;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .grid-container {
+        margin: auto;
+        display: grid;
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+    .main-content {
+        grid-column: 1/12;
+        margin: auto;
+        display: grid;
+        gap: 10px;
+    }
+    .inner-content {
+        grid-column: 1/12;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+

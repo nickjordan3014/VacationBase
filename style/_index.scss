@@ -1,4 +1,3 @@
-// this was in caro css for some reason. dumping it here until it can be put where it belongs
 @media only screen and (min-width: 1000px) { /*desktop*/
     .logo-area {
         display: inline-block;
@@ -10,10 +9,9 @@
     .logo-item {
         display: inline-block;
     }
-    /* Houses CSS specific to homepage */
-
-    /*<-------------------- Home Logo and Search -------------------->*/
-
+    .mobileLogo {
+        display: none;
+    }
     .logo {
         width: 20rem;
         vertical-align: -20px;
@@ -62,6 +60,12 @@
         vertical-align: -20px;
         margin-left: -1rem;
     }
+    .mobileLogo {
+        position: relative;
+        width: 15rem;
+        display: block;
+        margin-left: 0;
+    }
     .nobtndecor {
         background: none;
         color: inherit;
@@ -86,9 +90,4 @@
         width: 2rem;
         vertical-align: -10px;
     }
-}
-
-/* ITINERARY STYLING */
-.trip {
-    font-size: 28px;
 }

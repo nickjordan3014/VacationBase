@@ -1,5 +1,4 @@
-/*<-------------------- COLOR VARIABLES -------------------->*/ /* Houses CSS called by multiple/all pages: colors & fonts, page & CSS grid, cards & carousels  */
-/*<-------------------- FONTS -------------------->*/
+/*Applies to all Pages*/ /*<-------------------- COLOR VARIABLES -------------------->*/
 h1 { /* is for ____ */
   font-family: source-serif-pro, serif;
   font-weight: 400;
@@ -48,7 +47,6 @@ p, label, button {
 
 a {
   font-weight: 400;
-  /* color: $orange; */
 }
 
 .hsline {
@@ -65,6 +63,7 @@ a {
   border-top: 1px solid #c3c3c3;
 }
 
+/* Houses CSS called by multiple/all pages: colors & fonts, page & CSS grid, cards & carousels  */
 /*<-------------------- PAGE AND CSS GRID -------------------->*/
 body {
   margin: 0;
@@ -96,9 +95,6 @@ body {
     font-style: italic;
     color: black;
   }
-  .mobileLogo {
-    display: none;
-  }
 }
 @media only screen and (max-width: 1000px) {
   .grid-container {
@@ -118,12 +114,6 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  .mobileLogo {
-    position: relative;
-    width: 15rem;
-    display: block;
-    margin-left: 0;
-  }
 }
 /*<-------------------- CARDS AND CAROUSELS -------------------->*/
 /* houses everything in row */
@@ -132,33 +122,6 @@ body {
   margin-top: 20px;
   padding-bottom: 20px;
   position: relative;
-}
-
-/* the scrolling part and its toggles */
-.caro-btn-left {
-  border: none;
-  background: none;
-  position: absolute;
-  left: -70px;
-  top: calc(50% - 50px);
-  width: 60px;
-  height: 100px;
-  transition: 350ms;
-}
-
-.caro-btn-right {
-  border: none;
-  background: none;
-  position: absolute;
-  right: -70px;
-  top: calc(50% - 50px);
-  width: 60px;
-  height: 100px;
-  transition: 350ms;
-}
-
-.invis {
-  opacity: 0;
 }
 
 /* the cards and content within */
@@ -214,6 +177,30 @@ body {
     color: #282828;
     text-decoration: underline;
   }
+  /* the scrolling part and its toggles */
+  .caro-btn-left {
+    border: none;
+    background: none;
+    position: absolute;
+    left: -70px;
+    top: calc(50% - 50px);
+    width: 60px;
+    height: 100px;
+    transition: 350ms;
+  }
+  .caro-btn-right {
+    border: none;
+    background: none;
+    position: absolute;
+    right: -70px;
+    top: calc(50% - 50px);
+    width: 60px;
+    height: 100px;
+    transition: 350ms;
+  }
+  .invis {
+    opacity: 0;
+  }
 }
 @media only screen and (max-width: 1000px) { /* mobile screens */
   .caro-arrow {
@@ -250,95 +237,16 @@ body {
     color: #282828;
     text-decoration: underline;
   }
-}
-@media only screen and (min-width: 1000px) { /*desktop*/
-  .logo-area {
-    display: inline-block;
-    width: 100%;
-    margin: auto;
-    margin-top: 15px;
-    text-align: center;
+  .caro-btn-left {
+    display: none;
   }
-  .logo-item {
-    display: inline-block;
+  .caro-btn-right {
+    display: none;
   }
-  /* Houses CSS specific to homepage */
-  /*<-------------------- Home Logo and Search -------------------->*/
-  .logo {
-    width: 20rem;
-    vertical-align: -20px;
-  }
-  .nobtndecor {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-  }
-  .searchbox {
-    width: 10rem;
-    height: 1.5rem;
-    margin-left: 20px;
-    margin-right: 10px;
-    color: #535353;
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-  .searchlabel {
-    display: block;
-    text-align: left;
-  }
-  .searchico {
-    width: 2rem;
-    vertical-align: -10px;
+  .invis {
+    opacity: 0;
   }
 }
-@media only screen and (max-width: 1000px) { /*mobile*/
-  .logo-area {
-    display: block;
-    margin-top: 15px;
-    text-align: center;
-  }
-  .logo-item {
-    display: inline-block;
-  }
-  /*<-------------------- Home Logo and Search -------------------->*/
-  .logo {
-    width: 20rem;
-    vertical-align: -20px;
-    margin-left: -1rem;
-  }
-  .nobtndecor {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-  }
-  .searchbox {
-    width: 10rem;
-    height: 1.5rem;
-    margin: auto;
-    color: #535353;
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-  .searchlabel {
-    display: block;
-    text-align: center;
-  }
-  .searchico {
-    width: 2rem;
-    vertical-align: -10px;
-  }
-}
-/* ITINERARY STYLING */
-.trip {
-  font-size: 28px;
-}
-
 /* Houses CSS for nav, loginstatus, and footer templates */
 /*<-------------------- NAV -------------------->*/
 @media only screen and (min-width: 1000px) {
@@ -386,7 +294,7 @@ body {
     overflow: hidden;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     border: 2px #c3c3c3 solid;
     display: flex;
     justify-content: space-between;
@@ -411,10 +319,7 @@ body {
 }
 @media only screen and (max-width: 1000px) {
   .login-status {
-    position: absolute;
-    right: 10px;
     display: none;
-    padding-top: 5px;
   }
 }
 /*<-------------------- FOOTER -------------------->*/
@@ -443,25 +348,97 @@ body {
   footer {
     display: none;
   }
-  /*footer {
-      width: 100%;
-      padding-left: calc(8%);
-      padding-right: calc(8%);
-      padding-top: 40px;
-      padding-bottom: 220px;
+}
+/*Applies to individual pages*/
+@media only screen and (min-width: 1000px) { /*desktop*/
+  .logo-area {
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    margin-top: 15px;
+    text-align: center;
   }
-  .footer-item {
-      margin: 0px 20px 10px 0px;
-      float: left;
+  .logo-item {
+    display: inline-block;
   }
-  .footer-item-right {
-      margin: 30px 20px 0px 0px;
-      float: right;
+  .mobileLogo {
+    display: none;
   }
-  .footer-icon {
-      margin: 20px 20px 0px 0px;
-      float: left;
-  }*/
+  .logo {
+    width: 20rem;
+    vertical-align: -20px;
+  }
+  .nobtndecor {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+  .searchbox {
+    width: 10rem;
+    height: 1.5rem;
+    margin-left: 20px;
+    margin-right: 10px;
+    color: #535353;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  .searchlabel {
+    display: block;
+    text-align: left;
+  }
+  .searchico {
+    width: 2rem;
+    vertical-align: -10px;
+  }
+}
+@media only screen and (max-width: 1000px) { /*mobile*/
+  .logo-area {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+  }
+  .logo-item {
+    display: inline-block;
+  }
+  /*<-------------------- Home Logo and Search -------------------->*/
+  .logo {
+    width: 20rem;
+    vertical-align: -20px;
+    margin-left: -1rem;
+  }
+  .mobileLogo {
+    position: relative;
+    width: 15rem;
+    display: block;
+    margin-left: 0;
+  }
+  .nobtndecor {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+  .searchbox {
+    width: 10rem;
+    height: 1.5rem;
+    margin: auto;
+    color: #535353;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  .searchlabel {
+    display: block;
+    text-align: center;
+  }
+  .searchico {
+    width: 2rem;
+    vertical-align: -10px;
+  }
 }
 /* Houses CSS specific to activity and blog pages */
 /* Activity Page Content Styling */
@@ -613,6 +590,10 @@ body {
 
 .draggable.dragging {
   opacity: 0.5;
+}
+
+.trip {
+  font-size: 28px;
 }
 
 /* Houses CSS specific to log-in, sign-up, and forgotpw pages */
