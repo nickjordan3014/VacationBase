@@ -131,8 +131,8 @@
         }
 
         // temp patch to allow us to access images until we rework how we identify and call them
-        $temp_image = explode('/', $card_image);
-        $card_image = ($temp_image[0] . "/image1.jpeg");
+        // $temp_image = explode('/', $card_image);
+        // $card_image = ($temp_image[0] . "/image1.jpeg");
 
         // we match the caption from homepage here, but without price since it's a higher priority now that we have more space!
         $card_caption = ( 
