@@ -21,7 +21,7 @@
             "title" => "Orlando's Signature: Theme Parks",
             "results" => $db->query($select_themePark),
             "link" => "See All Theme Park Activities",
-            "href" => "search.php?event='themeparks'"
+            "href" => "search.php?query=themeparks"
         ),
         // "restaurants" row data
         array (

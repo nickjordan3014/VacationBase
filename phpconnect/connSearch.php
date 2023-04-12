@@ -51,6 +51,7 @@
 
         // removes spaces, any "s" characters at the end, and makes it lower case
         $search_query = str_replace(' ', '', $search_query);
+        $search_query = str_replace('-', '', $search_query);
         $search_query = rtrim($search_query, 's');
         $search_query = strtolower($search_query);
         // now, a user can search "theme park", "Themepark", "THEme Parks", or "themeparks" and they will all work!
@@ -64,7 +65,7 @@
         $array_rainy = array("badweather", "weather", "storm", "rain", "weatherday", "inside", "jacket", "thunder", "wind");
         $array_family = array("child", "children", "kid", "teen", "teenager", "family", "friend", "familie", "friend");
         $array_local = array("around", "area", "community", "local", "normal", "nearby", "corner", "familiar", "familiarity", "UCF", "universityofcentralflorida", "college", "football", "native");
-        $array_value = array("cheap", "poor", "dollar", "coin", "price", "cost", "afford", "affordable", "bargain", "special", "reasonable", "budget", "reduce", "money", "broke", "finance");
+        $array_value = array("cheap", "value", "poor", "dollar", "coin", "price", "cost", "afford", "affordable", "bargain", "special", "reasonable", "budget", "reduce", "money", "broke", "finance");
         $array_outdoors = array("outdoor", "outside", "animal", "zoo", "explore", "exploring", "land", "sky", "wind", "exercise", "garden", "air", "green", "recreation", "fresh");
         $array_live = array("music", "show", "concert", "festival", "social", "musical", "play", "opera", "comedy", "standup", "band", "venue", "film", "live", "screen");
         $array_arts = array("museum", "culture", "show", "paint", "mural", "artist", "create", "craft", "brush", "design", "history", "draw", "photo", "color", "sketch", "exhibit", "easel", "sculpt", "media", "animation", "studio", "display", "heritage", "renaissance", "statue", "mythology");

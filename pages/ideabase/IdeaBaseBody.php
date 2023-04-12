@@ -1,7 +1,5 @@
 <section class="main-content"><section class="inner-content">
-    <article class="adleaderboard">
-        <p>[ad here]</p> <!-- where does it go?! figure out later -->
-    </article>
+    <br><br>
     <h1 class="ideabase-heading">Welcome to your IdeaBase</h1>
     <p class="ideabase-info">
         Explore different hot activity topics in your area, preplanned vacations &
@@ -16,7 +14,7 @@
         <!--Cards-->
         <section class="carousel" id="scroll0">
             <div class="ideabase-card" id="ibC0"> 
-                <a class= "actPage" href="search.php?event1='Restaurants'" name='restaurants' onclick='post'>
+                <a class= "actPage" href="search.php?query=Restaurants" name='restaurants' onclick='post'>
                         <img 
                             src="img/gallery/bar_resturants.png" 
                             class="ideabase-image" 
@@ -25,7 +23,7 @@
                 </a>
             </div>
             <div class="ideabase-card" id="ibC1"> 
-                <a class= "actPage" href="search.php?event2='Good Value'" onclick='post'>
+                <a class= "actPage" href="search.php?query=Value" onclick='post'>
                     <img 
                         src="img/gallery/cheap.png" 
                         class="ideabase-image" 
@@ -34,7 +32,7 @@
                 </a>
             </div>
             <div class="ideabase-card" id="ibC2">
-                <a class= "actPage" href="search.php?event3='Art, Museum and Culture'" onclick='post'>
+                <a class= "actPage" href="search.php?query=Art" onclick='post'>
                     <img 
                         src="img/gallery/culture.png" 
                         class="ideabase-image" 
@@ -43,7 +41,7 @@
                 </a>
             </div>
             <div class="ideabase-card" id="ibC3"> 
-                <a class= "actPage" href="search.php?event4=Family" onclick='post'>
+                <a class= "actPage" href="search.php?query=Family" onclick='post'>
                     <img 
                         src="img/gallery/kid-friendly.png" 
                         class="ideabase-image" 
@@ -52,7 +50,7 @@
                 </a>
             </div>
             <div class="ideabase-card" id="ibC4"> 
-                <a class= "actPage" href="search.php?event5=Live" onclick='post'>
+                <a class= "actPage" href="search.php?query=Live" onclick='post'>
                     <img 
                         src="img/gallery/live_entertainment.png" 
                         class="ideabase-image" 
@@ -61,7 +59,7 @@
                 </a>
             </div>
             <div class="ideabase-card" id="ibC5"> 
-                <a class= "actPage" href="search.php?event6=Outdoor" onclick='post'>
+                <a class= "actPage" href="search.php?query=Outdoor" onclick='post'>
                     <img 
                         src="img/gallery/outdoor_active.png" 
                         class="ideabase-image" 
@@ -70,7 +68,7 @@
                 </a>
             </div>
             <div class="ideabase-card" id="ibC5"> 
-                <a class= "actPage" href="search.php?event7='Theme Park'" onclick='post'>
+                <a class= "actPage" href="search.php?query=ThemePark" onclick='post'>
                     <img 
                         src="img/gallery/themepark.png" 
                         class="ideabase-image" 
