@@ -97,7 +97,6 @@
 
 
     <!-- SIMILAR ACTIVITES NEARBY -->
-
     <?php
         
         $row_count = 0;

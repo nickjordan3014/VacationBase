@@ -7,8 +7,8 @@
     $select_themePark = "SELECT * FROM orlando_florida WHERE isThemePark = 'Y' LIMIT 8";
     $select_restaurant = "SELECT * FROM orlando_florida WHERE isFoodDrink = 'Y' LIMIT 8";
     $select_local = "SELECT * FROM orlando_florida WHERE isLocal = 'Y' LIMIT 8";
-    $select_outdoors = "SELECT * FROM orlando_florida WHERE isOutdoorActive = 'Y' LIMIT 8";
-    $select_value = "SELECT * FROM orlando_florida WHERE isGoodValue = 'Y' LIMIT 8";
+    $select_outdoors = "SELECT * FROM orlando_florida WHERE isOutdoorActive = 'Y' AND id > 32 LIMIT 8";
+    $select_value = "SELECT * FROM orlando_florida WHERE isGoodValue = 'Y' AND isOutdoorActive = 'N' AND id > 20 LIMIT 8";
 
     // eventually we will want to pull more than 8 per row and build a function that returns the first 8 cards per row 
     // that don't share any ids with any activies in rows above it. easiest way to prevent duplicates ik of  -sean
@@ -29,7 +29,7 @@
             "title" => "Hot Orlando Restaurants",
             "results" => $db->query($select_restaurant),
             "link" => "See All Food & Drink Activities",
-            "href" => "search.php?event='restaurants"
+            "href" => "search.php?event='restaurants'"
         ),
         // "local" row data
         array (
@@ -37,7 +37,7 @@
             "title" => "Go Where The Locals Go",
             "results" => $db->query($select_local),
             "link" => "See All Local Hangout Activities",
-            "href" => "search.php?event='local"
+            "href" => "search.php?event='local'"
         ),
         // "outdoors" row data
         array (
@@ -45,7 +45,7 @@
             "title" => "Get Outside In The Sunshine State!",
             "results" => $db->query($select_outdoors),
             "link" => "See All Outdoor Activities",
-            "href" => "search.php?event='outdoors"
+            "href" => "search.php?event='outdoors'"
         ),
         // "value" row data
         array (
@@ -53,7 +53,7 @@
             "title" => "Orlando's Cheap Thrills",
             "results" => $db->query($select_value),
             "link" => "See All High-Value Activities",
-            "href" => "search.php?event='value"
+            "href" => "search.php?event='value'"
         )
     );
 
@@ -97,8 +97,8 @@
         $card_price = $result["price"];
 
         // temp patch to allow us to access images until we rework how we identify and call them
-        $temp_image = explode('/', $card_image);
-        $card_image = ($temp_image[0] . "/image1.jpeg");
+        // $temp_image = explode('/', $card_image);
+        // $card_image = ($temp_image[0] . "/image1.jpeg");
 
         // removing empty decimals from numerical prices to free up space, or one $ from dollar sign prices since we add one below
         $priceCheck = $card_price[0];

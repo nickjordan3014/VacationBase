@@ -22,7 +22,7 @@ if(isset($_GET['query'])){
         <!-- SEARCH RESULT CARDS -->
         <?php 
         $card_count = 0;
-
+    
             // $query_results is an object that houses all our sql results, with each $search_result being a row therein
             if ($query_results) {
                 foreach ($query_results AS $search_result){
@@ -30,10 +30,12 @@ if(isset($_GET['query'])){
                     print("$this_card");
                     $card_count++;
 
-                    // failsafe for no search results, not sure how to identify this will look into it
-                    if (!$search_result) {
-                        print("yo dawg we don't have any results for u :((((");
-                    }
+                    print("search result: " + $search_result);
+                }
+                // THIS STATEMENT WILL NEVER EXECUTE BECAUSE $search_result aka $query_results WILL ALWAYS BE TRUE IN THIS IF CONDITION
+                // failsafe for no search results, not sure how to identify this will look into it
+                if (!$search_result) {
+                    print("yo dawg we don't have any results for u :((((");
                 }
             }
 
@@ -99,12 +101,12 @@ if(isset($_GET['query'])){
             <section class="filter-segment">
                 <h4>Great For...</h4>
                 <hr class="tightline">
-                <label for="storm" class="filter-label"><input type="checkbox" class="inline list">Stormy Weather</label>
-                <label for="fam" class="filter-label"><input type="checkbox" class="inline list">Families</label>
-                <label for="solo" class="filter-label"><input type="checkbox" class="inline list">Going Solo</label>
-                <label for="value" class="filter-label"><input type="checkbox" class="inline list">Awesome Value</label>
-                <label for="local" class="filter-label"><input type="checkbox" class="inline list">Living like a Local</label>
-                <label for="transit" class="filter-label"><input type="checkbox" class="inline list">Public Transit</label>
+                <label for="storm" class="filter-label"><input type="checkbox" class="inline list">&nbsp;&nbsp;Stormy Weather</label>
+                <label for="fam" class="filter-label"><input type="checkbox" class="inline list">&nbsp;&nbsp;Families</label>
+                <label for="solo" class="filter-label"><input type="checkbox" class="inline list">&nbsp;&nbsp;Going Solo</label>
+                <label for="value" class="filter-label"><input type="checkbox" class="inline list">&nbsp;&nbsp;Awesome Value</label>
+                <label for="local" class="filter-label"><input type="checkbox" class="inline list">&nbsp;&nbsp;Living like a Local</label>
+                <label for="transit" class="filter-label"><input type="checkbox" class="inline list">&nbsp;&nbsp;Public Transit</label>
             </section>
             <section>
                 <button type="submit" name="filter-btn"> Filter Results </button>

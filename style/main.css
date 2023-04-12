@@ -747,31 +747,31 @@ input[type=text] {
 input[type=text]:focus {
   outline: none;
   border: 2px solid #FFBD59;
-  border-radius: 3px;
+  border-radius: 99px;
 }
 
 input[type=email] {
   border: 1px solid #c3c3c3;
   padding: 4px 8px;
-  border-radius: 3px;
+  border-radius: 99px;
 }
 
 input[type=email]:focus {
   outline: none;
   border: 2px solid #FFBD59;
-  border-radius: 3px;
+  border-radius: 99px;
 }
 
 input[type=password] {
   border: 1px solid #c3c3c3;
   padding: 4px 8px;
-  border-radius: 3px;
+  border-radius: 99px;
 }
 
 input[type=password]:focus {
   outline: none;
   border: 2px solid #FFBD59;
-  border-radius: 3px;
+  border-radius: 99px;
 }
 
 /* Houses CSS specific to profile page */

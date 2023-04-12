@@ -28,6 +28,8 @@
     $event = $this_activity['isLiveEvent'];
     $value = $this_activity['isGoodValue'];
 
+    // print($id);
+
     // finds a major query category that $this_activity is to suggest more of them 
     $first_suggestion = "isFamily"; // failsafe
     if ($themepark = "y"){
@@ -41,17 +43,17 @@
     }
 
     // finds a secondary query category that $this_activity is to suggest more of them
-    $second_suggestion = "isGoodValue"; // failsafe
-    if ($event = "y"){
-        $second_suggestion = "isLiveEvent";
-    }
-    else if ($local = "y"){
-        $second_suggestion = "isLocal";
-    }
+    // $second_suggestion = "isGoodValue"; // failsafe
+    // if ($event = "y"){
+    //     $second_suggestion = "isLiveEvent";
+    // }
+    // else if ($local = "y"){
+    //     $second_suggestion = "isLocal";
+    // }
 
     // SQL customized to select things that $this_activity also is
-    $select_a = "SELECT * FROM orlando_florida WHERE $first_suggestion = 'Y' LIMIT 8";
-    $select_b = "SELECT * FROM orlando_florida WHERE $second_suggestion = 'Y' LIMIT 8";
+    $select_a = "SELECT * FROM orlando_florida WHERE $first_suggestion = 'Y' AND id <> $activity_id LIMIT 8";
+    // $select_b = "SELECT * FROM orlando_florida WHERE $second_suggestion = 'Y' LIMIT 8";
 
     // houses all of the dynamic content we put in our activity page rows:
     $row_objects = array(
@@ -64,82 +66,87 @@
             "href" => "search.php?event='$first_suggestion'"
         ),
         // "$second_suggestion"'s row data
-        array (
-            "name" => "$second_suggestion",
-            "title" => "More Activities With Similar Vibes",
-            "results" => $db->query($select_b),
-            "link" => "See More Activities Like These",
-            "href" => "search.php?event='$second_suggestion"
-        )
+        // array (
+        //     "name" => "$second_suggestion",
+        //     "title" => "More Activities With Similar Vibes",
+        //     "results" => $db->query($select_b),
+        //     "link" => "See More Activities Like These",
+        //     "href" => "search.php?event='$second_suggestion"
+        // )
     );
 
     // carousel html builder functions stolen from connindex.php
-        // when called dynamically builds the top half of each row's html
-        function _build_row_start($name, $title, $link, $href, $row_count) {
-            $row_start_html = "<section class='card-row'>
+    // when called dynamically builds the top half of each row's html
+    function _build_row_start($name, $title, $link, $href, $row_count) {
+        $row_start_html = "<section class='card-row'>
 
-                <h2 class='row-title'>$title</h2>
-                <a class='row-link' href='$href'><p class='inline rightalign row-link-item'>$link</p></a>
-                
-                <button class='caro-btn-left invis' id='autoLeft$row_count'>
-                    <img src='img/icons-VB/left_arrow.png' alt='Arrow' class='caro-arrow'>
-                </button>
-                
-                <section class='carousel' id='scroll$row_count'>";
+            <h2 class='row-title'>$title</h2>
+            <a class='row-link' href='$href'><p class='inline rightalign row-link-item'>$link</p></a>
             
-            return $row_start_html;
-        }
-
-        // when called dynamically builds the bottom half of each row's html
-        function _build_row_end($name, $row_count) {
-            $row_end_html = "</section>
-
-                <button class='caro-btn-right' id='autoRight$row_count'>
-                    <img src='img/icons-VB/right_arrow.png' alt='Arrow' class='caro-arrow'>
-                </button>
-
-                </section>";
-
-            return $row_end_html;
-        }
+            <button class='caro-btn-left invis' id='autoLeft$row_count'>
+                <img src='img/icons-VB/left_arrow.png' alt='Arrow' class='caro-arrow'>
+            </button>
+            
+            <section class='carousel' id='scroll$row_count'>";
         
-        // when called fills and returns the html of a card with provided content
-        function _build_card($result, $card_count) {
+        return $row_start_html;
+    }
 
-            // getting basic info for the card
-            $card_id = $result["id"];
-            $card_name = $result["event_name"];
-            $card_image = $result["img1"];
-            $card_alt = $result["alt_text_img1"];
-            $card_price = $result["price"];
+    // when called dynamically builds the bottom half of each row's html
+    function _build_row_end($name, $row_count) {
+        $row_end_html = "</section>
 
-            // removing empty decimals from numerical prices to free up space, or one $ from dollar sign prices since we add one below
-            $priceCheck = $card_price[0];
-            if ($priceCheck == "$") {
-                $card_price = substr($card_price, 1);
-            }
-            else {
-                $card_price = rtrim($card_price, ".00");
-            }
+            <button class='caro-btn-right' id='autoRight$row_count'>
+                <img src='img/icons-VB/right_arrow.png' alt='Arrow' class='caro-arrow'>
+            </button>
 
-            // build card caption here, put more rare & interesting captions higher up so its not every activity saying "family-friendly"
-            // captions are to grab interest! so categorical tags like food & drink or arts belong in rows and searches rather than here
-            $card_caption = ("$" . $card_price . 
-                (($result["isLiveEvent"] == 'Y') ? " | Live Events" : "") .
-                (($result["isLocal"] == 'Y') ? " | Local Hangout" : "") .
-                (($result["isGoodValue"] == 'Y') ? " | Great Value" : "") .
-                (($result["isOutdoorActive"] == 'Y') ? " | Outdoors" : "") .
-                (($result["isRainy"] == 'Y') ? " | Any Weather" : "") .
-                (($result["isFamily"] == 'Y') ? " | Family-Friendly" : "")
-            );
+            </section>";
 
-            $card_html = "<a class='card' id='cardA1' title='$card_name' href='activity.php?id=$card_id'>
-                <img class='card-image' src='img/images/$card_image' alt='$card_alt'>
-                <h4>$card_name</h4>
-                <p class='captions'>$card_caption</p>
-                </a>";
+        return $row_end_html;
+    }
+        
+    // when called fills and returns the html of a card with provided content
+    function _build_card($result, $card_count) {
+        $the_id = $_GET['id'];
 
-            return $card_html;
+        // getting basic info for the card
+        $card_id = $result["id"];
+        $card_name = $result["event_name"];
+        $card_image = $result["img1"];
+        $card_alt = $result["alt_text_img1"];
+        $card_price = $result["price"];
+
+        // if($the_id == $card_id){
+        //     $card_id = $card_id + 1;
+        // }
+
+        // removing empty decimals from numerical prices to free up space, or one $ from dollar sign prices since we add one below
+        $priceCheck = $card_price[0];
+        if ($priceCheck == "$") {
+            $card_price = substr($card_price, 1);
         }
+        else {
+            $card_price = rtrim($card_price, ".00");
+        }
+
+        // build card caption here, put more rare & interesting captions higher up so its not every activity saying "family-friendly"
+        // captions are to grab interest! so categorical tags like food & drink or arts belong in rows and searches rather than here
+        $card_caption = ("$" . $card_price . 
+            (($result["isLiveEvent"] == 'Y') ? " | Live Events" : "") .
+            (($result["isLocal"] == 'Y') ? " | Local Hangout" : "") .
+            (($result["isGoodValue"] == 'Y') ? " | Great Value" : "") .
+            (($result["isOutdoorActive"] == 'Y') ? " | Outdoors" : "") .
+            (($result["isRainy"] == 'Y') ? " | Any Weather" : "") .
+            (($result["isFamily"] == 'Y') ? " | Family-Friendly" : "")
+        );
+
+        $card_html = "<a class='card' id='cardA1' title='$card_name' href='activity.php?id=$card_id'>
+            <img class='card-image' src='img/images/$card_image' alt='$card_alt'>
+            <h4>$card_name</h4>
+            <p class='captions'>$card_caption</p>
+            </a>";
+
+        return $card_html;
+    }
 
 ?>

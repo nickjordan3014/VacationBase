@@ -95,28 +95,28 @@
                     <img src='img/images/preplanned/threedayTP.jpg' class='card-image' alt=''>
                     <h4>3 Day Theme Park Trip</h4>
                     <p class='captions'>Starting at $317.99</p>
-                    </a>&nbsp;"
+                    </a>"
                 );
                 print(
                     "<a class= 'card' id='piC1' href='preplanned.php?preplanned=2'>
                     <img src='img/images/preplanned/museum.jpg' class='card-image' alt=''>
                     <h4>4 Days of Art and Culture</h4>
                     <p class='captions'>Starting at $???</p>
-                    </a>&nbsp;"
+                    </a>"
                 );
                 print(
                     "<a class= 'card' id='piC2' href='preplanned.php?preplanned=3'>
                     <img src='img/images/preplanned/nightlife.jpg' class='card-image' alt=''>
                     <h4>A Week of Orlando Nightlife</h4>
                     <p class='captions'>Starting at $???</p>
-                    </a>&nbsp;"
+                    </a>"
                 );
                 print(
                     "<a class= 'card' id='piC3' href='preplanned.php?preplanned=4'>
                     <img src='img/images/preplanned/outside.jpg' class='card-image' alt=''>
                     <h4>3 Day Outdoor Fun</h4>
                     <p class='captions'>Starting at $???</p>
-                    </a>&nbsp;"
+                    </a>"
                 );
             ?>
         </section>
@@ -133,28 +133,28 @@
                 <img src='img/images/traveltips/sunrail.jpg' class='card-image' alt=''>
                 <h4>Orlando's SunRails</h4>
                 <p class='captions'>Caption Here</p>
-                </a>&nbsp;"
+                </a>"
             );
             print(
                 "<a class= 'card' id='aC1' href='triptips.php?tips=2'>
                 <img src='img/images/traveltips/i4.jpg' class='card-image' alt=''>
                 <h4>Getting Around I-4</h4>
                 <p class='captions'>Caption Here</p>
-                </a>&nbsp;"
+                </a>"
             );
             echo(
                 "<a class= 'card' id='aC2' href='triptips.php?tips=3'>
                 <img src='img/images/traveltips/carrent.jpg' class='card-image' alt=''>
                 <h4>Transportation Services</h4>
                 <p class='captions'>Caption Here</p>
-                </a>&nbsp;"
+                </a>"
             );
             print(
                 "<a class= 'card' id='aC3' href='triptips.php?tips=4'>
                 <img src='img/images/traveltips/toll.jpg' class='card-image' alt=''>
                 <h4>E-Passes, Sunpasses and Quarters</h4>
                 <p class='captions'>Caption Here</p>
-                </a>&nbsp;"
+                </a>"
             );
         ?>
     </section>
@@ -172,28 +172,28 @@
                         <img src='img/images/oblogs/popularTP.jpg' class='card-image' alt='People riding an attraction'>
                         <h4>The Popular Theme Parks</h4>
                         <p class='captions'>Caption Here</p>
-                        </a>&nbsp;"
+                        </a>"
                     );
                     print(
                         "<a class= 'card' id='bC0' href='blog.php?blog=2'>
                         <img src='img/images/oblogs/beaches.jpg' class='card-image' alt='Sun setting at Cocoa Beach'>
                         <h4>Best Beaches in the Area</h4>
                         <p class='captions'>Caption Here</p>
-                        </a>&nbsp;"
+                        </a>"
                     );
                     print(
                         "<a class= 'card' id='bC0' href='blog.php?blog=3'>
                         <img src='img/images/oblogs/idrive.jpg' class='card-image' alt='I-Drive'>
                         <h4>I-Drive</h4>
                         <p class='captions'>Caption Here</p>
-                        </a>&nbsp;"
+                        </a>"
                     );
                     print(
                         "<a class= 'card' id='bC0' href='blog.php?blog=4'>
                         <img src='img/images/oblogs/downtown.jpg' class='card-image' alt='Downtown Orlando'>
                         <h4>Downtown Orlando</h4>
                         <p class='captions'>Caption Here</p>
-                        </a>&nbsp;"
+                        </a>"
                     );
                 ?>
             </section>
