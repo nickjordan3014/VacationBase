@@ -32,14 +32,14 @@ if(isset($_GET['query'])){
 
                     // failsafe for no search results, not sure how to identify this will look into it
                     if (!$search_result) {
-                        print("yo dawg we don't have any results for u :((((");
+                        print("<p style='text-align: center;'> Sorry, we couldn't find anything for that </p>");
                     }
                 }
             }
 
             // message for if a search hasn't been performed
             else {
-                print("yo dawg u have not made a search yet get on that");
+                print("<p style='text-align: center;'> You haven't searched anything yet. Please type a search above </p>");
             }
         ?>
     </section>
