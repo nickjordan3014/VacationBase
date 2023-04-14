@@ -6,7 +6,6 @@ if(isset($_GET['query'])){
 
 <section class="main-content">
     <!-- SEARCH PAGE HEADER -->
-    <img src="img/icons-VB/VacationBase_Logo.png" alt="Vacation Base Logo" class="mobileLogo">
     <section class="search-content">
         <section class="logo-area">
             <form action="search.php" method="get" id="mainSearchForm" class="logo-item">     
