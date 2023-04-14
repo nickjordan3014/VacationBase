@@ -64,13 +64,13 @@
             "href" => "search.php?event='$first_suggestion'"
         ),
         // "$second_suggestion"'s row data
-        array (
-            "name" => "$second_suggestion",
-            "title" => "More Activities With Similar Vibes",
-            "results" => $db->query($select_b),
-            "link" => "See More Activities Like These",
-            "href" => "search.php?event='$second_suggestion"
-        )
+        // array (
+        //     "name" => "$second_suggestion",
+        //     "title" => "More Activities With Similar Vibes",
+        //     "results" => $db->query($select_b),
+        //     "link" => "See More Activities Like These",
+        //     "href" => "search.php?event='$second_suggestion"
+        // )
     );
 
     // carousel html builder functions stolen from connindex.php
@@ -112,6 +112,10 @@
             $card_image = $result["img1"];
             $card_alt = $result["alt_text_img1"];
             $card_price = $result["price"];
+
+            // temp patch to allow us to access images until we rework how we identify and call them
+            $temp_image = explode('/', $card_image);
+            $card_image = ($temp_image[0] . "/image1.jpg");
 
             // removing empty decimals from numerical prices to free up space, or one $ from dollar sign prices since we add one below
             $priceCheck = $card_price[0];
