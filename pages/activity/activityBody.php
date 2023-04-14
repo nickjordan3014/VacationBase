@@ -19,7 +19,7 @@
                 // $temp_image = explode('/', $img1);
                 // $card_image = ($temp_image[0] . "/image1.jpg");
 
-                print("<img src='img/images/$card_image' class='mapSize' alt='$altText1'>")
+                print("<img src='img/images/$img1' class='mapSize' alt='$altText1'>")
             ?>
         </section>
 
