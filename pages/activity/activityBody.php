@@ -16,8 +16,8 @@
         <section class="image-sec">
             <?php
                 // temp patch to allow us to access images until we rework how we identify and call them
-                $temp_image = explode('/', $img1);
-                $card_image = ($temp_image[0] . "/image1.jpg");
+                // $temp_image = explode('/', $img1);
+                // $card_image = ($temp_image[0] . "/image1.jpg");
 
                 print("<img src='img/images/$card_image' class='mapSize' alt='$altText1'>")
             ?>
@@ -45,7 +45,7 @@
                             <button type="submit" class="addACTButton activityButton" name="addtoitin_btn"><b>Add To Itinerary</b></button>
                     <?php
                         if (isset($_POST['addtoitin_btn'])){
-                            print("button clicked");
+                            // print("button clicked");
                         }
                     
                         }
