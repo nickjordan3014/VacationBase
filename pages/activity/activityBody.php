@@ -1,5 +1,7 @@
 <section class="main-content"><section class="inner-content">
  
+    <br><br>
+
     <div class="margActivity">
 
         <!-- ARTICLE HEADER -->
@@ -13,7 +15,11 @@
         <!-- IMAGE SECTION -->
         <section class="image-sec">
             <?php
-                print("<img src='img/images/$img1' class='mapSize' alt='$altText1'>")
+                // temp patch to allow us to access images until we rework how we identify and call them
+                $temp_image = explode('/', $img1);
+                $card_image = ($temp_image[0] . "/image1.jpg");
+
+                print("<img src='img/images/$card_image' class='mapSize' alt='$altText1'>")
             ?>
         </section>
 
@@ -32,7 +38,7 @@
                         }
                     ?>
                 </div>
-                <div class="actButton">
+                <!-- <div class="actButton">
                     <?php
                         if(isset($_SESSION['user'])){
                     ?>
@@ -45,7 +51,7 @@
                     <?php    
                         }
                     ?>
-                </div>
+                </div> -->
             </div>
         </section>
 
