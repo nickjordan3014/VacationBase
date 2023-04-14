@@ -13,12 +13,14 @@
 <section class="half-content-1">
     <h2 class="itinerary-header">Selected Content</h2>
     <div class="container-itin">
-        <p class="draggable" draggable="true">
-            1
-        </p>
-        <p class="draggable" draggable="true">
-            1
-        </p>
+        
+        <?php
+            // here we build our activity names with our sql return
+            foreach ($all_names AS $this_name){
+                print('<p class="draggable" draggable="true"> ' . $this_name['event_name'] . ' </p>');
+            }
+        ?>
+
     </div>
 </section>
 
