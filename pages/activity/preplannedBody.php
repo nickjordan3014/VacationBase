@@ -1,8 +1,4 @@
 <section class="main-content"><section class="inner-content">
-    <!-- PAGE TOP AD -->
-    <article class="adleaderboard">
-        <p>[ad here]</p> <!-- where does it go?! figure out later -->
-    </article>
  
     <div class="margActivity">
         <?php
@@ -26,9 +22,7 @@
                     <div class="priceOf">
                         <p>Preplanned Adult Ticket Package start at <b>$317.99</b><p>
                     </div>
-                    <div class="actButton"> 
-                        <button class="addACTButton activityButton" onclick="location.href = 'itinerary.php';"><b>Add Preplanned Itinerary</b></button>
-                    </div>
+                    
                 </div>
             </section>
 
@@ -99,11 +93,9 @@
                 <div class="price-click">
                     
                     <div class="priceOf">
-                        <p>Preplanned Adult Ticket Package start at <b>$</b><p>
+                        <p>Preplanned Adult Ticket Package start at 129.99 <b>$</b><p>
                     </div>
-                    <div class="actButton"> 
-                        <button class="addACTButton activityButton" onclick="location.href = 'itinerary.php';"><b>Add Preplanned Itinerary</b></button>
-                    </div>
+                    
                 </div>
             </section>
 
@@ -222,11 +214,9 @@
                 <div class="price-click">
                     
                     <div class="priceOf">
-                        <p>Preplanned Adult Ticket Package start at <b>$</b><p>
+                        <p>Preplanned Adult Ticket Package start at <b>$349.99</b><p>
                     </div>
-                    <div class="actButton"> 
-                        <button class="addACTButton activityButton" onclick="location.href = 'itinerary.php';"><b>Add Preplanned Itinerary</b></button>
-                    </div>
+                    
                 </div>
             </section>
 
@@ -347,11 +337,9 @@
                 <div class="price-click">
                     
                     <div class="priceOf">
-                        <p>Preplanned Adult Ticket Package start at <b>$</b><p>
+                        <p>Preplanned Adult Ticket Package start at <b>$189.99</b><p>
                     </div>
-                    <div class="actButton"> 
-                        <button class="addACTButton activityButton" onclick="location.href = 'itinerary.php';"><b>Add Preplanned Itinerary</b></button>
-                    </div>
+                    
                 </div>
             </section>
 
@@ -460,9 +448,5 @@
     <br>
     <br>
 
-    <!-- THIRD AD -->
-    <article class="adleaderboardTwo">
-        <p>[ad here]</p> <!-- where does it go?! figure out later -->
-    </article>
 
 </section></section>
