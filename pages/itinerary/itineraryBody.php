@@ -4,14 +4,17 @@
         
 ?>
 <section class="main-content">
-
+    <section class="inner-content">
+        <h1 class="itinerary-header">Itinerary Builder</h1>
+        <p class="itinerary-header">This feature is not available to use on touch screen devices. Please use a device with a mouse to proceed.</p>
+    </section>
 <?php
     // print($_SESSION['user']['id']);
     // print("hello");
 ?>
 
 <section class="half-content-1">
-    <h2 class="itinerary-header">Selected Content</h2>
+    <h2 class="itinerary-header">Orlando Florida Activities</h2>
     <div class="container-itin">
         
         <?php

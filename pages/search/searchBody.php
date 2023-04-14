@@ -16,6 +16,7 @@ if(isset($_GET['query'])){
                     </button>
             </form>
         </section>
+        <button class="mobile-filter-button" id="filterBtn">Filters</button>
         <hr class="hsline">
 
         <!-- SEARCH RESULT CARDS -->
@@ -50,7 +51,7 @@ if(isset($_GET['query'])){
     </section>
 
     <!-- FILTERING -->
-    <section class="filter-content">
+    <section class="filter-content" id="filter-toggle">
         <form name="mainFilteringForm" method="get" class="filter-form">
             <input name="query" style="display: none;" value='<?php print($search_query)?>'>
             <section class="filter-segment">
@@ -105,10 +106,10 @@ if(isset($_GET['query'])){
             <section class="filter-segment">
                 <h4>Great For...</h4>
                 <hr class="tightline">
-                <label for="storm" class="filter-label"><input type="checkbox" name="weather" class="inline list">Stormy Weather</label>
-                <label for="fam" class="filter-label"><input type="checkbox" name="family" class="inline list">Families</label>
-                <label for="value" class="filter-label"><input type="checkbox" name="value" class="inline list">Awesome Value</label>
-                <label for="local" class="filter-label"><input type="checkbox" name="local" class="inline list">Living like a Local</label>
+                <label for="storm" class="filter-label"><input type="checkbox" name="weather" class="inline list"> Stormy Weather</label>
+                <label for="fam" class="filter-label"><input type="checkbox" name="family" class="inline list"> Families</label>
+                <label for="value" class="filter-label"><input type="checkbox" name="value" class="inline list"> Awesome Value</label>
+                <label for="local" class="filter-label"><input type="checkbox" name="local" class="inline list"> Living like a Local</label>
             </section>
             <section>
                 <button type="submit"> Filter Results </button>

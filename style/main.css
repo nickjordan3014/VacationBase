@@ -1070,19 +1070,34 @@ section .rate {
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.6);
     border: 1px #c3c3c3 solid;
+    cursor: pointer;
   }
   .filter-content {
     display: none;
   }
   .filter-content-on {
     display: block;
-    z-index: 10;
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(195, 195, 195, 0.5); /* Black background with opacity */
+    z-index: 12; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
   }
   .filter-form {
     background-color: rgba(255, 255, 255, 0.6);
     border: 1px #c3c3c3 solid;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 15px;
-    margin-left: 0;
+    border-radius: 3px;
   }
   .filter-label {
     display: block;
