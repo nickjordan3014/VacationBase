@@ -450,13 +450,7 @@ body {
 .price-click {
   align-items: center;
   display: flex;
-  /* width: 50%; */
 }
-
-/* .priceOf {
-  flex: 1;
-  margin: 1%;
-} */
 
 .priceOf p {
   /* using 1.25vw for font-size worked but it gets too small and precise when the screen is minimized */
@@ -545,8 +539,8 @@ body {
     border: 1px solid #c3c3c3;
   }
   .ideabase-image {
-    width: 200px;
-    height: 200px;
+    width: 225px;
+    height: 225px;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -770,31 +764,31 @@ input[type=text] {
 input[type=text]:focus {
   outline: none;
   border: 2px solid #FFBD59;
-  border-radius: 99px;
+  border-radius: 3px;
 }
 
 input[type=email] {
   border: 1px solid #c3c3c3;
   padding: 4px 8px;
-  border-radius: 99px;
+  border-radius: 3px;
 }
 
 input[type=email]:focus {
   outline: none;
   border: 2px solid #FFBD59;
-  border-radius: 99px;
+  border-radius: 3px;
 }
 
 input[type=password] {
   border: 1px solid #c3c3c3;
   padding: 4px 8px;
-  border-radius: 99px;
+  border-radius: 3px;
 }
 
 input[type=password]:focus {
   outline: none;
   border: 2px solid #FFBD59;
-  border-radius: 99px;
+  border-radius: 3px;
 }
 
 a {
@@ -804,12 +798,8 @@ a {
 }
 
 header {
-  width: 15rem;
-  height: 40rem;
   border-radius: 1rem;
   background-color: #fbfbf9;
-  /* border-right: 1px solid #c3c3c3;
-  border-bottom: 1px solid #c3c3c3; */
   margin-top: 1rem;
   border: 2px solid #c3c3c3;
 }
@@ -829,8 +819,8 @@ header .user {
 
 header .user img {
   margin: 1rem 0;
-  height: 10rem;
-  width: 10rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -868,25 +858,7 @@ header .navbar_profile ul li a {
   border-radius: 3px;
 }
 
-section .itineraries {
-  min-height: 100%;
-}
-
-section .account {
-  min-height: 100%;
-}
-
-section .about {
-  min-height: 100%;
-}
-
-section .rate-review-sec {
-  min-height: 100%;
-}
-
 .containerProfile {
-  height: 40rem;
-  width: 60rem;
   background: #fbfbf9;
   border-radius: 1rem;
   overflow: hidden;
@@ -898,31 +870,46 @@ section .rate-review-sec {
   margin: 10px 50px 0px 50px;
 }
 
-.itineraries {
-  display: flex;
-  align-items: center;
-  flex-flow: column;
-  position: relative;
-  padding-bottom: 10rem;
-  margin-top: 2rem;
+section .account {
+  min-height: 100%;
 }
 
-.itineraries h4 {
-  font-size: larger;
-  margin: 10px 50px 0px 50px;
+section .about {
+  min-height: 100%;
 }
 
-.itineraries p {
-  margin: 10px 50px 0px 50px;
+section .rate {
+  min-height: 100%;
 }
 
+.invis {
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  header {
+    grid-column: 2/4;
+  }
+  .containerProfile {
+    grid-column: 4/10;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  header {
+    grid-column: 1/3;
+  }
+  .containerProfile {
+    grid-column: 4/12;
+  }
+}
 .account {
-  display: flex;
   align-items: center;
-  flex-flow: column;
-  position: relative;
-  padding-bottom: 10rem;
-  margin-top: 2rem;
+  justify-content: center;
+}
+
+.moveform {
+  display: block;
+  margin-left: 20px;
 }
 
 .account h4 {
@@ -934,15 +921,6 @@ section .rate-review-sec {
   margin: 10px 50px 0px 50px;
 }
 
-.about {
-  display: flex;
-  align-items: center;
-  flex-flow: column;
-  position: relative;
-  padding-bottom: 10rem;
-  margin-top: 2rem;
-}
-
 .about h4 {
   font-size: larger;
   margin: 10px 50px 0px 50px;
@@ -950,15 +928,6 @@ section .rate-review-sec {
 
 .about p {
   margin: 10px 50px 0px 50px;
-}
-
-.rate-review-sec {
-  display: flex;
-  align-items: center;
-  flex-flow: column;
-  position: relative;
-  padding-bottom: 10rem;
-  margin-top: 2rem;
 }
 
 /* form styling */
@@ -985,8 +954,8 @@ section .rate-review-sec {
 }
 
 .icon-container-profile {
-  justify-content: space-between;
   display: flex;
+  justify-content: center;
 }
 
 /* buttons */
@@ -1018,6 +987,68 @@ section .rate-review-sec {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*original profile styling*/
+.stars-in-box {
+  display: inline-block;
+  margin: auto;
+}
+
+.star-size {
+  width: 40px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.centerp {
+  text-align: center;
+}
+
+.headingProfile {
+  text-align: center;
+}
+
+.aboutContent h4 {
+  margin: 0;
+  padding: 5px;
+}
+
+.aboutContent p {
+  margin: 0;
+  padding: 5px;
+}
+
+/*Moved from inline css to here*/
+.dtpad {
+  padding: 5px;
+}
+
+.review-box-size {
+  height: 100px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.lil-more-btn {
+  color: white;
+  background-color: #FFc875;
+  border: 3px solid #FFc875;
+  border-radius: 25px;
+  padding: 10px 15px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.span-left {
+  float: left;
 }
 
 /* Houses CSS specific to search page */
