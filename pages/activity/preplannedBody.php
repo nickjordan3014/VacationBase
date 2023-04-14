@@ -1,8 +1,4 @@
 <section class="main-content"><section class="inner-content">
-    <!-- PAGE TOP AD -->
-    <article class="adleaderboard">
-        <p>[ad here]</p> <!-- where does it go?! figure out later -->
-    </article>
  
     <div class="margActivity">
         <?php
@@ -460,9 +456,5 @@
     <br>
     <br>
 
-    <!-- THIRD AD -->
-    <article class="adleaderboardTwo">
-        <p>[ad here]</p> <!-- where does it go?! figure out later -->
-    </article>
 
 </section></section>

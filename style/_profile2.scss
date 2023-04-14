@@ -1,0 +1,224 @@
+a {
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+header {
+    width: 15rem;
+    height: 40rem;
+    border-radius: 1rem;
+    background-color: #fbfbf9;
+    /* border-right: 1px solid #c3c3c3;
+    border-bottom: 1px solid #c3c3c3; */
+    margin-top: 1rem;
+    border: 2px solid #c3c3c3;
+}
+
+.navbar_profile li :hover{
+    background-color: #ffebcd;
+}
+
+.navbar_profile li :target{
+    background-color: #ffebcd;
+}
+
+header .user {
+    padding-top: 1rem;
+    text-align: center;
+}
+
+header .user img{
+    margin:1rem 0;
+    height:10rem;
+    width:10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    text-align: center;
+    border: 1px solid grey;
+}
+
+.name{
+    font-weight: 400;
+}
+
+header .navbar_profile{
+    padding:0.5rem 1rem;
+}
+
+header .navbar_profile ul li{
+    margin:1rem 0;
+    list-style: none;
+}
+
+header .navbar_profile ul li a{
+    display: block;
+    padding:0.5rem;
+    font-size: 1rem;
+    color: black;
+    border-radius: 0.5rem;
+}
+
+.logout_btn {
+    font-size: 12px;
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+section .itineraries{
+    min-height: 100%;
+}
+
+section .account{
+    min-height: 100%;
+}
+
+section .about {
+    min-height: 100%;
+}
+
+section .rate {
+    min-height: 100%;
+}
+
+.containerProfile {
+    height: 40rem;
+    width: 60rem;
+    background:#fbfbf9;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 2px solid #c3c3c3;
+    margin-top: 1rem;
+}
+
+.containerProfile h1 {
+    margin: 10px 50px 0px 50px;
+}
+
+.itineraries {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    position: relative;
+    padding-bottom: 10rem;
+    margin-top: 2rem;
+}
+
+.itineraries h4 {
+    font-size:larger;
+    margin: 10px 50px 0px 50px;
+}
+
+.itineraries p {
+    margin: 10px 50px 0px 50px;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    position: relative;
+    padding-bottom: 10rem;
+    margin-top: 2rem;
+}
+
+.account h4 {
+    font-size:larger;
+    margin: 10px 50px 0px 50px;
+}
+
+.account p {
+    margin: 10px 50px 0px 50px;
+}
+
+
+.about {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    position: relative;
+    padding-bottom: 10rem;
+    margin-top: 2rem;
+}
+
+.about h4 {
+    font-size:larger;
+    margin: 10px 50px 0px 50px;
+}
+
+.about p {
+    margin: 10px 50px 0px 50px;
+}
+
+.rate {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    position: relative;
+    padding-bottom: 10rem;
+    margin-top: 2rem;
+}
+
+
+/* form styling */
+
+.box-long {
+    width: 435px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.box-short {
+    width: 200px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.box-pad-profile {
+    margin-right: 30px;
+}
+
+.user-icons-profile {
+    width: 60px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.icon-container-profile {
+    justify-content: space-between;
+    display: flex;
+}
+
+/* buttons */
+.profile_btnOne {
+    color: white;
+    background-color: #FFc875;
+    border: 3px solid #FFc875;
+    border-radius: 25px;
+    font-size: 12px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.profile_btnTwo {
+    background-color: white;
+    color: #FFc875;
+    border: 3px solid #FFc875;
+    border-radius: 25px;
+    font-size: 12px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.btn-pad {
+    margin-right: 20px;
+}
+
+.profile_btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

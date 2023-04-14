@@ -104,7 +104,7 @@
             return $category;
         }
         else if (in_array($search_query, $array_arts)){
-            $category = "isLiveEvent";
+            $category = "isArts";
             return $category;
         }
 
@@ -112,6 +112,63 @@
         return $category;
     }
 
+    // does our filtering on each result we've already pulled via additional url params
+    function _run_filter_validation($result) {
+
+        $is_valid = true;
+
+        if(isset($_GET['budget'])){
+            $budget_filter = $_GET['budget'];
+            // removes any leading $s from budget input that would cause trouble!
+            $budget_filter = ltrim($budget_filter, '$');
+            $result_price = $result["price"];
+
+            // converting dollar sign prices to numerical values, this is subjective and can be adjusted anytime  -sean
+            if ($result_price == "$") {$result_price = 8;}
+            if ($result_price == "$$") {$result_price = 16;}
+            if ($result_price == "$$$") {$result_price = 32;}
+            if ($result_price == "$$$$") {$result_price = 64;}
+
+            if (is_numeric($budget_filter)) {
+                // we have a valid budget filter to test against
+                if ($result_price > $budget_filter) {
+                    $is_valid = false;
+                }
+            }
+        }
+
+        // goes through checking for categorical filters existing and if so runs a simple check
+        if(isset($_GET['weather'])){
+            $weather_category = $result["isRainy"];
+            if ($weather_category == "N") {
+                $is_valid = false;
+            }
+        }
+
+        if(isset($_GET['family'])){
+            $family_category = $result["isFamily"];
+            if ($family_category == "N") {
+                $is_valid = false;
+            }
+        }
+        
+        if(isset($_GET['value'])){
+            $value_category = $result["isGoodValue"];
+            if ($value_category == "N") {
+                $is_valid = false;
+            }
+        }
+
+        if(isset($_GET['local'])){
+            $local_category = $result["isLocal"];
+            if ($local_category == "N") {
+                $is_valid = false;
+            }
+        }
+
+        // if $is_valid was ever marked false, then that $result failed filtering and is excluded
+        return $is_valid;
+    }
 
     // when called fills and returns the html of a search card with provided content
     function _build_search_card($result, $card_count) {
@@ -133,7 +190,7 @@
 
         // temp patch to allow us to access images until we rework how we identify and call them
         $temp_image = explode('/', $card_image);
-        $card_image = ($temp_image[0] . "/image1.jpeg");
+        $card_image = ($temp_image[0] . "/image1.jpg");
 
         // we match the caption from homepage here, but without price since it's a higher priority now that we have more space!
         $card_caption = ( 
