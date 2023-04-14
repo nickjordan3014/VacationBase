@@ -22,12 +22,12 @@
                 <section class="navbar_profile">
                     <h4>Profile</h4>
                     <ul>
-                        <li>
+                        <!-- <li>
                             <a href="#itineraries">
                                 <i class="fa-regular fa-map"></i>&nbsp;&nbsp;
                                 Itineraries
                             </a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="#account">
                                 <i class="fa-regular fa-user"></i>&nbsp;&nbsp;&nbsp;
@@ -41,7 +41,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#rate">
+                            <a href="#rate-review-sec">
                                 <i class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;
                                 Rate & Review
                             </a>
@@ -54,13 +54,13 @@
         <br>
     
         <div class="containerProfile">
-            <section class="itineraries" id="itineraries">
+            <!-- <section class="itineraries" id="itineraries">
                 <h1 class="headingProfile">Itineraries</h1>
                 
                 <div class="content">
 
                 </div>
-            </section>
+            </section> -->
 
             <section class="account" id="account">
                 <h1 class="headingProfile">Account Information</h1>
@@ -143,23 +143,62 @@
                     </h4>
                     <br>
                     <p>
-                        <b>Home Page</b> (What we provide)
+                        <b>Home Page</b> - We want to introduce our vacation planners to all that we have to offer. We have vacation selections such as Theme Parks, Restaurants,
+                        Local Events, Outdoor Events, and Cheap Thrills! 
                     </p>
                     <p>
-                        <b>IdeaBase Page</b> (What we provide)
+                        <b>IdeaBase Page</b> - Vacation planners are provided with ideas for their vacation planning through various preplanned itineraries, travel tips, and specialties.  
                     </p>
                     <p>
-                        <b>Search Page</b> (What we provide)
+                        <b>Search Page</b> - Vacation planners are able to search up events they would like to attend and we return a listing of results that fall within that category.
                     </p>
                     <p>
-                        <b>Itinerary Page</b> (What we provide)
+                        <b>Itinerary Page</b> - This is where the magic takes place. Vacation planners can drag and drop events of their choosing in order to plan the perfect vacation!
                     </p>
                 </div>
             </section>
 
-            <section class="rate" id="rate">
+            <section class="rate-review-sec" id="rate-review-sec">
                 <h1 class="headingProfile">Rate & Review</h1>
-                
+                <!-- <section id="rate-review-sec" class="inner-content center-section invisible"> -->
+                <form action="review.php" class="profile-form" style="align-items: center;">
+                    <!-- <h3 class="center-text">Leave a review</h3> -->
+                    &nbsp;
+                    &nbsp;
+                    <p style="justify-content: center; align-items: center; text-align:center;">How are you liking your experience?</p>
+                    &nbsp;
+                    <dt style="padding: 5px;">
+                        <label for="review">Name</label>
+                    </dt>
+                    <dd class="tb-container">
+                        <input type="text" class="box" value="<?php echo($fname." ".$lname); ?>" disabled>
+                    </dd>
+                    &nbsp;
+                    <dt style="padding: 5px;">
+                        <label for="review">Email</label>
+                    </dt>
+                    <dd class="tb-container">
+                        <input type="text" class="box" value="<?php echo($email); ?>" disabled>
+                    </dd>
+                    &nbsp;
+                    <dt style="padding: 5px;">
+                        <label for="review">Review</label>
+                    </dt>
+                    <dd class="tb-container">
+                        <input type="text" class="box tall" style="height: 100px; width: 500px; border-radius: 10px;">
+                    </dd>
+                    <div class="stars-in-box">
+                        <!-- <img src="img/icons-VB/goldstar.png" alt="review star 1" id="star-1" class="star-size">
+                        <img src="img/icons-VB/goldstar.png" alt="review star 1" id="star-2" class="star-size">
+                        <img src="img/icons-VB/goldstar.png" alt="review star 1" id="star-3" class="star-size">
+                        <img src="img/icons-VB/blackstar.png" alt="review star 1" id="star-4" class="star-size">
+                        <img src="img/icons-VB/blackstar.png" alt="review star 1" id="star-5" class="star-size"> -->
+                    </div>
+                    <div style="display: flex; justify-content: center; align-items: center; padding: 15px;">
+                        <button type="submit" class="account-submit" style="color: white; background-color: #FFc875; border: 3px solid #FFc875; border-radius: 25px; padding: 10px 15px; font-size: 13px; cursor: pointer;">Save Changes</button>
+                    </div>
+                    </form>
+                <!-- </section>   -->
             </section>
         </div>
     </section>

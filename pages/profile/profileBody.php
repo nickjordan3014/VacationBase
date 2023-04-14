@@ -78,7 +78,7 @@
     <!--Rate & Review-->
     <section id="rate-review-sec" class="inner-content center-section invisible">
         <form action="review.php" class="profile-form">
-            <h3 class="center-text">Leave a review</h3>
+            <!-- <h3 class="center-text">Leave a review</h3> -->
             <p>How are you liking your experience?</p>
             <dt>
                 <label for="review">Name</label>
@@ -95,15 +95,15 @@
             <dt>
                 <label for="review">Review</label>
             </dt>
-            <dd class="tb-container">
+            <dd class="tb-container" style="height: 100px;">
                 <input type="text" class="box tall">
             </dd>
             <div class="stars-in-box">
-                <img src="img/icons-VB/goldstar.png" alt="review star 1" id="star-1" class="star-size">
-                <img src="img/icons-VB/goldstar.png" alt="review star 1" id="star-2" class="star-size">
-                <img src="img/icons-VB/goldstar.png" alt="review star 1" id="star-3" class="star-size">
-                <img src="img/icons-VB/blackstar.png" alt="review star 1" id="star-4" class="star-size">
-                <img src="img/icons-VB/blackstar.png" alt="review star 1" id="star-5" class="star-size">
+                <img src="img/icons-VB/goldstar.png" alt="review star 1" id="star-1">
+                <img src="img/icons-VB/goldstar.png" alt="review star 1" id="star-2">
+                <!-- <img src="img/icons-VB/goldstar.png" alt="review star 1" id="star-3" class="star-size"> -->
+                <!-- <img src="img/icons-VB/blackstar.png" alt="review star 1" id="star-4" class="star-size"> -->
+                <!-- <img src="img/icons-VB/blackstar.png" alt="review star 1" id="star-5" class="star-size"> -->
             </div>
             <button type="submit" class="account-submit">Save Changes</button>
         </form>

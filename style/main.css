@@ -880,7 +880,7 @@ section .about {
   min-height: 100%;
 }
 
-section .rate {
+section .rate-review-sec {
   min-height: 100%;
 }
 
@@ -952,7 +952,7 @@ section .rate {
   margin: 10px 50px 0px 50px;
 }
 
-.rate {
+.rate-review-sec {
   display: flex;
   align-items: center;
   flex-flow: column;
