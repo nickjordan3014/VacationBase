@@ -21,4 +21,10 @@
             echo'<script>alert("Update NOT Complete")</script>';
         }
     }
+
+
+    // code to get all our activities for the drag n drop
+    $select_names = "SELECT event_name FROM orlando_florida LIMIT 100";
+    $all_names = $db->query($select_names);
+
 ?>
