@@ -564,10 +564,14 @@ body {
 }
 .half-content-1 {
   grid-column: 2/6;
+  height: 90vh;
+  overflow-y: scroll;
 }
 
 .half-content-2 {
   grid-column: 7/10;
+  height: 90vh;
+  overflow-y: scroll;
 }
 
 .itinerary-header {
@@ -593,6 +597,26 @@ body {
 
 .trip {
   font-size: 28px;
+}
+
+.save-itinerary {
+  display: block;
+  margin-inline: auto;
+  margin-top: 20px;
+  background-color: white;
+  color: #FFBD59;
+  border: 3px solid #FFBD59;
+  border-radius: 25px;
+  font-size: 15px;
+  width: 180px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.save-itinerary:hover {
+  background-color: #FFBD59;
+  color: white;
+  border: 3px solid white;
 }
 
 /* Houses CSS specific to log-in, sign-up, and forgotpw pages */
@@ -1091,7 +1115,7 @@ section .rate {
     margin-top: 60px;
   }
   .searchpagebox {
-    width: 35vw;
+    width: 30vw;
     height: 1.5rem;
   }
   .search-card {

@@ -13,8 +13,12 @@
 <section class="half-content-1">
     <h2 class="itinerary-header">Selected Content</h2>
     <div class="container-itin">
-        <p class="draggable" draggable="true">1</p>
-        <p class="draggable" draggable="true">2</p>
+        <p class="draggable" draggable="true">
+            1
+        </p>
+        <p class="draggable" draggable="true">
+            1
+        </p>
     </div>
 </section>
 
@@ -43,7 +47,7 @@
             
         </div>
     </div> 
-    <button id="saveAsPDF">Save Itinerary as PDF</button>
+    <button id="saveAsPDF" class="save-itinerary">Save Itinerary as PDF</button>
 </section>
 
 <?php

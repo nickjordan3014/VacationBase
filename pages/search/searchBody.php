@@ -52,9 +52,7 @@ if(isset($_GET['query'])){
     <!-- FILTERING -->
     <section class="filter-content">
         <form name="mainFilteringForm" method="get" class="filter-form">
-
             <input name="query" style="display: none;" value='<?php print($search_query)?>'>
-
             <section class="filter-segment">
                 <h4>Days Open</h4>
                 <hr class="tightline">
