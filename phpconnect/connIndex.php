@@ -98,7 +98,7 @@
 
         // temp patch to allow us to access images until we rework how we identify and call them
         $temp_image = explode('/', $card_image);
-        $card_image = ($temp_image[0] . "/image1.jpeg");
+        $card_image = ($temp_image[0] . "/image1.jpg");
 
         // removing empty decimals from numerical prices to free up space, or one $ from dollar sign prices since we add one below
         $priceCheck = $card_price[0];
