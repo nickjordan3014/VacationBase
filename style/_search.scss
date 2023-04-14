@@ -1,54 +1,107 @@
 /* Houses CSS specific to search page */
-
-.filter-form {
-    background-color: $transwhite;
-    border: 1px $gray solid;
-    border-radius: 10px;
-    margin-top: 80px;
-    padding: 15px;
-}
-
-.filter-label {
-    display: block;
-}
-
-.filter-text {
-    width: 2rem;
-    min-width: 50px;
-    height: 1.5rem
-}
-.filter-segment {
-    padding-top: 10px;
-    padding-bottom: 20px;
-}
-.inline {
-    display: inline-block;
-    padding-left: 4px;
-    padding-right: 4px;
-}
-.list {
-    padding-top: 4px;
-}
-.filter-btn {
-    padding-top: 20px;
-    margin: 4px;
-}
-
-@media only screen and (min-width: 1000px) {
-    .search-content {
-        grid-column: 2/8;
-        margin-top: 60px;
+@media only screen and (min-width: 1000px) { /*Desktop media query*/
+    .filter-form {
+        background-color: $transwhite;
+        border: 1px $gray solid;
+        border-radius: 10px;
+        margin-top: 80px;
+        padding: 15px;
     }
-    .searchpagebox {
-        width: 40vw;
-        height: 1.5rem;
-    } 
     .filter-content {
         grid-column: 8/12;
         position: sticky;
         top: 0;
         height: 100vh;
     }
+
+    .filter-label {
+        display: block;
+    }
+
+    .filter-text {
+        width: 2rem;
+        min-width: 50px;
+        height: 1.5rem
+    }
+    .filter-segment {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    .inline {
+        display: inline-block;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    .list {
+        padding-top: 4px;
+    }
+    .filter-btn {
+        padding-top: 20px;
+        margin: 4px;
+    }
+    .mobile-filter-button {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) { /*Mobile filter*/
+    .mobile-filter-button {
+        width: 95vw;
+        margin-top: 5px;
+        border-radius: 10px;
+        background-color: $transwhite;
+        border: 1px $gray solid;
+    }
+    .filter-content {
+        display: none;
+    }
+    .filter-content-on {
+        display: block;
+        z-index: 10;
+    }
+    .filter-form {
+        background-color: $transwhite;
+        border: 1px $gray solid;
+        padding: 15px;
+        margin-left: 0;
+    }
+
+    .filter-label {
+        display: block;
+    }
+
+    .filter-text {
+        width: 2rem;
+        min-width: 50px;
+        height: 1.5rem
+    }
+    .filter-segment {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    .inline {
+        display: inline-block;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    .list {
+        padding-top: 4px;
+    }
+    .filter-btn {
+        padding-top: 20px;
+        margin: 4px;
+    }
+}
+
+@media only screen and (min-width: 1000px) { /*Destop Search*/
+    .search-content {
+        grid-column: 2/8;
+        margin-top: 60px;
+    }
+    .searchpagebox {
+        width: 35vw;
+        height: 1.5rem;
+    } 
     .search-card {
         display: inline-block;
         width: 100%;
@@ -80,18 +133,16 @@
         margin-top: -20px;
     }
 }
-@media only screen and (max-width: 1000px) { 
+
+@media only screen and (max-width: 1000px) { /*Mobile Search*/
     .search-content {
         grid-column: 1/12;
         margin: 10px;
     }
     .searchpagebox {
-        width: 70vw;
+        width: 60vw;
         height: 1.5rem;
     } 
-    .filter-content {
-        display: none;
-    }
     .search-card {
         height: 200px;
         border: 1px solid $gray;

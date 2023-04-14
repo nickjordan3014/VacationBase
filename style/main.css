@@ -294,7 +294,7 @@ body {
     overflow: hidden;
     position: fixed;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     border: 2px #c3c3c3 solid;
     display: flex;
     justify-content: space-between;
@@ -539,14 +539,14 @@ body {
   .ideabase-card {
     display: inline-block;
     margin: 0px 5px 0px 5px;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     background-color: #fff;
     border: 1px solid #c3c3c3;
   }
   .ideabase-image {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -773,253 +773,326 @@ input[type=password]:focus {
   border-radius: 3px;
 }
 
-/* Houses CSS specific to profile page */
-/*Top of Profile Page*/
-.profile-pic {
-  display: block;
-  margin: auto;
-  padding-top: 20px;
-  width: 200px;
-}
-
-.username {
-  text-align: center;
-  font-weight: 400;
-  font-size: 24px;
-}
-
-.profile-nav:hover {
-  text-decoration: underline;
-}
-
-/*Bottom of Profile Page*/
-.invisible {
-  display: none !important;
-}
-
-.itinerary-header {
-  text-align: center;
-}
-
-.center-section {
-  display: block;
-  margin: auto;
-}
-
-/*small screen*/
-@media only screen and (max-width: 1000px) {
-  .profile-split-left {
-    grid-column: 1/12;
-  }
-  .profile-split-right {
-    grid-column: 1/12;
-  }
-  .profile-nav {
-    font-size: 18px;
-    width: 20vw;
-  }
-}
-/*big screen*/
-@media only screen and (min-width: 1000px) {
-  .profile-split-left {
-    grid-column: 2/5;
-  }
-  .profile-split-right {
-    grid-column: 6/10;
-  }
-  .profile-nav {
-    font-size: 20px;
-    width: 15vw;
-  }
-}
-/*Itineraries Cards*/
-.itinerary-card {
-  display: grid;
-  grid-template-columns: 120px 140px 140px;
-  margin: auto;
-  width: 400px;
-  height: 95px;
-  background-color: #e2f0d9;
-}
-
-.itinerary-card-img {
-  grid-column: 1/span 1;
-  padding-top: 10px;
-  margin-left: 10px;
-  width: 100px;
-  height: 75px;
-}
-
-.card-col {
-  grid-column: auto/span 1;
-}
-
-.card-title {
-  font-size: 18px;
-  margin-top: 25px;
-  margin-bottom: 0;
-}
-
-.card-date {
-  font-style: italic;
-  margin-top: 0;
-}
-
-.card-remove {
-  font-style: italic;
-  padding-right: 5px;
-  padding-top: 20px;
-  text-align: right;
-  cursor: pointer;
-}
-
-.icons {
-  width: 25px;
-}
-
-.card-icons {
-  padding-top: 5px;
-  padding-left: 80px;
-}
-
-.share-icon {
-  width: 25px;
-  padding-top: 5px;
-  padding-left: 110px;
-}
-
-.card-button {
-  color: white;
-  background-color: #FFBD59;
+a {
+  outline: none;
   border: none;
-  border-radius: 5px;
-  width: 100px;
-  height: 30px;
-  margin-top: 25px;
-  margin-left: 35px;
+  text-decoration: none;
 }
 
-/*Account Settings Styling*/
-.profile-form {
-  background-color: #e2f0d9;
-  padding: 25px;
+header {
+  width: 15rem;
+  height: 40rem;
+  border-radius: 1rem;
+  background-color: #fbfbf9;
+  /* border-right: 1px solid #c3c3c3;
+  border-bottom: 1px solid #c3c3c3; */
+  margin-top: 1rem;
+  border: 2px solid #c3c3c3;
 }
 
-.icon-container {
-  margin: 0;
+.navbar_profile li :hover {
+  background-color: #ffebcd;
 }
 
-.user-icons {
-  width: 50px;
-  cursor: pointer;
+.navbar_profile li :target {
+  background-color: #ffebcd;
 }
 
-.tb-container {
-  margin: 0;
-}
-
-.box {
-  width: 250px;
-}
-
-.account-submit {
-  display: block;
-  margin: auto;
-  background-color: #e2f0d9;
-  color: #FFBD59;
-  border: 3px solid #FFBD59;
-  border-radius: 25px;
-  font-size: 15px;
-  padding: 10px 15px;
-}
-
-.account-submit:hover {
-  color: white;
-  background-color: #FFBD59;
-}
-
-/*About Us section*/
-.page-titles {
-  font-weight: bold;
-}
-
-.about-us-text {
-  margin-inline: 5%;
-}
-
-/*Reviews*/
-.center-text {
+header .user {
+  padding-top: 1rem;
   text-align: center;
 }
 
-.tall {
-  height: 100px;
+header .user img {
+  margin: 1rem 0;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-align: center;
+  border: 1px solid grey;
 }
 
-.stars-in-box {
-  display: inline-block;
-  margin: auto;
+.name {
+  font-weight: 400;
 }
 
-.star-size {
-  width: 40px;
-  padding: 4px;
+header .navbar_profile {
+  padding: 0.5rem 1rem;
+}
+
+header .navbar_profile ul li {
+  margin: 1rem 0;
+  list-style: none;
+}
+
+header .navbar_profile ul li a {
+  display: block;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: black;
+  border-radius: 0.5rem;
+}
+
+.logout_btn {
+  font-size: 12px;
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+section .itineraries {
+  min-height: 100%;
+}
+
+section .account {
+  min-height: 100%;
+}
+
+section .about {
+  min-height: 100%;
+}
+
+section .rate {
+  min-height: 100%;
+}
+
+.containerProfile {
+  height: 40rem;
+  width: 60rem;
+  background: #fbfbf9;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 2px solid #c3c3c3;
+  margin-top: 1rem;
+}
+
+.containerProfile h1 {
+  margin: 10px 50px 0px 50px;
+}
+
+.itineraries {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  position: relative;
+  padding-bottom: 10rem;
+  margin-top: 2rem;
+}
+
+.itineraries h4 {
+  font-size: larger;
+  margin: 10px 50px 0px 50px;
+}
+
+.itineraries p {
+  margin: 10px 50px 0px 50px;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  position: relative;
+  padding-bottom: 10rem;
+  margin-top: 2rem;
+}
+
+.account h4 {
+  font-size: larger;
+  margin: 10px 50px 0px 50px;
+}
+
+.account p {
+  margin: 10px 50px 0px 50px;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  position: relative;
+  padding-bottom: 10rem;
+  margin-top: 2rem;
+}
+
+.about h4 {
+  font-size: larger;
+  margin: 10px 50px 0px 50px;
+}
+
+.about p {
+  margin: 10px 50px 0px 50px;
+}
+
+.rate {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  position: relative;
+  padding-bottom: 10rem;
+  margin-top: 2rem;
+}
+
+/* form styling */
+.box-long {
+  width: 435px;
+  height: 30px;
+  margin-top: 5px;
+}
+
+.box-short {
+  width: 200px;
+  height: 30px;
+  margin-top: 5px;
+}
+
+.box-pad-profile {
+  margin-right: 30px;
+}
+
+.user-icons-profile {
+  width: 60px;
   cursor: pointer;
+  margin-top: 20px;
+}
+
+.icon-container-profile {
+  justify-content: space-between;
+  display: flex;
+}
+
+/* buttons */
+.profile_btnOne {
+  color: white;
+  background-color: #FFc875;
+  border: 3px solid #FFc875;
+  border-radius: 25px;
+  font-size: 12px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.profile_btnTwo {
+  background-color: white;
+  color: #FFc875;
+  border: 3px solid #FFc875;
+  border-radius: 25px;
+  font-size: 12px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.btn-pad {
+  margin-right: 20px;
+}
+
+.profile_btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Houses CSS specific to search page */
-.filter-form {
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 1px #c3c3c3 solid;
-  border-radius: 10px;
-  margin-top: 80px;
-  padding: 15px;
-}
-
-.filter-label {
-  display: block;
-}
-
-.filter-text {
-  width: 2rem;
-  min-width: 50px;
-  height: 1.5rem;
-}
-
-.filter-segment {
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-
-.inline {
-  display: inline-block;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-.list {
-  padding-top: 4px;
-}
-
-.filter-btn {
-  padding-top: 20px;
-  margin: 4px;
-}
-
-@media only screen and (min-width: 1000px) {
-  .search-content {
-    grid-column: 2/8;
-    margin-top: 60px;
-  }
-  .searchpagebox {
-    width: 40vw;
-    height: 1.5rem;
+@media only screen and (min-width: 1000px) { /*Desktop media query*/
+  .filter-form {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px #c3c3c3 solid;
+    border-radius: 10px;
+    margin-top: 80px;
+    padding: 15px;
   }
   .filter-content {
     grid-column: 8/12;
     position: sticky;
     top: 0;
     height: 100vh;
+  }
+  .filter-label {
+    display: block;
+  }
+  .filter-text {
+    width: 2rem;
+    min-width: 50px;
+    height: 1.5rem;
+  }
+  .filter-segment {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  .inline {
+    display: inline-block;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .list {
+    padding-top: 4px;
+  }
+  .filter-btn {
+    padding-top: 20px;
+    margin: 4px;
+  }
+  .mobile-filter-button {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1000px) { /*Mobile filter*/
+  .mobile-filter-button {
+    width: 95vw;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px #c3c3c3 solid;
+  }
+  .filter-content {
+    display: none;
+  }
+  .filter-content-on {
+    display: block;
+    z-index: 10;
+  }
+  .filter-form {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px #c3c3c3 solid;
+    padding: 15px;
+    margin-left: 0;
+  }
+  .filter-label {
+    display: block;
+  }
+  .filter-text {
+    width: 2rem;
+    min-width: 50px;
+    height: 1.5rem;
+  }
+  .filter-segment {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  .inline {
+    display: inline-block;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .list {
+    padding-top: 4px;
+  }
+  .filter-btn {
+    padding-top: 20px;
+    margin: 4px;
+  }
+}
+@media only screen and (min-width: 1000px) { /*Destop Search*/
+  .search-content {
+    grid-column: 2/8;
+    margin-top: 60px;
+  }
+  .searchpagebox {
+    width: 35vw;
+    height: 1.5rem;
   }
   .search-card {
     display: inline-block;
@@ -1052,17 +1125,14 @@ input[type=password]:focus {
     margin-top: -20px;
   }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) { /*Mobile Search*/
   .search-content {
     grid-column: 1/12;
     margin: 10px;
   }
   .searchpagebox {
-    width: 70vw;
+    width: 60vw;
     height: 1.5rem;
-  }
-  .filter-content {
-    display: none;
   }
   .search-card {
     height: 200px;
