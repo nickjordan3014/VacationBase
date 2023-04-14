@@ -45,7 +45,7 @@ if(isset($_GET['query'])){
 
     <!-- FILTERING -->
     <section class="filter-content">
-        <form action="filter.php" class="filter-form">
+        <form name="mainFilteringForm" action="filter.php" class="filter-form" onSubmit="filterResults()">
             <section class="filter-segment">
                 <h4>Days Open</h4>
                 <hr class="tightline">
