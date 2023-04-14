@@ -450,13 +450,13 @@ body {
 .price-click {
   align-items: center;
   display: flex;
-  width: 50%;
+  /* width: 50%; */
 }
 
-.priceOf {
+/* .priceOf {
   flex: 1;
   margin: 1%;
-}
+} */
 
 .priceOf p {
   /* using 1.25vw for font-size worked but it gets too small and precise when the screen is minimized */

@@ -30,7 +30,11 @@
                     <?php
                         // We only want this print statement to display if the event type is a theme park AND the price is over $0
                         if((intval($price) > 0) && ($themePark == 'Y')){
-                            print("<p>Adult tickets start at <b>$$price</b> (ticket prices vary for children)<p>");
+                            print("<p style='font-size: 15px'>Adult tickets start at <b>$$price</b> (ticket prices vary for children)<p>");
+                        }
+                        // if the event type is not a theme park and the price is greater than 0
+                        else if ((intval($price) > 0) && ($themePark != 'Y')){
+                            print("<p>Prices start at <b>$$price</b><p>");
                         }
                         // else we want this to display if the event is a theme park and the price is not clear
                         else if (($price == '$' || $price == '$$' || $price == '$$$' || $price == '$$$$')){

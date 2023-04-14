@@ -29,7 +29,7 @@
             "title" => "Hot Orlando Restaurants",
             "results" => $db->query($select_restaurant),
             "link" => "See All Food & Drink Activities",
-            "href" => "search.php?event='restaurants'"
+            "href" => "search.php?query=restaurants"
         ),
         // "local" row data
         array (
@@ -37,7 +37,7 @@
             "title" => "Go Where The Locals Go",
             "results" => $db->query($select_local),
             "link" => "See All Local Hangout Activities",
-            "href" => "search.php?event='local'"
+            "href" => "search.php?query=local"
         ),
         // "outdoors" row data
         array (
@@ -45,7 +45,7 @@
             "title" => "Get Outside In The Sunshine State!",
             "results" => $db->query($select_outdoors),
             "link" => "See All Outdoor Activities",
-            "href" => "search.php?event='outdoors'"
+            "href" => "search.php?query=outdoors"
         ),
         // "value" row data
         array (
@@ -53,7 +53,7 @@
             "title" => "Orlando's Cheap Thrills",
             "results" => $db->query($select_value),
             "link" => "See All High-Value Activities",
-            "href" => "search.php?event='value'"
+            "href" => "search.php?query=value"
         )
     );
 

@@ -146,7 +146,6 @@
         $card_html = "<a class='card' id='cardA1' title='$card_name' href='activity.php?id=$card_id'>
             <img class='card-image' src='img/images/$card_image' alt='$card_alt'>
             <h4>$card_name</h4>
-            <h4>$card_id</h4>
             <p class='captions'>$card_caption</p>
             </a>";
 
