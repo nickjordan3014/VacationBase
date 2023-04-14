@@ -66,13 +66,14 @@
                 <h1 class="headingProfile">Account Information</h1>
 
                 <div class="content">
-                    <form action="" method="POST" autocomplete="off">
+                    <form action="profile.php" method="POST" autocomplete="off">
                         <dd class="form-labels">
                             <span style="float: left;">
                                 <br>
                                 <label for="name" class="label-pad">First Name</label>
                                 <?php
                                     $fname = $_SESSION['user']['firstName'];
+                                    $id = $_SESSION['user']['id'];
                                 ?>
                                 <input type="text" class="box-short box-pad-profile" name="firstName" value="<?php echo($fname); ?>">
                             </span>
@@ -111,8 +112,10 @@
                         <br>
                     </form>
                     <section class="profile_btns">
-                        <button class="profile_btnOne btn-pad" onclick="location.href = 'index.php';"><b>Save Changes</b></button>
-                        <button class="profile_btnTwo" name="cancel_btn" onclick="location.href = 'profile.php#account.php';"><b>Cancel</b></button>
+                        <button class="profile_btnOne btn-pad" type="submit" name="save_changes"><b>Save Changes</b></button>
+                        <!-- <input class="profile_btnOne btn-pad" onclick="location.href = 'index.php';" type="submit" name="save_changes" value="Save Changes" > -->
+                        <!-- <button class="profile_btnTwo" name="cancel_btn" onclick="location.href = 'profile.php#account.php';"><b>Cancel</b></button> -->
+                        <!-- <input class="profile_btnTwo" onclick="location.href = 'profile.php#account';" type="submit" name="cancel" value="Cancel"> -->
                     </section>
                 </div>
             </section>
@@ -156,6 +159,7 @@
 
             <section class="rate" id="rate">
                 <h1 class="headingProfile">Rate & Review</h1>
+                
             </section>
         </div>
     </section>

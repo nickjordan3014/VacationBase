@@ -16,7 +16,7 @@
 ?>
 <section class="login-status">
     <div class="profile-drop">
-        <div class="drop-btn" onclick="toggle()" >
+        <div class="drop-btn">
             <span>
                 <?php
                     echo("<h4><p style='text-decoration:none;color:black;font-weight:700;'>Hey there, ".$_SESSION['user']['firstName']."</p></h4>");
@@ -24,25 +24,13 @@
             </span>
         </div>
 
-        <ul class="drop-list">
+        <!-- <ul class="drop-list">
             <li class="drop-items">
                 <a href="profile.php">
                     <i class="fa-regular fa-user"></i>
                     User Profile
                 </a>
             </li>
-            <!-- <li class="drop-items">
-                <a href="#">
-                    <i class="fa-solid fa-question"></i>
-                    FAQ
-                </a>
-            </li>
-            <li class="drop-items">
-                <a href="#">
-                    <i class="fa-regular fa-envelope"></i>
-                    Contact Us
-                </a>
-            </li> -->
             <hr />
             <li class="drop-items">
                 <a href="logout.php">
@@ -50,9 +38,8 @@
                     Log Out
                 </a>
             </li>
-        </ul>
-    </div>
-    
+        </ul> -->
+    </div>  
 </section>
 <?php
     }

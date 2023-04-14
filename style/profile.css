@@ -86,7 +86,7 @@ section .rate {
 
 .containerProfile {
     height: 40rem;
-    width: 50rem;
+    width: 60rem;
     background:#fbfbf9;
     border-radius: 1rem;
     overflow: hidden;

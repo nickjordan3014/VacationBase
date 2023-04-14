@@ -36,12 +36,16 @@
                     <?php
                         if(isset($_SESSION['user'])){
                     ?>
-                            <button class="addACTButton activityButton" name="addtoitin_btn" onclick="location.href = 'itinerary.php';"><b>Add To Itinerary</b></button>
+                            <button type="submit" class="addACTButton activityButton" name="addtoitin_btn"><b>Add To Itinerary</b></button>
                     <?php
+                        if (isset($_POST['addtoitin_btn'])){
+                            print("button clicked");
+                        }
+                    
                         }
                         else {
                     ?>
-                            <button class="addACTButton activityButton" name="addtoitin_btn" onclick="location.href = 'login.php';"><b>Add To Itinerary</b></button>
+                            <button type="submit" class="addACTButton activityButton" name="addtoitin_btn" onclick="location.href = 'login.php';"><b>Add To Itinerary</b></button>
                     <?php    
                         }
                     ?>
