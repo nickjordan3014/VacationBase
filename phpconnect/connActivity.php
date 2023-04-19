@@ -25,56 +25,60 @@
     $foodDrink = $this_activity['isFoodDrink'];
     $arts = $this_activity['isArts'];
     $local = $this_activity['isLocal'];
-    $event = $this_activity['isLiveEvent'];
+    $live = $this_activity['isLiveEvent'];
     $value = $this_activity['isGoodValue'];
-
-    // print($id);
-
-    // print($themepark);
+    $outdoor = $this_activity['isOutdoorActive'];
+    $rainy = $this_activity['isRainy'];
 
     // finds a major query category that $this_activity is to suggest more of them 
-    $first_suggestion = "isFamily"; // failsafe
-    if ($themepark = "y"){
+    // failsafe
+    if ($themePark == "Y"){
         $first_suggestion = "isThemePark";
+        $search_word = "Theme Parks";
     }
-    else if ($foodDrink = "y"){
+    else if ($foodDrink == "Y"){
         $first_suggestion = "isFoodDrink";
+        $search_word = "Restaurants";
     }
-    else if ($arts = "y"){
+    else if ($arts == "Y"){
         $first_suggestion = "isArts";
+        $search_word = "Arts Culture and Museums";
     }
-
-    // finds a secondary query category that $this_activity is to suggest more of them
-    // $second_suggestion = "isGoodValue"; // failsafe
-    // if ($event = "y"){
-    //     $second_suggestion = "isLiveEvent";
-    // }
-    // else if ($local = "y"){
-    //     $second_suggestion = "isLocal";
-    // }
+    else if ($outdoor == "Y"){
+        $first_suggestion = "isOutdoorActive";
+        $search_word = "Outdoor Events";
+    }
+    else if ($local == "Y"){
+        $first_suggestion = "isLocal";
+        $search_word = "Local Events";
+    }
+    else if ($live == "Y"){
+        $first_suggestion = "isLiveEvent";
+        $search_word = "Live Events";
+    }
+    else if ($rainy == "Y"){
+        $first_suggestion = "isRainy";
+        $search_word = "Rainy Day Events";
+    }
+    else if ($value == "Y"){
+        print("cheap");
+        $first_suggestion = "isGoodValue";
+        $search_word = "Good Value";
+    }
 
     // SQL customized to select things that $this_activity also is
     $select_a = "SELECT * FROM orlando_florida WHERE $first_suggestion = 'Y' AND id <> $activity_id LIMIT 8";
-    // $select_b = "SELECT * FROM orlando_florida WHERE $second_suggestion = 'Y' LIMIT 8";
 
     // houses all of the dynamic content we put in our activity page rows:
     $row_objects = array(
         // "$first_suggestion"'s row data
         array (
-            "name" => "$first_suggestion",
+            "name" => $first_suggestion,
             "title" => "Just Like $name",
             "results" => $db->query($select_a),
             "link" => "See More Activities Like These",
-            "href" => "search.php?event='$first_suggestion'"
-        ),
-        // "$second_suggestion"'s row data
-        // array (
-        //     "name" => "$second_suggestion",
-        //     "title" => "More Activities With Similar Vibes",
-        //     "results" => $db->query($select_b),
-        //     "link" => "See More Activities Like These",
-        //     "href" => "search.php?event='$second_suggestion"
-        // )
+            "href" => "search.php?query=$search_word"
+        )
     );
 
     // carousel html builder functions stolen from connindex.php

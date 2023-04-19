@@ -23,7 +23,7 @@
                 </a>
             </div>
             <div class="ideabase-card" id="ibC1"> 
-                <a class= "actPage" href="search.php?query=Value" onclick='post'>
+                <a class= "actPage" href="search.php?query=Good" onclick='post'>
                     <img 
                         src="img/gallery/cheap.png" 
                         class="ideabase-image" 
@@ -68,7 +68,7 @@
                 </a>
             </div>
             <div class="ideabase-card" id="ibC5"> 
-                <a class= "actPage" href="search.php?query=ThemePark" onclick='post'>
+                <a class= "actPage" href="search.php?query=Theme Parks" onclick='post'>
                     <img 
                         src="img/gallery/themepark.png" 
                         class="ideabase-image" 
@@ -130,28 +130,28 @@
                 "<a class= 'card' id='aC0' href='triptips.php?tips=1'>
                 <img src='img/images/traveltips/sunrail.jpg' class='card-image' alt=''>
                 <h4>Orlando's SunRails</h4>
-                <p class='captions'> Sunrail Tips & Destinations.</p>
+                <p class='captions'> Sunrail Tips & Destinations</p>
                 </a>"
             );
             print(
                 "<a class= 'card' id='aC1' href='triptips.php?tips=2'>
                 <img src='img/images/traveltips/i4.jpg' class='card-image' alt=''>
                 <h4>Getting Around I-4</h4>
-                <p class='captions'>Things To Know About the I-4 Highway.</p>
+                <p class='captions'>Things To Know About the I-4 Highway</p>
                 </a>"
             );
             echo(
                 "<a class= 'card' id='aC2' href='triptips.php?tips=3'>
                 <img src='img/images/traveltips/carrent.jpg' class='card-image' alt=''>
                 <h4>Transportation Services</h4>
-                <p class='captions'>Explore Orlando Transportation Methods.</p>
+                <p class='captions'>Explore Orlando Transportation Methods</p>
                 </a>"
             );
             print(
                 "<a class= 'card' id='aC3' href='triptips.php?tips=4'>
                 <img src='img/images/traveltips/toll.jpg' class='card-image' alt=''>
                 <h4>E-Passes, Sunpasses and Quarters</h4>
-                <p class='captions'>Tips for Using Toll Roads in Orlando.</p>
+                <p class='captions'>Tips for Using Toll Roads in Orlando</p>
                 </a>"
             );
         ?>

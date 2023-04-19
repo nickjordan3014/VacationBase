@@ -33,7 +33,7 @@
                     [
                         'emailAddress' => $emailAddress
                 ]);
-                // if theer's an email match, we bring all of the data in for that user and make sure the password matches
+                // if there's an email match, we bring all of the data in for that user and make sure the password matches
                 $row = $select_statement->fetch(PDO::FETCH_ASSOC);
                 
                 // if there was a row returned, then we can check the password (if not greater than 0, the user doesnt exist in the database)
@@ -46,6 +46,7 @@
                         $_SESSION['user']['lastName'] = $row["last_name"];
                         $_SESSION['user']['emailAddress'] = $row["email"];
                         $_SESSION['user']['id'] = $row["id"];
+                        $SESSION['user']['profilePic'] = $row["profile_pic"];
 
                         // if the password verifies, we redirect the user to their page
                         header("location: index.php");

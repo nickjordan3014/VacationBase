@@ -8,7 +8,7 @@
                     <!-- <dt><label for="email">Email Address</label></dt> -->
                     <br>
                     <br>
-                    <dd class="form-labels"><input type="text" class="box-size-long" placeholder="Email"></dd>
+                    <dd class="form-labels"><input type="text" class="box-size-long" placeholder="Email Address" name="email"></dd>
                     <?php
                         if(isset($errorMsg[0])){
                             foreach($errorMsg[0] as $emailError){

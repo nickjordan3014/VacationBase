@@ -7,11 +7,11 @@
                 <section class="user">
                     <?php
                         $profile_pic = "img/icons-VB/".$_SESSION['user']['profilePic'];
+                        print($_SESSION['user']['profilePic']);
                     ?>
 
                     <img src="img/icons-VB/banana_icon.png" alt="Profile Picture">
                     <?php
-                        print("<h4><b>".$profile_pic."</b></h4>");
                         print("<h4 class='name'><b>".$_SESSION['user']['firstName']." ".$_SESSION['user']['lastName']."</b></h4>");
                     ?>
                     <br>
@@ -64,7 +64,7 @@
             <section class="account" id="account">
 
                 <div class="content">
-                <h1 class="headingProfile">Account Information</h1>
+                    <h1 class="headingProfile">Account Information</h1>
                     <form action="profile.php" method="POST" autocomplete="off" class="moveform">
                         <dd class="form-labels">
                             <span class="span-left">

@@ -99,8 +99,8 @@
                 <input type="text" class="box tall">
             </dd>
             <div class="stars-in-box">
-                <img src="img/icons-VB/goldstar.png" alt="review star 1" id="star-1">
-                <img src="img/icons-VB/goldstar.png" alt="review star 1" id="star-2">
+                <!-- <img src="img/icons-VB/goldstar.png" alt="review star 1" id="star-1"> -->
+                <!-- <img src="img/icons-VB/goldstar.png" alt="review star 1" id="star-2"> -->
                 <!-- <img src="img/icons-VB/goldstar.png" alt="review star 1" id="star-3" class="star-size"> -->
                 <!-- <img src="img/icons-VB/blackstar.png" alt="review star 1" id="star-4" class="star-size"> -->
                 <!-- <img src="img/icons-VB/blackstar.png" alt="review star 1" id="star-5" class="star-size"> -->

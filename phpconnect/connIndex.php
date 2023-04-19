@@ -4,56 +4,62 @@
     session_start();
 
     // SQL referenced to build our rows, selecting categorical activities from our database
-    $select_themePark = "SELECT * FROM orlando_florida WHERE isThemePark = 'Y' LIMIT 8";
-    $select_restaurant = "SELECT * FROM orlando_florida WHERE isFoodDrink = 'Y' LIMIT 8";
-    $select_local = "SELECT * FROM orlando_florida WHERE isLocal = 'Y' LIMIT 8";
-    $select_outdoors = "SELECT * FROM orlando_florida WHERE isOutdoorActive = 'Y' AND id > 32 LIMIT 8";
-    $select_value = "SELECT * FROM orlando_florida WHERE isGoodValue = 'Y' AND isOutdoorActive = 'N' AND id > 20 LIMIT 8";
+    // THESE SQL QUERIES ARE SPECIFICALLY FOR THE HOME PAGE BECAUSE THEY RETURN EVENTS SO THAT THERE ARE NO REPEATS AND SO ITS RANDOMIZED
+    // THESE QUERIES ARE NOT REGULAR; THEY ARE CONFIGURED TO REDUCE REPETITIVE EVENTS
+    $select_themePark = "SELECT * FROM orlando_florida WHERE isThemePark = 'Y' ORDER BY RAND () LIMIT 8";
+    $select_restaurant = "SELECT * FROM orlando_florida WHERE isFoodDrink = 'Y' AND isThemePark = 'N' ORDER BY RAND () LIMIT 8";
+    $select_local = "SELECT * FROM orlando_florida WHERE isLocal = 'Y' AND isFoodDrink = 'N' ORDER BY RAND () LIMIT 8";
+    $select_outdoors = "SELECT * FROM orlando_florida WHERE isOutdoorActive = 'Y' AND id > 32 ORDER BY RAND () LIMIT 8";
+    $select_value = "SELECT * FROM orlando_florida WHERE isGoodValue = 'Y' AND isOutdoorActive = 'N' AND id > 16 ORDER BY RAND () LIMIT 8";
 
-    // eventually we will want to pull more than 8 per row and build a function that returns the first 8 cards per row 
-    // that don't share any ids with any activies in rows above it. easiest way to prevent duplicates ik of  -sean
-
+    // THESE WILL BE THE REGULAR QUERIES THAT CAN BE PASSED TO SEARCH PAGE
+    // $select_themePark_reg = "SELECT * FROM orlando_florida WHERE isThemePark = 'Y' ORDER BY RAND () LIMIT 8";
+    // $select_restaurant_reg = "SELECT * FROM orlando_florida WHERE isFoodDrink = 'Y' ORDER BY RAND () LIMIT 8";
+    // $select_local_reg = "SELECT * FROM orlando_florida WHERE isLocal = 'Y' ORDER BY RAND () LIMIT 8";
+    // $select_outdoors_reg = "SELECT * FROM orlando_florida WHERE isOutdoorActive = 'Y' ORDER BY RAND () LIMIT 8";
+    // $select_value_reg = "SELECT * FROM orlando_florida WHERE isGoodValue = 'Y' ORDER BY RAND () LIMIT 8";
+    
     // houses all of the content we put on our index page! build/customize rows here:
     $row_objects = array(
         // "theme parks" row data
         array (
-            "name" => "theme parks",
+            "name" => "Theme Parks",
             "title" => "Orlando's Signature: Theme Parks",
             "results" => $db->query($select_themePark),
             "link" => "See All Theme Park Activities",
-            "href" => "search.php?query=theme parks"
+            "href" => "search.php?query=Theme Parks"
         ),
         // "restaurants" row data
         array (
-            "name" => "restaurants",
+            "name" => "Restaurants",
             "title" => "Hot Orlando Restaurants",
             "results" => $db->query($select_restaurant),
             "link" => "See All Food & Drink Activities",
-            "href" => "search.php?query=restaurants"
+            "href" => "search.php?query=Restaurants"
         ),
         // "local" row data
         array (
-            "name" => "local",
+            "name" => "Local",
             "title" => "Go Where The Locals Go",
             "results" => $db->query($select_local),
             "link" => "See All Local Hangout Activities",
-            "href" => "search.php?query=local"
+            "href" => "search.php?query=Local Events"
         ),
         // "outdoors" row data
         array (
-            "name" => "outdoors",
+            "name" => "Outdoors",
             "title" => "Get Outside In The Sunshine State!",
             "results" => $db->query($select_outdoors),
             "link" => "See All Outdoor Activities",
-            "href" => "search.php?query=outdoors"
+            "href" => "search.php?query=Outdoor Events"
         ),
         // "value" row data
         array (
-            "name" => "value",
+            "name" => "Good Value",
             "title" => "Orlando's Cheap Thrills",
             "results" => $db->query($select_value),
             "link" => "See All High-Value Activities",
-            "href" => "search.php?query=value"
+            "href" => "search.php?query=Good"
         )
     );
 
@@ -95,10 +101,6 @@
         $card_image = $result["img1"];
         $card_alt = $result["alt_text_img1"];
         $card_price = $result["price"];
-
-        // temp patch to allow us to access images until we rework how we identify and call them
-        // $temp_image = explode('/', $card_image);
-        // $card_image = ($temp_image[0] . "/image1.jpg");
 
         // removing empty decimals from numerical prices to free up space, or one $ from dollar sign prices since we add one below
         $priceCheck = $card_price[0];

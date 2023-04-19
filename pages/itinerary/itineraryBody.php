@@ -1,5 +1,5 @@
 <?php
-  //  if(isset($_SESSION['user'])){
+//    if(isset($_SESSION['user'])){
 
         
 ?>
@@ -61,7 +61,7 @@
 
 </section>
 <?php
-   // } else{
-        //header("location: login.php");
-    //}
+//    } else{
+//         header("location: login.php");
+    // }
 ?>

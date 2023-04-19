@@ -683,6 +683,32 @@ body {
   cursor: pointer;
 }
 
+.buttons-lsOne {
+  background-color: white;
+  color: #FFBD59;
+  border: 3px solid #FFBD59;
+  border-radius: 25px;
+  font-size: 12px;
+  width: 90px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.buttons-lsTwo {
+  background-color: #FFBD59;
+  color: white;
+  border: 3px solid #FFBD59;
+  border-radius: 25px;
+  font-size: 12px;
+  width: 90px;
+  height: 30px;
+  cursor: pointer;
+}
+
+a:visited {
+  color: black;
+}
+
 .nopass {
   margin-top: 2px;
 }
@@ -764,31 +790,31 @@ input[type=text] {
 input[type=text]:focus {
   outline: none;
   border: 2px solid #FFBD59;
-  border-radius: 3px;
+  border-radius: 99px;
 }
 
 input[type=email] {
   border: 1px solid #c3c3c3;
   padding: 4px 8px;
-  border-radius: 3px;
+  border-radius: 99px;
 }
 
 input[type=email]:focus {
   outline: none;
   border: 2px solid #FFBD59;
-  border-radius: 3px;
+  border-radius: 99px;
 }
 
 input[type=password] {
   border: 1px solid #c3c3c3;
   padding: 4px 8px;
-  border-radius: 3px;
+  border-radius: 99px;
 }
 
 input[type=password]:focus {
   outline: none;
   border: 2px solid #FFBD59;
-  border-radius: 3px;
+  border-radius: 99px;
 }
 
 a {
@@ -821,11 +847,11 @@ header .user img {
   margin: 1rem 0;
   height: 5rem;
   width: 5rem;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   -o-object-fit: cover;
      object-fit: cover;
   text-align: center;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
 }
 
 .name {

@@ -3,10 +3,13 @@
     if(!isset($_SESSION['user'])){
 ?>
 <section class="login-status">
-    <div class="margActivity">
-        <p>New Here? <a href="signup.php">Sign Up!</a></p>
-        <p>Or, <a href="login.php">Log-In</a></p>
-    </div>
+    <!-- <div class="margActivity"> -->
+        <span style="display: flex;">
+            <button class="buttons-lsOne"><a href="signup.php" style="font-weight: 600;">Sign Up</a></button>
+            &nbsp;
+            <button class="buttons-lsTwo"><a href="login.php" style="font-weight: 600;">Log In</a></button>
+        </span>
+    <!-- </div> -->
 </section>
 <?php
     }

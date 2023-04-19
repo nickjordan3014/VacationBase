@@ -48,68 +48,88 @@
     // if the provided input is a category or close to it, it will return that category. else, it returns null
     function _category_validation($search_query) {
         $category = "";
+        // We were not able to find a search result for...
 
-        // removes spaces, any "s" characters at the end, and makes it lower case
-        $search_query = str_replace(' ', '', $search_query);
-        $search_query = str_replace('-', '', $search_query);
-        $search_query = rtrim($search_query, 's');
-        $search_query = strtolower($search_query);
-        // now, a user can search "theme park", "Themepark", "THEme Parks", or "themeparks" and they will all work!
+        $search_query = metaphone($search_query);
 
         // pleeeaaase eventually make this a pseudo-object like the $row_objects array in connIndex
         // that way we can iterate thru more efficiently and return as soon as we get a result
 
         // houses our arrays to check, we cannot have duplicate array items as searching will just go with first match!
-        $array_themepark = array("park", "waterpark", "themepark", "rollercoaster", "amusementpark", "carnival", "fair", "attraction", "adventure", "show");
-        $array_restaurant = array("restaurant", "eat", "eating", "eatery", "food", "drink", "lunch", "dinner", "breakfast", "cafe", "dish", "dishes", "hungry", "thirsty", "meal", "cook", "snack", "beverage", "cater", "munch", "feed");
-        $array_rainy = array("badweather", "weather", "storm", "rain", "weatherday", "inside", "jacket", "thunder", "wind");
-        $array_family = array("child", "children", "kid", "teen", "teenager", "family", "friend", "familie", "friend");
-        $array_local = array("around", "area", "community", "local", "normal", "nearby", "corner", "familiar", "familiarity", "UCF", "universityofcentralflorida", "college", "football", "native");
-        $array_value = array("cheap", "value", "poor", "dollar", "coin", "price", "cost", "afford", "affordable", "bargain", "special", "reasonable", "budget", "reduce", "money", "broke", "finance");
-        $array_outdoors = array("outdoor", "outside", "animal", "zoo", "explore", "exploring", "land", "sky", "wind", "exercise", "garden", "air", "green", "recreation", "fresh");
-        $array_live = array("music", "show", "concert", "festival", "social", "musical", "play", "opera", "comedy", "standup", "band", "venue", "film", "live", "screen");
-        $array_arts = array("museum", "culture", "show", "paint", "mural", "artist", "create", "craft", "brush", "design", "history", "draw", "photo", "color", "sketch", "exhibit", "easel", "sculpt", "media", "animation", "studio", "display", "heritage", "renaissance", "statue", "mythology");
+        $array_themepark = array(metaphone("park"), metaphone("water park"), metaphone("theme park"), metaphone("roller coaster"), metaphone("amusement park"), metaphone("carnival"), metaphone("fair"), metaphone("attraction"), metaphone("adventure"), metaphone("show"));
+        $array_restaurant = array(metaphone("restaurant"), metaphone("eat"), metaphone("eating"), metaphone("eatery"), metaphone("food"), metaphone("drink"), metaphone("lunch"), metaphone("dinner"), metaphone("breakfast"), metaphone("cafe"), metaphone("dish"), metaphone("dishes"), metaphone("hungry"), metaphone("thirsty"), metaphone("meal"), metaphone("cook"), metaphone("snack"), metaphone("beverage"), metaphone("cater"), metaphone("munch"), metaphone("feed"));
+        $array_rainy = array(metaphone("bad weather"), metaphone("weather"), metaphone("storm"), metaphone("rain"), metaphone("rainy"), metaphone("weather day"), metaphone("inside"), metaphone("jacket"), metaphone("thunder"), metaphone("wind"));
+        $array_family = array(metaphone("family"), metaphone("child"), metaphone("children"), metaphone("kid"), metaphone("teen"), metaphone("teenager"), metaphone("friend"), metaphone("familie"), metaphone("friend"), metaphone("good"), metaphone("good value"));
+        $array_local = array(metaphone("around"), metaphone("area"), metaphone("community"), metaphone("local"), metaphone("normal"),metaphone("nearby"), metaphone("corner"), metaphone("familiar"),metaphone("familiarity"), metaphone("UCF"), metaphone("university of central florida"), metaphone("college"), metaphone("football"), metaphone("native"));
+        $array_value = array(metaphone("cheap"), metaphone("value"), metaphone("poor"), metaphone("dollar"), metaphone("coin"), metaphone("price"), metaphone("cost"), metaphone("afford"), metaphone("affordable"), metaphone("bargain"), metaphone("special"), metaphone("reasonable"), metaphone( "budget"), metaphone("reduce"), metaphone("money"), metaphone("broke"), metaphone("finance"));
+        $array_outdoors = array(metaphone("outdoor"), metaphone("outside"), metaphone("animal"), metaphone("zoo"), metaphone("explore"), metaphone("exploring"), metaphone("land"), metaphone("sky"), metaphone("wind"),metaphone("exercise"), metaphone("garden"), metaphone("air"), metaphone("green"), metaphone("recreation"), metaphone("fresh"));
+        $array_live = array(metaphone("music"), metaphone("show"), metaphone("concert"), metaphone("festival"), metaphone("social"), metaphone("musical"), metaphone("play"), metaphone("opera"), metaphone("comedy"), metaphone("standup"), metaphone("band"), metaphone("venue"), metaphone("film"), metaphone("live"), metaphone("screen"));
+        $array_arts = array(metaphone("art"), metaphone("museum"), metaphone("culture"), metaphone("show"), metaphone("paint"), metaphone("mural"), metaphone("artist"), metaphone("create"), metaphone("craft"), metaphone("brush"), metaphone("design"), metaphone("history"), metaphone("draw"), metaphone("photo"), metaphone("color"), metaphone("sketch"), metaphone("exhibit"), metaphone("easel"), metaphone("sculpt"), metaphone("media"), metaphone("animation"), metaphone("studio"), metaphone("display"), metaphone("heritage"), metaphone("renaissance"), metaphone("statue"), metaphone("mythology"));
+        
+        // checks to see then return if our search_query
+        for ($i = 0; $i < count($array_themepark); $i++){ 
+            if (str_contains($search_query, $array_themepark[$i])) {
+                $category = "isThemePark";
+                return $category;
+            }
+        }
+        for ($i = 0; $i < count($array_restaurant); $i++){     
+            if (str_contains($search_query, $array_restaurant[$i])){
+                $category = "isFoodDrink";
+                return $category;
+            }
+        }
+        for ($i = 0; $i < count($array_rainy); $i++){ 
+            if (str_contains($search_query, $array_rainy[$i])){
+                $category = "isRainy";
+                return $category;
+            }
+        }
+        for ($i = 0; $i < count($array_family); $i++){ 
+            if (str_contains($search_query, $array_family[$i])){
+                $category = "isFamily";
+                return $category;
+            }
+        }
+        for ($i = 0; $i < count($array_local); $i++){ 
+            if (str_contains($search_query, $array_local[$i])){
+                $category = "isLocal";
+                return $category;
+            }
+        }
+        for ($i = 0; $i < count($array_value); $i++){ 
+            if (str_contains($search_query, $array_value[$i])){
+                $category = "isGoodValue";
+                return $category;
+            }
+        }
+        for ($i = 0; $i < count($array_outdoors); $i++){ 
+            if (str_contains($search_query, $array_outdoors[$i])){
+                $category = "isOutdoorActive";
+                return $category;
+            }
+        }
+        for ($i = 0; $i < count($array_live); $i++){ 
+            if (str_contains($search_query, $array_live[$i])){
+                $category = "isLiveEvent";
+                return $category;
+            }
+        }
+        for ($i = 0; $i < count($array_arts); $i++){ 
+            if (str_contains($search_query, $array_arts[$i])){
+                $category = "isArts";
+                return $category;
+            }
+        }
 
-        // checks to see then return if our search_query 
-        if (in_array($search_query, $array_themepark)) {
-            $category = "isThemePark";
-            return $category;
-        }
-        else if (in_array($search_query, $array_restaurant)){
-            $category = "isFoodDrink";
-            return $category;
-        }
-        else if (in_array($search_query, $array_rainy)){
-            $category = "isRainy";
-            return $category;
-        }
-        else if (in_array($search_query, $array_family)){
-            $category = "isFamily";
-            return $category;
-        }
-        else if (in_array($search_query, $array_local)){
-            $category = "isLocal";
-            return $category;
-        }
-        else if (in_array($search_query, $array_value)){
-            $category = "isGoodValue";
-            return $category;
-        }
-        else if (in_array($search_query, $array_outdoors)){
-            $category = "isOutdoorActive";
-            return $category;
-        }
-        else if (in_array($search_query, $array_live)){
-            $category = "isLiveEvent";
-            return $category;
-        }
-        else if (in_array($search_query, $array_arts)){
-            $category = "isArts";
-            return $category;
-        }
+        // if ($category == ""){
+        //     $category = "We were not able to find a search result for...");
+        //     return $category;
+        // }
 
-        // if not returned by now a category wasn't found!
-        return $category;
+            // if not returned by now a category wasn't found!
+            return $category;
+        // }
     }
 
     // does our filtering on each result we've already pulled via additional url params
@@ -182,10 +202,14 @@
         $description = $result["meta_description"];
 
         // corrects how we display numerical prices for cards
+
+        // this specific part doesnt work for everything because it only stores the first indexed integer of the price (aka 60.00 translates to $6 on the cards for top golf)
+        // changed it from $card_price = ("From $" . rtrim($card_price, ".00")); to this in order to display it correctly
         $priceCheck = $card_price[0];
+
         if ($priceCheck == "$") {}
         else {
-            $card_price = ("From $" . rtrim($card_price, ".00"));
+            $card_price = ("From $".$card_price);
         }
 
         // temp patch to allow us to access images until we rework how we identify and call them
