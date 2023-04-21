@@ -4,9 +4,9 @@
 
     if ($_SERVER['SERVER_NAME'] == 'students.gaim.ucf.edu'){
         $servername = "localhost";
-        $username = "ni387624";
-        $password = "N_j3599871!";
-        $database = "ni387624";
+        $username = "nid";
+        $password = "studentpw";
+        $database = "nid";
     }
     else {
         $servername = "localhost";
